@@ -69,7 +69,7 @@ latex:
 # Launch button settings
 launch_buttons:
   notebook_interface: classic # The interface interactive links will activate ["classic", "jupyterlab"]
-  jupyterhub_url: "https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/" # The URL of the JupyterHub
+  jupyterhub_url: "https://eosc211.jupyterhub.eoas.ubc.ca/jupyter" # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   #jupyterhub_url: "https://eosc211.jupyterhub.eoas.ubc.ca/jupyter"
   thebe: false # Add a thebe button to pages (requires the repository to run on Binder)
   colab_url: "https://colab.research.google.com"
