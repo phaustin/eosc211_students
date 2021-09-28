@@ -53,8 +53,8 @@
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Week 3 quiz" href="../../wk03/week3_quiz.html" />
-    <link rel="prev" title="Data Structures II" href="../../wk03/data_structures_ii.html" />
+    <link rel="next" title="Week 3 quiz" href="../week3_quiz.html" />
+    <link rel="prev" title="Data Structures II" href="../data_structures_ii.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -145,12 +145,12 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../wk03/data_structures.html">
+  <a class="reference internal" href="../data_structures.html">
    Data Structures
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../wk03/data_structures_ii.html">
+  <a class="reference internal" href="../data_structures_ii.html">
    Data Structures II
   </a>
  </li>
@@ -160,25 +160,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../wk03/week3_quiz.html">
+  <a class="reference internal" href="../week3_quiz.html">
    Week 3 quiz
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Week 4 - Scientific Figures
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../wk04/making_plots.html">
-   Making Plots Worksheet
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week4_lab/lab_wk4.html">
-   Lab Week 4
   </a>
  </li>
 </ul>
@@ -221,11 +204,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../../_sources/outbound/week3_lab/lab_wk3.ipynb"><button type="button"
+            href="../../_sources/wk03/week3_lab/lab_wk3.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/outbound/week3_lab/lab_wk3.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/wk03/week3_lab/lab_wk3.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -250,14 +233,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/outbound/week3_lab/lab_wk3.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk03/week3_lab/lab_wk3.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/outbound/week3_lab/lab_wk3.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk03/week3_lab/lab_wk3.ipynb&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../../_static/images/logo_jupyterhub.svg"
@@ -389,7 +372,7 @@
 <p>It’s good practice to import all the packages you’ll need (on top of Python’s core <em>built-in functions</em>) in a cell near the top of your notebook. So far we know we will be dealing with <em>numpy arrays</em> and making plots, so lets import Numpy and Matplotlib. There are a few different syntaxes for importing packages, demonstrated below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span> <span class="c1"># get all the packages from the e211 library (developed specifically for this course)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">e211</span> <span class="c1"># get all the packages from the e211 library (developed specifically for this course)</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># get all the packages associated with numpy, and assign numpy a nickname &#39;np&#39;</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># get just the package called &#39;pyplot&#39; from the matplotlib library, nicknamed &#39;plt&#39;</span>
 </pre></div>
@@ -565,7 +548,7 @@ Your task is to go through much the same analysis as we did in the tutorial: imp
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_16952</span><span class="o">/</span><span class="mf">3278646782.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_37601</span><span class="o">/</span><span class="mf">3278646782.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># YOUR CODE HERE</span>
 <span class="ne">----&gt; </span><span class="mi">4</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -592,7 +575,7 @@ Your task is to go through much the same analysis as we did in the tutorial: imp
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./outbound/week3_lab"
+            path: "./wk03/week3_lab"
         },
         predefinedOutput: true
     }
@@ -604,8 +587,8 @@ Your task is to go through much the same analysis as we did in the tutorial: imp
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../../wk03/data_structures_ii.html" title="previous page">Data Structures II</a>
-    <a class='right-next' id="next-link" href="../../wk03/week3_quiz.html" title="next page">Week 3 quiz</a>
+    <a class='left-prev' id="prev-link" href="../data_structures_ii.html" title="previous page">Data Structures II</a>
+    <a class='right-next' id="next-link" href="../week3_quiz.html" title="next page">Week 3 quiz</a>
 
         </div>
         
