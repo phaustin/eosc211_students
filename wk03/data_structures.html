@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -42,19 +42,19 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
         const thebe_selector_input = "pre"
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data Structures II" href="data_structures_ii.html" />
-    <link rel="prev" title="Some Review Plus Built-In Functions, Arrays Preview" href="../wk02/some_review_plus_built_in_functions_arrays_preview.html" />
+    <link rel="prev" title="Lab Week 2 - Jupyterhub Tutorial" href="../wk02/lab_wk2/lab_wk2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -74,13 +74,14 @@
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
+      
       <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
@@ -132,6 +133,11 @@
    Some Review Plus Built-In Functions, Arrays Preview
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/lab_wk2/lab_wk2.html">
+   Lab Week 2 - Jupyterhub Tutorial
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
@@ -150,8 +156,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../exchange/e211/outbound/week3_lab/lab_wk3.html">
+  <a class="reference internal" href="../outbound/week3_lab/lab_wk3.html">
    Lab Week 3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week3_quiz.html">
+   Week 3 quiz
   </a>
  </li>
 </ul>
@@ -163,11 +174,11 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../wk04/making_plots.html">
-   Making Plots
+   Making Plots Worksheet
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk04/lab_wk4/lab_wk4.html">
+  <a class="reference internal" href="../outbound/week4_lab/lab_wk4.html">
    Lab Week 4
   </a>
  </li>
@@ -186,130 +197,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../wk05/complicated_logic.html">
    More Complicated Logic
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk05/lab_wk5/lab_wk5.html">
-   Lab Week 5
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Assignment 1
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../assignment01/ast1.html">
-   Assignment 1
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Week 6 - Loops
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/loops.html">
-   Loops
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/loops_ii.html">
-   Loops II
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/lab_wk6/lab_wk6.html">
-   Lab Week 6
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Week 8 - Functions
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/functions.html">
-   Functions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/functions_ii.html">
-   Functions II
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/lab_wk8/lab_wk8.html">
-   Lab Week 8
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Week 9 - Debugging
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/debugging.html">
-   Debugging
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/debugging_2.html">
-   Debugging II
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/lab_wk9/lab_wk9.html">
-   Lab Week 9
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Week 10 - Developing Workflows
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk10/dictionaries_and_f_strings.html">
-   Dictionaries, F String Literals
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Week 11 - Vectorization and Speed
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk11/lab_wk11/lab_wk11.html">
-   Lab Week 11
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  Week 12
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice.html">
-   Practice with loops, if, strings,  file IO, logical indexing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/exercises.html">
-   Exercises
   </a>
  </li>
 </ul>
@@ -388,7 +275,7 @@
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://e211hub.eoastest5.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk03/data_structures.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk03/data_structures.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -407,7 +294,7 @@
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eosc-211">
@@ -624,16 +511,36 @@
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../wk02/some_review_plus_built_in_functions_arrays_preview.html" title="previous page">Some Review Plus Built-In Functions, Arrays Preview</a>
-    <a class='right-next' id="next-link" href="data_structures_ii.html" title="next page">Data Structures II</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../wk02/lab_wk2/lab_wk2.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Lab Week 2 - Jupyterhub Tutorial</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="data_structures_ii.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Data Structures II</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
