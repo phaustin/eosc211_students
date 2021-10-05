@@ -22,10 +22,10 @@ parts:
     chapters:
       - file: wk04/making_plots.md
       - file: outbound/week4_lab/lab_wk4.md
-  # - caption: Week 5 - Computer Logic
-  #   chapters:
-  #     - file: wk05/logic.md
-  #     - file: wk05/complicated_logic.md
+  - caption: Week 5 - Computer Logic
+    chapters:
+      - file: wk05/logic.md
+      - file: wk05/complicated_logic.md
   #     - file: wk05/lab_wk5/lab_wk5.md
   # - caption: Assignment 1
   #   chapters:
