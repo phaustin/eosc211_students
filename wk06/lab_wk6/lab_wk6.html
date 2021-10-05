@@ -1,0 +1,724 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Week 6 &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Functions" href="../../wk08/functions.html" />
+    <link rel="prev" title="Loops II" href="../loops_ii.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../announcements.html">
+   Course Home/Announcements
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 1 - Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/syllabus.html">
+   Course Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/covid_statements.html">
+   Covid Safety in the Classroom
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/schedule_F2021.html">
+   Course Schedule - Fall Semester 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/worksheet_steps_in_problem_solving.html">
+   Steps In Problem Solving
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 2 - Data Types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/data_types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/some_review_plus_built_in_functions_arrays_preview.html">
+   Some Review Plus Built-In Functions, Arrays Preview
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 3 - Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/data_structures_ii.html">
+   Data Structures II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../exchange/e211/outbound/week3_lab/lab_wk3.html">
+   Lab Week 3
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 4 - Scientific Figures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk04/making_plots.html">
+   Making Plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk04/lab_wk4/lab_wk4.html">
+   Lab Week 4
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 5 - Computer Logic
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/logic.html">
+   Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/complicated_logic.html">
+   More Complicated Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/lab_wk5/lab_wk5.html">
+   Lab Week 5
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Assignment 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../assignment01/ast1.html">
+   Assignment 1
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../loops_ii.html">
+   Loops II
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab Week 6
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 8 - Functions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/functions_ii.html">
+   Functions II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/lab_wk8/lab_wk8.html">
+   Lab Week 8
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 9 - Debugging
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging.html">
+   Debugging
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging_2.html">
+   Debugging II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/lab_wk9/lab_wk9.html">
+   Lab Week 9
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 10 - Developing Workflows
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/dictionaries_and_f_strings.html">
+   Dictionaries, F String Literals
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 11 - Vectorization and Speed
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk11/lab_wk11/lab_wk11.html">
+   Lab Week 11
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 12
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/file_io_practice.html">
+   Practice with loops, if, strings,  file IO, logical indexing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/exercises.html">
+   Exercises
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/wk06/lab_wk6/lab_wk6.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/wk06/lab_wk6/lab_wk6.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk06/lab_wk6/lab_wk6.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://e211hub.eoastest5.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk06/lab_wk6/lab_wk6.md&branch=e211_live_main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eosc-211">
+   EOSC 211
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learning-objectives">
+     Learning Objectives:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#intro">
+     Intro
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-creating-a-running-mean-algorithm-using-for-loops">
+   Part 1 - Creating a Running Mean Algorithm Using
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   Loops
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-the-running-median-and-while-loops">
+   Part 2 - The Running Median and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     while
+    </span>
+   </code>
+   Loops
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#to-hand-in">
+     To hand in:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lab-week-6">
+<h1>Lab Week 6<a class="headerlink" href="#lab-week-6" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="eosc-211">
+<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="learning-objectives">
+<h3>Learning Objectives:<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>develop algorithms involving loops.</p></li>
+<li><p>carry out a top-down design process.</p></li>
+<li><p>modularize code, separating the algorithm from input/output statements.</p></li>
+<li><p>solve a problem useful in the earth sciences</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load data </span>
+<span class="c1"># note: time vectors are in some strange format and need to be fixed (AL)</span>
+
+<span class="c1"># aircraft velocity time series</span>
+<span class="n">vel</span><span class="p">,</span> <span class="n">fly_time</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_aircraft</span><span class="p">(</span><span class="s2">&quot;aircraft_gps.mat&quot;</span><span class="p">)</span>
+
+<span class="c1"># sand heads temperature time series</span>
+<span class="n">temp</span><span class="p">,</span> <span class="n">sand_time</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_temps</span><span class="p">(</span><span class="s2">&quot;sand_heads.mat&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="intro">
+<h3>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h3>
+<p>In this lab, we will be working with <em>time series data</em>, and apply our skills programming with loops to create a series of <em>filters</em>, which remove unwanted or erroneous features in our data. Time series are one of the most common types of data sets we expect to encounter, so we would like our filtering algorithm to work for not just one particular dataset, but <em>any</em> time series that can be read as a numpy array.</p>
+<p>In the very first lab you plotted a long sequence (a time series) of temperatures at Sand Heads.  Remember that the data showed a broad seasonal trend (colder in winter, warmer in summer), but that at very short time scales (a day or two) there was a great deal of variability which gave the curve a fuzzy look when you plotted a whole year.  It is often very useful to be able to <em>smooth</em> a time series to better display broad trends by averaging away the short-time variability. A very simple way of smoothing a time series is to use a <em>running mean</em>. Imagine that <span class="math notranslate nohighlight">\(N\)</span> data points are recorded hourly, and number them 1,2,3,…,<span class="math notranslate nohighlight">\(i\)</span>−1, <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(i\)</span> + 1,…,<span class="math notranslate nohighlight">\(N\)</span> as they appear in an array.If we are calculating a 5 point running mean, then the 5th point in the <em>smoothed</em> time series will be the average of points 3, 4, 5, 6 and 7 from the original time series (from “two-to-the-left” to “two-to-the-right”).  The 6th point in the smoothed time series will be the average of points 4, 5, 6, 7,and 8 from the original time series. The 7th point will be the average of points 5, 6, 7, 8, and 9. And so on, moving over one point each time, with your window <em>running</em> through the time series, calculating the average of the points in the window at each point in the original series (Fig. 2).</p>
+<img src="runningmean.png" width="300">
+<p style="text-align: center;">Fig 2: An example of the 5 point running mean. The $i$th element of $z$ will be 9.2, an average of 1, 12, 21, 7, and 5. The next element will be 9.4, an average of 12, 21, 7, 5, and 2, and so on.</p>
+<p>How de we describe this mathematically? Formally, we start with a time series vector <span class="math notranslate nohighlight">\(x\)</span>, whose <span class="math notranslate nohighlight">\(i\)</span>th element is <span class="math notranslate nohighlight">\(x_i\)</span> where <span class="math notranslate nohighlight">\(i= 1. . . N\)</span>.  Then we form a new time series <span class="math notranslate nohighlight">\(z\)</span>, again with <span class="math notranslate nohighlight">\(N\)</span> elements, for which the <span class="math notranslate nohighlight">\(i\)</span>th point <span class="math notranslate nohighlight">\(z_i\)</span> is an average of points in <span class="math notranslate nohighlight">\(x\)</span> within the window. If the window has a length of 5, then:</p>
+<div class="math notranslate nohighlight">
+\[
+z_i = \frac{x_{i-2} + x_{i-1} + x_{i} + x_{i+1} + x_{i+2}}{5}\tag{1}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+z_i = \frac{1}{5}\sum_{k=-2}^2 x_{i+k}\tag{2}
+\]</div>
+<p>and if it has a length <span class="math notranslate nohighlight">\(L\)</span> (which has to be an odd number) then it would be:</p>
+<div class="math notranslate nohighlight">
+\[
+z_i = \frac{1}{L}\sum_{k=-W}^Wx_{i+k}\tag{3}
+\]</div>
+<p>where
+$<span class="math notranslate nohighlight">\(
+W = \frac{L-1}{2}\tag{4}
+\)</span>$</p>
+</div>
+</div>
+<div class="section" id="part-1-creating-a-running-mean-algorithm-using-for-loops">
+<h2>Part 1 - Creating a Running Mean Algorithm Using <code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#part-1-creating-a-running-mean-algorithm-using-for-loops" title="Permalink to this headline">¶</a></h2>
+<p>Your task is to implement these equations in Python and use them to filter the time series data provided. We would like our code to be re-useable and somewhat flexible, so we don’t just program the long sum of 5 points in eqn. (1), because we may want to change the length of the window later on - we want <span class="math notranslate nohighlight">\(L\)</span> as another input parameter. This is because we might want a 3 point running mean, or a 9 point running mean. Instead, in this lab, you will use loops to program eqn. (3). To write the required code, we will break the problem down into a series of steps, which you will follow as you go through the lab:</p>
+<blockquote>
+<div><ol class="simple">
+<li><p>First, develop a basic algorithm, using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to run through each element <span class="math notranslate nohighlight">\(x_i\)</span> in the series (This can be done correctly in a few different ways). For now, just print <span class="math notranslate nohighlight">\(x_i\)</span> to the screen, or perform some other very simple operation inside the loop.</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p>Inside the first loop, replace your very simple operation with another <code class="docutils literal notranslate"><span class="pre">for</span></code> loop which calculates the mean centered around the point <span class="math notranslate nohighlight">\(x_i\)</span> (i.e. implement equation 2 in code). You will need to specify a window length <span class="math notranslate nohighlight">\(L\)</span>, which needs to be an <strong>odd number</strong>. If we are going to take <span class="math notranslate nohighlight">\(L\)</span> as a user-specified variable, what could you do to ensure that the <span class="math notranslate nohighlight">\(L\)</span> used in your algorithm is indeed an odd number? (Multiple correct approaches)</p></li>
+</ol>
+<blockquote>
+<div><p><em>Note: Numpy has a built-in function <code class="docutils literal notranslate"><span class="pre">np.mean()</span></code> for calculating the mean of an array, but don’t use it here. The point of this lab is to practice with loops. DIY</em></p>
+</div></blockquote>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p>Next, add some <code class="docutils literal notranslate"><span class="pre">if</span></code> statements to handle the awkward cases that take place at the start and end of the loop. (Again, multiple correct approaches, although some are better than others)</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p>In order to make really sure you have implemented the algorithm correctly, test it on some data for which you can work out the answer. For example, set <code class="docutils literal notranslate"><span class="pre">x=[1</span> <span class="pre">5</span> <span class="pre">3</span> <span class="pre">7</span> <span class="pre">9</span> <span class="pre">8</span> <span class="pre">4</span> <span class="pre">6]</span></code>, <code class="docutils literal notranslate"><span class="pre">winlen=3</span></code> Work out BY HAND what the answer should be, and then see if your program replicates this. Try different window lengths and see what happens.</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p>Apply your filtering algorithm to each of the datasets provided and display the results with a scientific figure. Show on your plot both the raw and filtered data, and include a legend showing which is which.</p></li>
+</ol>
+</div></blockquote>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="part-2-the-running-median-and-while-loops">
+<h2>Part 2 - The Running Median and <code class="docutils literal notranslate"><span class="pre">while</span></code> Loops<a class="headerlink" href="#part-2-the-running-median-and-while-loops" title="Permalink to this headline">¶</a></h2>
+<p>In this section, your task is to add to/modify your code to calculate the <em>running median</em> for a given window size. Why would you use a running median instead of a running mean? In the case of the temperature data most (or all) of the data is correct, or at least not wildly and obviously wrong. This is generally untypical of “real” data, which often show very intermittent obviously erroneous measurements for various reasons. The aircraft dataset contains such errors. We know that the speed of a plane tends to vary smoothly between something like 30 to 50 m/s, but there are strange spikes in the series (especially inthe middle part of the time series when the plane is turning a lot), related to changes in the paths of radio-wave propagation when the aircraft changes its orientation and certain parts of the sky are obscured. These are clearly “bad data” because the speed of anything real won’t change by 20 m/s for only one second (the airplane’s wings would fall off from the violent acceleration). Now, if  we  were  interested  in  the  speed,  taking  a  running  average  will  not  really  help  matters because it tends to pull the smooth curve away from the “correct” points.   But  a  running  median,  if  the  window  is  long  enough,  can  reject  these outliers.</p>
+<p>A running median works much like a running mean, except that inside the window, we calculate the median of a dataset instead of the average. For a refresher on <em>central tendencies of a dataset</em>, click <a class="reference external" href="https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/a/mean-median-and-mode-review">here</a>. To calculate the median of a dataset:</p>
+<blockquote>
+<div><ol class="simple">
+<li><p>Start with all a list of numbers, which in this case is all the numbers currently inside the window.</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p>Using a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, eliminate both the hightest and lowest numbers from your current window until you are left with only one number – the <em>median</em>. (You need an window of odd length for this to work)</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p>Once your window only contains one number, stop eliminating the min and max, and extract the number from your dataset and save it to the <span class="math notranslate nohighlight">\(i\)</span>th element of your filtered array</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p>Move the window over and repeat</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p>Test your algorithm the same way you did with the running mean (do it by hand on a small dataset). When working properly the spikes will be removed from the aircraft time series with a window length of 7.</p></li>
+</ol>
+</div></blockquote>
+<div class="section" id="to-hand-in">
+<h3>To hand in:<a class="headerlink" href="#to-hand-in" title="Permalink to this headline">¶</a></h3>
+<p>Combine your code from parts 1 and 2 to create a <em>scientific figure</em> which displays:</p>
+<p>A) The raw aircraft velocity data</p>
+<p>B) The data filtered by your running mean algorithm with a window length of 7</p>
+<p>C) The data filtered by your running median algorithm, also with a window length of 7</p>
+<p>Your code should follow our standard <em>input/import, process, display</em> structure, and include lots of commenting to show what is happening where. In a <em>markdown</em> cell below your figure, explain which algorithm is more effective at filtering erroneous measurements out of the dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+
+<span class="n">winlen</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># L from equation 3</span>
+<span class="n">window_ind</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">winlen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># equation 4</span>
+
+<span class="c1"># discuss this vs the np.append() approach</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
+<span class="n">zm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
+<span class="c1"># y = np.zeros_like(vel)</span>
+<span class="c1"># ym = np.zeros_like(vel)</span>
+
+<span class="c1"># the crux here is remembering that range(a,b) and/or [a:b] are INCLUSIVE of a and EXCLUSIVE of b</span>
+<span class="c1"># not recoginizing this will give you the wrong answer</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span>
+    <span class="n">window_ind</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span> <span class="o">-</span> <span class="n">window_ind</span><span class="p">):</span>  <span class="c1"># deal with the edges by ignoring them</span>
+    <span class="c1"># mean</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="n">window_ind</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="n">window_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">z</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="n">vel</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">/</span> <span class="n">winlen</span>  <span class="c1"># eqn 2</span>
+
+    <span class="c1"># median</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">vel</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="n">window_ind</span> <span class="p">:</span> <span class="n">i</span> <span class="o">+</span> <span class="n">window_ind</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span>
+    <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">window</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">window</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">window</span><span class="p">))</span>
+        <span class="n">window</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">window</span><span class="p">))</span>
+    <span class="n">zm</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">window</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># the numpy functions do it faster -- more on this in later labs</span>
+    <span class="c1"># y[i] = np.mean(vel[i - window_ind : i + window_ind + 1])</span>
+    <span class="c1"># ym[i] = np.median(vel[i - window_ind : i + window_ind + 1])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># output comparing the raw data and two smoothing techniques</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fly_time</span><span class="p">,</span> <span class="n">vel</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;raw data&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fly_time</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;running mean&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fly_time</span><span class="p">,</span> <span class="n">zm</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;running median&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Time (units need fixing)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Aircraft Velocity (m/s)&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Various Filtering Algorithms on Aircraft Velocity Time Series&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/lab_wk6_9_0.png" src="../../_images/lab_wk6_9_0.png" />
+</div>
+</div>
+<p>The running mean does a reasonably good job of smoothing out the data, but still includes data from the “spikes” (it just makes the spikes smaller). The running median ignores the spikes entirely, as medians are less sensitive to outlier data.</p>
+<p>An even better approach would be to detect areas of the data where the plane’s accelerations are beyond some threshhold value and eliminate the “spikes” completely from the dataset, <em>then</em> apply the running mean or median algorithms.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./wk06/lab_wk6"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../loops_ii.html" title="previous page">Loops II</a>
+    <a class='right-next' id="next-link" href="../../wk08/functions.html" title="next page">Functions</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
