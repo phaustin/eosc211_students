@@ -14,7 +14,7 @@ kernelspec:
   name: python3
 ---
 
-# Lab Week 2 - Jupyterhub Tutorial
+# Answers: Lab Week 2 - Jupyterhub Tutorial
 
 ## EOSC 211
 
@@ -40,6 +40,7 @@ The URL for this course is -url-. Here you can view all of the notes, worksheets
 #### Why Python/Jupyterhub?
 
 <img src=xkcd_python.png>
+
 <figcaption>Credit: Randal Munroe, xkcd.com</figcaption>
 
 **Python** is a *high level programming language,* meaning it is comparatively easy for humans to read. Python programs are executed by a *python interpreter,* which takes python code, reads it into a processor (the CPU on your computer, or in our case, a Jupyterhub server) and returns a result. This process is repeated over and over for each line of code, often taking the result of one line and feeding it into the next. 
@@ -72,6 +73,7 @@ and press `[Ctrl]` + `[Enter]` to execute the code.
 
 ```{code-cell} ipython3
 # your code here
+print("Hello World")
 ```
 
 Congratulations, you have just written and executed your first Python code! The "Hello World" program is a long-standing tradition in computer programming as a first program in a new language. 
@@ -175,6 +177,7 @@ Try it out! In the code cell below (or you can create multiple code cells, up to
 
 ```{code-cell} ipython3
 # your code here
+a = (2 + 9)**2.
 ```
 
 #### Math With Variables
@@ -207,6 +210,8 @@ The main focus of this course is writing *Python* code, so you won't be expected
 +++
 
 your answer here
+
+red
 
 +++
 
@@ -266,9 +271,12 @@ nbgrader:
 # reference variables assigned in earlier cells to calculate travel time around "planet"
 # and assign the result to a new variable "t"
 
+biking_speed = 20 # km/hour
+hours_per_day = 24.
+biking_speed = biking_speed*hours_per_day # convert hours to days
+time_in_days = circumference/biking_speed
 
-
-#print(f"It will take {time_in_days} days to ride a bicycle around {planet}")
+print(f"It will take {time_in_days} days to ride a bicycle around {planet}")
 ```
 
 ```{code-cell} ipython3
@@ -282,7 +290,7 @@ nbgrader:
   solution: false
   task: false
 ---
-# assert(time_in_days > 0)
+assert(time_in_days > 0)
 ```
 
 ## Helpful Terminology
