@@ -18,7 +18,8 @@ kernelspec:
 
 ## Read in the data
 
-This is a fake satellite image with longwave flux in a vector called "flux" and brightness temperature in a vector called "temp".  I've stored them in an [npz file](https://numpy.org/doc/stable/reference/generated/numpy.savez.html) using np.savez.
+This is a fake satellite image with longwave flux in a vector called "flux" and brightness temperature in a vector called "temp".  I've stored them in an [npz file](https://numpy.org/doc/stable/reference/generated/numpy.savez.html) using np.savez.  If you
+are working on your laptop, you can download the npz file here: [temp_flux.npz]( https://github.com/phaustin/eosc211_students/blob/e211_live_main/wk05/temp_flux.npz)
 
 In the cells below, you'll be asked to add new points to the figure, and then
 redisplay using `display(fig)`
