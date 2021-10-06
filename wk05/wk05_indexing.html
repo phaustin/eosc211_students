@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>More Complicated Logic &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    <title>Indexing worksheet &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -51,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Indexing worksheet" href="wk05_indexing.html" />
-    <link rel="prev" title="Logic" href="logic.html" />
+    <link rel="next" title="Week 5 quiz" href="week5_quiz.html" />
+    <link rel="prev" title="More Complicated Logic" href="complicated_logic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -197,13 +199,13 @@
    Logic
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="complicated_logic.html">
    More Complicated Logic
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wk05_indexing.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Indexing worksheet
   </a>
  </li>
@@ -257,11 +259,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/wk05/complicated_logic.ipynb"><button type="button"
+            href="../_sources/wk05/wk05_indexing.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk05/complicated_logic.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/wk05/wk05_indexing.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -286,14 +288,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk05/complicated_logic.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk05/wk05_indexing.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk05/complicated_logic.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk05/wk05_indexing.ipynb&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -315,23 +317,35 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eosc-211">
-   EOSC 211
+  <a class="reference internal nav-link" href="#read-in-the-data">
+   Read in the data
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   Question 1
+  <a class="reference internal nav-link" href="#q1-logical-and-for-flux">
+   Q1 –
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     logical_and
+    </span>
+   </code>
+   for flux
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   Question 2
+  <a class="reference internal nav-link" href="#q2-logical-and-for-temperature-and-flux">
+   Q2 –
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     logical_and
+    </span>
+   </code>
+   for temperature and flux
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   Question 3
+  <a class="reference internal nav-link" href="#q3-argmax">
+   Q3 – argmax
   </a>
  </li>
 </ul>
@@ -345,89 +359,76 @@
         
               <div>
                 
-  <div class="section" id="more-complicated-logic">
-<h1>More Complicated Logic<a class="headerlink" href="#more-complicated-logic" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="eosc-211">
-<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
-<p><strong>Week 5</strong></p>
-<p><strong>Learning Objectives:</strong></p>
-<ol class="simple">
-<li><p>Practice interpreting logical flow control</p></li>
-<li><p>Comment code to make it easier for humans to interpret</p></li>
-</ol>
-</div>
-<div class="section" id="question-1">
-<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
-<p><strong>What is the value of <code class="docutils literal notranslate"><span class="pre">z</span></code> after you execute this script? Remember that <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">%</span> <span class="pre">b</span></code> returns the remainder of the floor division operation <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">//</span> <span class="pre">b</span></code>. Add comments to explain what is happening at each step.</strong></p>
+  <div class="section" id="indexing-worksheet">
+<h1>Indexing worksheet<a class="headerlink" href="#indexing-worksheet" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="read-in-the-data">
+<h2>Read in the data<a class="headerlink" href="#read-in-the-data" title="Permalink to this headline">¶</a></h2>
+<p>This is a fake satellite image with longwave flux in a vector called “flux” and brightness temperature in a vector called “temp”.  I’ve stored them in an <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.savez.html">npz file</a> using np.savez.  If you
+are working on your laptop, you can download the npz file here: <a class="reference external" href="https://github.com/phaustin/eosc211_students/blob/e211_live_main/wk05/temp_flux.npz">temp_flux.npz</a></p>
+<p>In the cells below, you’ll be asked to add new points to the figure, and then
+redisplay using <code class="docutils literal notranslate"><span class="pre">display(fig)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">4</span>
-<span class="n">y</span><span class="o">=</span><span class="mi">3</span>
-
-<span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
-        <span class="n">z</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">elif</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="n">z</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="k">elif</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">12</span><span class="p">:</span>
-        <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">z</span><span class="o">=</span><span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="n">filename</span><span class="o">=</span><span class="s1">&#39;temp_flux.npz&#39;</span>
+<span class="n">the_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">flux</span> <span class="o">=</span> <span class="n">the_data</span><span class="p">[</span><span class="s1">&#39;flux&#39;</span><span class="p">]</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">the_data</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">flux</span><span class="p">,</span><span class="n">temp</span><span class="p">,</span> <span class="s1">&#39;b.&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/wk05_indexing_1_0.png" src="../_images/wk05_indexing_1_0.png" />
+</div>
+</div>
+<p>you can redisplay a modfied figure like this:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;flux vs. temperature&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;shortwave flux (W/m^2)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;temperature K&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/wk05_indexing_3_0.png" src="../_images/wk05_indexing_3_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="q1-logical-and-for-flux">
+<h2>Q1 – <code class="docutils literal notranslate"><span class="pre">logical_and</span></code> for flux<a class="headerlink" href="#q1-logical-and-for-flux" title="Permalink to this headline">¶</a></h2>
+<p>Find all pixels with flux values between 500 and 550 <span class="math notranslate nohighlight">\(W/m^2\)</span> and color them yellow.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="question-2">
-<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
-<p><strong>What is the value of z after you execute this script? Add comments to the code</strong></p>
+<div class="section" id="q2-logical-and-for-temperature-and-flux">
+<h2>Q2 – <code class="docutils literal notranslate"><span class="pre">logical_and</span></code> for temperature and flux<a class="headerlink" href="#q2-logical-and-for-temperature-and-flux" title="Permalink to this headline">¶</a></h2>
+<p>Now extend this by finding all pixels with fluxes between 500 and 550 <span class="math notranslate nohighlight">\(W/m^2\)</span>
+and temperatures greater than 300 K and color those cyan.  Redisplay the figure.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">12</span><span class="p">:</span>
-        <span class="n">z</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="question-3">
-<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h2>
-<p><strong>What is the value of z after executing this script? Add comments to the code</strong></p>
+<div class="section" id="q3-argmax">
+<h2>Q3 – argmax<a class="headerlink" href="#q3-argmax" title="Permalink to this headline">¶</a></h2>
+<p>Now find the index of the maximum temperature, and use that index to find the flux for that hottest pixel.
+Make that pixel a large green dot with <code class="docutils literal notranslate"><span class="pre">ax.plot(the_flux,the_temp,'g.',markersize=20)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
-
-<span class="k">if</span> <span class="o">-</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="k">elif</span> <span class="o">-</span><span class="mi">4</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="o">-</span><span class="n">x</span> <span class="o">*</span> <span class="n">y</span> <span class="o">**</span> <span class="mi">2</span>
-    <span class="k">if</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="p">:</span>
-        <span class="n">z</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">z</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>What is <code class="docutils literal notranslate"><span class="pre">z</span></code> after executing this script? What does this script do (in in 4 or 5 words)?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-<span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
-
-<span class="k">if</span>  <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-
-<span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
-    
-<span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
@@ -465,19 +466,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="logic.html" title="previous page">
+        <a class="left-prev" href="complicated_logic.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Logic</p>
+                <p class="prevnext-title">More Complicated Logic</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="wk05_indexing.html" title="next page">
+        <a class="right-next" href="week5_quiz.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Indexing worksheet</p>
+                <p class="prevnext-title">Week 5 quiz</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
