@@ -27,6 +27,7 @@ parts:
     chapters:
       - file: wk05/logic.md
       - file: wk05/complicated_logic.md
+      - file: wk05/wk05_indexing.md
       - file: wk05/week5_quiz.md
       - file: outbound/week5_lab/lab_wk5.ipynb
   # - caption: Assignment 1
