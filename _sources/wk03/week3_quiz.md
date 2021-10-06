@@ -43,8 +43,6 @@ toc:
   toc_window_display: true
 ---
 
-# Week 3 quiz
-
 - **Name:**
 - **Student number:**
 
@@ -54,51 +52,47 @@ toc:
 
 +++
 
-## 1)
+# Week 3 quiz
+
+## numpy arrays
+
+* Q1)
 
 
-    the_list=[4,7,10]
-    the_list*2
-
-$~~~~~~~~~$
-
-$~~~$
-
-$~$
-
-$~~~~~~~~~$
+      the_list=[4,7,10]
+      the_list*2
 
 $~~~~~~~~~$
 
 +++
 
-## 2)
+* Q2)
 
-    import numpy as np
-    the_list=np.array([4,7,10])
-    the_list*2
-
-+++
-
-## 3)
-
-    a=np.array([[1,2,3],[4,5,6],[7,8,9]])
-    a[1,:]
+      import numpy as np
+      the_list=np.array([4,7,10])
+      the_list*2
 
 +++
 
-## 4)
+* Q3)
 
-
-    a=np.array([[1,2,3],[4,5,6],[7,8,9]])
-    a[:,1]=9
-    a
+       a=np.array([[1,2,3],[4,5,6],[7,8,9]])
+       a[1,:]
 
 +++
 
-## 5) 
+* Q4)
 
-    a=np.array([[1,2,3],[4,5,6],[7,8,9]])
-    b = -a
-    a[:,1]=b[2,:]
-    a
+
+       a=np.array([[1,2,3],[4,5,6],[7,8,9]])
+       a[:,1]=9
+       a
+
++++
+
+* Q5) 
+
+       a=np.array([[1,2,3],[4,5,6],[7,8,9]])
+       b = -a
+       a[:,1]=b[2,:]
+       a
