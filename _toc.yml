@@ -11,50 +11,51 @@ parts:
     chapters:
       - file: wk02/data_types.md
       - file: wk02/some_review_plus_built_in_functions_arrays_preview.md
-      - file: wk02/lab_wk2.md
+      - file: wk02/week2_lab/lab_wk2.md
+      - file: wk02/week2_quiz.md
   - caption: Week 3 - Data Structures
     chapters:
       - file: wk03/data_structures.md
       - file: wk03/data_structures_ii.md
-      - file: exchange/e211/outbound/week3_lab/lab_wk3.ipynb
+      - file: outbound/week3_lab/lab_wk3.ipynb
   - caption: Week 4 - Scientific Figures
     chapters:
       - file: wk04/making_plots.md
-      - file: wk04/lab_wk4/lab_wk4.md
+      - file: outbound/week4_lab/lab_wk4.ipynb
   - caption: Week 5 - Computer Logic
     chapters:
       - file: wk05/logic.md
       - file: wk05/complicated_logic.md
-      - file: wk05/lab_wk5/lab_wk5.md
-  - caption: Assignment 1
-    chapters:
-      - file: assignment01/ast1.md
-  - caption: Week 6 - Loops
-    chapters:
-      - file: wk06/loops.md
-      - file: wk06/loops_ii.md
-      - file: wk06/lab_wk6/lab_wk6.md
-  - caption: Week 7 - Midterm
-    chapters:
-      - file: wk07/midterm_review.ipynb
-  - caption: Week 8 - Functions
-    chapters:
-      - file: wk08/functions.md
-      - file: wk08/functions_ii.md
-      - file: wk08/lab_wk8/lab_wk8.md
-  - caption: Week 9 - Debugging 
-    chapters:
-      - file: wk09/debugging.md
-      - file: wk09/debugging_2.md
-      - file: wk09/lab_wk9/lab_wk9.md
-  - caption: Week 10 - Developing Workflows
-    chapters:
-      - file: wk10/dictionaries_and_f_strings.md
-  - caption: Week 11 - Vectorization and Speed
-    chapters:
-      - file: wk11/loops_and_vectorization.ipynb
-      - file: wk11/lab_wk11/lab_wk11.md
-  - caption: Week 12
-    chapters:
-      - file: wk12/file_io_practice.md
-      - file: wk12/exercises.md
+      - file: outbound/week5_lab/lab_wk5.ipynb
+  # - caption: Assignment 1
+  #   chapters:
+  #     - file: assignment01/ast1.md
+  # - caption: Week 6 - Loops
+  #   chapters:
+  #     - file: wk06/loops.md
+  #     - file: wk06/loops_ii.md
+  #     - file: wk06/lab_wk6/lab_wk6.md
+  # - caption: Week 7 - Midterm
+  #   chapters:
+  #     - file: wk07/midterm_review.ipynb
+  # - caption: Week 8 - Functions
+  #   chapters:
+  #     - file: wk08/functions.md
+  #     - file: wk08/functions_ii.md
+  #     - file: wk08/lab_wk8/lab_wk8.md
+  # - caption: Week 9 - Debugging 
+  #   chapters:
+  #     - file: wk09/debugging.md
+  #     - file: wk09/debugging_2.md
+  #     - file: wk09/lab_wk9/lab_wk9.md
+  # - caption: Week 10 - Developing Workflows
+  #   chapters:
+  #     - file: wk10/dictionaries_and_f_strings.md
+  # - caption: Week 11 - Vectorization and Speed
+  #   chapters:
+  #     - file: wk11/loops_and_vectorization.ipynb
+  #     - file: wk11/lab_wk11/lab_wk11.md
+  # - caption: Week 12
+  #   chapters:
+  #     - file: wk12/file_io_practice.md
+  #     - file: wk12/exercises.md
