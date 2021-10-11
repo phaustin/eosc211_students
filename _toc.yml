@@ -7,6 +7,7 @@ parts:
       - file: syllabus/covid_statements.md
       - file: syllabus/schedule_F2021.md
       - file: syllabus/worksheet_steps_in_problem_solving.md
+      - file: syllabus/class_notes.md
   - caption: Week 2 - Data Types
     chapters:
       - file: wk02/data_types.md
@@ -30,17 +31,20 @@ parts:
       - file: wk05/wk05_indexing.md
       - file: wk05/week5_quiz.md
       - file: outbound/week5_lab/lab_wk5.ipynb
-  # - caption: Assignment 1
-  #   chapters:
-  #     - file: assignment01/ast1.md
-  # - caption: Week 6 - Loops
-  #   chapters:
-  #     - file: wk06/loops.md
-  #     - file: wk06/loops_ii.md
+  - caption: Week 6 - Loops
+    chapters:
+      - file: wk06/loops.md
+      - file: wk06/loops_ii.md
+  - caption: Reference material 
+    chapters:
+      - file: reference_notes/thursday_oct7.md
   #     - file: wk06/lab_wk6/lab_wk6.md
   # - caption: Week 7 - Midterm
   #   chapters:
   #     - file: wk07/midterm_review.ipynb
+  # - caption: Assignment 1
+  #   chapters:
+  #     - file: assignment01/ast1.md
   # - caption: Week 8 - Functions
   #   chapters:
   #     - file: wk08/functions.md

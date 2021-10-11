@@ -4,3 +4,4 @@ acme.json
 *.pyc
 *.ipynb
 *_soln*
+*.ipynb_checkpoints*
