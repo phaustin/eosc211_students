@@ -28,10 +28,7 @@ parts:
     chapters:
       - file: wk05/logic.md
       - file: wk05/complicated_logic.md
-<<<<<<< HEAD
       - file: wk05/wk05_indexing.md
-=======
->>>>>>> 39260a1 (wk06 worksheets)
       - file: wk05/week5_quiz.md
       - file: wk05/wk05_indexing.md
       - file: outbound/week5_lab/lab_wk5.ipynb

@@ -30,7 +30,6 @@ parts:
       - file: wk05/complicated_logic.md
       - file: wk05/wk05_indexing.md
       - file: wk05/week5_quiz.md
-      - file: wk05/wk05_indexing.md
       - file: outbound/week5_lab/lab_wk5.ipynb
   - caption: Week 6 - Loops
     chapters:
