@@ -33,6 +33,7 @@ parts:
 =======
 >>>>>>> 39260a1 (wk06 worksheets)
       - file: wk05/week5_quiz.md
+      - file: wk05/wk05_indexing.md
       - file: outbound/week5_lab/lab_wk5.ipynb
   - caption: Week 6 - Loops
     chapters:
