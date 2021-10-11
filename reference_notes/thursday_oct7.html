@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Structures &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    <title>Notes for Thursday Oct. 7 &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,8 +42,6 @@
     <script src="../_static/copybutton.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe"
@@ -53,8 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Structures II" href="data_structures_ii.html" />
-    <link rel="prev" title="Week 2 quiz" href="../wk02/week2_quiz.html" />
+    <link rel="prev" title="Loops II" href="../wk06/loops_ii.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -148,19 +145,19 @@
   Week 3 - Data Structures
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures.html">
    Data Structures
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data_structures_ii.html">
+  <a class="reference internal" href="../wk03/data_structures_ii.html">
    Data Structures II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="week3_quiz.html">
+  <a class="reference internal" href="../wk03/week3_quiz.html">
    Week 3 quiz
   </a>
  </li>
@@ -241,9 +238,9 @@
   Reference material
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../reference_notes/thursday_oct7.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Notes for Thursday Oct. 7
   </a>
  </li>
@@ -287,11 +284,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/wk03/data_structures.ipynb"><button type="button"
+            href="../_sources/reference_notes/thursday_oct7.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk03/data_structures.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/reference_notes/thursday_oct7.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -316,14 +313,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk03/data_structures.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/reference_notes/thursday_oct7.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk03/data_structures.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/reference_notes/thursday_oct7.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -345,21 +342,31 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eosc-211">
-   EOSC 211
+  <a class="reference internal nav-link" href="#week-5-lab">
+   Week 5 lab
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objects-instances-and-types">
+   Objects, instances, and types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#untangling-spaghetti-code">
+   Untangling spaghetti code
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#question-1-generating-arrays">
-     Question 1: Generating Arrays
+    <a class="reference internal nav-link" href="#example-find-an-item-in-a-list">
+     Example: Find an item in a list
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-return-a-slice-from-a-dictionary">
+     Example:  return a slice from a dictionary
     </a>
    </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2-array-slicing">
-   Question 2: Array Slicing
-  </a>
  </li>
 </ul>
 
@@ -372,164 +379,121 @@
         
               <div>
                 
-  <div class="section" id="data-structures">
-<h1>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="eosc-211">
-<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
-<p><strong>Week 3</strong></p>
-<p><strong>Learning Objectives:</strong></p>
-<ol class="simple">
-<li><p>Introduce numpy arrays</p></li>
-<li><p>Use some of numpy’s built in functions to generate arrays efficiently</p></li>
-<li><p>Use slicing to access and change elements of an array</p></li>
-</ol>
-<p>Useful references:</p>
-<p><a class="reference external" href="https://phaustin.github.io/Problem-Solving-with-Python/NumPy-and-Arrays/Introduction.html">Course Reading on Numpy Arrays</a></p>
-<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">Numpy Documentation</a></p>
+  <div class="section" id="notes-for-thursday-oct-7">
+<h1>Notes for Thursday Oct. 7<a class="headerlink" href="#notes-for-thursday-oct-7" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="week-5-lab">
+<h2>Week 5 lab<a class="headerlink" href="#week-5-lab" title="Permalink to this headline">¶</a></h2>
+<p>1.) Watch your brackets:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cosine(the_lat_radians)</span></code>  – function evaluation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">topo[i,j+1]</span></code>  – indexing</p></li>
+</ul>
+<p>2.) Simplify complex formulas by evaluating pieces separately</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> numerator=(a + b)**3. - np.exp(c)  
+ denom = cos(5z) - np.log(y)`  
+ slope = np.arctan(umerator/denom)  
+</pre></div>
+</div>
+<p>3.)  When in doubt about how row/colum relate to lat/lon on an image, draw a dot
+on your map</p>
+</div>
+<div class="section" id="objects-instances-and-types">
+<h2>Objects, instances, and types<a class="headerlink" href="#objects-instances-and-types" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://eli.thegreenplace.net/2012/03/30/python-objects-types-classes-and-instances-a-glossary">A glossary</a></p></li>
+<li><p>A type or class:  np.array or NoneType</p></li>
+<li><p>An instance or object:  np.array([5,6,7]) or None</p></li>
+</ul>
+</div>
+<div class="section" id="untangling-spaghetti-code">
+<h2>Untangling spaghetti code<a class="headerlink" href="#untangling-spaghetti-code" title="Permalink to this headline">¶</a></h2>
+<p>1.) Comment your code to make your intent clear<br />
+2.) For choosing one among many, use the <code class="docutils literal notranslate"><span class="pre">in</span></code> keyword</p>
+<div class="section" id="example-find-an-item-in-a-list">
+<h3>Example: Find an item in a list<a class="headerlink" href="#example-find-an-item-in-a-list" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the numpy package - an extension of python&#39;s core built in functions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guestlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tom&#39;</span><span class="p">,</span><span class="s1">&#39;betty&#39;</span><span class="p">,</span><span class="s1">&#39;ulma&#39;</span><span class="p">]</span>
+<span class="n">guest</span> <span class="o">=</span> <span class="s1">&#39;ulma&#39;</span>
+<span class="k">if</span> <span class="n">guest</span> <span class="ow">in</span> <span class="n">guestlist</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Welcome </span><span class="si">{</span><span class="n">guest</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome ulma!
+</pre></div>
+</div>
+</div>
+</div>
+<p>3.) Use dictionaries to hold functions and slices by keyword</p>
+</div>
+<div class="section" id="example-return-a-slice-from-a-dictionary">
+<h3>Example:  return a slice from a dictionary<a class="headerlink" href="#example-return-a-slice-from-a-dictionary" title="Permalink to this headline">¶</a></h3>
+<p>Suppose that if our map projection is mercator, then our study region (Vancouver Island) is
+located between row 10 and row 20 and column 100 and column 107 on a series of satellite images.
+If our map projection is Lambert Azimuthal, then there’s a different set of corners for the region.
+How would we find the right slice without an if/else block?</p>
+<p>Answer: store the slices in a dictionary and look them up by dictionary key</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a fake image</span>
+
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">numcols</span> <span class="o">=</span> <span class="mi">200</span>
+<span class="n">numrows</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">fake_image</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">numcols</span><span class="o">*</span><span class="n">numrows</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="n">numrows</span><span class="p">,</span><span class="n">numcols</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">fake_image</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">0</span><span class="p">:</span><span class="mi">5</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[   0    1    2    3    4]
+ [ 200  201  202  203  204]
+ [ 400  401  402  403  404]
+ [ 600  601  602  603  604]
+ [ 800  801  802  803  804]
+ [1000 1001 1002 1003 1004]
+ [1200 1201 1202 1203 1204]
+ [1400 1401 1402 1403 1404]
+ [1600 1601 1602 1603 1604]
+ [1800 1801 1802 1803 1804]]
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="question-1-generating-arrays">
-<h3>Question 1: Generating Arrays<a class="headerlink" href="#question-1-generating-arrays" title="Permalink to this headline">¶</a></h3>
-<p>Some built-in functions (functions that come with the numpy package) which may be useful:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">()</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">()</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">()</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">()</span>
-    <span class="n">my_array</span><span class="o">.</span><span class="n">shape</span>
-    <span class="n">my_array</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-</div>
-<p>There are several correct ways to do each of these; some strategies are better than others. Have a look at the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">numpy documentation</a> for help using numpy’s built in functions</p>
-<p><strong>A) Represent the following vector as a numpy array called <code class="docutils literal notranslate"><span class="pre">var1</span></code></strong></p>
-<div class="math notranslate nohighlight">
-\[
-(1.1, 2.2, 3.3, 4.4, 5.5) 
-\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a dictionary that has &#39;mercator&#39; as its first key, and holds another dictionary with</span>
+<span class="c1"># &#39;rows&#39; and &#39;columns&#39; keys for that map projection</span>
+
+<span class="n">row_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># 10:20</span>
+<span class="n">column_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">107</span><span class="p">)</span>  <span class="c1"># 100:107</span>
+<span class="n">corner_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">corner_dict</span><span class="p">[</span><span class="s1">&#39;mercator&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;rows&#39;</span><span class="p">:</span> <span class="n">row_slice</span><span class="p">,</span><span class="s1">&#39;columns&#39;</span><span class="p">:</span><span class="n">column_slice</span><span class="p">}</span>
+<span class="c1">## now use these slices on the fake_image</span>
+
+<span class="n">projection</span><span class="o">=</span><span class="s1">&#39;mercator&#39;</span>
+<span class="n">island_rows</span> <span class="o">=</span> <span class="n">corner_dict</span><span class="p">[</span><span class="n">projection</span><span class="p">][</span><span class="s1">&#39;rows&#39;</span><span class="p">]</span>
+<span class="n">island_columns</span> <span class="o">=</span> <span class="n">corner_dict</span><span class="p">[</span><span class="n">projection</span><span class="p">][</span><span class="s1">&#39;columns&#39;</span><span class="p">]</span>
+<span class="n">island_image</span> <span class="o">=</span> <span class="n">fake_image</span><span class="p">[</span><span class="n">island_rows</span><span class="p">,</span><span class="n">island_columns</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">island_image</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p><strong>B) Create a numpy array called <code class="docutils literal notranslate"><span class="pre">var2</span></code> with numbers 0 to 10</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2100 2101 2102 2103 2104 2105 2106]
+ [2300 2301 2302 2303 2304 2305 2306]
+ [2500 2501 2502 2503 2504 2505 2506]
+ [2700 2701 2702 2703 2704 2705 2706]
+ [2900 2901 2902 2903 2904 2905 2906]
+ [3100 3101 3102 3103 3104 3105 3106]
+ [3300 3301 3302 3303 3304 3305 3306]
+ [3500 3501 3502 3503 3504 3505 3506]
+ [3700 3701 3702 3703 3704 3705 3706]
+ [3900 3901 3902 3903 3904 3905 3906]]
 </pre></div>
 </div>
-</div>
-</div>
-<p><strong>C) Create a numpy array called <code class="docutils literal notranslate"><span class="pre">var3</span></code> containing all odd numbers (in order) from 0 to 1000</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>D) Represent the following matrix as a numpy array called <code class="docutils literal notranslate"><span class="pre">var4</span></code></strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{pmatrix}
-1 &amp; 1 \\
-2 &amp; 3 \\
-5 &amp; 8
-\end{pmatrix}
-\end{split}\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>E) Is <code class="docutils literal notranslate"><span class="pre">var4</span></code> a 2 x 3 array or a 3 x 2?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>F) Make an array called <code class="docutils literal notranslate"><span class="pre">var5</span></code> that looks like this. (hint: you shouldn’t have to type it all out)</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{pmatrix}
-1 &amp; 2 &amp; 5\\
-1 &amp; 3 &amp; 8\\
-\end{pmatrix}
-\end{split}\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>G) Create an array called <code class="docutils literal notranslate"><span class="pre">var6</span></code> with 10 rows and 5 columns where all elements are zero</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>H) Create an array called <code class="docutils literal notranslate"><span class="pre">var7</span></code> that has 5 rows and 10 columns where all elements are the number 1</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="question-2-array-slicing">
-<h2>Question 2: Array Slicing<a class="headerlink" href="#question-2-array-slicing" title="Permalink to this headline">¶</a></h2>
-<p><strong>A) Use slicing to get the 3rd element in <code class="docutils literal notranslate"><span class="pre">var1</span></code>. REMEMBER that in Python we count starting from zero, so the first element of an array would look like <code class="docutils literal notranslate"><span class="pre">my_array[0]</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>B) The 2nd, 3rd, and 4th elements of <code class="docutils literal notranslate"><span class="pre">var1</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>C) The last 20 elements in <code class="docutils literal notranslate"><span class="pre">var3</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>D) The element in the third row and second column of <code class="docutils literal notranslate"><span class="pre">var4</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>E) The last column of <code class="docutils literal notranslate"><span class="pre">var5</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
 </div>
 </div>
 </div>
@@ -549,7 +513,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./wk03"
+            path: "./reference_notes"
         },
         predefinedOutput: true
     }
@@ -566,23 +530,14 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../wk02/week2_quiz.html" title="previous page">
+        <a class="left-prev" href="../wk06/loops_ii.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Week 2 quiz</p>
+                <p class="prevnext-title">Loops II</p>
             </div>
         </a>
     </div>
-     <div id="next">
-        <a class="right-next" href="data_structures_ii.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Data Structures II</p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
 
 </div>
         

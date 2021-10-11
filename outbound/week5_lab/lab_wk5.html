@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -53,6 +53,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Loops" href="../../wk06/loops.html" />
     <link rel="prev" title="Week 5 quiz" href="../../wk05/week5_quiz.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -71,7 +72,6 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
-      
       
       
       <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
@@ -216,6 +216,35 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Lab Week 5
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/loops_ii.html">
+   Loops II
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference_notes/thursday_oct7.html">
+   Notes for Thursday Oct. 7
   </a>
  </li>
 </ul>
@@ -584,7 +613,7 @@ slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta lon \cdot 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60456</span><span class="o">/</span><span class="mf">1067236896.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1353904</span><span class="o">/</span><span class="mf">1067236896.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># YOUR CODE HERE</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -615,7 +644,7 @@ slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta lon \cdot 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60456</span><span class="o">/</span><span class="mf">1067236896.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1353904</span><span class="o">/</span><span class="mf">1067236896.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># YOUR CODE HERE</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -674,7 +703,7 @@ will run your code for arbitrary values of <code class="docutils literal notrans
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60456</span><span class="o">/</span><span class="mf">1067236896.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1353904</span><span class="o">/</span><span class="mf">1067236896.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># YOUR CODE HERE</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
 
@@ -725,12 +754,21 @@ will run your code for arbitrary values of <code class="docutils literal notrans
             </div>
         </a>
     </div>
+     <div id="next">
+        <a class="right-next" href="../../wk06/loops.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Loops</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
 
 </div>
         
         </div>
     </div>
-    <footer class="footer">
+    <footer class="footer mt-5 mt-md-0">
     <div class="container">
       <p>
         

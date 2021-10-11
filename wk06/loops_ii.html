@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Structures &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    <title>Loops II &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data Structures II" href="data_structures_ii.html" />
-    <link rel="prev" title="Week 2 quiz" href="../wk02/week2_quiz.html" />
+    <link rel="next" title="Notes for Thursday Oct. 7" href="../reference_notes/thursday_oct7.html" />
+    <link rel="prev" title="Loops" href="loops.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -148,19 +148,19 @@
   Week 3 - Data Structures
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures.html">
    Data Structures
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="data_structures_ii.html">
+  <a class="reference internal" href="../wk03/data_structures_ii.html">
    Data Structures II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="week3_quiz.html">
+  <a class="reference internal" href="../wk03/week3_quiz.html">
    Week 3 quiz
   </a>
  </li>
@@ -224,14 +224,14 @@
   Week 6 - Loops
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/loops.html">
+  <a class="reference internal" href="loops.html">
    Loops
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/loops_ii.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Loops II
   </a>
  </li>
@@ -287,11 +287,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/wk03/data_structures.ipynb"><button type="button"
+            href="../_sources/wk06/loops_ii.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk03/data_structures.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/wk06/loops_ii.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -316,14 +316,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk03/data_structures.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk06/loops_ii.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk03/data_structures.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk06/loops_ii.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -348,17 +348,30 @@
   <a class="reference internal nav-link" href="#eosc-211">
    EOSC 211
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#question-1-generating-arrays">
-     Question 1: Generating Arrays
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2-array-slicing">
-   Question 2: Array Slicing
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   Question 5
   </a>
  </li>
 </ul>
@@ -372,160 +385,73 @@
         
               <div>
                 
-  <div class="section" id="data-structures">
-<h1>Data Structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="loops-ii">
+<h1>Loops II<a class="headerlink" href="#loops-ii" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="eosc-211">
 <h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
-<p><strong>Week 3</strong></p>
+<p><strong>Week 6 Day 2</strong></p>
 <p><strong>Learning Objectives:</strong></p>
 <ol class="simple">
-<li><p>Introduce numpy arrays</p></li>
-<li><p>Use some of numpy’s built in functions to generate arrays efficiently</p></li>
-<li><p>Use slicing to access and change elements of an array</p></li>
+<li><p>More practice with loops</p></li>
+<li><p>Write elegant, efficient code</p></li>
 </ol>
-<p>Useful references:</p>
-<p><a class="reference external" href="https://phaustin.github.io/Problem-Solving-with-Python/NumPy-and-Arrays/Introduction.html">Course Reading on Numpy Arrays</a></p>
-<p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">Numpy Documentation</a></p>
+<p><strong>Write Python code to solve the following problems.</strong></p>
+</div>
+<div class="section" id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<p><strong>Display the numbers of the series 2 4 6 8 10 12 …100 to the screen one by one.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the numpy package - an extension of python&#39;s core built in functions</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-2">
+<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
+<p>You are given the matrix <span class="math notranslate nohighlight">\(A\)</span> which is size 10x20. The following code loops through each element <span class="math notranslate nohighlight">\(A_{ij}\)</span> and calculates <span class="math notranslate nohighlight">\(i \cdot j \cdot A_{ij}\)</span>. Modify this code to store successive calculations in successive elements of a new variable <code class="docutils literal notranslate"><span class="pre">B</span></code> which will be size 1x200.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># modify this code</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">])</span>
+<span class="o">*</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>        
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="question-1-generating-arrays">
-<h3>Question 1: Generating Arrays<a class="headerlink" href="#question-1-generating-arrays" title="Permalink to this headline">¶</a></h3>
-<p>Some built-in functions (functions that come with the numpy package) which may be useful:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">()</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">()</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">()</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">()</span>
-    <span class="n">my_array</span><span class="o">.</span><span class="n">shape</span>
-    <span class="n">my_array</span><span class="o">.</span><span class="n">T</span>
-</pre></div>
-</div>
-<p>There are several correct ways to do each of these; some strategies are better than others. Have a look at the <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.array.html">numpy documentation</a> for help using numpy’s built in functions</p>
-<p><strong>A) Represent the following vector as a numpy array called <code class="docutils literal notranslate"><span class="pre">var1</span></code></strong></p>
-<div class="math notranslate nohighlight">
-\[
-(1.1, 2.2, 3.3, 4.4, 5.5) 
-\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>B) Create a numpy array called <code class="docutils literal notranslate"><span class="pre">var2</span></code> with numbers 0 to 10</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>C) Create a numpy array called <code class="docutils literal notranslate"><span class="pre">var3</span></code> containing all odd numbers (in order) from 0 to 1000</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>D) Represent the following matrix as a numpy array called <code class="docutils literal notranslate"><span class="pre">var4</span></code></strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{pmatrix}
-1 &amp; 1 \\
-2 &amp; 3 \\
-5 &amp; 8
-\end{pmatrix}
-\end{split}\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>E) Is <code class="docutils literal notranslate"><span class="pre">var4</span></code> a 2 x 3 array or a 3 x 2?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>F) Make an array called <code class="docutils literal notranslate"><span class="pre">var5</span></code> that looks like this. (hint: you shouldn’t have to type it all out)</strong></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{pmatrix}
-1 &amp; 2 &amp; 5\\
-1 &amp; 3 &amp; 8\\
-\end{pmatrix}
-\end{split}\]</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>G) Create an array called <code class="docutils literal notranslate"><span class="pre">var6</span></code> with 10 rows and 5 columns where all elements are zero</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>H) Create an array called <code class="docutils literal notranslate"><span class="pre">var7</span></code> that has 5 rows and 10 columns where all elements are the number 1</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_1354405/2511859354.py&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+    <span class="o">*</span>
+     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+<div class="section" id="question-3">
+<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h2>
+<p><strong>Given a variable <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">12,</span> <span class="pre">53,</span> <span class="pre">34,</span> <span class="pre">61,</span> <span class="pre">16,</span> <span class="pre">17,</span> <span class="pre">38,</span> <span class="pre">20]</span></code>,  generate a new variable <code class="docutils literal notranslate"><span class="pre">y</span></code> whose elements are</strong></p>
+<p><strong>a.	2 times the value of the corresponding element in <code class="docutils literal notranslate"><span class="pre">x</span></code> if the latter is even</strong></p>
+<p><strong>b.	3 times the value of the corresponding element in <code class="docutils literal notranslate"><span class="pre">x</span></code> if the latter is odd</strong></p>
 </div>
-<div class="section" id="question-2-array-slicing">
-<h2>Question 2: Array Slicing<a class="headerlink" href="#question-2-array-slicing" title="Permalink to this headline">¶</a></h2>
-<p><strong>A) Use slicing to get the 3rd element in <code class="docutils literal notranslate"><span class="pre">var1</span></code>. REMEMBER that in Python we count starting from zero, so the first element of an array would look like <code class="docutils literal notranslate"><span class="pre">my_array[0]</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="section" id="question-4">
+<h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>
+<p><strong>Given a user’s input of some integer num, calculate the factorial of the input. Definition: n! = n(n-1)(n-2)…(3)(2)(1)</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># assigns user input to a variable `num`</span>
+<span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter an integer: &#39;</span><span class="p">))</span>
+<span class="c1"># add your code here</span>
 </pre></div>
 </div>
 </div>
-</div>
-<p><strong>B) The 2nd, 3rd, and 4th elements of <code class="docutils literal notranslate"><span class="pre">var1</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>C) The last 20 elements in <code class="docutils literal notranslate"><span class="pre">var3</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>D) The element in the third row and second column of <code class="docutils literal notranslate"><span class="pre">var4</span></code></strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>E) The last column of <code class="docutils literal notranslate"><span class="pre">var5</span></code></strong></p>
+<div class="section" id="question-5">
+<h2>Question 5<a class="headerlink" href="#question-5" title="Permalink to this headline">¶</a></h2>
+<p>Modify the above factorial calculation to return an error message if num is negative or is not an integer.
+To exit and raise an error, include <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">Exception('Error</span> <span class="pre">message</span> <span class="pre">here')</span></code>, or  <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">TypeError('Error</span> <span class="pre">message</span> <span class="pre">here')</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
@@ -549,7 +475,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./wk03"
+            path: "./wk06"
         },
         predefinedOutput: true
     }
@@ -566,19 +492,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../wk02/week2_quiz.html" title="previous page">
+        <a class="left-prev" href="loops.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Week 2 quiz</p>
+                <p class="prevnext-title">Loops</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="data_structures_ii.html" title="next page">
+        <a class="right-next" href="../reference_notes/thursday_oct7.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Data Structures II</p>
+                <p class="prevnext-title">Notes for Thursday Oct. 7</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
