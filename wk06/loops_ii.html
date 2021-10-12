@@ -316,14 +316,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk06/loops_ii.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk06/loops_ii.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk06/loops_ii.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk06/loops_ii.ipynb&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -410,24 +410,23 @@
 </div>
 <div class="section" id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
-<p>You are given the matrix <span class="math notranslate nohighlight">\(A\)</span> which is size 10x20. The following code loops through each element <span class="math notranslate nohighlight">\(A_{ij}\)</span> and calculates <span class="math notranslate nohighlight">\(i \cdot j \cdot A_{ij}\)</span>. Modify this code to store successive calculations in successive elements of a new variable <code class="docutils literal notranslate"><span class="pre">B</span></code> which will be size 1x200.</p>
+<p>You are given the matrix <span class="math notranslate nohighlight">\(A\)</span> which is size 10x20. The following code loops through each element <span class="math notranslate nohighlight">\(A_{ij}\)</span> and calculates <span class="math notranslate nohighlight">\(i \cdot j \cdot A_{ij}\)</span>. Modify this code to store successive calculations in successive elements of a new variable <code class="docutils literal notranslate"><span class="pre">B</span></code> which will have shape 1x200.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># modify this code</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">])</span>
-<span class="o">*</span>
+
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
         <span class="n">k</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>        
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_1438266/2511859354.py&quot;</span><span class="gt">, line </span><span class="mi">4</span>
-    <span class="o">*</span>
-     <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your modified version here</span>
 </pre></div>
 </div>
 </div>
@@ -438,6 +437,13 @@
 <p><strong>Given a variable <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">12,</span> <span class="pre">53,</span> <span class="pre">34,</span> <span class="pre">61,</span> <span class="pre">16,</span> <span class="pre">17,</span> <span class="pre">38,</span> <span class="pre">20]</span></code>,  generate a new variable <code class="docutils literal notranslate"><span class="pre">y</span></code> whose elements are</strong></p>
 <p><strong>a.	2 times the value of the corresponding element in <code class="docutils literal notranslate"><span class="pre">x</span></code> if the latter is even</strong></p>
 <p><strong>b.	3 times the value of the corresponding element in <code class="docutils literal notranslate"><span class="pre">x</span></code> if the latter is odd</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 <div class="section" id="question-4">
 <h2>Question 4<a class="headerlink" href="#question-4" title="Permalink to this headline">¶</a></h2>

@@ -36,16 +36,20 @@ kernelspec:
 
 ## Question 2
 
-You are given the matrix $A$ which is size 10x20. The following code loops through each element $A_{ij}$ and calculates $i \cdot j \cdot A_{ij}$. Modify this code to store successive calculations in successive elements of a new variable `B` which will be size 1x200.
+You are given the matrix $A$ which is size 10x20. The following code loops through each element $A_{ij}$ and calculates $i \cdot j \cdot A_{ij}$. Modify this code to store successive calculations in successive elements of a new variable `B` which will have shape 1x200.
 
 ```{code-cell} ipython3
 # modify this code
 import numpy as np
 A = np.ones([10,20])
-*
+
 for i in np.arange(0,10):
     for j in np.arange(0,20):
         k = i * j * A[i,j]        
+```
+
+```{code-cell} ipython3
+# your modified version here
 ```
 
 ## Question 3
@@ -56,7 +60,9 @@ for i in np.arange(0,10):
 
 **b.	3 times the value of the corresponding element in `x` if the latter is odd**
 
-
+```{code-cell} ipython3
+# your code here
+```
 
 ## Question 4 
 

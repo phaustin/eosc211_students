@@ -22,7 +22,7 @@ kernelspec:
 1. Use for and while loops to do useful things
 2. Appreciate built in functions
 
-**Write Python code to solve the following problems.  Do not use any built-in functions (unless explicitly allowed)**
+**Write Python code to solve the following problems.  Do not use any built-in functions (unless explicitly allowed).  It is really good practice to 'map out' your algorithm on paper/in your note-taking app first.  In other words, write what we call 'pseudo-code' or a flow chart.  This will almost always save you a LOT of time debugging later.**
 
 +++
 
@@ -34,8 +34,6 @@ kernelspec:
 # your code here
 ```
 
-
-
 ## Question 2
 
 **Use a loop to find the maximum (largest) value in `x`, writing the result into a variable `largest`.**
@@ -43,8 +41,6 @@ kernelspec:
 ```{code-cell} ipython3
 # your code here
 ```
-
-
 
 ## Question 3
 
@@ -54,7 +50,6 @@ kernelspec:
 # your code here
 ```
 
-
 ## Question 4
 
 **Consider an MxN array `A`.  Use a double loop to form a new 1xN array `rowsum`, the k$^{th}$ element of which contains the sum of elements in the k$^{th}$ column of `A`. You may use the built in functions `range()` and `len()`.**
@@ -63,17 +58,15 @@ kernelspec:
 # your code here
 ```
 
-
-
 ## Exercise 5
 
-**A) Run the following cell. What is the output (descrive in words)**
+**A) Run the following cell. What is the output (describe in words)**
 
 ```{code-cell} ipython3
 import numpy as np
 x = np.array([0, 1])
 for k in np.arange(2,20):
-    x = np.append(x, x[k-1] + x[k-2])
+    x = np.append(x, x[k-1] + x[k-2
 ```
 
 your answer here
@@ -84,6 +77,4 @@ your answer here
 
 +++
 
-
 your answer here
-
