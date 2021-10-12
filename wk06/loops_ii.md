@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.4
+    jupytext_version: 1.10.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -40,6 +40,7 @@ You are given the matrix $A$ which is size 10x20. The following code loops throu
 
 ```{code-cell} ipython3
 # modify this code
+import numpy as np
 A = np.ones([10,20])
 
 for i in np.arange(0,10):
@@ -67,11 +68,15 @@ for i in np.arange(0,10):
 
 **Given a user’s input of some integer num, calculate the factorial of the input. Definition: n! = n(n-1)(n-2)...(3)(2)(1)**
 
-```{code-cell} ipython3
++++
+
+``` python
 # assigns user input to a variable `num`
 num = int(input('Enter an integer: '))
 # add your code here
 ```
+
++++
 
 ## Question 5
 

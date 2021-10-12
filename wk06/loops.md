@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.4
+    jupytext_version: 1.10.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -63,6 +63,7 @@ kernelspec:
 **A) Run the following cell. What is the output (describe in words)**
 
 ```{code-cell} ipython3
+import numpy as np
 x = np.array([0, 1])
 for k in np.arange(2,20):
     x = np.append(x, x[k-1] + x[k-2])
