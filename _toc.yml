@@ -33,8 +33,10 @@ parts:
       - file: lab_keys/week5_lab/lab_wk5.md
   - caption: Week 6 - Loops
     chapters:
-      - file: wk06/loops.ipynb
-      - file: wk06/loops_ii.ipynb
+      - file: wk06/loops.md
+      - file: wk06/loops_soln.md
+      - file: wk06/loops_ii.md
+      - file: wk06/week6_quiz_sol.ipynb
       - file: outbound/week6_lab/lab_wk6.ipynb
   - caption: Reference material 
     chapters:
