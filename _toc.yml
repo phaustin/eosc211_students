@@ -37,7 +37,7 @@ parts:
       - file: wk06/loops_soln.md
       - file: wk06/loops_ii.md
       - file: wk06/week6_quiz_sol.ipynb
-      - file: outbound/week6_lab/lab_wk6.ipynb
+      - file: lab_keys/week6_lab/lab_wk6.ipynb
   - caption: Reference material 
     chapters:
       - file: reference_notes/thursday_oct7.md
