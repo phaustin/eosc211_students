@@ -1,18 +1,20 @@
 ---
 jupytext:
+  cell_metadata_filter: all
   formats: ipynb,md:myst
+  notebook_metadata_filter: all,-language_info,-toc,-latex_envs
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.4
+    jupytext_version: 1.10.3
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
   name: python3
 ---
 
-# Loops II
+# Loops II solution
 
 ## EOSC 211
 
