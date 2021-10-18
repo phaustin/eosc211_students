@@ -13,6 +13,10 @@ kernelspec:
   name: python3
 ---
 
+# Week 5 indexing solution
+
+First -- generate some random data for indexing
+
 ```{code-cell} ipython3
 import numpy.random as nr
 from matplotlib import pyplot as plt
