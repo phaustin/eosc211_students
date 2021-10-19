@@ -1,14 +1,15 @@
 ---
-celltoolbar: Create Assignment
 jupytext:
-  cell_metadata_filter: all
   formats: ipynb,md:myst
-  notebook_metadata_filter: all
   text_representation:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.4
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
 ---
 
 - **Name:**
