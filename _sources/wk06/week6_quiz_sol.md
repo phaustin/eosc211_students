@@ -50,15 +50,6 @@ for the_name in ['tom','lisa','joey','steph']:
 ## Q2 What does the following cell print?
 
 ```{code-cell} ipython3
-a = -1
-while a < 3:
-    a = a+1
-    print(a)
-```
-
-## Q3 What does the following cell print?
-
-```{code-cell} ipython3
 for icount in range(3):
     jcount = 0
     while jcount < 2*icount:
@@ -67,7 +58,7 @@ for icount in range(3):
         
 ```
 
-## Provide code that does the following
+## Q3 Provide code that does the following
 
 Use a while loop to print all numbers between 0 and 20 (inclusive) that
 are divisible by 5
