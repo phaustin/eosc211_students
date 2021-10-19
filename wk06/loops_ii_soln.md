@@ -33,15 +33,17 @@ kernelspec:
 **Display the numbers of the series 2 4 6 8 10 12 …100 to the screen one by one.**
 
 ```{code-cell} ipython3
+import numpy as np
 # your code here
 ```
 
-```{code-cell} ipython3
+```python
 # andrew's soln
-import numpy as np
 for num in np.arange(2,101,2):
     print(num)
 ```
+
++++
 
 ## Question 2
 
@@ -114,35 +116,48 @@ for k in range(len(x)):
     else:
         y[k] = 3 * x[k] 
         
-print(f'y contains {y}')
-print(f'\n ** Note that here y has type float and in previous solution using np.empty_like had type int (same as x)')
-print(f'\n ** We saw this also in a question on the previous worksheet')
-print(f'\n ** Depending on your problem you may or may not want to preserve type')
-print(f'\n ** e.g. think about what happens if I wanted half the value of the element of x when the latter is odd')
+message=f"""
+   y contains {y}
+   
+   Note that here y has type float and in previous 
+   solution using np.empty_like had type int (same as x)
+   We saw this also in a question on the previous worksheet
+   Depending on your problem you may or may not want to preserve type
+   e.g. think about what happens if I wanted half the value of 
+   the element of x when the latter is odd
+   """
+
+print(message)
 ```
 
 ## Question 4 
 
 **Given a user’s input of some integer num, calculate the factorial of the input. Definition: n! = n(n-1)(n-2)...(3)(2)(1)**
 
-```{code-cell} ipython3
++++
+
+```python
 # assigns user input to a variable `num`
 num = int(input('Enter an integer: '))
 # add your code here
 ```
 
-```{code-cell} ipython3
++++
+
+``` python
 # assigns user input to a variable `num`
-num = int(input('Enter an integer: '))
+num = int(input('Enter an integer: '))  
 # andrew's soln
-fac = 1
-for n in range(num):
-    #print(n+1)
-    fac *= (n + 1) # rememver pythons counting convention, add 1 to n to 
+fac = 1  
+for n in range(num):  
+    #print(n+1)  
+    fac *= (n + 1) # remember pythons counting convention, add 1 to n to 
 print(fac)
 ```
 
-```{code-cell} ipython3
++++
+
+``` python
 # catherine's solution
 num = int(input('Enter your favorite positive integer'))
 
@@ -153,6 +168,8 @@ for n in range(num,1,-1):   # goes from n down to 2 inclusive, multiplying by 1 
 print(my_fac)
 ```
 
++++
+
 ## Question 5
 
 Modify the above factorial calculation to return an error message if num is negative or is not an integer. 
@@ -162,7 +179,7 @@ To exit and raise an error, include `raise Exception('Error message here')`, or 
 # your code here
 ```
 
-```{code-cell} ipython3
+```python
 # andrew's soln
 num = int(input('Enter an integer: '))
 print(type(num))
@@ -171,7 +188,9 @@ print(type(num))
 # cast from str to int then it raises a ValueError
 ```
 
-```{code-cell} ipython3
++++
+
+```python
 # catherine's solution
 
 # casting into 'int' on input deals with cases that are not an integer

@@ -9,26 +9,14 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.10.3
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
-language_info:
-  codemirror_mode:
-    name: ipython
-    version: 3
-  file_extension: .py
-  mimetype: text/x-python
-  name: python
-  nbconvert_exporter: python
-  pygments_lexer: ipython3
-  version: 3.8.10
 ---
 
 - **Name:**
 - **Student number:**
 
 +++
+
+# Week 5 quiz solution
 
 **Instructions**:  The three items on this page show the python code in individual cells in a  jupyter notebook.  For each of the three, write down what the cell would display if you ran it.
 
