@@ -39,13 +39,12 @@ parts:
       - file: wk06/loops_ii.md
       - file: wk06/week6_quiz_sol.ipynb
       - file: lab_keys/week6_lab/lab_wk6.ipynb
+  - caption: Week 7 - Midterm
+    chapters:
+      - file: wk07/midterm_review.md
   - caption: Reference material 
     chapters:
       - file: reference_notes/thursday_oct7.md
-  #     - file: wk06/lab_wk6/lab_wk6.md
-  # - caption: Week 7 - Midterm
-  #   chapters:
-  #     - file: wk07/midterm_review.ipynb
   # - caption: Assignment 1
   #   chapters:
   #     - file: assignment01/ast1.md
