@@ -14,7 +14,7 @@ kernelspec:
   name: python3
 ---
 
-# Loops solution
+# Loops -- Solution
 
 ## EOSC 211
 
@@ -173,6 +173,7 @@ print(f'\nCan you see a subtle difference between the two solutions? See also lo
 x = np.array([0, 1])
 for k in np.arange(2,20):
     x = np.append(x, x[k-1] + x[k-2])
+print(x)
 ```
 
 your answer here
@@ -183,4 +184,4 @@ your answer here
 
 +++
 
-your answer here
+just one

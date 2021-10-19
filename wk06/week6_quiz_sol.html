@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -70,6 +70,7 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
       
       
       <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
@@ -212,8 +213,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk05/week5_quiz.html">
-   Week 5 quiz
+  <a class="reference internal" href="../wk05/week5_quiz_sol.html">
+   Week 5 quiz solution
   </a>
  </li>
  <li class="toctree-l1">
@@ -235,7 +236,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="loops_soln.html">
-   Loops solution
+   Loops – Solution
   </a>
  </li>
  <li class="toctree-l1">
@@ -261,8 +262,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk07/midterm_review.html">
-   Midterm Review
+  <a class="reference internal" href="../wk07/midterm_review_sol.html">
+   Midterm Review solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/week7_quiz_sol.html">
+   Week 7 quiz solution
   </a>
  </li>
 </ul>
@@ -385,8 +391,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q3-provide-code-that-does-the-following">
-   Q3 Provide code that does the following
+  <a class="reference internal nav-link" href="#q3-what-does-the-following-cell-print">
+   Q3 What does the following cell print?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#provide-code-that-does-the-following">
+   Provide code that does the following
   </a>
  </li>
 </ul>
@@ -431,6 +442,27 @@ joey
 <h2>Q2 What does the following cell print?<a class="headerlink" href="#q2-what-does-the-following-cell-print" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+1
+2
+3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="q3-what-does-the-following-cell-print">
+<h2>Q3 What does the following cell print?<a class="headerlink" href="#q3-what-does-the-following-cell-print" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">icount</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="n">jcount</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">jcount</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">icount</span><span class="p">:</span>
@@ -452,8 +484,8 @@ joey
 </div>
 </div>
 </div>
-<div class="section" id="q3-provide-code-that-does-the-following">
-<h2>Q3 Provide code that does the following<a class="headerlink" href="#q3-provide-code-that-does-the-following" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="provide-code-that-does-the-following">
+<h2>Provide code that does the following<a class="headerlink" href="#provide-code-that-does-the-following" title="Permalink to this headline">¶</a></h2>
 <p>Use a while loop to print all numbers between 0 and 20 (inclusive) that
 are divisible by 5</p>
 <div class="cell docutils container">
@@ -531,7 +563,7 @@ are divisible by 5</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

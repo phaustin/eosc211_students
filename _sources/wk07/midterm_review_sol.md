@@ -1,6 +1,8 @@
 ---
 jupytext:
+  cell_metadata_filter: all
   formats: ipynb,md:myst
+  notebook_metadata_filter: all,-language_info,-toc,-latex_envs
   text_representation:
     extension: .md
     format_name: myst
@@ -12,7 +14,7 @@ kernelspec:
   name: python3
 ---
 
-# Midterm Review
+# Midterm Review solution
 
 ## EOSC 211
 
@@ -36,6 +38,18 @@ import numpy as np
 # your code here
 ```
 
+```{code-cell} ipython3
+# andrew's soln
+import numpy as np
+
+a = np.array([7, 6, 5, 4, 3, 2, 1])
+b = a[1:-1:2]
+c = [a / 2]
+
+for i in [a, b, c]:
+    print(i, type(i))
+```
+
 ## Question 2
 
 **What is the result of the following expressions?**
@@ -48,6 +62,15 @@ import numpy as np
 
 ```{code-cell} ipython3
 # your code here
+```
+
+```{code-cell} ipython3
+# andrew's soln
+a = 6 == 2 + 3 * 1
+b = 14 > np.arange(6,2,-1) * 3 + 1
+c = 3 ** 0 / 4 - -3 / np.array([4, 3])
+
+[print(letter) for letter in [a,b,c]];
 ```
 
 ## Question 3
@@ -71,5 +94,15 @@ for i in range(len(meas)):
 ```
 
 ```{code-cell} ipython3
-# your code here`
+# soln
+meas = np.array([-999, -999, 2, 16, 3, 4, 4, 4, -999, 31, 4, 5, -999])
+time = np.arange(0,len(meas) * 60,60)  # seconds
+
+print(f"measurements: {meas}") # need f's for f strings
+print(f"time recorded: {time}")
+
+print("bad data recorded at times:")
+for i in range(len(meas)): # use consistent indexing variables (could change them all to j)
+    if meas[i] == -999: # booleans need "==", not "="
+        print(time[i])
 ```
