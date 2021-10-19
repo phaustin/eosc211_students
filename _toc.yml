@@ -41,7 +41,7 @@ parts:
       - file: lab_keys/week6_lab/lab_wk6.ipynb
   - caption: Week 7 - Midterm
     chapters:
-      - file: wk07/midterm_review.md
+      - file: wk07/midterm_review.ipynb
   - caption: Reference material 
     chapters:
       - file: reference_notes/thursday_oct7.md
