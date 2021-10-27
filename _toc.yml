@@ -7,7 +7,6 @@ parts:
       - file: syllabus/covid_statements.md
       - file: syllabus/schedule_F2021.md
       - file: syllabus/worksheet_steps_in_problem_solving.md
-      - file: syllabus/class_notes.md
   - caption: Week 2 - Data Types
     chapters:
       - file: wk02/data_types.md
@@ -29,7 +28,7 @@ parts:
       - file: wk05/logic.md
       - file: wk05/complicated_logic.md
       - file: wk05/wk05_indexing.md
-      - file: wk05/wk05_indexing_soln.ipynb
+      - file: wk05/wk05_indexing_soln.md
       - file: wk05/week5_quiz_sol.md
       - file: lab_keys/week5_lab/lab_wk5.md
   - caption: Week 6 - Loops
@@ -37,13 +36,19 @@ parts:
       - file: wk06/loops.md
       - file: wk06/loops_soln.md
       - file: wk06/loops_ii.md
-      - file: wk06/loops_ii_soln.ipynb
-      - file: wk06/week6_quiz_sol.ipynb
-      - file: lab_keys/week6_lab/lab_wk6.ipynb
+      - file: wk06/loops_ii_soln.md
+      - file: wk06/week6_quiz_sol.md
+      - file: lab_keys/week6_lab/lab_wk6.md
   - caption: Week 7 - Midterm
     chapters:
-      - file: wk07/midterm_review_sol.ipynb
-      - file: wk07/week7_quiz_sol.ipynb
+      - file: wk07/midterm_review_sol.md
+      - file: wk07/week7_quiz_sol.md
+  - caption: Week 8 - Functions
+    chapters:
+      - file: wk08/functions.md
+      - file: wk08/functions_ii.md
+      - file: wk08/quiz_wk08_sol.md
+      - file: wk08/lab_wk8/lab_wk8.ipynb
   - caption: Reference material 
     chapters:
       - file: reference_notes/thursday_oct7.md
