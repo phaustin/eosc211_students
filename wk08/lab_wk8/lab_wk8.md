@@ -1,7 +1,5 @@
 ---
-celltoolbar: Create Assignment
 jupytext:
-  formats: ipynb,md:myst
   text_representation:
     extension: .md
     format_name: myst
@@ -21,13 +19,13 @@ kernelspec:
 
 As an example of how we can reuse code, you will use what you write for this lab as a core function for assignment 1.
 
+Datasets for this lab can be downloaded by clicking on the file names at:  https://github.com/phaustin/eosc211_students/tree/e211_live_main/wk08
+
 +++
 
 ### As always, first import the packages you'll need
 
 ```{code-cell} ipython3
-:trusted: true
-
 from e211_lib import e211
 import numpy as np
 from datetime import datetime
@@ -36,50 +34,40 @@ import matplotlib.pyplot as plt
 
 ```{code-cell} ipython3
 ---
+deletable: false
 nbgrader:
+  cell_type: code
+  checksum: c95b19f7f7b1ef3f8fdac3e12e7a209f
   grade: false
   grade_id: cell-0f1bebfd15ae4946
   locked: false
   schema_version: 3
   solution: true
   task: false
-trusted: true
 ---
 # your posix_to_datetime function will go here (see below for details)
 
-### BEGIN SOLUTION
-def posix_to_datetime(time_array):
-    """
-    Converts numpy arrays of POSIX time to datetime objects.
+#
+#  Remember to comment out the NotImplementedError exception from all the cells you need
+#  to fill in.  Check to make sure your notebook runs cleanly before you upload to canvas
+#
 
-        IN: array of POSIX time of length N (dtype=int or float)
-
-        OUT: array of dtype=datetime.datetime object, length N
-    """
-    dt = np.empty_like(time_array, dtype="O")
-    for index, tt in enumerate(time_array):
-        dt[index] = datetime.fromtimestamp(tt)
-    return dt
-
-# This also works
-# for index in range(len(time_array)):         
-#    dt[index] = datetime.fromtimestamp(time_array[index])
-
-#  And this does - note the for loop is not a separate line here
-#  dt = np.array([datetime.fromtimestamp(tt) for tt in time]) 
-### END SOLUTION
+# YOUR CODE HERE
+raise NotImplementedError()
 ```
 
 ```{code-cell} ipython3
 ---
+deletable: false
 nbgrader:
+  cell_type: code
+  checksum: 93758c2ece8733d895ce25dd90048543
   grade: false
   grade_id: cell-0240c3fb29bf120a
   locked: false
   schema_version: 3
   solution: true
   task: false
-trusted: true
 ---
 # IN THIS CELL DEFINE TWO FUNCTIONS WITH THE FOLLOWING NAMES AND SIGNATURES
 
@@ -87,100 +75,34 @@ trusted: true
 
 # running_mean(data, winlen) return running mean
 
-### BEGIN SOLUTION
-def check_inputs(winlen):
-    """
-    checks that user inputs "winlen" are an odd number and corrects them if not
-
-        IN: winlen (int)
-
-        OUT: winlen of guaranteed odd value (int)
-    """  
-    if winlen % 2 == 0:
-        winlen += 1
-        print(
-            f"odd window length {winlen - 1} detected, using window length {winlen} instead"
-        )
-
-    return winlen
-
-def running_mean(data, winlen):
-    """
-    filters data with a running mean with window length winlen
-
-        IN: numpy array of data (dtype=int or float), winlen (dtype=int)
-        note here that no default has been set for winlen
-
-        OUT: filtered array (dtype=float)
-    """
-    winlen = check_inputs(winlen)  # call the check_inputs from inside another fcn!
-    ndat = len(data)
-    ww = int((winlen - 1) / 2)
-    # print(f"N = {ndat}, L = {winlen}, W = {ww}")  #print statement for debugging
-
-    z = np.zeros_like(data, dtype="O")
-
-    for i in range(ndat):
-        if (i < ww) or (i > ndat - ww - 1):  # be careful with the limits!
-            # print(
-            #    f"special end case at point i = {i}"
-            # )  # print statements to check what is in the special end cases
-            z[i] = data[i]  # at ends just set running mean equal to unfiltered value
-        else:  # running mean is executed from ww to ndat-1-ww inclusive
-            for j in range(-ww, ww + 1):
-                z[i] += data[i + j]
-            z[i] = z[i] / winlen
-    return z
-### END SOLUTION
+# YOUR CODE HERE
+raise NotImplementedError()
 ```
 
 ```{code-cell} ipython3
 ---
+deletable: false
 nbgrader:
+  cell_type: code
+  checksum: bc1fab99efa9e416f21cf21f7dfb4478
   grade: false
   grade_id: cell-5f6db024bb9d6991
   locked: false
   schema_version: 3
   solution: true
   task: false
-trusted: true
 ---
 # IN THIS CELL DEFINE YOUR RUNNING MEDIAN FUNCTION WITH THIS NAME AND SIGNATURE
 #
 # running_median(data, winlen=7)
-### BEGIN SOLUTION
-def running_median(data, winlen=7):
-    """
-    filters data with a running median, window length winlen
-
-        IN: numpy array of data (int or float), winlen (dtype=int)
-            winlen here has been set with a default of 7
-
-        OUT: median filtered array (dtype=int or float)
-    """
-    winlen = check_inputs(winlen)  # call the check_inputs from inside another fcn!
-    window_ind = int((winlen - 1) / 2)  # equation 4
-    zm = np.zeros_like(data)
-
-    for i in range(window_ind, len(data) - window_ind):
-        # deal with the edges by ignoring them ^
-
-        # median
-        window = list(data[i - window_ind : i + window_ind + 1])
-        while len(window) > 1:
-            window.remove(max(window))
-            window.remove(min(window))
-        zm[i] = window[0]
-    return zm
-### END SOLUTION
+# YOUR CODE HERE
+raise NotImplementedError()
 ```
 
 ### Now get some data sets.  
 Remind yourself of np.load and what `.npz` files contain from the week 6 lab. Also review the week 6 lab to remind yourself about datetime objects are and how to import dates/times into a numpy array of datetime objects.
 
 ```{code-cell} ipython3
-:trusted: true
-
 # get the aircraft data again -- copy from week 6 solution
 aircraft_gps = np.load("aircraft_gps.npz")
 vel = aircraft_gps["vel"]
@@ -244,9 +166,15 @@ Make sure to rerun your code that calls the running mean and running median to c
 
 ### What to turn in
 
+1) define your posix_to_datetime in cell 2 (remove the exceptions in all fill-in cells)
+
+2) define your check_inputs and running_mean functions in cell 3
+
+3) define  your running_median function in cell 4 
+
 Make sure your running_median function works when you test it by executing
 code roughly similar to the cell below
-for either the `aircraft` data set or the `temperture` dataset.  We will run
+for either the `aircraft` data set or the `temperature` dataset.  We will run
 code similar to this, with a variety of window sizes and data sets.
 
 +++
@@ -255,7 +183,7 @@ code similar to this, with a variety of window sizes and data sets.
 def main(data,tt):
     time=posix_to_datetime(tt)
     windows = choose some windows
-    loop over your windows
+    check various window sizes:
         filtered_data = running_median ...
         #
         # overlay the filtered data on the raw data
@@ -273,9 +201,9 @@ main(vel,time)
 
 ## A quick sanity check
 
-```{code-cell} ipython3
-:trusted: true
+This code shows the raw data
 
+```{code-cell} ipython3
 # Sands Heads data
 temp_time = posix_to_datetime(sand_time)
 
@@ -288,11 +216,10 @@ plt.ylabel('temperature [units]');   # I added semi-colon to suppress text outpu
 ```
 
 The cell below tests window length 32 for the velocity data and 
-compares the result at index = 231 with the answer we got
+compares the result at index = 231 with the answer we got with our
+own running_median filter
 
 ```{code-cell} ipython3
-:trusted: true
-
 import numpy.testing as nt
 window=32
 vel_median_filtered = running_median(vel, window)
@@ -302,7 +229,10 @@ nt.assert_allclose(testval,1.95,rtol=1.e-2)
 
 ```{code-cell} ipython3
 ---
+deletable: false
 nbgrader:
+  cell_type: code
+  checksum: c6c8cae1ae106ee735375b3f9d497291
   grade: true
   grade_id: cell-70b0c8801298e72c
   locked: false
@@ -310,20 +240,11 @@ nbgrader:
   schema_version: 3
   solution: true
   task: false
-trusted: true
 ---
-### BEGIN SOLUTION
-def main(data,tt):
-    time=posix_to_datetime(tt)
-    windows = [11,42,153]
-    for window in windows:
-        print(f'Running median test, winlen = {window}')
-        filtered_data = running_median(data, window)
-        plt.plot(time,data,time,filtered_data)
-        plt.xlabel('time')
-        plt.xticks(rotation=70)
-        plt.ylabel('y values')
-        plt.show()
-main(temp,sand_time)
-### END SOLUTION
+# You don't need to enter anything here  -- we have hidden the
+# code we will use to check your functions in this cell
+# Just comment out the exception so your notebook will run
+
+# YOUR CODE HERE
+raise NotImplementedError()
 ```
