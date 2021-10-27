@@ -47,7 +47,7 @@ parts:
     chapters:
       - file: wk08/functions_soln.ipynb
       - file: wk08/functions_ii.md
-      - file: wk08/quiz_wk08_sol.md
+      - file: wk08/quiz_wk08_soln.md
       - file: wk08/lab_wk8/lab_wk8.ipynb
   - caption: Reference material 
     chapters:
