@@ -1,19 +1,29 @@
+---
+jupytext:
+  cell_metadata_filter: -all
+  formats: md:myst,ipynb
+  text_representation:
+    extension: .md
+    format_name: myst
+    format_version: 0.13
+    jupytext_version: 1.11.5
+kernelspec:
+  display_name: Python 3 (ipykernel)
+  language: python
+  name: python3
+---
 
 
+# Week 08 Quiz: Functions basics -solution
 
-+++
-
-# Week 08 Quiz: Functions basics
-
-### The following code calls a function "poly3" for which the code is given:
+## The following code calls a function "poly3" for which the code is given:
 
 ```{code-cell}
-import numpy as np
+import numpy as np  # not needed in example below
 
 def poly3(x):
     """ POLY3: Evaluates the cubic polynomial y = a0 + a1*x+a2*x**2+a3*x**3
     using Horner's method, where a0=1, a1=-1, a2=2, a3=1.
-
     """
     
     a0 = 1
@@ -25,22 +35,21 @@ def poly3(x):
     
     return y
 
-
 myx = -2
 new = poly3(myx)
 ```
 
 1.  Identify the following elements of the code:
 
-   Function name:
+   Function name:  poly3
 <br />
 <br />
 
-   Input argument(s):
+   Input argument(s): x
 <br />
 <br />
 
-   Output argument(s):
+   Output argument(s): y
 <br />
 <br />
 
@@ -48,8 +57,9 @@ new = poly3(myx)
 
 <br />
 <br />
-<br />
-<br />
-<br />
+myx = -2
 
-3.  What helpful information is missing in the docstring?
+new = 3
+<br />
+<br />
+<br />
