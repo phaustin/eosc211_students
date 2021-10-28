@@ -1,4 +1,5 @@
 
+
 # Week 08 Quiz: Functions basics
 
 ### The following code calls a function "poly3" for which the code is given:
