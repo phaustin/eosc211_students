@@ -13,6 +13,8 @@ kernelspec:
 ---
 
 ```{code-cell} ipython3
+:trusted: true
+
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime
@@ -90,10 +92,14 @@ Note that all of your functions written for this assignment should work when cal
 - A scientific figure of the raw data over the period **April 1958 - September 2016**. Your figure should contain two subplots, the upper one showing temperature records and the bottom one CO2, both as functions of time with monthly resolution.
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your get_temps(filename) here
 ```
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your get_co2(filename) here
 ```
 
@@ -111,6 +117,8 @@ plt.ylabel('CO2 concentration (ppm)');
 ```
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your combine_datasets(temp_in, date_temp, co2_in, date_co2, date_min, date_max) here
 
 #In addition, write another function called combine_datasets() that takes in a 
@@ -131,6 +139,8 @@ temp, CO2, date = combine_datasets(temp_raw, date_tdata, co2_raw, date_co2, date
 ```
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your Part 1 figure here
 ```
 
@@ -155,14 +165,20 @@ Once you have the mean and standard deviation functions working (test them!), wr
 We will use a `main()` function (defined for you below) to run the whole analysis over different time periods and window lengths, and come up with a well-supported answer to the claim above.
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your running_mean(data, winlen) here
 ```
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your running_std(data, winlen)  here
 ```
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your do_plot(temp,temp_mean, temp_std, CO2, CO2_mean, CO2_std, dates)  here
 ```
 
@@ -210,12 +226,16 @@ def main(date_min, date_max, window_len):
 As you increase the filter length, what happens to the apparent trend in the data? What happens to the spread?
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your code here
 ```
 
 **2)** Now plot the whole dataset (1968-2016) with a 120 month filter. Within the data spread, how sure are you about the trend?
 
 ```{code-cell} ipython3
+:trusted: true
+
 # your code here
 ```
 
@@ -241,8 +261,4 @@ main(date_min, date_max, 121)
 
 +++
 
-**Analysis - Andrew**
-
-The raw global average temperature series is a very noisy dataset. We can see *seasonal variability*, *interannual variability* from things like the ENSO or Pacific Decadal oscillations, as well as isolated events that influence global climate -- like the eruotion of Mt. Pinatubo in 1991 which deposited massive amounts of *aerosols* into the atmosphere, altering the planetary radiation balance which resulted in a ~5 year cooling trend. 
-
-However, when we average away the short term trends, all points to temperatures increasing in step with CO2 on multi-decadal  timescales (10's of years), even when we consider the variability in the data. Climate change happens slowly by human standards, often leading to claims like the one we investigated. If we consider the trend in terms of geological time, temperature changes this rapid are unprecedented and are surely cause for concern!
+## your analysis here
