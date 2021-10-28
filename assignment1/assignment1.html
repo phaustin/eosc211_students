@@ -1,0 +1,785 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1 – CO2/temperature &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notes for Thursday Oct. 7" href="../reference_notes/thursday_oct7.html" />
+    <link rel="prev" title="Lab Week 8" href="../wk08/lab_wk8/lab_wk8.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../announcements.html">
+   Course Home/Announcements
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 1 - Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/syllabus.html">
+   Course Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/covid_statements.html">
+   Covid Safety in the Classroom
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule_F2021.html">
+   Course Schedule - Fall Semester 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/worksheet_steps_in_problem_solving.html">
+   Steps In Problem Solving
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 2 - Data Types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/data_types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/some_review_plus_built_in_functions_arrays_preview.html">
+   Some Review Plus Built-In Functions, Arrays Preview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week2_lab/lab_wk2.html">
+   Answers: Lab Week 2 - Jupyterhub Tutorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/week2_quiz.html">
+   Week 2 quiz
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 3 - Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures_ii.html">
+   Data Structures II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/week3_quiz.html">
+   Week 3 quiz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week3_lab/lab_wk3_soln.html">
+   Answers: Lab Week 3
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 4 - Scientific Figures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk04/making_plots.html">
+   Making Plots Worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week4_lab/lab_wk4.html">
+   Answers: Lab Week 4
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 5 - Computer Logic
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/logic.html">
+   Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/complicated_logic.html">
+   More Complicated Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/wk05_indexing.html">
+   Indexing worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/wk05_indexing_soln.html">
+   Week 5 indexing solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/week5_quiz_sol.html">
+   Week 5 quiz solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week5_lab/lab_wk5.html">
+   Answers: Lab Week 5
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_soln.html">
+   Loops – Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_ii.html">
+   Loops II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_ii_soln.html">
+   Loops II solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/week6_quiz_sol.html">
+   Week 6 quiz solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week6_lab/lab_wk6.html">
+   Lab Week 6 Solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 7 - Midterm
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/midterm_review_sol.html">
+   Midterm Review solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/week7_quiz_sol.html">
+   Week 7 quiz solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 8 - Functions
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_soln.html">
+   Functions – solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_ii.html">
+   Functions II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
+   Week 08 Quiz: Functions basics -solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/lab_wk8/lab_wk8.html">
+   Lab Week 8
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Assignment 1 – CO2/temperature
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Reference material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference_notes/thursday_oct7.html">
+   Notes for Thursday Oct. 7
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/assignment1/assignment1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/assignment1/assignment1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/assignment1/assignment1.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/assignment1/assignment1.ipynb&branch=e211_live_main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective-1-obtain-scrub-and-plot-temperature-and-co2-records-from-1958-to-2016">
+   Objective 1 - Obtain, Scrub, and Plot Temperature and CO2 Records From 1958 to 2016
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learning-objectives">
+     Learning Objectives
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#get-the-raw-temperature-and-co2-data-and-plot-it-from-1958-to-2016">
+     1) Get the Raw Temperature and CO2 Data and Plot it from 1958 to 2016
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#helpful-hints">
+       Helpful Hints
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#to-hand-in-for-part-1">
+     To Hand In For Part 1
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objective-2-statistics-and-analysis">
+   Objective 2 - Statistics and Analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analysis-questions">
+     Analysis Questions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#to-hand-in-part-2">
+     To Hand in Part 2
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="assignment-1-co2-temperature">
+<h1>Assignment 1 – CO2/temperature<a class="headerlink" href="#assignment-1-co2-temperature" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="objective-1-obtain-scrub-and-plot-temperature-and-co2-records-from-1958-to-2016">
+<h2>Objective 1 - Obtain, Scrub, and Plot Temperature and CO2 Records From 1958 to 2016<a class="headerlink" href="#objective-1-obtain-scrub-and-plot-temperature-and-co2-records-from-1958-to-2016" title="Permalink to this headline">¶</a></h2>
+<p>This assignment is about analyzing two data sets that comprise a major part of the global warming discussion: <strong>(1)</strong> global land-ocean
+temperature anomalies from 1880 to 2016 that show evidence for an increase in global temperatures, and <strong>(2)</strong> a
+classic record from Mauna Loa, Hawaii, that tracks the global trend in atmospheric CO2 from 1958 to 2021. The location where these measurements were taken is important; since Mauna Loa is very isolated in the middle of the Pacific Ocean and far away from any local pollutant (CO2) sources, it is reasonable to take these measurements as representative of the global average concentration.
+We will address the question of the time intervals needed to clearly pick out trends in these two records that cannot
+be accounted for by seasonal (or other) variations. This kind of issue is at the heart of many discussions in science.
+For anyone wanting to to a deep dive (optional), the CO2 records are discussed at <a class="reference external" href="http://scrippsco2.ucsd.edu/data/atmospheric_co2/">http://scrippsco2.ucsd.edu/data/atmospheric_co2/</a>. A good discussion of global temperature trends (and their cause) on annual and decadal timescales is: <a class="reference external" href="http://data.giss.nasa.gov/gistemp/">http://data.giss.nasa.gov/gistemp/</a> and a summary of the temperature data and analyses can be found in the “Background and History” links on that page.</p>
+<div class="section" id="learning-objectives">
+<h3>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Work with data as you would find it “in the wild” – no help from e211 functions this time</p></li>
+<li><p>Recycle code from previous assignments, modifying it to suit a new purpose</p></li>
+<li><p>Use functions effectively to avoid repeating code</p></li>
+<li><p>Use your own code to process real data, then - based on that statistical work - draw some important scientific conclusions and identify some limitations of those conclusions</p></li>
+</ul>
+</div>
+<div class="section" id="get-the-raw-temperature-and-co2-data-and-plot-it-from-1958-to-2016">
+<h3>1) Get the Raw Temperature and CO2 Data and Plot it from 1958 to 2016<a class="headerlink" href="#get-the-raw-temperature-and-co2-data-and-plot-it-from-1958-to-2016" title="Permalink to this headline">¶</a></h3>
+<p>In the same folder as this assignment, there is a file called <code class="docutils literal notranslate"><span class="pre">temperature_1880_2016.dat</span></code>. This file contains monthly averaged temperature data from 1880 to 2016. This time, there is no handy <code class="docutils literal notranslate"><span class="pre">e211.getthedata()</span></code> function for reading the datesets into Python, you will have to write them yourself.  Write 2 functions: <code class="docutils literal notranslate"><span class="pre">get_co2()</span></code>, <code class="docutils literal notranslate"><span class="pre">get_temps()</span></code>, that take in the names of the datasets to load and return numpy arrays. The outputs of each function should look something like the following:</p>
+<p>A) For <code class="docutils literal notranslate"><span class="pre">get_temps()</span></code>: Monthly temperature anomaly between April 1958 and September 2016, e.g.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mf">1.1750e-01</span><span class="p">,</span>  <span class="mf">1.0690e-01</span><span class="p">,</span>  <span class="o">...</span><span class="p">,</span>  <span class="mf">8.8980e-01</span><span class="p">,</span>  <span class="mf">8.6150e-01</span><span class="p">,</span> <span class="mf">8.9660e-01</span><span class="p">,</span>  <span class="mf">8.8690e-01</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>B) For <code class="docutils literal notranslate"><span class="pre">get_co2()</span></code>: Monthly Mauna Loa CO2 values from 1880 to 2021.  Get the data with gaps filled but <em>not</em> seasonally adjusted (see first hint below).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">CO2</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="mf">317.45</span><span class="p">,</span> <span class="mf">317.5</span> <span class="p">,</span> <span class="mf">317.24</span><span class="p">,</span>  <span class="o">...</span><span class="p">,</span> <span class="mf">404.5</span> <span class="p">,</span> <span class="mf">402.24</span><span class="p">,</span> <span class="mf">401.01</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>For both functions: An array containing the dates of each measurement, to be used for labelling plots</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">date</span> <span class="o">=</span> <span class="n">array</span><span class="p">([</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1880</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">1880</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="o">...</span><span class="p">,</span>
+              <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+       
+</pre></div>
+</div>
+<p>In addition, write another function called <code class="docutils literal notranslate"><span class="pre">combine_datasets()</span></code> that takes in a start date, end date, and the datasets, and outputs arrays which only span the specified time interval (so you only need one <code class="docutils literal notranslate"><span class="pre">date</span></code> array). Include statements to check for valid inputs as you see fit.</p>
+<p>Note that all of your functions written for this assignment should work when called with code like that given in our example <code class="docutils literal notranslate"><span class="pre">main</span></code> function toward the end of this write-up, so make sure to organize your function inputs and outputs accordingly.</p>
+<div class="section" id="helpful-hints">
+<h4>Helpful Hints<a class="headerlink" href="#helpful-hints" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>It may be useful to open each raw dataset in an editor (plain text, excel, etc.) to examine the included <em>metadata</em>, which explains what each column represents (especially for (B)). Take a look at e.g. the CO2 file to make sure you are reading in the column requested above and also to notice what value has clearly been assigned to missing data.</p></li>
+<li><p>To parse new file types with Python, start by typing “<em>convert .dat file to numpy array</em>” into your favorite search engine. There are many, many helpful functions and tutorials available for pretty much any data type.</p></li>
+<li><p>This assignment is meant to incorporate many of the skills from previous labs/worksheets. Recycling previous code is highly encouraged! (Be sure to credit source if you are recycling code that isn’t yours - use comments throughout your code)</p></li>
+<li><p>Oftentimes, data scrubbing is the most laborious part of a scientific study. Taking the extra time and doing a good job here will make Part 2 much easier. For example, the CO2 record has some missing values at the beginning and end that you probably want to ditch so as to avoid having to always check for these and not plot them.</p></li>
+<li><p>It’s always a good idea to check that any data ingestion has gone as expected by making a plot and/or printing a few values to the screen.  For example, if you plot your CO2 data (excluding data flagged as ‘missing’) after calling your <code class="docutils literal notranslate"><span class="pre">get_co2()</span></code> function but before calling the <code class="docutils literal notranslate"><span class="pre">combine_datasets()</span></code>, you should get a plot that looks like the one you can find here <a class="reference external" href="https://scrippsco2.ucsd.edu/graphics_gallery/mauna_loa_record/mauna_loa_record.html">https://scrippsco2.ucsd.edu/graphics_gallery/mauna_loa_record/mauna_loa_record.html</a></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="to-hand-in-for-part-1">
+<h3>To Hand In For Part 1<a class="headerlink" href="#to-hand-in-for-part-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Code: your 3 functions: <code class="docutils literal notranslate"><span class="pre">get_temps()</span></code>, <code class="docutils literal notranslate"><span class="pre">get_co2()</span></code>, and <code class="docutils literal notranslate"><span class="pre">combine_datasets()</span></code>.  See instructions in the what to turn in for Part 2 section for how to organize these.</p></li>
+<li><p>A scientific figure of the raw data over the period <strong>April 1958 - September 2016</strong>. Your figure should contain two subplots, the upper one showing temperature records and the bottom one CO2, both as functions of time with monthly resolution.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your get_temps(filename) here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your get_co2(filename) here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># test it</span>
+<span class="n">fname_temp</span> <span class="o">=</span> <span class="s1">&#39;./temperature_1880_2016.dat&#39;</span>
+<span class="n">fname_co2</span> <span class="o">=</span> <span class="s1">&#39;./monthly_in_situ_co2_mlo.csv&#39;</span>
+<span class="n">tdata</span><span class="p">,</span> <span class="n">ttime</span> <span class="o">=</span> <span class="n">get_temps</span><span class="p">(</span><span class="n">fname_temp</span><span class="p">)</span>
+<span class="n">co2data</span><span class="p">,</span> <span class="n">co2time</span> <span class="o">=</span> <span class="n">get_co2</span><span class="p">(</span><span class="n">fname_co2</span><span class="p">)</span>
+
+<span class="n">isel</span> <span class="o">=</span> <span class="n">co2data</span> <span class="o">&gt;</span> <span class="mi">0</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">co2time</span><span class="p">[</span><span class="n">isel</span><span class="p">],</span><span class="n">co2data</span><span class="p">[</span><span class="n">isel</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;CO2 concentration (ppm)&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your combine_datasets(temp_in, date_temp, co2_in, date_co2, date_min, date_max) here</span>
+
+<span class="c1">#In addition, write another function called combine_datasets() that takes in a </span>
+<span class="c1">#start date, end date, and the datasets, and outputs arrays which only span the </span>
+<span class="c1">#specified time interval (so you only need one date array). </span>
+<span class="c1">#Include statements to check for valid inputs as you see fit.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># define our user inputs here</span>
+<span class="n">date_min</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">1960</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">date_max</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="c1"># call all the functions to do the analysis (this will turn into &quot;main()&quot; later)</span>
+<span class="n">temp_raw</span><span class="p">,</span> <span class="n">date_tdata</span> <span class="o">=</span> <span class="n">get_temps</span><span class="p">(</span><span class="s2">&quot;temperature_1880_2016.dat&quot;</span><span class="p">)</span>
+<span class="n">co2_raw</span><span class="p">,</span> <span class="n">date_co2</span> <span class="o">=</span> <span class="n">get_co2</span><span class="p">(</span><span class="s2">&quot;monthly_in_situ_co2_mlo.csv&quot;</span><span class="p">)</span>
+<span class="n">temp</span><span class="p">,</span> <span class="n">CO2</span><span class="p">,</span> <span class="n">date</span> <span class="o">=</span> <span class="n">combine_datasets</span><span class="p">(</span><span class="n">temp_raw</span><span class="p">,</span> <span class="n">date_tdata</span><span class="p">,</span> <span class="n">co2_raw</span><span class="p">,</span> <span class="n">date_co2</span><span class="p">,</span> <span class="n">date_min</span><span class="p">,</span> <span class="n">date_max</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your Part 1 figure here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="objective-2-statistics-and-analysis">
+<h2>Objective 2 - Statistics and Analysis<a class="headerlink" href="#objective-2-statistics-and-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Suppose I make the following claim:</p>
+<blockquote>
+<div><p><em>Although on the whole, CO2 and temperature appear to be increasing, there are many years, or even several decades where global temperature drops in which CO2 increases – therefore temperature and CO2 must not be as tightly linked as climate alarmists say they are (look at 1990-1994, or 2010-2014). Furthermore, the overall temperature anomaly is very small (the whole range is 1.4<span class="math notranslate nohighlight">\(^o\)</span>C) and the data is highly variable. Therefore, these claims made by the climate alarmists are probably over-exaggerated.</em></p>
+</div></blockquote>
+<p>To support or refute this claim, let’s first go back to our data and run some analysis to back up our answer. Implement your running mean function from the week 8 lab to filter the data (good thing we made it work for <em>any</em> dataset!). In addition, we would like some way to quantify the variability within the averaged data over a particular time period, to provide a <em>confidence interval</em> when looking for trends. A good way to do this is to take the <em>standard deviation</em> within the window, given by:</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma = \sqrt{\frac{{\sum_{i}^{N} (x_i - \bar{x})^2}}{N}}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(x_i\)</span> is the value at each point <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(\bar{x}\)</span> the mean within the window and <span class="math notranslate nohighlight">\(N\)</span> is the length of the window.</p>
+<p>Define an additional function similar to your running mean called <code class="docutils literal notranslate"><span class="pre">running_std()</span></code>, that computes the standard deviation of the data within each window. In your function you can implement the equation above or use the built-in <code class="docutils literal notranslate"><span class="pre">np.std()</span></code>.</p>
+<p>Once you have the mean and standard deviation functions working (test them!), write one more function <code class="docutils literal notranslate"><span class="pre">do_plot()</span></code> that allows you to plot your results by writing a single line of code, such as in the example below. Your plot should include two subplots, one each for temperature and CO2 and should show the raw data, the running mean and the running mean +/- 1 standard deviation. (<em>HINT: modify your plot from part 1 and wrap it in a function. The plot function should output a figure to the screen and return <code class="docutils literal notranslate"><span class="pre">None</span></code></em>).</p>
+<p>We will use a <code class="docutils literal notranslate"><span class="pre">main()</span></code> function (defined for you below) to run the whole analysis over different time periods and window lengths, and come up with a well-supported answer to the claim above.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your running_mean(data, winlen) here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your running_std(data, winlen)  here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your do_plot(temp,temp_mean, temp_std, CO2, CO2_mean, CO2_std, dates)  here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">date_min</span><span class="p">,</span> <span class="n">date_max</span><span class="p">,</span> <span class="n">window_len</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    main function that performs the analysis for EOSC 211, assignment 1</span>
+
+<span class="sd">        IN: date_min, date_max (datetime obj) -- the beginning and end of the analysis period</span>
+<span class="sd">            window_len -- the length of the window (int, months) with which to filter data</span>
+<span class="sd">                          and calculate the running standard deviation</span>
+
+<span class="sd">        OUT: a plot showing global temperature anomaly (oC) and CO2 concentration (ppm) at</span>
+<span class="sd">             Mauna Loa Observatory, Hawaii, USA</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># get the raw data</span>
+    <span class="n">temp_raw</span><span class="p">,</span> <span class="n">date_tdata</span> <span class="o">=</span> <span class="n">get_temps</span><span class="p">(</span><span class="s2">&quot;temperature_1880_2016.dat&quot;</span><span class="p">)</span>
+    <span class="n">CO2_raw</span><span class="p">,</span> <span class="n">date_co2</span> <span class="o">=</span> <span class="n">get_co2</span><span class="p">(</span><span class="s2">&quot;monthly_in_situ_co2_mlo.csv&quot;</span><span class="p">)</span>
+
+    <span class="c1"># combine and truncate the data sets</span>
+    <span class="n">temp</span><span class="p">,</span> <span class="n">CO2</span><span class="p">,</span> <span class="n">date</span> <span class="o">=</span> <span class="n">combine_datasets</span><span class="p">(</span>
+        <span class="n">temp_raw</span><span class="p">,</span> <span class="n">date_tdata</span><span class="p">,</span> <span class="n">CO2_raw</span><span class="p">,</span> <span class="n">date_co2</span><span class="p">,</span> <span class="n">date_min</span><span class="p">,</span> <span class="n">date_max</span>
+    <span class="p">)</span>
+    
+    <span class="c1"># filter the data and get the standard deviations</span>
+    <span class="n">temp_mn</span> <span class="o">=</span> <span class="n">running_mean</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">window_len</span><span class="p">)</span>
+    <span class="n">temp_sd</span> <span class="o">=</span> <span class="n">running_std</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">window_len</span><span class="p">)</span>
+    <span class="n">CO2_mn</span> <span class="o">=</span> <span class="n">running_mean</span><span class="p">(</span><span class="n">CO2</span><span class="p">,</span> <span class="n">window_len</span><span class="p">)</span>
+    <span class="n">CO2_sd</span> <span class="o">=</span> <span class="n">running_std</span><span class="p">(</span><span class="n">CO2</span><span class="p">,</span> <span class="n">window_len</span><span class="p">)</span>
+
+    <span class="c1"># make a pretty plot</span>
+    <span class="n">do_plot</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span><span class="n">temp_mn</span><span class="p">,</span> <span class="n">temp_sd</span><span class="p">,</span> <span class="n">CO2</span><span class="p">,</span> <span class="n">CO2_mn</span><span class="p">,</span> <span class="n">CO2_sd</span><span class="p">,</span> <span class="n">date</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<div class="section" id="analysis-questions">
+<h3>Analysis Questions<a class="headerlink" href="#analysis-questions" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/lin_trends.PNG" src="../_images/lin_trends.PNG" />
+<p><strong>1)</strong> Now that we can quickly produce and present the filtered data, its time to answer the question at hand. Pick a 10 year period over which the temperature is decreasing and plot it with filter lengths 1 month (i.e. no filter), 11 months, 61 months, and 121 months. If you’ve written the functions correctly, you should be able to create each plot with a <em>single line of code!</em></p>
+<p>As you increase the filter length, what happens to the apparent trend in the data? What happens to the spread?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>2)</strong> Now plot the whole dataset (1968-2016) with a 120 month filter. Within the data spread, how sure are you about the trend?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="to-hand-in-part-2">
+<h3>To Hand in Part 2<a class="headerlink" href="#to-hand-in-part-2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Copy your 6 functions <code class="docutils literal notranslate"><span class="pre">get_temps()</span></code>, <code class="docutils literal notranslate"><span class="pre">get_co2()</span></code>, <code class="docutils literal notranslate"><span class="pre">combine_datasets()</span></code>, <code class="docutils literal notranslate"><span class="pre">running_mean()</span></code>, <code class="docutils literal notranslate"><span class="pre">running_std()</span></code> and <code class="docutils literal notranslate"><span class="pre">do_plot()</span></code> into a separate notebook, one function per cell. Do not add anything of you testing scripts to that notebook, and make sure your functions are ‘clean’: i.e., they don’t produce unecessary output (e.g. via print statements that you might have included during testing).  Don’t include any markdown cells, only code cells. Call Download this notebook as .py, called it <code class="docutils literal notranslate"><span class="pre">a1_functions.py</span></code> and upload it to Canvas.</p></li>
+<li><p>5 figures as described above, varying the window size</p></li>
+<li><p>Maximum 2 paragraphs / 0.5 page of text (12 pt font maximum) analyzing your results. What are the timescales of variations in global temperature measurements? How would you <strong>quantitatively</strong> answer the claim that temperature is varying independently of CO2?  Check that you think your answer would still be valid if you were to choose a different 10-year interval.   Make sure that anything you write here is a result based on your data.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 8 plots with 6 lines of code. How neat is that??</span>
+<span class="n">date_min</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">1994</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">date_max</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2004</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">main</span><span class="p">(</span><span class="n">date_min</span><span class="p">,</span> <span class="n">date_max</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">main</span><span class="p">(</span><span class="n">date_min</span><span class="p">,</span> <span class="n">date_max</span><span class="p">,</span> <span class="mi">11</span><span class="p">)</span>
+<span class="n">main</span><span class="p">(</span><span class="n">date_min</span><span class="p">,</span> <span class="n">date_max</span><span class="p">,</span> <span class="mi">61</span><span class="p">)</span>
+<span class="n">main</span><span class="p">(</span><span class="n">date_min</span><span class="p">,</span> <span class="n">date_max</span><span class="p">,</span> <span class="mi">121</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Analysis - Andrew</strong></p>
+<p>The raw global average temperature series is a very noisy dataset. We can see <em>seasonal variability</em>, <em>interannual variability</em> from things like the ENSO or Pacific Decadal oscillations, as well as isolated events that influence global climate – like the eruotion of Mt. Pinatubo in 1991 which deposited massive amounts of <em>aerosols</em> into the atmosphere, altering the planetary radiation balance which resulted in a ~5 year cooling trend.</p>
+<p>However, when we average away the short term trends, all points to temperatures increasing in step with CO2 on multi-decadal  timescales (10’s of years), even when we consider the variability in the data. Climate change happens slowly by human standards, often leading to claims like the one we investigated. If we consider the trend in terms of geological time, temperature changes this rapid are unprecedented and are surely cause for concern!</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./assignment1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../wk08/lab_wk8/lab_wk8.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Lab Week 8</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../reference_notes/thursday_oct7.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Notes for Thursday Oct. 7</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

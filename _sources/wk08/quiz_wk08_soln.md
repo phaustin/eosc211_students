@@ -1,7 +1,23 @@
+---
+jupyter:
+  jupytext:
+    cell_metadata_filter: -all
+    formats: md,ipynb
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.11.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
+---
 
-# Week 08 Quiz: Functions basics
 
-### The following code calls a function "poly3" for which the code is given:
+# Week 08 Quiz: Functions basics -solution
+
+## The following code calls a function "poly3" for which the code is given:
 
 ```{code-cell}
 import numpy as np  # not needed in example below
@@ -26,15 +42,15 @@ new = poly3(myx)
 
 1.  Identify the following elements of the code:
 
-   Function name:
+   Function name:  poly3
 <br />
 <br />
 
-   Input argument(s):
+   Input argument(s): x
 <br />
 <br />
 
-   Output argument(s):
+   Output argument(s): y
 <br />
 <br />
 
@@ -42,59 +58,11 @@ new = poly3(myx)
 
 <br />
 <br />
+myx = -2
+
+new = 3
 <br />
 <br />
 <br />
 
-3.  What helpful information is missing in the doc string?
 
-<br />
-<br />
-<br />
-<br />
-
-```{code-cell}
-print(f'myx = {myx} and has type {type(myx)}')
-print(f'new = {new} and has type {type(new)}')
-```
-
-    myx = -2 and has type <class 'int'>
-    new = 3 and has type <class 'int'>
-
-
-```{code-cell}
-# this command lists the variables in my workspace
-%who
-
-# np and poly 3 are the packages and function respectively so I was just looking for myx and new
-```
-
-    myx	 new	 np	 poly3	 
-
-
-```{code-cell}
-# so e.g. a0 is not here and if I type the following i will get an error
-print(a0)
-```
-
-    ---------------------------------------------------------------------------
-
-    NameError                                 Traceback (most recent call last)
-
-    /var/folders/4r/t59g43td3c38d4338mgslkwh0000gr/T/ipykernel_4471/3057198155.py in <module>
-          1 # so e.g. a0 is not here and if I type the following i will get an error
-    ----> 2 print(a0)
-    
-
-    NameError: name 'a0' is not defined
-
-
-### Better docstring
-```
-    """ POLY3: Evaluates the cubic polynomial y = a0 + a1*x+a2*x**2+a3*x**3
-    using Horner's method, where a0=1, a1=-1, a2=2, a3=1.
-    
-    INPUTS: x  (type = int or float)
-    OUTPUTS: y  (type = int or float)
-    """
-```
