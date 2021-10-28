@@ -49,6 +49,7 @@ parts:
       - file: wk08/functions_ii.md
       - file: wk08/quiz_wk08_soln.md
       - file: wk08/lab_wk8/lab_wk8.md
+      - file: midterm/midterm_2021_key.md
       - file: assignment1/assignment1.md
   - caption: Reference material 
     chapters:
