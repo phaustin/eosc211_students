@@ -304,6 +304,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../midterm/midterm_2021_key.html">
+   e211 2021t1 midterm solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../assignment1/assignment1.html">
    Assignment 1 – CO2/temperature
   </a>
@@ -359,7 +364,10 @@
 
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
-        
+        <a class="dropdown-buttons"
+            href="../_sources/wk08/quiz_wk08_soln.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
         <a class="dropdown-buttons" href="../_sources/wk08/quiz_wk08_soln.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
@@ -380,6 +388,29 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk08/quiz_wk08_soln.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk08/quiz_wk08_soln.ipynb&branch=e211_live_main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -411,6 +442,30 @@
 <h1>Week 08 Quiz: Functions basics -solution<a class="headerlink" href="#week-08-quiz-functions-basics-solution" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="the-following-code-calls-a-function-poly3-for-which-the-code-is-given">
 <h2>The following code calls a function “poly3” for which the code is given:<a class="headerlink" href="#the-following-code-calls-a-function-poly3-for-which-the-code-is-given" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># not needed in example below</span>
+
+<span class="k">def</span> <span class="nf">poly3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; POLY3: Evaluates the cubic polynomial y = a0 + a1*x+a2*x**2+a3*x**3</span>
+<span class="sd">    using Horner&#39;s method, where a0=1, a1=-1, a2=2, a3=1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">a0</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">a1</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">a2</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">a3</span> <span class="o">=</span> <span class="mi">1</span>
+    
+    <span class="n">y</span> <span class="o">=</span> <span class="n">a0</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="n">a1</span> <span class="o">+</span> <span class="n">x</span><span class="o">*</span><span class="p">(</span><span class="n">a2</span><span class="o">+</span><span class="n">x</span><span class="o">*</span><span class="n">a3</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">y</span>
+
+<span class="n">myx</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
+<span class="n">new</span> <span class="o">=</span> <span class="n">poly3</span><span class="p">(</span><span class="n">myx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 <ol class="simple">
 <li><p>Identify the following elements of the code:</p></li>
 </ol>
