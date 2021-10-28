@@ -45,10 +45,11 @@ parts:
       - file: wk07/week7_quiz_sol.md
   - caption: Week 8 - Functions
     chapters:
-      - file: wk08/functions_soln.ipynb
+      - file: wk08/functions_soln.md
       - file: wk08/functions_ii.md
       - file: wk08/quiz_wk08_soln.md
-      - file: wk08/lab_wk8/lab_wk8.ipynb
+      - file: wk08/lab_wk8/lab_wk8.md
+      - file: assignment1/assignment1.md
   - caption: Reference material 
     chapters:
       - file: reference_notes/thursday_oct7.md
