@@ -48,7 +48,7 @@ parts:
       - file: wk08/functions_soln.md
       - file: wk08/functions_ii_soln.md
       - file: wk08/quiz_wk08_soln.md
-      - file: wk08/lab_wk8/lab_wk8.md
+      - file: lab_keys/week8_lab/lab_wk8.md
       - file: midterm/midterm_2021_key.md
   - caption: Week 9 - Functions/debugging
     chapters:
