@@ -308,6 +308,25 @@
    e211 2021t1 midterm solutions
   </a>
  </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 9 - Functions/debugging
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging.html">
+   More Functions &amp; Debugging Practice
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Assignment 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../assignment1/assignment1.html">
    Assignment 1 – CO2/temperature
@@ -489,6 +508,19 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_951855</span><span class="o">/</span><span class="mf">3053815248.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;e211_lib&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -507,7 +539,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60990</span><span class="o">/</span><span class="mf">525937701.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_951855</span><span class="o">/</span><span class="mf">525937701.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> 
 <span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># YOUR CODE HERE</span>
 <span class="ne">----&gt; </span><span class="mi">9</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -533,7 +565,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60990</span><span class="o">/</span><span class="mf">4292524671.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_951855</span><span class="o">/</span><span class="mf">4292524671.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> 
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># YOUR CODE HERE</span>
 <span class="ne">----&gt; </span><span class="mi">8</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -556,7 +588,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60990</span><span class="o">/</span><span class="mf">3429531933.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_951855</span><span class="o">/</span><span class="mf">3429531933.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># running_median(data, winlen=7)</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># YOUR CODE HERE</span>
 <span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
@@ -581,6 +613,20 @@
 <span class="n">sand_heads</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;sand_heads_temps.npz&quot;</span><span class="p">)</span>
 <span class="n">temp</span> <span class="o">=</span> <span class="n">sand_heads</span><span class="p">[</span><span class="s2">&quot;temp&quot;</span><span class="p">]</span>
 <span class="n">sand_time</span> <span class="o">=</span> <span class="n">sand_heads</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_951855</span><span class="o">/</span><span class="mf">3261540205.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># get the aircraft data again -- copy from week 6 solution</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">aircraft_gps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;aircraft_gps.npz&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">vel</span> <span class="o">=</span> <span class="n">aircraft_gps</span><span class="p">[</span><span class="s2">&quot;vel&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">time</span> <span class="o">=</span> <span class="n">aircraft_gps</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -678,7 +724,7 @@ code similar to this, with a variety of window sizes and data sets.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60990</span><span class="o">/</span><span class="mf">4147357963.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_951855</span><span class="o">/</span><span class="mf">4147357963.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Sands Heads data</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">temp_time</span> <span class="o">=</span> <span class="n">posix_to_datetime</span><span class="p">(</span><span class="n">sand_time</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -706,7 +752,7 @@ own running_median filter</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60990</span><span class="o">/</span><span class="mf">196865547.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_951855</span><span class="o">/</span><span class="mf">196865547.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy.testing</span> <span class="k">as</span> <span class="nn">nt</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">window</span><span class="o">=</span><span class="mi">32</span>
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">vel_median_filtered</span> <span class="o">=</span> <span class="n">running_median</span><span class="p">(</span><span class="n">vel</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
@@ -732,7 +778,7 @@ own running_median filter</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">_k</span><span class="o">/</span><span class="mi">0</span><span class="n">f_hlw7x2hq4vtcq0h8bvsm40000gr</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_60990</span><span class="o">/</span><span class="mf">3775223129.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_951855</span><span class="o">/</span><span class="mf">3775223129.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span> 
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># YOUR CODE HERE</span>
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
