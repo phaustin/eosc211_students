@@ -51,6 +51,9 @@ parts:
       - file: wk08/lab_wk8/lab_wk8.md
       - file: midterm/midterm_2021_key.md
       - file: assignment1/assignment1.md
+  - caption: Week 8 - Functions/debugging
+      - file: wk09/debugging.md
+    chapters:
   - caption: Reference material 
     chapters:
       - file: reference_notes/thursday_oct7.md
