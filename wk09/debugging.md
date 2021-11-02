@@ -59,7 +59,6 @@ def surfgrav(planet):
 What would be the output of the following code:
 
 ```{code-cell} ipython3
-# Francis question: 
 import numpy as np
 
 
@@ -76,7 +75,6 @@ radius_squared(y=3, 2)
 ```
 
 ### 2.b
-
 
 Which line number(s) of code will not work and why?
 
