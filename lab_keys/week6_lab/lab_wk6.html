@@ -547,18 +547,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_948266</span><span class="o">/</span><span class="mf">3263772591.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;e211_lib&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -718,16 +706,32 @@ From string: 	2021-10-22 22:03:00
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_948266</span><span class="o">/</span><span class="mf">3271836441.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># load data</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">data_in</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;aircraft_gps.npz&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">vel</span> <span class="o">=</span> <span class="n">data_in</span><span class="p">[</span><span class="s2">&quot;vel&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">time</span> <span class="o">=</span> <span class="n">data_in</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Times: [1.02151829e+09 1.02151829e+09 1.02151829e+09 ... 1.02152478e+09
+ 1.02152478e+09 1.02152478e+09]
+Andrew: From aircraft file: 	[datetime.datetime(2002, 5, 15, 20, 4, 49, 440005)
+ datetime.datetime(2002, 5, 15, 20, 4, 50, 439999)
+ datetime.datetime(2002, 5, 15, 20, 4, 51, 440004) ...
+ datetime.datetime(2002, 5, 15, 21, 53, 0, 430003)
+ datetime.datetime(2002, 5, 15, 21, 53, 1, 429998)
+ datetime.datetime(2002, 5, 15, 21, 53, 2, 430002)]
+Catherine: From aircraft file: 	[datetime.datetime(2002, 5, 15, 20, 4, 49, 440005)
+ datetime.datetime(2002, 5, 15, 20, 4, 50, 439999)
+ datetime.datetime(2002, 5, 15, 20, 4, 51, 440004) ...
+ datetime.datetime(2002, 5, 15, 21, 53, 0, 430003)
+ datetime.datetime(2002, 5, 15, 21, 53, 1, 429998)
+ datetime.datetime(2002, 5, 15, 21, 53, 2, 430002)]
+Francis: From aircraft file: 	[datetime.datetime(2002, 5, 15, 20, 4, 49, 440005)
+ datetime.datetime(2002, 5, 15, 20, 4, 50, 439999)
+ datetime.datetime(2002, 5, 15, 20, 4, 51, 440004) ...
+ datetime.datetime(2002, 5, 15, 21, 53, 0, 430003)
+ datetime.datetime(2002, 5, 15, 21, 53, 1, 429998)
+ datetime.datetime(2002, 5, 15, 21, 53, 2, 430002)]
+Version 4: From aircraft file: 	[datetime.datetime(2002, 5, 15, 20, 4, 49, 440005)
+ datetime.datetime(2002, 5, 15, 20, 4, 50, 439999)
+ datetime.datetime(2002, 5, 15, 20, 4, 51, 440004) ...
+ datetime.datetime(2002, 5, 15, 21, 53, 0, 430003)
+ datetime.datetime(2002, 5, 15, 21, 53, 1, 429998)
+ datetime.datetime(2002, 5, 15, 21, 53, 2, 430002)]
 </pre></div>
 </div>
 </div>
@@ -826,18 +830,14 @@ W = \frac{L-1}{2}\tag{4}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_948266</span><span class="o">/</span><span class="mf">1609109490.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Catherine&#39;s solution</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">ndat</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">winlen</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ww</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">winlen</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;vel&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>N = 6464, L = 5, W = 2
+special end case at point i = 0
+special end case at point i = 1
+special end case at point i = 6462
+special end case at point i = 6463
 </pre></div>
 </div>
+<img alt="../../_images/lab_wk6_11_1.png" src="../../_images/lab_wk6_11_1.png" />
 </div>
 </div>
 </div>
@@ -945,18 +945,7 @@ W = \frac{L-1}{2}\tag{4}
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_948266</span><span class="o">/</span><span class="mf">2592642390.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># discuss this vs the np.append() approach</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">zm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># y = np.zeros_like(vel)</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/lab_wk6_13_0.png" src="../../_images/lab_wk6_13_0.png" />
 </div>
 </div>
 </div>
