@@ -53,7 +53,7 @@ parts:
   - caption: Week 9 - Functions/debugging
     chapters:
       - file: wk09/debugging.md
-      - file: wk09/lab_wk9/lab_wk9.md
+      - file: wk09/quiz_wk9_soln.md
   - caption: Assignment 1
     chapters:
       - file: assignment1/assignment1.md
