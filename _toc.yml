@@ -55,6 +55,7 @@ parts:
       - file: wk09/debugging.md
       - file: wk09/debugging_soln.md
       - file: wk09/quiz_wk9_soln.md
+      - file: wk09/debugging_ii.md
       - file: wk09/lab_wk9/lab_wk9.md
   - caption: Assignment 1
     chapters:
