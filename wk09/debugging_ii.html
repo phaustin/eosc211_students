@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 6 quiz solution &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    <title>Debugging II &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -51,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lab Week 6 Solution" href="../lab_keys/week6_lab/lab_wk6.html" />
-    <link rel="prev" title="Loops II solution" href="loops_ii_soln.html" />
+    <link rel="next" title="Lab Week 9" href="lab_wk9/lab_wk9.html" />
+    <link rel="prev" title="Quiz Week 9: Debugging with Functions solution" href="quiz_wk9_soln.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -228,29 +230,29 @@
   Week 6 - Loops
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="loops.html">
+  <a class="reference internal" href="../wk06/loops.html">
    Loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="loops_soln.html">
+  <a class="reference internal" href="../wk06/loops_soln.html">
    Loops – Solution
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="loops_ii.html">
+  <a class="reference internal" href="../wk06/loops_ii.html">
    Loops II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="loops_ii_soln.html">
+  <a class="reference internal" href="../wk06/loops_ii_soln.html">
    Loops II solution
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/week6_quiz_sol.html">
    Week 6 quiz solution
   </a>
  </li>
@@ -309,29 +311,29 @@
   Week 9 - Functions/debugging
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/debugging.html">
+  <a class="reference internal" href="debugging.html">
    More Functions &amp; Debugging Practice
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/debugging_soln.html">
+  <a class="reference internal" href="debugging_soln.html">
    solution: More Functions &amp; Debugging Practice
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/quiz_wk9_soln.html">
+  <a class="reference internal" href="quiz_wk9_soln.html">
    Quiz Week 9:  Debugging with Functions solution
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/debugging_ii.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Debugging II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/lab_wk9/lab_wk9.html">
+  <a class="reference internal" href="lab_wk9/lab_wk9.html">
    Lab Week 9
   </a>
  </li>
@@ -399,11 +401,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/wk06/week6_quiz_sol.ipynb"><button type="button"
+            href="../_sources/wk09/debugging_ii.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk06/week6_quiz_sol.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/wk09/debugging_ii.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -428,14 +430,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk06/week6_quiz_sol.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk09/debugging_ii.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk06/week6_quiz_sol.ipynb&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk09/debugging_ii.ipynb&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -457,23 +459,13 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q1-what-does-the-following-cell-print">
-   Q1  What does the following cell print?
+  <a class="reference internal nav-link" href="#eosc-211">
+   EOSC 211
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q2-what-does-the-following-cell-print">
-   Q2 What does the following cell print?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#q3-what-does-the-following-cell-print">
-   Q3 What does the following cell print?
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#provide-code-that-does-the-following">
-   Provide code that does the following
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
   </a>
  </li>
 </ul>
@@ -487,99 +479,64 @@
         
               <div>
                 
-  <ul class="simple">
-<li><p><strong>Name:</strong></p></li>
-<li><p><strong>Student number:</strong></p></li>
-</ul>
-<p><strong>Instructions</strong>:  Answer all three questions</p>
-<div class="tex2jax_ignore mathjax_ignore section" id="week-6-quiz-solution">
-<h1>Week 6 quiz solution<a class="headerlink" href="#week-6-quiz-solution" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="q1-what-does-the-following-cell-print">
-<h2>Q1  What does the following cell print?<a class="headerlink" href="#q1-what-does-the-following-cell-print" title="Permalink to this headline">¶</a></h2>
+  <div class="tex2jax_ignore mathjax_ignore section" id="debugging-ii">
+<h1>Debugging II<a class="headerlink" href="#debugging-ii" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="eosc-211">
+<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
+<p><strong>Week 9 Day 2</strong></p>
+<p><strong>Learning Objectives: More practice with</strong></p>
+<ol class="simple">
+<li><p>Dictionaries</p></li>
+<li><p>Functions</p></li>
+<li><p>Debugging</p></li>
+</ol>
+</div>
+<div class="section" id="question-1">
+<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
+<p><strong>We have a record of speeds for a moving object (say, a drifter). We  want to see how long the object moves at a constant speed. In particular, we want to write code which will measure the length of time that the speed is less than <code class="docutils literal notranslate"><span class="pre">maxspd</span></code> and greater than <code class="docutils literal notranslate"><span class="pre">minspd</span></code> (call this a “run”). For example, if the speeds are stored in an array: <code class="docutils literal notranslate"><span class="pre">spd</span> <span class="pre">=</span> <span class="pre">np.array([5</span> <span class="pre">1</span> <span class="pre">5</span> <span class="pre">5</span> <span class="pre">5</span> <span class="pre">10</span> <span class="pre">5</span> <span class="pre">1</span> <span class="pre">5</span> <span class="pre">5</span> <span class="pre">5</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">2</span> <span class="pre">5])</span></code> with <code class="docutils literal notranslate"><span class="pre">minspd=4</span></code> and <code class="docutils literal notranslate"><span class="pre">maxspd=6</span></code>, then we have 3 runs of length 1 and 2 runs of length 3, with no other runs. We would want to store this information in another variable in which the i<span class="math notranslate nohighlight">\(^{th}\)</span> value was the number of runs of length i, i.e.:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">runs</span><span class="o">=</span><span class="p">[</span><span class="mi">3</span> <span class="mi">0</span> <span class="mi">2</span> <span class="mi">0</span> <span class="mi">0</span> <span class="o">...</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Here is some code we have started to write to calculate runs in this way. However, there are 5 small bugs in this code - find and fix them.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">the_name</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;tom&#39;</span><span class="p">,</span><span class="s1">&#39;lisa&#39;</span><span class="p">,</span><span class="s1">&#39;joey&#39;</span><span class="p">,</span><span class="s1">&#39;steph&#39;</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">the_name</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">the_name</span> <span class="o">==</span> <span class="s1">&#39;joey&#39;</span><span class="p">:</span>
-        <span class="k">break</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1"># debug this code</span>
+
+<span class="k">def</span> <span class="nf">runlength</span><span class="p">(</span><span class="n">spd</span><span class="p">,</span> <span class="n">minspd</span><span class="p">,</span> <span class="n">maxspd</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    RUNLENGTH calculates run lengths tatistics</span>
+
+<span class="sd">    Inputs</span>
+<span class="sd">    spd: a time series (1D numpy array or list) of track speeds</span>
+<span class="sd">    minspd and maxspd: the lower and upper limits of speed for a run</span>
+
+<span class="sd">    Outputs</span>
+<span class="sd">    runs: an array in which runs[i] is the number of runs of i points.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">minspd</span><span class="p">)</span>
+    <span class="n">runs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">runlen</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">isrun</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">spd</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">minspd</span> <span class="ow">and</span> <span class="n">spd</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">maxspd</span><span class="p">:</span>
+            <span class="n">isrun</span><span class="o">=</span><span class="kc">True</span>
+            <span class="n">runlen</span> <span class="o">=</span> <span class="n">runlen</span><span class="o">+</span><span class="mi">1</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">spd</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">minspd</span> <span class="ow">or</span> <span class="n">spd</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maxspd</span> <span class="p">)</span> <span class="ow">and</span> <span class="n">isrun</span><span class="p">:</span>
+            <span class="n">runs</span><span class="p">[</span><span class="n">runlen</span><span class="p">]</span><span class="o">=</span><span class="n">runs</span><span class="p">[</span><span class="n">runlen</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+            <span class="n">runlen</span><span class="o">=</span><span class="mi">0</span>
+            <span class="n">isrun</span><span class="o">=</span><span class="kc">False</span>
+    <span class="k">if</span> <span class="n">isrun</span><span class="p">:</span>
+        <span class="n">runs</span><span class="p">[</span><span class="n">runlen</span><span class="p">]</span><span class="o">=</span><span class="n">runs</span><span class="p">[</span><span class="n">runlen</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+    
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>tom
-lisa
-joey
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="q2-what-does-the-following-cell-print">
-<h2>Q2 What does the following cell print?<a class="headerlink" href="#q2-what-does-the-following-cell-print" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-<span class="k">while</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-1
-2
-3
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="q3-what-does-the-following-cell-print">
-<h2>Q3 What does the following cell print?<a class="headerlink" href="#q3-what-does-the-following-cell-print" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">icount</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
-    <span class="n">jcount</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">jcount</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="n">icount</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">icount</span><span class="p">,</span><span class="n">jcount</span><span class="p">)</span>
-        <span class="n">jcount</span> <span class="o">=</span> <span class="n">jcount</span> <span class="o">+</span> <span class="mi">1</span>
-        
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 0
-1 1
-2 0
-2 1
-2 2
-2 3
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="provide-code-that-does-the-following">
-<h2>Provide code that does the following<a class="headerlink" href="#provide-code-that-does-the-following" title="Permalink to this headline">¶</a></h2>
-<p>Use a while loop to print all numbers between 0 and 20 (inclusive) that
-are divisible by 5</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">counter</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">counter</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
-    <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
-5
-10
-15
-20
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/_k/0f_hlw7x2hq4vtcq0h8bvsm40000gr/T/ipykernel_75309/3383483938.py&quot;</span><span class="gt">, line </span><span class="mi">19</span>
+<span class="nn">    for i</span> in <span class="ni">range</span><span class="nt">(N)</span>
+                     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
@@ -600,7 +557,7 @@ are divisible by 5</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./wk06"
+            path: "./wk09"
         },
         predefinedOutput: true
     }
@@ -617,19 +574,19 @@ are divisible by 5</p>
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="loops_ii_soln.html" title="previous page">
+        <a class="left-prev" href="quiz_wk9_soln.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Loops II solution</p>
+                <p class="prevnext-title">Quiz Week 9:  Debugging with Functions solution</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../lab_keys/week6_lab/lab_wk6.html" title="next page">
+        <a class="right-next" href="lab_wk9/lab_wk9.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Lab Week 6 Solution</p>
+                <p class="prevnext-title">Lab Week 9</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
