@@ -65,8 +65,6 @@ plt.plot(x, y, 'o', xnew, f1(xnew), 'x-', xnew, f2(xnew), '--', xnew, f3(xnew),'
 plt.legend(['data', 'nearest', 'linear', 'cubic'], loc = 'best');
 ```
 
-![png](output_5_0.png)
-    
 
 +++ {"lines_to_next_cell": 0}
 
