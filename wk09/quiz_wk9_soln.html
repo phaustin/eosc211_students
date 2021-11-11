@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Debugging II" href="debugging_ii_soln.html" />
+    <link rel="next" title="Lab Week 9 - solution" href="../lab_keys/week9_lab/lab_wk9.html" />
     <link rel="prev" title="solution: More Functions &amp; Debugging Practice" href="debugging_soln.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -177,7 +177,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../wk04/making_plots.html">
-   Making Plots
+   Making Plots Worksheet
   </a>
  </li>
  <li class="toctree-l1">
@@ -289,11 +289,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/functions_ii_soln.html">
-   Functions II – solutions
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
    Week 08 Quiz: Functions basics -solution
   </a>
@@ -328,11 +323,6 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Quiz Week 9:  Debugging with Functions solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="debugging_ii_soln.html">
-   Debugging II
   </a>
  </li>
  <li class="toctree-l1">
@@ -467,14 +457,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk09/quiz_wk9_soln.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk09/quiz_wk9_soln.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk09/quiz_wk9_soln.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk09/quiz_wk9_soln.ipynb&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -576,7 +566,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_120316/3948385497.py&quot;</span><span class="gt">, line </span><span class="mi">27</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_296904/3948385497.py&quot;</span><span class="gt">, line </span><span class="mi">27</span>
     <span class="n">i2</span><span class="p">,</span><span class="n">i1</span><span class="p">,</span><span class="n">i3</span><span class="p">,</span><span class="n">i4</span> <span class="o">=</span> <span class="k">def</span> <span class="nf">lat_lonbounds_to_indices</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span><span class="n">lats</span><span class="p">,</span><span class="n">lon1</span><span class="p">,</span><span class="n">lat1</span><span class="p">,</span><span class="n">lon2</span><span class="p">,</span><span class="n">lat2</span><span class="p">)</span>
                   <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -672,7 +662,7 @@
 </div>
 <div class="section" id="q2">
 <h3>Q2:<a class="headerlink" href="#q2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span><span class="p">,</span><span class="n">i3</span><span class="p">,</span><span class="n">i4</span> <span class="o">=</span> <span class="n">lat_lonbounds_to_indices</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span><span class="n">lat</span><span class="p">,</span><span class="o">**</span><span class="n">lims_dict</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span><span class="p">,</span><span class="n">i3</span><span class="p">,</span><span class="n">i4</span> <span class="o">=</span> <span class="n">lat_lonbounds_to_indices</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span><span class="n">lats</span><span class="p">,</span><span class="o">**</span><span class="n">lims_dict</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -718,10 +708,10 @@
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="debugging_ii_soln.html" title="next page">
+        <a class="right-next" href="../lab_keys/week9_lab/lab_wk9.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Debugging II</p>
+                <p class="prevnext-title">Lab Week 9 - solution</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

@@ -22,7 +22,7 @@ language_info:
   name: python
   nbconvert_exporter: python
   pygments_lexer: ipython3
-  version: 3.8.12
+  version: 3.8.10
 ---
 
 - **Name:**

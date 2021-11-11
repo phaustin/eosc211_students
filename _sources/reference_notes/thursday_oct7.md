@@ -1,8 +1,5 @@
 ---
-celltoolbar: Slideshow
 jupytext:
-  cell_metadata_filter: all
-  notebook_metadata_filter: all,-language_info,-toc,-latex_envs
   text_representation:
     extension: .md
     format_name: myst
@@ -28,7 +25,7 @@ kernelspec:
 2.) Simplify complex formulas by evaluating pieces separately
 
      numerator=(a + b)**3. - np.exp(c)  
-     denom = cos(5z) - np.log(y)
+     denom = cos(5z) - np.log(y)`  
      slope = np.arctan(umerator/denom)  
 
 3.)  When in doubt about how row/colum relate to lat/lon on an image, draw a dot

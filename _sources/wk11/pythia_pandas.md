@@ -1,6 +1,5 @@
 ---
 jupytext:
-  formats: ipynb,md:myst
   text_representation:
     extension: .md
     format_name: myst
@@ -15,6 +14,7 @@ kernelspec:
 <center><img src="https://github.com/pandas-dev/pandas/raw/master/web/pandas/static/img/pandas.svg" alt="pandas Logo" style="width: 800px;"/></center>
 
 # Introduction to Pandas
+
 
 +++
 
@@ -31,11 +31,13 @@ This notebook is part of the [Project Pythia foundations series](https://foundat
 
 +++
 
+
+
 ## Imports
 
 +++
 
-You will often see the nickname `pd` used as an abbreviation for pandas in the import statement, just like `numpy` is often imported as `np`.
+You will often see the nickname `pd` used as an abbreviation for pandas in the import statement, just like `numpy` is often imported as `np`. 
 
 ```{code-cell} ipython3
 import pandas as pd

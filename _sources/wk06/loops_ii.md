@@ -1,8 +1,6 @@
 ---
 jupytext:
-  cell_metadata_filter: all
   formats: ipynb,md:myst
-  notebook_metadata_filter: all,-language_info,-toc,-latex_envs
   text_representation:
     extension: .md
     format_name: myst
@@ -14,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Loops II 
+# Loops II
 
 ## EOSC 211
 
@@ -32,7 +30,7 @@ kernelspec:
 
 **Display the numbers of the series 2 4 6 8 10 12 …100 to the screen one by one.**
 
-```{code-cell} ipython3
+```{code-cell}
 # your code here
 ```
 
@@ -40,17 +38,17 @@ kernelspec:
 
 You are given the matrix $A$ which is size 10x20. The following code loops through each element $A_{ij}$ and calculates $i \cdot j \cdot A_{ij}$. Modify this code to store successive calculations in successive elements of a new variable `B` which will have shape 1x200.
 
-+++
-
-### modify this code
+```{code-cell}
+# modify this code
 import numpy as np
 A = np.ones([10,20])
 
 for i in np.arange(0,10):
     for j in np.arange(0,20):
         k = i * j * A[i,j]        
+```
 
-```{code-cell} ipython3
+```{code-cell}
 # your modified version here
 ```
 
@@ -62,7 +60,7 @@ for i in np.arange(0,10):
 
 **b.	3 times the value of the corresponding element in `x` if the latter is odd**
 
-```{code-cell} ipython3
+```{code-cell}
 # your code here
 ```
 
@@ -78,12 +76,13 @@ num = int(input('Enter an integer: '))
 # add your code here
 ```
 
++++
 
 ## Question 5
 
 Modify the above factorial calculation to return an error message if num is negative or is not an integer. 
 To exit and raise an error, include `raise Exception('Error message here')`, or  `raise TypeError('Error message here')`
 
-```{code-cell} ipython3
+```{code-cell}
 # your code here
 ```

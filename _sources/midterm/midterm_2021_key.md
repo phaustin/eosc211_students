@@ -311,6 +311,14 @@ list
 ```{code-cell} ipython3
 :trusted: true
 
+import numpy as np
+np.linspace(4,25,6)
+np.arange(4,26,2)
+```
+
+```{code-cell} ipython3
+:trusted: true
+
 heights = np.arange(0, 20).reshape(10,2)
 even_heights = heights[heights % 2 == 0]
 print(even_heights)
@@ -395,7 +403,9 @@ z4=x1[np.logical_and(i1,i2)]
 x1 = np.arange(1,10)
 y1 = np.arange(100,1000,100)
 i1 = -1*x1>-5
+print(i1)
 i2 = y1==900 
+print(i2)
 z3=y1[np.logical_or(i1,i2)]
 z4=x1[np.logical_and(i1,i2)]
 print(f'z3 = {z3}')

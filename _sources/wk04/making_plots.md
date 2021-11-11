@@ -12,7 +12,7 @@ kernelspec:
   name: python3
 ---
 
-# Making Plots
+# Making Plots Worksheet
 
 ## EOSC 211
 
@@ -65,7 +65,7 @@ $~~~~$
 
 ### Question 3
 
-**The [reading](link) for this week has tutorials for many different styles of plots (line plot, contour plot, boxplot, violin plot, etc). Choose 2 of the available options, and repeat question 2: come up with an experimental setup or data collection scheme that would best be presented via your choice of plot**
+**The reading for this week has tutorials for many different styles of plots (line plot, contour plot, boxplot, violin plot, etc). Choose 2 of the available options, and repeat question 2: come up with an experimental setup or data collection scheme that would best be presented via your choice of plot**
 
 +++
 

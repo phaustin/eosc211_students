@@ -235,15 +235,15 @@ ___
 
 In the cell(s) below, write a self contained program (you can recycle code from earlier parts of the lab) that runs through the whole process of *import/input, data scrubbing, presentation.*
 
-### Import/Input
+#### Import/Input
 This part should be pretty trivial, just copy/paste the appropriate code from above.  As before, use the variables
 `usrlat` and `usrlon` to hold your lat/lon coordinates.
 
-### Data Scrubbing
+#### Data Scrubbing
 Use `if` `elif` `else` statements to handle the possible special cases for user input.  Assume that we
 will run your code for arbitrary values of `usrlat` and `usrlon` and test a variety of possibilities yourself.
 
-### Output
+#### Output
 Generate a scientific figure with the following:
 
 * An X marking the selected location

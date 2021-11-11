@@ -179,7 +179,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../wk04/making_plots.html">
-   Making Plots
+   Making Plots Worksheet
   </a>
  </li>
  <li class="toctree-l1">
@@ -291,11 +291,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/functions_ii_soln.html">
-   Functions II – solutions
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
    Week 08 Quiz: Functions basics -solution
   </a>
@@ -330,11 +325,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../wk09/quiz_wk9_soln.html">
    Quiz Week 9:  Debugging with Functions solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/debugging_ii_soln.html">
-   Debugging II
   </a>
  </li>
  <li class="toctree-l1">
@@ -469,14 +459,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk06/loops_ii.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk06/loops_ii.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk06/loops_ii.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk06/loops_ii.ipynb&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -511,13 +501,6 @@
   <a class="reference internal nav-link" href="#question-2">
    Question 2
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modify-this-code">
-     modify this code
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-3">
@@ -571,18 +554,23 @@
 <div class="section" id="question-2">
 <h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
 <p>You are given the matrix <span class="math notranslate nohighlight">\(A\)</span> which is size 10x20. The following code loops through each element <span class="math notranslate nohighlight">\(A_{ij}\)</span> and calculates <span class="math notranslate nohighlight">\(i \cdot j \cdot A_{ij}\)</span>. Modify this code to store successive calculations in successive elements of a new variable <code class="docutils literal notranslate"><span class="pre">B</span></code> which will have shape 1x200.</p>
-<div class="section" id="modify-this-code">
-<h3>modify this code<a class="headerlink" href="#modify-this-code" title="Permalink to this headline">¶</a></h3>
-<p>import numpy as np
-A = np.ones([10,20])</p>
-<p>for i in np.arange(0,10):
-for j in np.arange(0,20):
-k = i * j * A[i,j]</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># modify this code</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">])</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">):</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">i</span> <span class="o">*</span> <span class="n">j</span> <span class="o">*</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">]</span>        
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your modified version here</span>
 </pre></div>
-</div>
 </div>
 </div>
 </div>

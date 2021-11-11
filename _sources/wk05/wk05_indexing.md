@@ -18,7 +18,8 @@ kernelspec:
 
 ## Read in the data
 
-This is a fake satellite image with longwave flux in a vector called "flux" and brightness temperature in a vector called "temp".  I've stored them in an [npz file](https://numpy.org/doc/stable/reference/generated/numpy.savez.html) using np.savez.
+This is a fake satellite image with longwave flux in a vector called "flux" and brightness temperature in a vector called "temp".  I've stored them in an [npz file](https://numpy.org/doc/stable/reference/generated/numpy.savez.html) using np.savez.  If you
+are working on your laptop, you can download the npz file here: [temp_flux.npz]( https://github.com/phaustin/eosc211_students/blob/e211_live_main/wk05/temp_flux.npz)
 
 In the cells below, you'll be asked to add new points to the figure, and then
 redisplay using `display(fig)`
@@ -49,11 +50,6 @@ Find all pixels with flux values between 500 and 550 $W/m^2$ and color them yell
 
 ```{code-cell} ipython3
 # your code here
-hit = np.logical_and(flux > 500, flux < 550)
-x =flux[hit]
-y = temp[hit]
-ax.plot(x,y,'g.')
-display(fig)
 ```
 
 ## Q2 -- `logical_and` for temperature and flux
@@ -63,8 +59,6 @@ and temperatures greater than 300 K and color those cyan.  Redisplay the figure.
 
 ```{code-cell} ipython3
 # your code here
-hit temp > 300
-combined_hit = logical_and(hit, hit_tem)p
 ```
 
 ## Q3 -- argmax
