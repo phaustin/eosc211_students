@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -30,7 +30,7 @@ kernelspec:
 
 **Use a loop to multiply together all the values in a numpy array `x`, which has n points. The final product goes into a variable `total`.**
 
-```{code-cell}
+```{code-cell} ipython3
 # your code here
 ```
 
@@ -38,7 +38,7 @@ kernelspec:
 
 **Use a loop to find the maximum (largest) value in `x`, writing the result into a variable `largest`.**
 
-```{code-cell}
+```{code-cell} ipython3
 # your code here
 ```
 
@@ -46,7 +46,7 @@ kernelspec:
 
 **Use a loop to count the number of values in a list `x` that appear before a 5. (i.e. if `x = [1, 12, 2.5, 5, 8, 4, 5]` we want  an answer of 3). Put this number into another variable `get_five`.**
 
-```{code-cell}
+```{code-cell} ipython3
 # your code here
 ```
 
@@ -54,7 +54,7 @@ kernelspec:
 
 **Consider an MxN array `A`.  Use a double loop to form a new 1xN array `rowsum`, the k$^{th}$ element of which contains the sum of elements in the k$^{th}$ column of `A`. You may use the built in functions `range()` and `len()`.**
 
-```{code-cell}
+```{code-cell} ipython3
 # your code here
 ```
 
@@ -62,7 +62,7 @@ kernelspec:
 
 **A) Run the following cell. What is the output (describe in words)**
 
-```{code-cell}
+```{code-cell} ipython3
 import numpy as np
 x = np.array([0, 1])
 for k in np.arange(2,20):

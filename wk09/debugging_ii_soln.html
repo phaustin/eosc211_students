@@ -53,7 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Lab Week 9" href="lab_wk9/lab_wk9.html" />
+    <link rel="next" title="Lab Week 9 - solution" href="../lab_keys/week9_lab/lab_wk9.html" />
     <link rel="prev" title="Quiz Week 9: Debugging with Functions solution" href="quiz_wk9_soln.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -179,7 +179,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../wk04/making_plots.html">
-   Making Plots Worksheet
+   Making Plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -291,6 +291,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_ii_soln.html">
+   Functions II – solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
    Week 08 Quiz: Functions basics -solution
   </a>
@@ -333,8 +338,42 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week9_lab/lab_wk9.html">
+   Lab Week 9 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="lab_wk9/lab_wk9.html">
    Lab Week 9
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 10 - Interpolation/scipy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/wk10_interpolation_demo.html">
+   Week 10:  Interpolation - some examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/dictionaries_and_f_strings.html">
+   Dictionaries, F String Literals
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 11 - Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/pythia_pandas.html">
+   Introduction to Pandas
   </a>
  </li>
 </ul>
@@ -401,11 +440,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/wk09/debugging_ii.ipynb"><button type="button"
+            href="../_sources/wk09/debugging_ii_soln.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk09/debugging_ii.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/wk09/debugging_ii_soln.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -430,14 +469,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk09/debugging_ii.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk09/debugging_ii_soln.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk09/debugging_ii.ipynb&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk09/debugging_ii_soln.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -533,10 +572,111 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/_k/0f_hlw7x2hq4vtcq0h8bvsm40000gr/T/ipykernel_75309/3383483938.py&quot;</span><span class="gt">, line </span><span class="mi">19</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_120209/3383483938.py&quot;</span><span class="gt">, line </span><span class="mi">19</span>
 <span class="nn">    for i</span> in <span class="ni">range</span><span class="nt">(N)</span>
                      <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># andrew&#39;s soln</span>
+<span class="k">def</span> <span class="nf">runlength</span><span class="p">(</span><span class="n">spd</span><span class="p">,</span> <span class="n">minspd</span><span class="p">,</span> <span class="n">maxspd</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    RUNLENGTH calculstes run lengths tatistics</span>
+
+<span class="sd">    Inputs</span>
+<span class="sd">    spd: a time series vector of track speeds</span>
+<span class="sd">    minspd and maxspd: the lower and upper limits of speed for a run</span>
+
+<span class="sd">    Outputs</span>
+<span class="sd">    runs: an array in which runs[i] is the number of runs of i points.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">spd</span><span class="p">)</span>  <span class="c1"># should be the length of spd, not minspd</span>
+    <span class="n">runs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+    <span class="n">runlen</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">isrun</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># this should be a boolean, not an integer</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">N</span><span class="p">):</span>  <span class="c1"># use a consistent index variable, &#39;i&#39; or &#39;k&#39;, don&#39;t forget the colon</span>
+        <span class="k">if</span> <span class="n">spd</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">minspd</span> <span class="ow">and</span> <span class="n">spd</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">maxspd</span><span class="p">:</span>
+            <span class="n">isrun</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">runlen</span> <span class="o">=</span> <span class="n">runlen</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">spd</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">minspd</span> <span class="ow">or</span> <span class="n">spd</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">maxspd</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isrun</span><span class="p">:</span>
+            <span class="n">runs</span><span class="p">[</span><span class="n">runlen</span><span class="p">]</span> <span class="o">=</span> <span class="n">runs</span><span class="p">[</span><span class="n">runlen</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="n">runlen</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">isrun</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">isrun</span><span class="p">:</span>
+        <span class="n">runs</span><span class="p">[</span><span class="n">runlen</span><span class="p">]</span> <span class="o">=</span> <span class="n">runs</span><span class="p">[</span><span class="n">runlen</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">runs</span>  <span class="c1"># the function needs a return statement</span>
+
+
+<span class="n">spd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">minspd</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">maxspd</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">runlength</span><span class="p">(</span><span class="n">spd</span><span class="p">,</span> <span class="n">minspd</span><span class="p">,</span> <span class="n">maxspd</span><span class="p">)</span>
+
+<span class="c1"># annoying indexing error that includes runs of length 0. rewrite this whole function less matlab-y?</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 3., 0., 2., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Catherine&#39;s soln</span>
+<span class="k">def</span> <span class="nf">runlength</span><span class="p">(</span><span class="n">spd</span><span class="p">,</span> <span class="n">minspd</span><span class="p">,</span> <span class="n">maxspd</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    RUNLENGTH calculates run length statistics</span>
+
+<span class="sd">    Inputs</span>
+<span class="sd">    spd: a time series vector of track speeds</span>
+<span class="sd">    minspd and maxspd: the lower and upper limits of speed for a run</span>
+
+<span class="sd">    Outputs</span>
+<span class="sd">    runs: a dictionary with runlengths as keywords and # runs as values</span>
+<span class="sd">          only runlengths with a non-zero # runs are included  </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">spd</span><span class="p">)</span>  <span class="c1"># should be the length of spd, not minspd</span>
+    <span class="c1">#runs = np.zeros(N)</span>
+    <span class="n">runlen</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">runs_dict</span> <span class="o">=</span> <span class="p">{}</span>   <span class="c1"># set up an empty dictionary</span>
+    <span class="n">isrun</span> <span class="o">=</span> <span class="kc">False</span>  <span class="c1"># this should be a boolean, not an integer</span>
+    <span class="k">for</span> <span class="n">speed</span> <span class="ow">in</span> <span class="n">spd</span><span class="p">:</span>  <span class="c1"># use a consistent index variable, &#39;i&#39; or &#39;k&#39;, don&#39;t forget the colon</span>
+        <span class="k">if</span> <span class="n">speed</span> <span class="o">&gt;=</span> <span class="n">minspd</span> <span class="ow">and</span> <span class="n">speed</span> <span class="o">&lt;=</span> <span class="n">maxspd</span><span class="p">:</span>    <span class="c1"># CJ pythonic for loop fix</span>
+            <span class="n">isrun</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="n">runlen</span> <span class="o">+=</span> <span class="mi">1</span>   <span class="c1"># CJ small pythonic fix</span>
+        <span class="k">elif</span> <span class="p">(</span><span class="n">speed</span> <span class="o">&lt;</span> <span class="n">minspd</span> <span class="ow">or</span> <span class="n">speed</span> <span class="o">&gt;</span> <span class="n">maxspd</span><span class="p">)</span> <span class="ow">and</span> <span class="n">isrun</span><span class="p">:</span>   <span class="c1"># CJ pythonic for loop fix</span>
+            <span class="n">runs_dict</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">runlen</span><span class="p">)]</span> <span class="o">=</span> <span class="n">runs_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">runlen</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span><span class="mi">1</span>   <span class="c1"># I want to hear set the new keyword in dictionary if doesn&#39;t exist</span>
+                                          <span class="c1"># then set it&#39;s value to 1 or increment it if it already existed.</span>
+            <span class="n">runlen</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">isrun</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">isrun</span><span class="p">:</span>
+        <span class="n">runs_dict</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">runlen</span><span class="p">)]</span> <span class="o">=</span> <span class="n">runs_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">runlen</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>    <span class="c1"># and obviously this will need a fix.</span>
+    <span class="k">return</span> <span class="n">runs_dict</span>  <span class="c1"># the function needs a return statement</span>
+
+
+<span class="n">spd</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="n">minspd</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">maxspd</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">runlength</span><span class="p">(</span><span class="n">spd</span><span class="p">,</span> <span class="n">minspd</span><span class="p">,</span> <span class="n">maxspd</span><span class="p">)</span>
+
+<span class="c1"># CJ: I made a couple of edits things c.f. above and also turned into a dictionary. </span>
+<span class="c1"># The dictionary is not &quot;ordered&quot; ie # runs by increasing runlength but this doesn&#39;t matter</span>
+<span class="c1"># (obvious b/c I added an extra 5 for this test at end of speed array)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 2, &#39;3&#39;: 2, &#39;2&#39;: 1}
 </pre></div>
 </div>
 </div>
@@ -583,10 +723,10 @@
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="lab_wk9/lab_wk9.html" title="next page">
+        <a class="right-next" href="../lab_keys/week9_lab/lab_wk9.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Lab Week 9</p>
+                <p class="prevnext-title">Lab Week 9 - solution</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

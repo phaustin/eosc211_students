@@ -1,16 +1,16 @@
 ---
-jupytext:
-  cell_metadata_filter: -all
-  notebook_metadata_filter: all,-language_info,-toc,-latex_envs
-  text_representation:
-    extension: .md
-    format_name: myst
-    format_version: 0.13
-    jupytext_version: 1.11.5
-kernelspec:
-  display_name: Python 3 (ipykernel)
-  language: python
-  name: python3
+jupyter:
+  jupytext:
+    cell_metadata_filter: -all
+    text_representation:
+      extension: .md
+      format_name: markdown
+      format_version: '1.3'
+      jupytext_version: 1.11.5
+  kernelspec:
+    display_name: Python 3 (ipykernel)
+    language: python
+    name: python3
 ---
 
 # Week 10:  Interpolation - some examples
@@ -21,9 +21,8 @@ Note: There is also a numpy function that does just linear interpolation: See ht
 
 ## Import Packages
 
-```{code-cell} ipython3
-:trusted: true
 
+```python
 ## import the packages I'll need
 import numpy as np
 from scipy import interpolate 
@@ -33,22 +32,19 @@ import time
 
 ### Example #1 from the web page reading
 
-```{code-cell} ipython3
-:lines_to_next_cell: 2
-:trusted: true
 
+```python
 # make synthetic data - a nice smooth function
 x = np.linspace(0, 4, 12)
 y = np.cos(x**2/3+4)
 
 # make a figure of my synthetic data
-plt.plot(x, y, 'o');
+plt.plot(x, y, 'o')
+plt.show()
 ```
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
 
+```python
 # mess around a bit with basic 1D interpolation methods
 f1 = interpolate.interp1d(x, y, kind = 'nearest')  # nearest neighbor
 
@@ -62,11 +58,15 @@ xnew = np.linspace(0, 4, 80)
 # plot original data and my interpolation estimates
 plt.figure(figsize=(12,6))
 plt.plot(x, y, 'o', xnew, f1(xnew), 'x-', xnew, f2(xnew), '--', xnew, f3(xnew),'-.')
-plt.legend(['data', 'nearest', 'linear', 'cubic'], loc = 'best');
+plt.legend(['data', 'nearest', 'linear', 'cubic'], loc = 'best')
+plt.show()
 ```
 
 
-+++ {"lines_to_next_cell": 0}
+
+![png](output_5_0.png)
+    
+
 
 ### More detail with Splines - only use these more complex approaches once you have gained some experience / understanding of interpolation
 
@@ -87,10 +87,7 @@ This fits a spline y = spl(x) of degree k to the provided x, y data. Parameters:
 
 
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```python
 # make a function and add some gaussian random noise, mean 0, variance 1
 
 x = np.linspace(-3, 3, 50)
@@ -110,15 +107,26 @@ h2,=plt.plot(xs, spl(xs), 'b', lw = 2, label='SF=0.5')
 spl.set_smoothing_factor(0)    # no smoothing
 h3,=plt.plot(xs, spl(xs), 'c-.', lw = 2, label='SF=0')
 plt.legend(handles=[h0,h1,h2,h3])
-plt.title('Different Smoothing Factors (SF)');
+plt.title('Different Smoothing Factors (SF)')
+plt.show()
 ```
+
+
+
+![png](output_7_0.png)
+    
+
+
+
+
+![png](output_7_1.png)
+    
+
 
 ## Example #2: Demos with interp1d - nearest neighbor, linear, cubic
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
 
+```python
 # set up my demo function
 
 # make a nice smooth function
@@ -149,38 +157,53 @@ f3 = interpolate.interp1d(xsamp, ysamp, kind = 'cubic', fill_value='extrapolate'
 # plot original data and my interpolation estimates
 plt.figure(figsize=(12,6))
 plt.plot(x, y, 'k--', lw=3)
-plt.plot(xsamp, ysamp, 'o', ms = 15, label='raw data');
+plt.plot(xsamp, ysamp, 'o', ms = 15, label='raw data')
+plt.show()
 ```
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
 
+
+![png](output_9_0.png)
+    
+
+
+
+```python
 # plot original data and my interpolation estimates
 plt.figure(figsize=(12,6))
 plt.plot(x, y, 'k--', lw=1)
 plt.plot(xsamp, ysamp, 'o', ms = 15, label='raw data')
 plt.plot(xnew, f1(xnew), 'x-', lw=1)
-plt.legend(['original','data', 'nearest'], loc = 'best');
+plt.legend(['original','data', 'nearest'], loc = 'best')
+plt.show()
 ```
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
 
+
+![png](output_10_0.png)
+    
+
+
+
+```python
 # plot original data and my interpolation estimates
 plt.figure(figsize=(12,6))
 plt.plot(x, y, 'k--', lw=1)
 plt.plot(xsamp, ysamp, 'o', ms = 15, label='raw data')
 plt.plot(xnew, f1(xnew), 'x-')
 plt.plot(xnew, f2(xnew), 'x--')
-plt.legend(['original','data', 'nearest', 'linear'], loc = 'best');
+plt.legend(['original','data', 'nearest', 'linear'], loc = 'best')
+plt.show()
 ```
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
 
+
+![png](output_11_0.png)
+    
+
+
+
+```python
 plt.figure(figsize=(12,6))
 plt.plot(x, y, 'k-', lw=1)
 plt.plot(xsamp, ysamp, 'o', ms = 15, label='raw data')
@@ -188,15 +211,20 @@ plt.plot(xnew, f1(xnew))
 plt.plot(xnew, f2(xnew), 'x--')
 plt.show
 plt.plot(xnew, f3(xnew),'x-.')
-plt.legend(['original','data', 'nearest', 'linear', 'cubic'], loc = 'best');
+plt.legend(['original','data', 'nearest', 'linear', 'cubic'], loc = 'best')
+plt.show()
 ```
+
+
+
+![png](output_12_0.png)
+    
+
 
 ## What can go wrong?  Example #3 - overshoot 
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
 
+```python
 x = np.arange(-2,2.1,0.2)
 y = np.zeros_like(x)
 y[x<0] = -1
@@ -213,15 +241,19 @@ plt.plot(x, y, 'o', ms = 5, label='raw data')
 plt.plot(xnew, f2(xnew), '--')
 plt.show
 plt.plot(xnew, f3(xnew),'-.')
-plt.legend(['original','data','linear', 'cubic'], loc = 'best');
+plt.legend(['original','data','linear', 'cubic'], loc = 'best')
+plt.show()
 ```
+
+
+
+![png](output_14_0.png)
+
 
 ## What can go wrong? Example #4 - extrapolation issues 
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
 
+```python
 x = np.arange(-2,2.1,0.5)
 y = np.zeros_like(x)
 y[x<0] = -1
@@ -238,5 +270,12 @@ plt.plot(x, y, 'o', ms = 5, label='raw data')
 plt.plot(xnew, f2(xnew), '--')
 plt.show
 plt.plot(xnew, f3(xnew),'-.')
-plt.legend(['original','data','linear', 'cubic'], loc = 'best');
+plt.legend(['original','data','linear', 'cubic'], loc = 'best')
+plt.show()
 ```
+
+
+
+![png](output_16_0.png)
+    
+

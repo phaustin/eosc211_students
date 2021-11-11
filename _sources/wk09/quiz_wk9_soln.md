@@ -1,7 +1,6 @@
 ---
 jupytext:
   cell_metadata_filter: all
-  notebook_metadata_filter: -all
   text_representation:
     extension: .md
     format_name: myst
@@ -132,5 +131,5 @@ print(sub_lons,sub_lats)
 ###  Q2:
 
 ```
-i1,i2,i3,i4 = lat_lonbounds_to_indices(lons,lats,**lims_dict)
+i1,i2,i3,i4 = lat_lonbounds_to_indices(lon,lat,**lims_dict)
 ```

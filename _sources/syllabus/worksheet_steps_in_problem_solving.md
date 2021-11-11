@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.11.4
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -26,17 +26,7 @@ kernelspec:
 
 ### Question 1
 
-**Write down the 3 steps in algorithm design mentioned in the text book OR write down some steps you think will be common to problem solving with python (you might have more than 3 steps):**
-
-+++
-
-1) 
-
-2)
-
-3)
-
-4)
+**Write down the key steps in algorithm design / steps you think will be common to problem solving with python:**
 
 +++
 
@@ -64,10 +54,6 @@ Output:
 
 +++
 
-your answer here
-
-+++
-
 ### Question 3
 
 **The following is a *Python* code snippet:**
@@ -90,5 +76,3 @@ A) Variable names:
 B) Operators:
 
 C) Reserved words:
-
-D) Special characters:

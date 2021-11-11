@@ -179,7 +179,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../wk04/making_plots.html">
-   Making Plots Worksheet
+   Making Plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -291,6 +291,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_ii_soln.html">
+   Functions II – solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
    Week 08 Quiz: Functions basics -solution
   </a>
@@ -328,8 +333,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging_ii_soln.html">
+   Debugging II
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../lab_keys/week9_lab/lab_wk9.html">
    Lab Week 9 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/lab_wk9/lab_wk9.html">
+   Lab Week 9
   </a>
  </li>
 </ul>
@@ -347,6 +362,18 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../wk10/dictionaries_and_f_strings.html">
    Dictionaries, F String Literals
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 11 - Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/pythia_pandas.html">
+   Introduction to Pandas
   </a>
  </li>
 </ul>
@@ -517,8 +544,7 @@
 <h1>Indexing worksheet<a class="headerlink" href="#indexing-worksheet" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="read-in-the-data">
 <h2>Read in the data<a class="headerlink" href="#read-in-the-data" title="Permalink to this headline">¶</a></h2>
-<p>This is a fake satellite image with longwave flux in a vector called “flux” and brightness temperature in a vector called “temp”.  I’ve stored them in an <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.savez.html">npz file</a> using np.savez.  If you
-are working on your laptop, you can download the npz file here: <a class="reference external" href="https://github.com/phaustin/eosc211_students/blob/e211_live_main/wk05/temp_flux.npz">temp_flux.npz</a></p>
+<p>This is a fake satellite image with longwave flux in a vector called “flux” and brightness temperature in a vector called “temp”.  I’ve stored them in an <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.savez.html">npz file</a> using np.savez.</p>
 <p>In the cells below, you’ll be asked to add new points to the figure, and then
 redisplay using <code class="docutils literal notranslate"><span class="pre">display(fig)</span></code></p>
 <div class="cell docutils container">
@@ -559,8 +585,16 @@ redisplay using <code class="docutils literal notranslate"><span class="pre">dis
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<span class="n">hit</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="n">flux</span> <span class="o">&gt;</span> <span class="mi">500</span><span class="p">,</span> <span class="n">flux</span> <span class="o">&lt;</span> <span class="mi">550</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span><span class="n">flux</span><span class="p">[</span><span class="n">hit</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">temp</span><span class="p">[</span><span class="n">hit</span><span class="p">]</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s1">&#39;g.&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/wk05_indexing_5_0.png" src="../_images/wk05_indexing_5_0.png" />
 </div>
 </div>
 </div>
@@ -571,6 +605,16 @@ and temperatures greater than 300 K and color those cyan.  Redisplay the figure.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<span class="n">hit</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">300</span>
+<span class="n">combined_hit</span> <span class="o">=</span> <span class="n">logical_and</span><span class="p">(</span><span class="n">hit</span><span class="p">,</span> <span class="n">hit_tem</span><span class="p">)</span><span class="n">p</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_119785/1275806324.py&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="n">hit</span> <span class="n">temp</span> <span class="o">&gt;</span> <span class="mi">300</span>
+        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
