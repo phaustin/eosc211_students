@@ -57,10 +57,14 @@ parts:
       - file: wk09/quiz_wk9_soln.md
       - file: wk09/debugging_ii_soln.md
       - file: lab_keys/week9_lab/lab_wk9.md
+      - file: wk09/lab_wk9/lab_wk9.md
   - caption: Week 10 - Interpolation/scipy
     chapters:
       - file: wk10/wk10_interpolation_demo.md
       - file: wk10/dictionaries_and_f_strings.md
+  - caption: Week 11 - Pandas
+    chapters:
+      - file: wk11/pythia_pandas.md
   - caption: Assignment 1
     chapters:
       - file: assignment1/assignment1.md
