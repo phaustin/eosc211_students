@@ -602,18 +602,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_947774</span><span class="o">/</span><span class="mf">484298724.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;e211_lib&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -624,14 +612,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_947774</span><span class="o">/</span><span class="mf">181495384.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># get the data and query the size of the array</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">topo</span> <span class="o">=</span> <span class="n">e211</span><span class="o">.</span><span class="n">load_topo</span><span class="p">(</span><span class="s2">&quot;lab5_topo.mat&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Data has shape </span><span class="si">{</span><span class="n">topo</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span> <span class="c1"># rows, columns</span>
-
-<span class="ne">NameError</span>: name &#39;e211&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data has shape (180, 360)
 </pre></div>
 </div>
 </div>
@@ -651,18 +632,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_947774</span><span class="o">/</span><span class="mf">2294315767.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># create lat and lon arrays just like week 3 lab</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">89.5</span><span class="p">,</span> <span class="mf">89.5</span><span class="p">,</span> <span class="n">topo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">lons</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">359.5</span><span class="p">,</span> <span class="n">topo</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># see if our labels correctly match the plot</span>
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/lab_wk5_5_0.png" src="../../_images/lab_wk5_5_0.png" />
 </div>
 </div>
 <p>Does everything look alright with our preliminary data visualization? Note that the scaling of the axes is a little bit off: if the units in the x and y direction are equal (both are in degrees), then we should expect that the length of the x-axis should be twice the length of the y-axis. However the 360 degrees of longitude are not represented as twice the length of the 180 degrees of latitude. While not strictly necessary, we can fix this visualization next time we plot with <code class="docutils literal notranslate"><span class="pre">plt.axis('equal')</span></code>. Also note that without a colorbar, we don’t actually know what each colour on this contour plot represents, nor can we visualize what units of elevation are being used here!</p>
@@ -697,16 +667,9 @@ to find the closest point on the map to the user specified lat/lon.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_947774</span><span class="o">/</span><span class="mf">1227607914.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> 
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># assign new variables for the closest indexes to user specified lat &amp; lon</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">ilat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lats</span><span class="o">-</span><span class="n">usrlat</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>   <span class="c1"># this can also be written ilat=np.argmin(np.abs(lats-usrlat))</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">ilon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">lons</span><span class="o">-</span><span class="n">usrlon</span><span class="p">)</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> 
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>User specified variables: lat: 50, lon: 50
+Closest values in array: lat: 49.5, lon: 49.5 at indices [139, 49]
+Value of topo array at that point: 0 m
 </pre></div>
 </div>
 </div>
@@ -728,18 +691,7 @@ to find the closest point on the map to the user specified lat/lon.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_947774</span><span class="o">/</span><span class="mf">824528194.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># output</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>  <span class="c1"># make the figure a bit bigger</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">img</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contourf</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span> <span class="n">lats</span><span class="p">,</span> <span class="n">topo</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>  <span class="c1"># set axis scaling to equal</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
-
-<span class="ne">NameError</span>: name &#39;plt&#39; is not defined
-</pre></div>
-</div>
+<img alt="../../_images/lab_wk5_9_0.png" src="../../_images/lab_wk5_9_0.png" />
 </div>
 </div>
 </div>
@@ -808,16 +760,7 @@ slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta lon \cdot 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_947774</span><span class="o">/</span><span class="mf">1345184166.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">### BEGIN SOLUTION</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># andrew&#39;s soln</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">slope</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan</span><span class="p">((</span><span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span>                               <span class="o">-</span> <span class="n">topo</span><span class="p">[</span><span class="n">ilat</span><span class="p">,</span> <span class="n">ilon</span> <span class="o">-</span> <span class="mi">1</span><span class="p">])</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span>                               <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="mf">111e3</span> 
-
-<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.009636368489360649
 </pre></div>
 </div>
 </div>
@@ -863,16 +806,7 @@ slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta lon \cdot 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_947774</span><span class="o">/</span><span class="mf">703354968.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> 
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># formatting for slope direction</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="k">if</span> <span class="n">slope</span> <span class="o">&gt;</span> <span class="mf">0.1</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">aspect</span> <span class="o">=</span> <span class="s2">&quot;west-facing&quot;</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">elif</span> <span class="n">slope</span> <span class="o">&lt;</span> <span class="o">-</span><span class="mf">0.1</span><span class="p">:</span>
-
-<span class="ne">NameError</span>: name &#39;slope&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>At 49.5 N, 49.5 E, the height is 0 m and the slope is -0.01 degrees. This is flat.
 </pre></div>
 </div>
 </div>
@@ -986,18 +920,7 @@ will run your code for arbitrary values of <code class="docutils literal notrans
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_947774</span><span class="o">/</span><span class="mf">1034253424.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1">### imports ###</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;e211_lib&#39;
-</pre></div>
-</div>
+<img alt="../../_images/lab_wk5_15_0.png" src="../../_images/lab_wk5_15_0.png" />
 </div>
 </div>
 </div>
