@@ -15,6 +15,7 @@ kernelspec:
 
 # Introduction to Pandas
 
+
 +++
 
 ## Overview
@@ -22,26 +23,24 @@ kernelspec:
 1. How to slice and dice pandas dataframes and dataseries
 1. How to use pandas for exploratory data analysis
 
-## Prerequisites
+## Credits
 
-| Concepts | Importance | Notes |
-| --- | --- | --- |
-| [Python Quickstart](../../foundations/quickstart) | Necessary | Intro to `dict` |
-| [Numpy basics](../numpy/numpy-basics) | Necessary | |
+This notebook is part of the [Project Pythia foundations series](https://foundations.projectpythia.org/core/pandas/pandas.html) ([link to github repo](https://github.com/ProjectPythia/pythia-foundations)).  [LICENSE](https://github.com/ProjectPythia/pythia-foundations/blob/main/LICENSE)
 
 * **Time to learn**: 60 minutes
 
 +++
 
+
+
 ## Imports
 
 +++
 
-You will often see the nickname `pd` used as an abbreviation for pandas in the import statement, just like `numpy` is often imported as `np`. Here we will also be importing `pythia_datasets`, our tool for accessing example data we provide for our materials.
+You will often see the nickname `pd` used as an abbreviation for pandas in the import statement, just like `numpy` is often imported as `np`. 
 
 ```{code-cell} ipython3
 import pandas as pd
-from pythia_datasets import DATASETS
 ```
 
 ## The pandas [`DataFrame`](https://pandas.pydata.org/docs/user_guide/dsintro.html#dataframe)...
@@ -51,32 +50,27 @@ from pythia_datasets import DATASETS
 
 The `columns` that make up our `DataFrame` can be lists, dictionaries, NumPy arrays, pandas `Series`, or more. Within these `columns` our data can be any texts, numbers, dates and times, or many other data types you may have encountered in Python and NumPy. Shown here on the left in dark gray, our very first `column`  is uniquely referrred to as an `Index`, and this contains information characterizing each row of our `DataFrame`. Similar to any other `column`, the `index` can label our rows by text, numbers, `datetime`s (a popular one!), or more.
 
-Let's take a look by reading in some `.csv` data, which comes from the NCDC teleconnections database, including various El Niño Southern Oscillation (ENSO) indices! [[ref](https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/)].
+## Sea surface temperature measurements
 
-+++
+For this notebook we will be looking at temperature timeseries used to monitor the  El Niño Southern Oscillation (ENSO). The data are provided by  the US National Climatic Data Center.  You can read about the regions 
+corresponding to the various sea surface temperatures (Nino12, Nino3 and Nino4) [at the NCDC website](https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/).
 
-<div class="admonition alert alert-info">
-    <p class="admonition-title" style="font-weight:bold">Info</p>
-    Here we're getting the data from Project Pythia's custom library of example data, which we already imported above with <code>from pythia_datasets import DATASETS</code>. The <code>DATASETS.fetch()</code> method will automatically download and cache our example data file <code>enso_data.csv</code> locally.
-</div>
-
-```{code-cell} ipython3
-filepath = DATASETS.fetch('enso_data.csv')
-```
-
-Once we have a valid path to a data file that Pandas knows how to read, we can open it like this:
+We start by reading in the data, formated as comma separated values.  You can download the enso_data.csv file [at this dropbox link](https://www.dropbox.com/s/afxfi6a0odoyx9y/enso_data.csv?dl=0).  If you are on our jupyterhub, it will
+already be in the same folder as this notebook.
 
 ```{code-cell} ipython3
+filepath = "enso_data.csv"
 df = pd.read_csv(filepath)
 ```
 
-If we print out our dataframe, you will notice that is text based, which is okay, but not the "best" looking output
+If we print out our dataframe, you will notice that is text based, which is okay, but not the "best" looking output.  All numbers are temperatures in deg Celsius.  "anom" is short for anomaly, which is defined as the
+fluctuation about the mean.
 
 ```{code-cell} ipython3
 print(df)
 ```
 
-Instead, if we just use the pandas dataframe itself (without wrapping it in `print`), we have a nicely rendered table which is native to pandas and Jupyter Notebooks. See how much nicer that looks?
+If we just use the pandas dataframe itself (without wrapping it in `print`), we have a nicely rendered table which is native to pandas and Jupyter Notebooks. See how much nicer that looks?
 
 ```{code-cell} ipython3
 df
@@ -220,28 +214,25 @@ These capabilities extend back to our original `DataFrame`, as well!
 ```{code-cell} ipython3
 :tags: [raises-exception]
 
-df["1982-01-01"]
+df.loc["1982-01-01"]
 ```
 
-<div class="admonition alert alert-danger">
-    <p class="admonition-title" style="font-weight:bold">Danger</p>
-    Or do they?
-</div>
-
-+++
-
-They do! Importantly however, indexing a `DataFrame` can be more strict, and pandas will try not to too heavily assume what you are looking for. So, by default we can't pull out a row within `df` by its label alone, and **instead labels are for identifying columns within `df`**,
+They do! Importantly however, indexing a `DataFrame` can be more strict. A DataFrame has both rows and columns,
+and pandas needs to know that you are asking for a row, which is why you need to access the row label by
+using the `.loc` index.  If you give the DataFrame a single index, it will assume that you are asking
+for a column (the default) and not a row.
 
 ```{code-cell} ipython3
 df["Nino34"]
 ```
 
-and integer indexing will similarly get us nothing,
+You can also retrieve a row by its row number, but again, to remove the ambiguity between index labels (.loc)
+and row numbers, you need to use the `.iloc` locater.
 
 ```{code-cell} ipython3
 :tags: [raises-exception]
 
-df[0]
+df.iloc[0]
 ```
 
 Knowing now that we can pull out one of our columns as a series with its label, plus our experience interacting with the `Series` `df["Nino34"]` gives us, we can chain our brackets to pull out any value from any of our columns in `df`.
