@@ -351,6 +351,11 @@
    Dictionaries, F String Literals
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/quiz_wk10_soln.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
 </ul>
 <p class="caption" role="heading">
  <span class="caption-text">
@@ -556,15 +561,10 @@ on your map</p>
 <h3>Example: Find an item in a list<a class="headerlink" href="#example-find-an-item-in-a-list" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">guestlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tom&#39;</span><span class="p">,</span><span class="s1">&#39;betty&#39;</span><span class="p">,</span><span class="s1">&#39;ulma&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">guestlist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tom&#39;</span><span class="p">,</span><span class="s1">&#39;betty&#39;</span><span class="p">,</span><span class="s1">&#39;ulma&#39;</span><span class="p">]</span>
 <span class="n">guest</span> <span class="o">=</span> <span class="s1">&#39;ulma&#39;</span>
 <span class="k">if</span> <span class="n">guest</span> <span class="ow">in</span> <span class="n">guestlist</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Welcome </span><span class="si">{</span><span class="n">guest</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome ulma!
 </pre></div>
 </div>
 </div>
@@ -580,7 +580,7 @@ How would we find the right slice without an if/else block?</p>
 <p>Answer: store the slices in a dictionary and look them up by dictionary key</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a fake image</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a fake image</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">numcols</span> <span class="o">=</span> <span class="mi">200</span>
@@ -590,24 +590,10 @@ How would we find the right slice without an if/else block?</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[   0    1    2    3    4]
- [ 200  201  202  203  204]
- [ 400  401  402  403  404]
- [ 600  601  602  603  604]
- [ 800  801  802  803  804]
- [1000 1001 1002 1003 1004]
- [1200 1201 1202 1203 1204]
- [1400 1401 1402 1403 1404]
- [1600 1601 1602 1603 1604]
- [1800 1801 1802 1803 1804]]
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a dictionary that has &#39;mercator&#39; as its first key, and holds another dictionary with</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a dictionary that has &#39;mercator&#39; as its first key, and holds another dictionary with</span>
 <span class="c1"># &#39;rows&#39; and &#39;columns&#39; keys for that map projection</span>
 
 <span class="n">row_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span>  <span class="c1"># 10:20</span>
@@ -621,20 +607,6 @@ How would we find the right slice without an if/else block?</p>
 <span class="n">island_columns</span> <span class="o">=</span> <span class="n">corner_dict</span><span class="p">[</span><span class="n">projection</span><span class="p">][</span><span class="s1">&#39;columns&#39;</span><span class="p">]</span>
 <span class="n">island_image</span> <span class="o">=</span> <span class="n">fake_image</span><span class="p">[</span><span class="n">island_rows</span><span class="p">,</span><span class="n">island_columns</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">island_image</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[2100 2101 2102 2103 2104 2105 2106]
- [2300 2301 2302 2303 2304 2305 2306]
- [2500 2501 2502 2503 2504 2505 2506]
- [2700 2701 2702 2703 2704 2705 2706]
- [2900 2901 2902 2903 2904 2905 2906]
- [3100 3101 3102 3103 3104 3105 3106]
- [3300 3301 3302 3303 3304 3305 3306]
- [3500 3501 3502 3503 3504 3505 3506]
- [3700 3701 3702 3703 3704 3705 3706]
- [3900 3901 3902 3903 3904 3905 3906]]
 </pre></div>
 </div>
 </div>

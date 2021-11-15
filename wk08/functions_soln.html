@@ -352,6 +352,11 @@
    Dictionaries, F String Literals
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/quiz_wk10_soln.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
 </ul>
 <p class="caption" role="heading">
  <span class="caption-text">
@@ -548,7 +553,7 @@
 <p><strong>create the <code class="docutils literal notranslate"><span class="pre">sqrtsum</span></code> function by editing the code below:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write the function definition line:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Write the function definition line:</span>
 <span class="k">def</span> <span class="nf">a_function</span><span class="p">():</span>
     <span class="c1"># Write the docstring:</span>
     
@@ -563,18 +568,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_125956/1668016085.py&quot;</span><span class="gt">, line </span><span class="mi">12</span>
-    
-    <span class="o">^</span>
-<span class="ne">SyntaxError</span>: unexpected EOF while parsing
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="k">def</span> <span class="nf">sqrtsum</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    takes in two real numbers and returns a tuple y1, y2 with y1=x1+x2 and y2=(y1)^1/2</span>
@@ -592,23 +589,17 @@
 <p><strong>In the cell below, <em>call</em> your <code class="docutils literal notranslate"><span class="pre">sqrtsum</span></code> function if you want to find the “sqrtsum” of 255 and 73.5. Assign variables <code class="docutils literal notranslate"><span class="pre">mysum</span></code> and <code class="docutils literal notranslate"><span class="pre">rootsum</span></code> to the outputs <code class="docutils literal notranslate"><span class="pre">sqrtsum</span></code></strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="n">mysum</span><span class="p">,</span> <span class="n">rootsum</span> <span class="o">=</span> <span class="n">sqrtsum</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mf">73.5</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mysum</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rootsum</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>328.5
-18.12456896039186
 </pre></div>
 </div>
 </div>
@@ -619,14 +610,14 @@
 <p><strong>Let’s make our function a little more user friendly by anticipating a possible error. Modify <code class="docutils literal notranslate"><span class="pre">sqrtsum</span></code> to <em>raise</em> an exception if both of the function arguments aren’t either integers or floats</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="k">def</span> <span class="nf">sqrtsum</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    takes in two real numbers and returns a tuple y1, y2 with y1=x1+x2 and y2=(y1)^1/2</span>
@@ -646,7 +637,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">sqrtsum</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
@@ -673,11 +664,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0 3 5.0 2.23606797749979
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="question-4">
@@ -685,14 +671,14 @@
 <p><strong>Now change your code in (3) to be a function called <code class="docutils literal notranslate"><span class="pre">checkinput()</span></code> that does the exact same thing as in (3) and is called by your main function <code class="docutils literal notranslate"><span class="pre">sqrtsum</span></code>. <code class="docutils literal notranslate"><span class="pre">checkinput</span></code> should take all the input parameters passed to <code class="docutils literal notranslate"><span class="pre">sqrtsum</span></code>.  <code class="docutils literal notranslate"><span class="pre">checkinput</span></code> is what is called a nested or inner function.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="k">def</span> <span class="nf">sqrtsum</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    takes in two real numbers and returns a tuple y1, y2 with y1=x1+x2 and y2=(y1)^1/2</span>
@@ -712,18 +698,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_125956/558418108.py&quot;</span><span class="gt">, line </span><span class="mi">7</span>
-    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">:</span>
-    <span class="o">^</span>
-<span class="ne">IndentationError</span>: expected an indented block
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution</span>
 <span class="c1"># discuss scope here</span>
 <span class="c1">#</span>
 <span class="c1"># More on inner/nested functions:  </span>
@@ -756,7 +734,7 @@
 <p><strong>Continue writing the body of the function addn that takes three parameters n, summax and maxiter and adds n to itself while the sum is less than or equal to summax or if the number of iterations is less than or equal to maxiter, and then returns the sum.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_n</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">summax</span><span class="p">,</span> <span class="n">maxiter</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_n</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">summax</span><span class="p">,</span> <span class="n">maxiter</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    adds n to itself until one of the</span>
 <span class="sd">    two conditions is reached:</span>
@@ -770,18 +748,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_125956/793529304.py&quot;</span><span class="gt">, line </span><span class="mi">10</span>
-    <span class="k">while</span> <span class="o">&lt;</span><span class="n">your</span> <span class="n">code</span> <span class="n">here</span><span class="o">&gt;</span><span class="p">:</span>
-          <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Andrew&#39;s and Catherine&#39;s solutions the same</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Andrew&#39;s and Catherine&#39;s solutions the same</span>
 
 <span class="k">def</span> <span class="nf">sum_n</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">summax</span><span class="p">,</span> <span class="n">maxiter</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -802,7 +772,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some extra things to discuss:  Catherine</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Some extra things to discuss:  Catherine</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>    <span class="c1"># I always add</span>
 
@@ -840,11 +810,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 102
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 <div class="section" id="question-6">
@@ -852,7 +817,7 @@
 <p><strong>Why doesn’t this work? Debug this code</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_num</span> <span class="o">=</span> <span class="mf">5.1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_num</span> <span class="o">=</span> <span class="mf">5.1</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">cube_plus_one</span><span class="p">(</span><span class="n">my_num</span><span class="p">)</span>
 
 
@@ -864,24 +829,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_125956</span><span class="o">/</span><span class="mf">315864639.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">my_num</span> <span class="o">=</span> <span class="mf">5.1</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">y</span> <span class="o">=</span> <span class="n">cube_plus_one</span><span class="p">(</span><span class="n">my_num</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">def</span> <span class="nf">cube_plus_one</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
-
-<span class="ne">NameError</span>: name &#39;cube_plus_one&#39; is not defined
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="n">my_num</span> <span class="o">=</span> <span class="mf">5.1</span>
 
 

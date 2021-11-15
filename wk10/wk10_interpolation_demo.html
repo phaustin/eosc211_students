@@ -352,6 +352,11 @@
    Dictionaries, F String Literals
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quiz_wk10_soln.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
 </ul>
 <p class="caption" role="heading">
  <span class="caption-text">
@@ -545,7 +550,7 @@
 <h2>Import Packages<a class="headerlink" href="#import-packages" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## import the packages I&#39;ll need</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">## import the packages I&#39;ll need</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">interpolate</span> 
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -558,7 +563,7 @@
 <h3>Example #1 from the web page reading<a class="headerlink" href="#example-1-from-the-web-page-reading" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make synthetic data - a nice smooth function</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make synthetic data - a nice smooth function</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">/</span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="p">)</span>
 
@@ -567,13 +572,10 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_3_0.png" src="../_images/wk10_interpolation_demo_3_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mess around a bit with basic 1D interpolation methods</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># mess around a bit with basic 1D interpolation methods</span>
 <span class="n">f1</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;nearest&#39;</span><span class="p">)</span>  <span class="c1"># nearest neighbor</span>
 
 <span class="n">f2</span> <span class="o">=</span> <span class="n">interpolate</span><span class="o">.</span><span class="n">interp1d</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;linear&#39;</span><span class="p">)</span>  <span class="c1"># linear</span>
@@ -589,9 +591,6 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;nearest&#39;</span><span class="p">,</span> <span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="s1">&#39;cubic&#39;</span><span class="p">],</span> <span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;best&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_4_0.png" src="../_images/wk10_interpolation_demo_4_0.png" />
 </div>
 </div>
 </div>
@@ -613,7 +612,7 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a function and add some gaussian random noise, mean 0, variance 1</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># make a function and add some gaussian random noise, mean 0, variance 1</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
@@ -636,10 +635,6 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_6_0.png" src="../_images/wk10_interpolation_demo_6_0.png" />
-<img alt="../_images/wk10_interpolation_demo_6_1.png" src="../_images/wk10_interpolation_demo_6_1.png" />
-</div>
 </div>
 </div>
 </div>
@@ -648,7 +643,7 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 <h2>Example #2: Demos with interp1d - nearest neighbor, linear, cubic<a class="headerlink" href="#example-2-demos-with-interp1d-nearest-neighbor-linear-cubic" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up my demo function</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># set up my demo function</span>
 
 <span class="c1"># make a nice smooth function</span>
 <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span>
@@ -682,13 +677,10 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_8_0.png" src="../_images/wk10_interpolation_demo_8_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot original data and my interpolation estimates</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot original data and my interpolation estimates</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xsamp</span><span class="p">,</span> <span class="n">ysamp</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;raw data&#39;</span><span class="p">)</span>
@@ -697,13 +689,10 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_9_0.png" src="../_images/wk10_interpolation_demo_9_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot original data and my interpolation estimates</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot original data and my interpolation estimates</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;k--&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xsamp</span><span class="p">,</span> <span class="n">ysamp</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;raw data&#39;</span><span class="p">)</span>
@@ -713,13 +702,10 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_10_0.png" src="../_images/wk10_interpolation_demo_10_0.png" />
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;k-&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xsamp</span><span class="p">,</span> <span class="n">ysamp</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">ms</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;raw data&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xnew</span><span class="p">,</span> <span class="n">f1</span><span class="p">(</span><span class="n">xnew</span><span class="p">))</span>
@@ -730,16 +716,13 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_11_0.png" src="../_images/wk10_interpolation_demo_11_0.png" />
-</div>
 </div>
 </div>
 <div class="section" id="what-can-go-wrong-example-3-overshoot">
 <h2>What can go wrong?  Example #3 - overshoot<a class="headerlink" href="#what-can-go-wrong-example-3-overshoot" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mf">2.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mf">2.1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="n">y</span><span class="p">[</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="n">y</span><span class="p">[</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -759,16 +742,13 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_13_0.png" src="../_images/wk10_interpolation_demo_13_0.png" />
-</div>
 </div>
 </div>
 <div class="section" id="what-can-go-wrong-example-4-extrapolation-issues">
 <h2>What can go wrong? Example #4 - extrapolation issues<a class="headerlink" href="#what-can-go-wrong-example-4-extrapolation-issues" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mf">2.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mf">2.1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="n">y</span><span class="p">[</span><span class="n">x</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="n">y</span><span class="p">[</span><span class="n">x</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
@@ -787,9 +767,6 @@ ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns t
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;original&#39;</span><span class="p">,</span><span class="s1">&#39;data&#39;</span><span class="p">,</span><span class="s1">&#39;linear&#39;</span><span class="p">,</span> <span class="s1">&#39;cubic&#39;</span><span class="p">],</span> <span class="n">loc</span> <span class="o">=</span> <span class="s1">&#39;best&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/wk10_interpolation_demo_15_0.png" src="../_images/wk10_interpolation_demo_15_0.png" />
 </div>
 </div>
 </div>

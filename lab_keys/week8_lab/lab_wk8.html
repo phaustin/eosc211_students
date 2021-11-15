@@ -352,6 +352,11 @@
    Dictionaries, F String Literals
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/quiz_wk10_soln.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
 </ul>
 <p class="caption" role="heading">
  <span class="caption-text">
@@ -544,7 +549,7 @@
 <h2>As always, first import the packages you’ll need<a class="headerlink" href="#as-always-first-import-the-packages-you-ll-need" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -554,7 +559,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your posix_to_datetime function will go here (see below for details)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your posix_to_datetime function will go here (see below for details)</span>
 
 <span class="c1">### BEGIN SOLUTION</span>
 <span class="k">def</span> <span class="nf">posix_to_datetime</span><span class="p">(</span><span class="n">time_array</span><span class="p">):</span>
@@ -583,7 +588,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># IN THIS CELL DEFINE TWO FUNCTIONS WITH THE FOLLOWING NAMES AND SIGNATURES</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># IN THIS CELL DEFINE TWO FUNCTIONS WITH THE FOLLOWING NAMES AND SIGNATURES</span>
 
 <span class="c1"># check_inputs(winlen) return winlen</span>
 
@@ -640,7 +645,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># IN THIS CELL DEFINE YOUR RUNNING MEDIAN FUNCTION WITH THIS NAME AND SIGNATURE</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># IN THIS CELL DEFINE YOUR RUNNING MEDIAN FUNCTION WITH THIS NAME AND SIGNATURE</span>
 <span class="c1">#</span>
 <span class="c1"># running_median(data, winlen=7)</span>
 <span class="c1">### BEGIN SOLUTION</span>
@@ -678,7 +683,7 @@
 <p>Remind yourself of np.load and what <code class="docutils literal notranslate"><span class="pre">.npz</span></code> files contain from the week 6 lab. Also review the week 6 lab to remind yourself about datetime objects are and how to import dates/times into a numpy array of datetime objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the aircraft data again -- copy from week 6 solution</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the aircraft data again -- copy from week 6 solution</span>
 <span class="n">aircraft_gps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;aircraft_gps.npz&quot;</span><span class="p">)</span>
 <span class="n">vel</span> <span class="o">=</span> <span class="n">aircraft_gps</span><span class="p">[</span><span class="s2">&quot;vel&quot;</span><span class="p">]</span>
 <span class="n">time</span> <span class="o">=</span> <span class="n">aircraft_gps</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
@@ -769,7 +774,7 @@ code similar to this, with a variety of window sizes and data sets.</p>
 <p>This code shows the raw data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sands Heads data</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sands Heads data</span>
 <span class="n">temp_time</span> <span class="o">=</span> <span class="n">posix_to_datetime</span><span class="p">(</span><span class="n">sand_time</span><span class="p">)</span>
 
 <span class="c1"># quick and dirty plot to check everything is working ok</span>
@@ -781,16 +786,13 @@ code similar to this, with a variety of window sizes and data sets.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="../../_images/lab_wk8_16_0.png" src="../../_images/lab_wk8_16_0.png" />
-</div>
 </div>
 <p>The cell below tests window length 32 for the velocity data and
 compares the result at index = 231 with the answer we got with our
 own running_median filter</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy.testing</span> <span class="k">as</span> <span class="nn">nt</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy.testing</span> <span class="k">as</span> <span class="nn">nt</span>
 <span class="n">window</span><span class="o">=</span><span class="mi">32</span>
 <span class="n">vel_median_filtered</span> <span class="o">=</span> <span class="n">running_median</span><span class="p">(</span><span class="n">vel</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
 <span class="n">testval</span> <span class="o">=</span> <span class="n">vel_median_filtered</span><span class="p">[</span><span class="mi">231</span><span class="p">]</span>
@@ -798,15 +800,10 @@ own running_median filter</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>odd window length 32 detected, using window length 33 instead
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You don&#39;t need to enter anything here  -- we have hidden the</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># You don&#39;t need to enter anything here  -- we have hidden the</span>
 <span class="c1"># code we will use to check your functions in this cell</span>
 
 <span class="c1">### BEGIN SOLUTION</span>
@@ -825,21 +822,6 @@ own running_median filter</p>
 <span class="c1">### END SOLUTION</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running median test, winlen = 11
-</pre></div>
-</div>
-<img alt="../../_images/lab_wk8_19_1.png" src="../../_images/lab_wk8_19_1.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running median test, winlen = 42
-odd window length 42 detected, using window length 43 instead
-</pre></div>
-</div>
-<img alt="../../_images/lab_wk8_19_3.png" src="../../_images/lab_wk8_19_3.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Running median test, winlen = 153
-</pre></div>
-</div>
-<img alt="../../_images/lab_wk8_19_5.png" src="../../_images/lab_wk8_19_5.png" />
 </div>
 </div>
 </div>

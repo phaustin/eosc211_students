@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Introduction to Pandas" href="../wk11/pythia_pandas.html" />
+    <link rel="next" title="Week 10 Quiz Solution: Practice with Dictionaries and Functions" href="quiz_wk10_soln.html" />
     <link rel="prev" title="Week 10: Interpolation - some examples" href="wk10_interpolation_demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -352,6 +352,11 @@
    Dictionaries, F String Literals
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="quiz_wk10_soln.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
 </ul>
 <p class="caption" role="heading">
  <span class="caption-text">
@@ -522,7 +527,7 @@
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># placeholder results (not the actual survey)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># placeholder results (not the actual survey)</span>
 <span class="n">transport</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;car&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
     <span class="s2">&quot;bus&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -541,14 +546,14 @@
 <p><strong>A) The median commuting time for people who drive</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">drivemed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">transport</span><span class="p">[</span><span class="s2">&quot;car&quot;</span><span class="p">])</span>
@@ -556,31 +561,21 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The median commute time for people who drive is 4.0 minutes
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>B) The number of people who ride bikes to UBC</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="n">cyclists</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">transport</span><span class="p">[</span><span class="s2">&quot;bike&quot;</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">cyclists</span><span class="si">}</span><span class="s2"> cyclists in EOSC211 this semester.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 5 cyclists in EOSC211 this semester.
 </pre></div>
 </div>
 </div>
@@ -631,10 +626,10 @@
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../wk11/pythia_pandas.html" title="next page">
+        <a class="right-next" href="quiz_wk10_soln.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Introduction to Pandas</p>
+                <p class="prevnext-title">Week 10 Quiz Solution:  Practice with Dictionaries and Functions</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

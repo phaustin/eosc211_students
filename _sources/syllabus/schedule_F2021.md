@@ -27,7 +27,7 @@ Week |Dates | Readings | Worksheets | Lab
  8.5  | | Assignment 1 released <br> Due 4pm Friday Nov. 12 (week 10) on Canvas 
  9|Nov 1-5|  [Positional and Keyword Arguments](https://phaustin.github.io/Problem-Solving-with-Python/Functions-and-Modules/Positional-and-Keyword-Arguments.html) <br> [Calling Functions from Other Files](https://phaustin.github.io/Problem-Solving-with-Python/Functions-and-Modules/Calling-Functions-from-Other-Files.html)| More functions <br> Debugging and error types <br>   (e.g., off by one, fencepost) | Debug "large" functional program <br> `*args, **kwargs` 
  10|Nov 8-12| [Interpolation](https://www.tutorialspoint.com/scipy/scipy_interpolate.htm)  <br> Introduction to SciPy| interpolation  | No lab/thurs class <br> A1 due Fri.
- 11|Nov 15-19|  [Pandas](https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html) (quiz covers sections through "Slicing and dicing" ) | Working with ENSO SST data | YVR climatology
+ 11|Nov 15-19|  TBA | Vectorization and speed (Tues) <br> Numerical Integration (Thurs) | TBD
    11.5  | | Assignment 2 released <br> Due 4pm Friday Dec. 3 (week 13) on Canvas 
  12|Nov 22-26|  TBA | vectorization practice, file IO (csv) | none
  13|Nov 29-Dec 1| No pre-reading | review, linear algebra (if time) | none
