@@ -62,6 +62,7 @@ parts:
     chapters:
       - file: wk10/wk10_interpolation_demo.md
       - file: wk10/dictionaries_and_f_strings.md
+      - file: wk10/quiz_wk10_soln.md
   - caption: Week 11 - Pandas
     chapters:
       - file: wk11/pythia_pandas.md
