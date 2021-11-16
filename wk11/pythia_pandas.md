@@ -780,6 +780,7 @@ pd.read_csv('nino_analyzed_output.csv', index_col=0, parse_dates=True)
 
 ## Resources and References
 1. [NOAA NCDC ENSO Dataset Used in this Example](https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/)
+1. [Software carpentry pandas lesson](https://swcarpentry.github.io/python-novice-gapminder/08-data-frames/index.html)
 1. [Getting Started with Pandas](https://pandas.pydata.org/docs/getting_started/index.html#getting-started)
 1. [Pandas User Guide](https://pandas.pydata.org/docs/user_guide/index.html#user-guide)
 1. [Modern Pandas](https://tomaugspurger.github.io/modern-1-intro)
