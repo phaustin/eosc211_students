@@ -393,6 +393,16 @@
    Notes for Thursday Oct. 7
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/lab_wk11/pandas-cheatsheet.html">
+   Pandas Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html">
+   Pythia Pandas Lesson
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -571,7 +581,7 @@
 <p>would print to the screen the surface gravity of Venus followed by the surface gravity of Earth.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">surfgrav</span><span class="p">(</span><span class="n">planet</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">surfgrav</span><span class="p">(</span><span class="n">planet</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; computes and returns surface gravity on my favorite inner solar system body</span>
 <span class="sd">        INPUT:  planet/moon choice, default is Earth</span>
 <span class="sd">        OUTPUT:  surface gravity in m/s^2</span>
@@ -588,7 +598,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Solution</span>
 <span class="k">def</span> <span class="nf">surfgrav</span><span class="p">(</span><span class="n">planet</span><span class="o">=</span><span class="s2">&quot;Earth&quot;</span><span class="p">):</span>    <span class="c1"># needs default argument</span>
     <span class="sd">&quot;&quot;&quot; computes and returns surface gravity on my favorite inner solar system body</span>
 <span class="sd">        INPUT:  planet/moon choice, default is Earth</span>
@@ -611,6 +621,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8.86376117923448
+3.698211166353131
+1.6244088415332385
+3.7244185135875956
+9.813646787366265
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="question-2">
@@ -620,7 +639,7 @@
 <p>What would be the output of the following code:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Francis question: </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Francis question: </span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 
@@ -634,6 +653,14 @@
 <span class="n">radius_squared</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="n">radius_squared</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">3</span> <span class="p">)</span>
 <span class="n">radius_squared</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_125923/2144764213.py&quot;</span><span class="gt">, line </span><span class="mi">14</span>
+    <span class="n">radius_squared</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+                        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: positional argument follows keyword argument
 </pre></div>
 </div>
 </div>
@@ -656,7 +683,7 @@
 <p>Which line number(s) of code will not work and why?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">equilibrium_temp</span><span class="p">(</span><span class="n">F_sun</span><span class="o">=</span><span class="mi">1366</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">albedo</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">equilibrium_temp</span><span class="p">(</span><span class="n">F_sun</span><span class="o">=</span><span class="mi">1366</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">albedo</span><span class="o">=</span><span class="mf">0.3</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    prints the blackbody equilibrium temperature of a</span>
 <span class="sd">    perfectly emitting planetary body (default values </span>
@@ -682,6 +709,14 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_125923/3638049612.py&quot;</span><span class="gt">, line </span><span class="mi">23</span>
+    <span class="n">equilibrium_temp</span><span class="p">(</span><span class="n">albedo</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">distance</span><span class="o">=</span><span class="mf">0.6</span><span class="p">,</span> <span class="mi">1366</span><span class="p">)</span>        <span class="c1"># Line 5</span>
+                                               <span class="o">^</span>
+<span class="ne">SyntaxError</span>: positional argument follows keyword argument
+</pre></div>
+</div>
+</div>
 </div>
 <hr class="docutils" />
 <p><em>Solution:</em></p>
@@ -696,7 +731,7 @@
 <p><strong>Decide what the code fragment is trying to do, and how to fix the error so it performs the required task.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># creates a 10x5 matrix containing random numbers</span>
 
 <span class="c1"># debug this code</span>
@@ -710,10 +745,22 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_125923</span><span class="o">/</span><span class="mf">3356679194.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="n">rowsum</span> <span class="o">=</span> <span class="n">rowsum</span> <span class="o">+</span> <span class="n">A</span><span class="p">[:,</span><span class="n">k</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> 
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="n">rowsum</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+
+<span class="ne">TypeError</span>: rowsum() takes 0 positional arguments but 1 was given
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution - same for Catherine and Andrew</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution - same for Catherine and Andrew</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># creates a 10x5 matrix containing random numbers</span>
 
@@ -733,6 +780,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[5.76838988 5.70657453 4.92602674 6.80279708 4.12355387]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="question-4">
@@ -740,7 +792,7 @@
 <p><strong>This code is supposed to create a <em>running standard deviation</em>. Does it? If it doesn’t, state why. If not, what is the problem?</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="c1"># debug this code</span>
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
@@ -754,14 +806,14 @@
 <p><strong>B) Fix the code to perform the intended operation</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution </span>
 <span class="c1">#</span>
 <span class="c1"># this is supposed to call the function np.std (calculate the standard deviation) for x[k-3:k+3],</span>
 <span class="c1"># i.e. the running standard deviation. The min and max function calls handle the cases at the beginning and </span>
@@ -778,6 +830,12 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.13279718, 0.11696531, 0.31384394, 0.37307537, 0.40073334,
+       0.34710262, 0.32205735, 0.24020099, 0.2428595 , 0.21464626])
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="question-5">
@@ -791,7 +849,7 @@
 <p><strong>What do you see on the screen when you run this code (after fixing the error)?</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">-</span><span class="mi">1</span>
@@ -800,17 +858,25 @@
 </pre></div>
 </div>
 </div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_125923/4191340243.py&quot;</span><span class="gt">, line </span><span class="mi">5</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">4</span><span class="p">:</span>
+         <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
 <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
 <span class="n">y</span> <span class="o">=</span> <span class="mi">4</span>
 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
@@ -819,6 +885,11 @@
         <span class="n">x</span> <span class="o">+=</span><span class="mi">4</span>
         
 <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(9, -1)
 </pre></div>
 </div>
 </div>
