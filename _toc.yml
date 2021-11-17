@@ -66,6 +66,7 @@ parts:
   - caption: Week 11 - Pandas
     chapters:
       - file: wk11/pythia_pandas.md
+      - file: wk11/lab_wk11/lab_wk11.md
   - caption: Assignment 1
     chapters:
       - file: assignment1/assignment1.md
