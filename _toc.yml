@@ -67,9 +67,10 @@ parts:
     chapters:
       - file: wk11/pythia_pandas.md
       - file: wk11/lab_wk11/lab_wk11.md
-  - caption: Assignment 1
+  - caption: Assignments
     chapters:
       - file: assignment1/assignment1.md
+      - file: assignment02/ast2.md
   - caption: Reference material 
     chapters:
       - file: reference_notes/thursday_oct7.md
