@@ -1,0 +1,861 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2 - Flybys &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notes for Thursday Oct. 7" href="../reference_notes/thursday_oct7.html" />
+    <link rel="prev" title="Assignment 1 – CO2/temperature" href="../assignment1/assignment1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../announcements.html">
+   Course Home/Announcements
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 1 - Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/syllabus.html">
+   Course Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/covid_statements.html">
+   Covid Safety in the Classroom
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule_F2021.html">
+   Course Schedule - Fall Semester 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/worksheet_steps_in_problem_solving.html">
+   Steps In Problem Solving
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 2 - Data Types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/data_types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/some_review_plus_built_in_functions_arrays_preview.html">
+   Some Review Plus Built-In Functions, Arrays Preview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week2_lab/lab_wk2.html">
+   Answers: Lab Week 2 - Jupyterhub Tutorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/week2_quiz.html">
+   Week 2 quiz
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 3 - Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures_ii.html">
+   Data Structures II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/week3_quiz.html">
+   Week 3 quiz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week3_lab/lab_wk3_soln.html">
+   Answers: Lab Week 3
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 4 - Scientific Figures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk04/making_plots.html">
+   Making Plots Worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week4_lab/lab_wk4.html">
+   Answers: Lab Week 4
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 5 - Computer Logic
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/logic.html">
+   Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/complicated_logic.html">
+   More Complicated Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/wk05_indexing.html">
+   Indexing worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/wk05_indexing_soln.html">
+   Week 5 indexing solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/week5_quiz_sol.html">
+   Week 5 quiz solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week5_lab/lab_wk5.html">
+   Answers: Lab Week 5
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_soln.html">
+   Loops – Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_ii.html">
+   Loops II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_ii_soln.html">
+   Loops II solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/week6_quiz_sol.html">
+   Week 6 quiz solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week6_lab/lab_wk6.html">
+   Lab Week 6 Solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 7 - Midterm
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/midterm_review_sol.html">
+   Midterm Review solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/week7_quiz_sol.html">
+   Week 7 quiz solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 8 - Functions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_soln.html">
+   Functions – solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
+   Week 08 Quiz: Functions basics -solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week8_lab/lab_wk8.html">
+   Lab Week 8 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../midterm/midterm_2021_key.html">
+   e211 2021t1 midterm solutions
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 9 - Functions/debugging
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging.html">
+   More Functions &amp; Debugging Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging_soln.html">
+   solution: More Functions &amp; Debugging Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/quiz_wk9_soln.html">
+   Quiz Week 9:  Debugging with Functions solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week9_lab/lab_wk9.html">
+   Lab Week 9 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/lab_wk9/lab_wk9.html">
+   Lab Week 9
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 10 - Interpolation/scipy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/wk10_interpolation_demo.html">
+   Week 10:  Interpolation - some examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/dictionaries_and_f_strings.html">
+   Dictionaries, F String Literals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/quiz_wk10_soln.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 11 - Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/pythia_pandas.html">
+   Introduction to Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/lab_wk11/lab_wk11.html">
+   Lab Week 11
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignment1/assignment1.html">
+   Assignment 1 – CO2/temperature
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Reference material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference_notes/thursday_oct7.html">
+   Notes for Thursday Oct. 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/lab_wk11/pandas-cheatsheet.html">
+   Pandas Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html">
+   Pythia Pandas Lesson
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/assignment02/ast2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/assignment02/ast2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/assignment02/ast2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/assignment02/ast2.ipynb&branch=e211_live_main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Assignment 2 - Flybys
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spacecraft-flybys-of-planets-and-moons">
+   Spacecraft flybys of planets and moons.
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#assignment-overview">
+     1. Assignment Overview
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coding-overview">
+     2. Coding Overview
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#important-points">
+       IMPORTANT POINTS:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-physics">
+     3. The Physics
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-up-the-core-functions">
+     4. Set up the Core Functions
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#do-a-test-run">
+     5. Do a test run
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#start-by-importing-your-functions-file-and-any-other-packages-you-need">
+       Start by importing your functions file and any other packages you need
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#doing-a-test-calculation">
+       Doing a test calculation
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#organizing-your-work">
+       Organizing your work
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numerical-convergence-starting-conditions-and-time-step">
+     6. Numerical Convergence: Starting Conditions and Time Step
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#designing-a-successful-flyby">
+     7. Designing a Successful Flyby
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#extra-credit-ice-near-mercurys-south-pole">
+     8. Extra Credit: Ice near Mercury’s South Pole
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upload-to-canvas-the-following-by-fri-dec-3rd-4pm">
+     9. Upload to Canvas the following by Fri Dec 3rd, 4pm.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="assignment-2-flybys">
+<h1>Assignment 2 - Flybys<a class="headerlink" href="#assignment-2-flybys" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="spacecraft-flybys-of-planets-and-moons">
+<h1>Spacecraft flybys of planets and moons.<a class="headerlink" href="#spacecraft-flybys-of-planets-and-moons" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="assignment-overview">
+<h2>1. Assignment Overview<a class="headerlink" href="#assignment-overview" title="Permalink to this headline">¶</a></h2>
+<p>This assignment is motivated by the use of flybys of planets / moons in spacecraft missions to alter a spacecraft’s trajectory (flight path). Planetary flybys can be used to not only change the direction of a spacecraft’s
+motion, but to also alter its speed. Such flybys are often referred to as “gravity assists” because the change to
+the spacecraft’s motion is enabled by the gravitational force of the planet on the spacecraft. For example, missions to the outer solar system typically use the gravity of Jupiter to provide a “boost” to the spacecraft’s speed,
+such that the spacecraft can actually make it to the outer solar system. In contrast, missions to the inner solar system typically use the gravity field of one or more planets to slow the spacecraft down enough that it can
+go into orbit around the desired planet. A good resource describing planetary gravity assists can be found <a class="reference external" href="https://www.planetary.org/articles/20130926-gravity-assist">here</a>.</p>
+<p>In this assignment we will construct a simplified planetary flyby. The simplifications are that we assume an otherwise “straight-line” path of the spacecraft (rather than starting with an elliptical orbit around the sun, or a hyberbolic trajectory into the outer solar system), and we assume that the planet is stationary during the flyby (in practice the planet is of course in an elliptical orbit around the Sun). In the assignment we will draw on much of what we have learned in the course to implement a numerical integration algorithm using python to compute a spacecraft’s acceleration, velocity and position as it flys by a planet. The assignment will also demonstrate how you can use python to produce numerical solutions to problems for which there is no simple analytical solution.</p>
+</div>
+<div class="section" id="coding-overview">
+<h2>2. Coding Overview<a class="headerlink" href="#coding-overview" title="Permalink to this headline">¶</a></h2>
+<p>For this assignment you will write 4 functions and call them with several <code class="docutils literal notranslate"><span class="pre">main()</span></code> functions. The functions are as follows:</p>
+<ul class="simple">
+<li><p>The guts of your code will be a function <code class="docutils literal notranslate"><span class="pre">get_traj()</span></code> that will return the acceleration, velocity and position vectors along the complete spacecraft trajectory. <code class="docutils literal notranslate"><span class="pre">get_traj()</span></code> will call three subfunctions <code class="docutils literal notranslate"><span class="pre">gravacc(),</span> <span class="pre">update_sc_vel_pos(),</span> <span class="pre">and</span> <span class="pre">checkinit()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gravacc()</span></code> will calculate the gravitational acceleration on the spacecraft at any given point along the trajectory.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update_sc_vel_pos()</span></code> will compute the instantaneous change in position and velocity of the spacecraft due to the gravitational acceleration caused by the planet.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkinit()</span></code> will check that your initial spacecraft velocity and position are feasible.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">main()</span></code> script(s) will call <code class="docutils literal notranslate"><span class="pre">get_traj()</span> </code>for various initial (starting) conditions that I will give you. The main script(s) will contain the code to generate the requested figures or output in each section.</p></li>
+</ul>
+<div class="section" id="important-points">
+<h3>IMPORTANT POINTS:<a class="headerlink" href="#important-points" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>The use of SI units is ESSENTIAL to this assignment. Make sure to convert ALL your length, mass and time variables into m, kg and seconds before doing any calculations. For plotting purposes it is more useful to use km, so convert m to km only for plotting.</p></li>
+<li><p>The amount of code required for this assignment is not huge. For example, my version of <code class="docutils literal notranslate"><span class="pre">get_traj</span></code> contains only 13 lines of code and the subfunctions <code class="docutils literal notranslate"><span class="pre">gravacc</span></code>, <code class="docutils literal notranslate"><span class="pre">update_sc_vel_pos</span></code>, and <code class="docutils literal notranslate"><span class="pre">checkinit</span></code> contain 5, 3 and 3 lines of code respectively, not including comment and help lines. However, you should be vigilent about being consistent in your use of variable names, and in not generating unecessary variables, otherwise your code (and thinking!) will get out of hand.</p></li>
+<li><p>Make sure your code is organized into easily readable, compact coding “blocks”, with appropriate comment lines, and separated by white space.</p></li>
+<li><p>All functions must contain doc strings.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="the-physics">
+<h2>3. The Physics<a class="headerlink" href="#the-physics" title="Permalink to this headline">¶</a></h2>
+<p><strong>Figure 1: Example of flyby trajectory</strong>
+<a class="reference internal" href="../_images/fig1.png"><img alt="../_images/fig1.png" src="../_images/fig1.png" style="width: 500px;" /></a></p>
+<p>The set-up of the problem is quite straightforward. <strong>You need to read this section carefully to understand what is going on, and to be able to sketch out your algorithm for computing the spacecraft acceleration, velocity and position at each time-step during the flyby.</strong></p>
+<p>We have a spacecraft which is about to fly past a planet or moon. We will simplify the problem and look at it in a cartesian (x,y) geometry. The origin of our coordinate system is at the center of the planet (see Figure 1). The spacecraft motion is such that if the planet was not there, the spacecraft would be flying with constant velocity in the positive y-direction. Our spacecraft starts out with this velocity at some distance from the planet (bottom of Figure 1). Far away from the planet the spacecraft has constant velocity (remember Newton’s second law: no net force on the spacecraft implies constant momentum (<span class="math notranslate nohighlight">\(m \vec{v}\)</span>), and so constant velocity). As the spacecraft approaches the planet, it experiences a gravitational force due to the planet. The position vector, <span class="math notranslate nohighlight">\(\vec{s}\)</span> has both <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components, so <span class="math notranslate nohighlight">\(\vec{s}=s_{x} \hat{x}+s_{y} \hat{y}\)</span>. At a position <span class="math notranslate nohighlight">\(\vec{s}\)</span>, Newton’s law of gravitation tells us that the magnitude of the force on the spacecraft, <span class="math notranslate nohighlight">\(F_{sc}\)</span>, will be</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+F_{s c}=\frac{G M_{p} m_{s c}}{s^{2}}
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(s\)</span> is the distance of the spacecraft from the center of the planet, given by <span class="math notranslate nohighlight">\(s=\sqrt{\left(s_{x}^{2}+s_{y}^{2}\right)}\)</span>. <span class="math notranslate nohighlight">\(M_p\)</span> is the mass of the planet, <span class="math notranslate nohighlight">\(m_{sc}\)</span> is the mass of the spacecraft, and G is the gravitational constant (= <span class="math notranslate nohighlight">\(6.67 \times 10^{−11} m^3kg^{−1} s^{2}\)</span>)</p>
+<p>The spacecraft will thus experience an instantaneous acceleration in a direction toward the center of the planet. We use  <span class="math notranslate nohighlight">\(\vec{a}\)</span> to denote the acceleration vector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation}
+\vec{a}=\frac{\vec{F}_{s c}}{m_{s c}}
+\end{equation}\]</div>
+<p>The instantaneous acceleration vector, <span class="math notranslate nohighlight">\(\vec{a}\)</span>, can be resolved into components along the x- and y- axes (See <strong>Figure 2</strong>).
+$<span class="math notranslate nohighlight">\(\begin{equation} a_{x}=a \sin \beta \end{equation}\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(\begin{equation} a_{y}=a \cos \beta \end{equation}\)</span>$</p>
+<p><strong>Figure 2:</strong>
+<a class="reference internal" href="../_images/fig2.png"><img alt="../_images/fig2.png" src="../_images/fig2.png" style="width: 500px;" /></a></p>
+<p>where <span class="math notranslate nohighlight">\(a\)</span> is the magnitude of the acceleration vector, <span class="math notranslate nohighlight">\(a=\frac{G M_{p}}{s^{2}}\)</span>. <span class="math notranslate nohighlight">\(\beta\)</span> is the angle between the acceleration vector and the <span class="math notranslate nohighlight">\(\hat y\)</span> direction and can easily be found from the instantaneous position vector. <span class="math notranslate nohighlight">\(\sin \beta\)</span> and <span class="math notranslate nohighlight">\(\cos \beta\)</span> are given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation} \sin \beta=\frac{-s_{x}}{s} \end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation} \cos \beta=\frac{-s_{y}}{s} \end{equation}\]</div>
+<p>The minus signs in (5) and (6) ensure that <span class="math notranslate nohighlight">\(a_x\)</span> and <span class="math notranslate nohighlight">\(a_y\)</span> are positive when <span class="math notranslate nohighlight">\(s_x\)</span> and <span class="math notranslate nohighlight">\(s_y\)</span> are respectively negative and vice-versa (i.e., in the figure, the spacecraft acceleration is towards the planet).</p>
+<p>The spacecraft velocity is changed due to this acceleration; both the speed and the direction of the velocity vector change. This is easiest to see at the beginning of the spacecraft’s trajectory. Initially the spacecraft has a speed
+<span class="math notranslate nohighlight">\(v_{y}^{\text {initial }}\)</span> along the y-axis. The acceleration means that after a small time <span class="math notranslate nohighlight">\(\Delta t\)</span> the component of velocity along the y-axis is increased by a <span class="math notranslate nohighlight">\(\Delta t\)</span>, so that <span class="math notranslate nohighlight">\(v_{y}^{\text {new }}=v_{y}^{\text {initial }}+a_{y} \Delta t\)</span>. Similarly, the component of velocity in the x-direction is changed to <span class="math notranslate nohighlight">\(v_{x}^{\text {new }}=v_{x}^{\text {initial }}+a_{x} \Delta t\)</span>, and in our problem, <span class="math notranslate nohighlight">\(v_{x}^{\text {initial }}=0\)</span>. Since the new velocity now has non-zero <span class="math notranslate nohighlight">\(x\)</span>- and <span class="math notranslate nohighlight">\(y\)</span>- components its direction has been changed as well as the net speed.</p>
+<p>We can generalize this so that at any point along the spacecraft’s trajectory we can compute the acceleration due to the planet, along with the resulting change in velocity and position over some small time increment <span class="math notranslate nohighlight">\(\Delta t\)</span>. The equations for each component of velocity and position are as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation} v_{x}^{i+1}=v_{x}^{i}+\Delta v_{x}^{i+1} \end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation} v_{y}^{i+1}=v_{y}^{i}+\Delta v_{y}^{i+1} \end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation} s_{x}^{i+1}=s_{x}^{i}+\Delta s_{x}^{i+1} \end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation} s_{y}^{i+1}=s_{y}^{i}+\Delta s_{y}^{i+1} \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(v_{x}^{i+1}\)</span> is the x-component of velocity at the <span class="math notranslate nohighlight">\((i+1)’th\)</span> time step, <span class="math notranslate nohighlight">\((t^{i+1})\)</span>, <span class="math notranslate nohighlight">\(v_{x}^{i}\)</span> is the x-component of velocity at the
+i’th time, <span class="math notranslate nohighlight">\((t^i)\)</span> ,and the time interval <span class="math notranslate nohighlight">\(t^{i+1} − t^i = \Delta t\)</span>. Similarly for <span class="math notranslate nohighlight">\(v_{y}^{i+1}, s_{x}^{i+1}, s_{y}^{i+1}\)</span> etc. The change in velocity and
+position after a time <span class="math notranslate nohighlight">\(\Delta t\)</span> are given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{equation} \Delta v_{x}^{i+1}=a_{x}^{i} \Delta t \end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation} \Delta v_{y}^{i+1}=a_{y}^{i} \Delta t \end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation} \Delta s_{x}^{i+1}=v_{x}^{i} \Delta t+\frac{1}{2} a_{x}^{i}(\Delta t)^{2} \end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{equation} \Delta s_{y}^{i+1}=v_{y}^{i} \Delta t+\frac{1}{2} a_{y}^{i}(\Delta t)^{2} \end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(a^i_x\)</span> and <span class="math notranslate nohighlight">\(a^i_y\)</span> are the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of acceleration at the time-step <span class="math notranslate nohighlight">\(t^i\)</span> initial position vector <span class="math notranslate nohighlight">\((s_{x0}, s_{y0})\)</span> and velocity vector <span class="math notranslate nohighlight">\((v_{x0}, v_{y0})\)</span> are specified at time, <span class="math notranslate nohighlight">\(t = 0\)</span>, and if we know the mass of the planet <span class="math notranslate nohighlight">\(M_p\)</span> we can compute the complete spacecraft trajectory.</p>
+</div>
+<div class="section" id="set-up-the-core-functions">
+<h2>4. Set up the Core Functions<a class="headerlink" href="#set-up-the-core-functions" title="Permalink to this headline">¶</a></h2>
+<p>This section and the following section will help you outline your algorithm for coding up the flyby trajectory.
+The guts of your code will be a function <code class="docutils literal notranslate"><span class="pre">get_traj()</span></code> that will return the acceleration, velocity and position vectors along the complete spacecraft trajectory. <code class="docutils literal notranslate"><span class="pre">get_traj()</span></code> should take as input the following arguments.  If you specify any arguments as positional they should be in the following order.</p>
+<ul class="simple">
+<li><p>initial position vector, <span class="math notranslate nohighlight">\(\vec{s}_{0}=\left(s_{x 0}, s_{y 0}\right)\)</span></p></li>
+<li><p>initial velocity vector,  <span class="math notranslate nohighlight">\(\vec{v}_{0}=\left(v_{x 0}, v_{y 0}\right)\)</span></p></li>
+<li><p>time increment, <span class="math notranslate nohighlight">\(\Delta t\)</span> at which spacecraft acceleration, velocity, positions are updated</p></li>
+<li><p>total time, <span class="math notranslate nohighlight">\(t_\mathrm{f}\)</span></p></li>
+<li><p>initial time, <span class="math notranslate nohighlight">\(t_\mathrm{0}\)</span> (default = 0 secs)</p></li>
+<li><p>mass of planet, <span class="math notranslate nohighlight">\(M_\mathrm{p}\)</span> (default = Mercury mass)</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">get_traj()</span></code> should return a dictionary containing 4 key:value pairs <code class="docutils literal notranslate"><span class="pre">time,acc,vel,pos</span></code>.  The values for each key are numpy arrays containing time in seconds during the trajectory, and your full acceleration, velocity and position vectors.  <code class="docutils literal notranslate"><span class="pre">time</span></code> will have shape <code class="docutils literal notranslate"><span class="pre">(nt,</span> <span class="pre">)</span></code> and <code class="docutils literal notranslate"><span class="pre">acc,vel,pos</span></code> each have shape <code class="docutils literal notranslate"><span class="pre">(nt,</span> <span class="pre">2)</span></code> where <span class="math notranslate nohighlight">\(nt\)</span> is the number of time steps, <span class="math notranslate nohighlight">\(\Delta t\)</span>. (Note that <span class="math notranslate nohighlight">\(nt = 1+(t_\mathrm{f}\Delta t)\)</span> if you include the initial conditions as your first time step, or <span class="math notranslate nohighlight">\(nt = tf /\Delta t\)</span> if you don’t include them), and the columns return the <span class="math notranslate nohighlight">\(x\)</span> and <span class="math notranslate nohighlight">\(y\)</span> components of the position/velocity/acceleration vector.</p>
+<p><code class="docutils literal notranslate"><span class="pre">get_traj()</span></code> should call three functions <code class="docutils literal notranslate"><span class="pre">gravacc,</span> <span class="pre">update_sc_vel_pos</span></code> and <code class="docutils literal notranslate"><span class="pre">checkinit</span></code>:</p>
+<ol class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">gravacc</span></code> should calculate the gravitational acceleration on the spacecraft at each time step. It should take as input the instantaneous position vector, and the mass of the planet, and return as output the instantaneous acceleration vector. <code class="docutils literal notranslate"><span class="pre">update_sc_vel_pos</span></code> should compute the instantaneous change in position and velocity given by equations (11)–(14).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">update_sc_vel_pos</span></code> should take as input the instantaneous acceleration and velocity vectors and the time increment, <span class="math notranslate nohighlight">\(\Delta t\)</span>, and return as output the instantaneous change in position vector <span class="math notranslate nohighlight">\((\Delta \vec{s})\)</span> and change in velocity vector <span class="math notranslate nohighlight">\((\Delta \vec{v})\)</span>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">checkinit</span></code> should implement the following checks:</p></li>
+</ol>
+<ul class="simple">
+<li><p>the starting position vector is such that the spacecraft starts out above the planetary surface!</p></li>
+<li><p>the starting velocity is in the positive y-direction (spacecraft flying toward the planet not away from it!) If either of these conditions are not met, the program should terminate with a helpful error message.</p></li>
+</ul>
+<p><strong>Keep these core functions and any others you write in a file called <code class="docutils literal notranslate"><span class="pre">assign2_funs.py</span></code> and import that file into your main notebook for calculations.</strong></p>
+</div>
+<div class="section" id="do-a-test-run">
+<h2>5. Do a test run<a class="headerlink" href="#do-a-test-run" title="Permalink to this headline">¶</a></h2>
+<p>For the remaining parts of this assignment you will write some pieces of code to compute the spacecraft trajectory  given a series of initial conditions and parameters. We will use parameters that simulate the flybys of Mercury by the MESSENGER spacecraft in 2008 and 2009. These flybys were specifically designed to alter the spacecraft trajectory such that the spacecraft could be put into orbit around the planet in  2011.</p>
+<div class="section" id="start-by-importing-your-functions-file-and-any-other-packages-you-need">
+<h3>Start by importing your functions file and any other packages you need<a class="headerlink" href="#start-by-importing-your-functions-file-and-any-other-packages-you-need" title="Permalink to this headline">¶</a></h3>
+<p>It will also be useful in this initial cell to declare a variable, <span class="math notranslate nohighlight">\(R_\mathrm{p}\)</span>, the radius of Mercury, to use in spacecraft altitude determinations and for plotting. The spacecraft altitude is given by <span class="math notranslate nohighlight">\(s − R_\mathrm{p}\)</span> ,
+where <span class="math notranslate nohighlight">\(s= \left(s_{x}^{2}+s_{y}^{2}\right)^{1/2}\)</span>.</p>
+</div>
+<div class="section" id="doing-a-test-calculation">
+<h3>Doing a test calculation<a class="headerlink" href="#doing-a-test-calculation" title="Permalink to this headline">¶</a></h3>
+<p>Assign the following values to the various parameters needed. In your code, remember to convert everything to SI units – kg, m, s – before doing ANY calculations:</p>
+<ul class="simple">
+<li><p>Mercury mass, <span class="math notranslate nohighlight">\(M_\mathrm{p} = 3.3 \times 10^{23}\)</span> kg</p></li>
+<li><p>Mercury radius, <span class="math notranslate nohighlight">\(R_\mathrm{p} = 2440\)</span> km</p></li>
+<li><p>Total time, <span class="math notranslate nohighlight">\(t_\mathrm{f}\)</span> = 40 minutes</p></li>
+<li><p>Time increment, <span class="math notranslate nohighlight">\(\Delta t = 60\)</span> secs</p></li>
+<li><p>Initial position, <span class="math notranslate nohighlight">\(s_\mathrm{x 0}=-3050 \mathrm{~km}, s_\mathrm{y 0}=-3 R_{p}\)</span></p></li>
+<li><p>Initial velocity, in positive y-direction with magnitude <span class="math notranslate nohighlight">\(7\)</span> km s<span class="math notranslate nohighlight">\(^{−1}\)</span></p></li>
+</ul>
+<p>The guts of your script will be the function call <code class="docutils literal notranslate"><span class="pre">flyby_dict</span> <span class="pre">=</span> <span class="pre">get_traj(...)</span></code>, where <code class="docutils literal notranslate"><span class="pre">...</span></code> is the list of input parameters to <code class="docutils literal notranslate"><span class="pre">get_traj()</span></code> and <code class="docutils literal notranslate"><span class="pre">flyby_dict</span></code> is the function’s output (a dictionary).</p>
+<p>Make 2 figures. Your figure 1 should plot the spacecraft trajectory in the x, y plane, along with a circle to denote the cross-section of Mercury. This should produce a trajectory like that in my Figure 1 above. (Note that the annotations on my figure are extra and you need not add them). Figure 2 should contain 3 subplots. In the top one plot <span class="math notranslate nohighlight">\(a_x, a_y, a\)</span> versus time (where <span class="math notranslate nohighlight">\(a\)</span> is the magnitude of the acceleration vector), in the middle one plot the speed <span class="math notranslate nohighlight">\(v\)</span> versus time, and in the lower one plot spacecraft altitude (height above planet’s surface) versus time. Use a log scale on the y-axis for the spacecraft altitude plot. So that you can check your work at this point, your figure should look like my Figure 3 below. A useful diagnostic to print to the screen is the closest approach altitude – you should get 365 km.</p>
+</div>
+<div class="section" id="organizing-your-work">
+<h3>Organizing your work<a class="headerlink" href="#organizing-your-work" title="Permalink to this headline">¶</a></h3>
+<p>You can either put the code that does this test calculation in a function called <code class="docutils literal notranslate"><span class="pre">main1()</span></code> (or something more informative) in <code class="docutils literal notranslate"><span class="pre">assign2._funs.py</span></code> and call it from this notebook, passing <code class="docutils literal notranslate"><span class="pre">main1</span></code> the input arguments it needs.  The following sections you would then similarly write functions called e.g. <code class="docutils literal notranslate"><span class="pre">main2()</span></code> or something more informative.  Alternatively, you might decide here and in the sections below to keep the main calculation code in this notebook and instead put the code that makes each figure into separate functions in the <code class="docutils literal notranslate"><span class="pre">assign2._funs.py</span></code> file, and call those functions e.g. <code class="docutils literal notranslate"><span class="pre">plot_myfig1(...)</span></code> from this notebook.  Whatever you do this notebook should be easy to read with comments for the code.</p>
+<p><strong>Figure 3:</strong>
+<a class="reference internal" href="../_images/fig3_new.png"><img alt="../_images/fig3_new.png" src="../_images/fig3_new.png" style="width: 800px;" /></a></p>
+</div>
+</div>
+<div class="section" id="numerical-convergence-starting-conditions-and-time-step">
+<h2>6. Numerical Convergence: Starting Conditions and Time Step<a class="headerlink" href="#numerical-convergence-starting-conditions-and-time-step" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Explore what happens to the closest approach altitude, when you change the y-coordinate of the initial position (<span class="math notranslate nohighlight">\(s_{y0}\)</span>).  Print a 2-column output that gives the <span class="math notranslate nohighlight">\(s_{y0}\)</span> coordinate in <span class="math notranslate nohighlight">\(R_p\)</span> and closest approach altitude in km for <span class="math notranslate nohighlight">\(s_{y0}\)</span> equal to <span class="math notranslate nohighlight">\(-3R_p\)</span>, and then for 9 additional values of <span class="math notranslate nohighlight">\(s_{y0}\)</span>, each one set to be double the previous value.  Do this in a loop, doubling the <span class="math notranslate nohighlight">\(s_{y0}\)</span> value in each iteration. Each time you double <span class="math notranslate nohighlight">\(s_{y0}\)</span> you should double <span class="math notranslate nohighlight">\(t_f\)</span>. (After you have your loop working you can check out what happens if you don’t double <span class="math notranslate nohighlight">\(t_f\)</span> …). You should find that as you increase the distance of the initial <span class="math notranslate nohighlight">\(s_{y0}\)</span> coordinate from the planet, the closest approach altitude decreases. The decrease is large initially but then gets smaller as the closest approach altitude converges towards a stable answer. What has happened is that although we had set up the algorithm for the numerical integration properly, the initial conditions were incorrect. To accurately assess how close the spacecraft will get to the planet, we need to start our calculation with the spacecraft far enough away from the planet that the gravitational force on the spacecraft due to the planet is negligible. Our initial guess at a starting position of <span class="math notranslate nohighlight">\(s_{y0}\)</span> of <span class="math notranslate nohighlight">\(-3 R_p\)</span> is not far enough since the gravitational force only falls off as 1 /(distance)<span class="math notranslate nohighlight">\(^2\)</span> . You’ll see that an initial value of more than <span class="math notranslate nohighlight">\(-300 R_p\)</span> is needed! However, there is also another issue that you’ll now investigate.</p></li>
+</ol>
+<p><em>Hint 1 - depending how you are handling your initial conditions input arguments to get_traj, you may find it helpful to use <code class="docutils literal notranslate"><span class="pre">copy.deepcopy</span></code> to make copies of the initial condition variable so that you can update it without affecting your original values.  You need to <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">copy</span></code>, then if e.g. your initial conditions are stored in one variable called init_cond, the syntax to make a copy is <code class="docutils literal notranslate"><span class="pre">init_cond2</span> <span class="pre">=</span> <span class="pre">copy.deepcopy(init_cond)</span></code></em>.</p>
+<p><em>Hint 2 - displaying your 2-column output: A pandas data frame is quite handy for this.  You can index the closest approach altitudes in the table using the initial position y-coordinate variable <span class="math notranslate nohighlight">\(s_{y0}\)</span></em>.</p>
+<ol class="simple">
+<li><p>Set up another simulation: Set the <span class="math notranslate nohighlight">\(s_{y0}\)</span> variable to be <span class="math notranslate nohighlight">\(s_{y0} =  -96 R_p\)</span>. (Although it should be larger, this would result in the computations taking longer.) Set the total time, <span class="math notranslate nohighlight">\(t_f\)</span> to be 1280 minutes. Set up another variable <span class="math notranslate nohighlight">\(a_\mathrm{target}\)</span> for the target closest approach altitude. Set this altitude to be 195 km.</p></li>
+<li><p>Now investigate the effect of the time increment <span class="math notranslate nohighlight">\((\Delta t)\)</span> used in the numerical integration. Start with <span class="math notranslate nohighlight">\(\Delta t = 60\)</span>  seconds, compute the spacecraft trajectory, then halve the value of <span class="math notranslate nohighlight">\(\Delta t\)</span> used. Continue until the closest approach altitude <span class="math notranslate nohighlight">\(a_c\)</span> is within 2% of the target altitude, that is until the percentage error <span class="math notranslate nohighlight">\(100*(a_c - a_\mathrm{target})/a_\mathrm{target}\)</span> falls just below 2. This is best done using a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop. Use <code class="docutils literal notranslate"><span class="pre">time.perf_counter()</span></code> to measure the elapsed time for each <span class="math notranslate nohighlight">\(\Delta t\)</span>. You’ll see that the computation time scales with the number of time steps.</p></li>
+<li><p>In Figure 3, make 2 subplots. In the top one show the percentage error in the closest approach altitude as a function of 1/<span class="math notranslate nohighlight">\(\Delta t\)</span>. You should see smooth convergence of the results toward the desired target altitude, but at increasing computational expense. In fact, in our case the results converge only to within about 2% of the target altitude, because to converge more closely to the actual target altitude you would also need to use an initial <span class="math notranslate nohighlight">\(s_{y0}\)</span> position futher from the planet. In the lower figure plot the percentage error versus <span class="math notranslate nohighlight">\(\Delta t\)</span>, and label your plot with the final <span class="math notranslate nohighlight">\(\Delta t\)</span> needed to reach the 2% error criterion above, and the computation time for that ∆t.</p></li>
+<li><p>This concept of convergence is fundamental to numerical techniques. What you saw above is that in our case two parameters are important, the initial position of the spacecraft with respect to the planet and the time increment, <span class="math notranslate nohighlight">\(\Delta t\)</span>. In the first exercise you saw that successively doubling the distance of the y-coordinate <span class="math notranslate nohighlight">\(s_{y0}\)</span> led to a decrease in the altitude of closest approach, and furthermore that as you got further away from the planet the answer (closest approach distance) changed less. In this case the solution was converging (meaning that eventually as we moved even further away the answer would no longer change). However, it was not converging to the right answer. This was because the time interval, <span class="math notranslate nohighlight">\(\Delta t\)</span> was too long. An implicit assumption in our numerical integration is that over the time interval <span class="math notranslate nohighlight">\(\Delta t\)</span> the gravitational force on the spacecraft remains constant. However in 60 seconds the spacecraft travels approximately 7<span class="math notranslate nohighlight">\(*\)</span>60 km = 420 km. When the spacecraft is close to the planet the gravitational force changes substantially over this time increment. Thus decreasing the the time increment increases the accuracy of the calculations. In practice we have found that we need to start a long way from the planet (more than 300 Mercury radii) and use a short time increment. This results in a computationally intensive calculation, and most of the calculations are not needed because they are being done at short time intervals while we are very far away from the planet. Can you think of a way to choose the time stepping to speed things up while retaining the accuracy needed? Write one or two sentences (3 max) on how you might do this.</p></li>
+</ol>
+</div>
+<div class="section" id="designing-a-successful-flyby">
+<h2>7. Designing a Successful Flyby<a class="headerlink" href="#designing-a-successful-flyby" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Set up another simulation:</p></li>
+<li><p>Set <span class="math notranslate nohighlight">\(s_{y0} = −96R_p\)</span>. Set <span class="math notranslate nohighlight">\(t_f\)</span> to be 1280 minutes.</p></li>
+<li><p>Include the target altitude variable <span class="math notranslate nohighlight">\(a_\mathrm{target}\)</span> and set it to be 195 km as in the section above.</p></li>
+<li><p>Set <span class="math notranslate nohighlight">\(\Delta t\)</span> to be 5 seconds. We know from Section 6 that it should be less than 5 seconds but this takes a while to compute….If you like, when you are have working code for this section and have produced the plot requested you can check that changing <span class="math notranslate nohighlight">\(\Delta t\)</span> to the value you found you needed in Section 6 doesn’t change the answer here.</p></li>
+<li><p>Using a nested loop evaluate the spacecraft trajectories for initial velocities <span class="math notranslate nohighlight">\(v_{y0}\)</span> ranging from 4.0 km/s to 8 km/s in 0.5 km/s intervals, and for initial x- positions <span class="math notranslate nohighlight">\(s_{x0}\)</span> that range from <span class="math notranslate nohighlight">\(−(R_p + 4*a_\mathrm{target}\)</span>)  to <span class="math notranslate nohighlight">\(−(R_p + a_\mathrm{target}\)</span>) in intervals of <span class="math notranslate nohighlight">\(a_\mathrm{target}\)</span>.</p></li>
+<li><p>Figure 4. Make a contour map to show the closest approach altitude as a function of initial x-position (x-axis) and initial velocity (y-axis). Make clear the region of the plot that lies within 5 km of the target altitude (approximately our 2% criterion in part 6). <em>Hint</em>: You can plot a second set of contours with only two lines for atarget ± 5 km specifying the color and line thickness for those contours. Failed experiments (spacecraft crashes) should not be contoured. Note that it is best to NOT set spacecraft crashes to NaN, because the contour plot will look ugly. Instead keep the (unrealistic) spacecraft altitudes but don’t show these contours.</p></li>
+</ul>
+</div>
+<div class="section" id="extra-credit-ice-near-mercurys-south-pole">
+<h2>8. Extra Credit: Ice near Mercury’s South Pole<a class="headerlink" href="#extra-credit-ice-near-mercurys-south-pole" title="Permalink to this headline">¶</a></h2>
+<p>Set up another simulation:</p>
+<ul class="simple">
+<li><p>In this part we will use the “failed” experiments from Part 7, to design a Mercury experiment analogous to the Lunar LCROSS mission that crashed into the South Pole of the Moon in search of water ice. Imagine that the x-coordinate in our problem points north, such that the point <span class="math notranslate nohighlight">\((x = −Rp , y = 0)\)</span> is Mercury’s south pole. Use the experiments from Section 7, to try to find one or two spacecraft starting position(s) <span class="math notranslate nohighlight">\(s_{x0}\)</span> and speeds <span class="math notranslate nohighlight">\(v_{y0}\)</span> that result in a crash at a y-coordinate that lies within 500 km of the south pole. Your starting position, <span class="math notranslate nohighlight">\(s_{x0}\)</span> must be less than <span class="math notranslate nohighlight">\(−1R_p\)</span> (i.e. the spacecraft must not initially have been on a direct collision course with the planet).</p></li>
+<li><p>When you have found one or two positions that work, plot your spacecraft trajectory as far as the crash site. Call this Figure 5. Label your crash site position and print the initial conditions <span class="math notranslate nohighlight">\((v_{y0},  s_{x0})\)</span> that resulted in this crash site.</p></li>
+<li><p><em>Hint: Using a version of Figure 4 in which you show your contours for the “failed” experitments is helpful to narrow your search of starting x-position, sx0 and y-speed, vy0.</em></p></li>
+</ul>
+</div>
+<div class="section" id="upload-to-canvas-the-following-by-fri-dec-3rd-4pm">
+<h2>9. Upload to Canvas the following by Fri Dec 3rd, 4pm.<a class="headerlink" href="#upload-to-canvas-the-following-by-fri-dec-3rd-4pm" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>A clean notebook - name it <code class="docutils literal notranslate"><span class="pre">assign2.ipynb</span></code> that contains your code, comments, any word answers clearly indicated in markdown cells.  Include your results for Sections 5, 6, 7 and 8 (if you did 8). Include the names of your assignment partner in the notebook.</p></li>
+<li><p>A .py file containing the requested functions and any others you wrote to keep your code clean: name it <code class="docutils literal notranslate"><span class="pre">assign2_funs.py</span></code></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./assignment02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../assignment1/assignment1.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Assignment 1 – CO2/temperature</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../reference_notes/thursday_oct7.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Notes for Thursday Oct. 7</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
