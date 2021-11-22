@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Structures II &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    <title>Week 12 Review Exercises &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Week 3 quiz" href="week3_quiz.html" />
-    <link rel="prev" title="Data Structures" href="data_structures.html" />
+    <link rel="next" title="Assignment 1 – CO2/temperature" href="../assignment1/assignment1.html" />
+    <link rel="prev" title="Lab Week 11" href="../wk11/lab_wk11/lab_wk11.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -147,19 +147,19 @@
   Week 3 - Data Structures
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="data_structures.html">
+  <a class="reference internal" href="../wk03/data_structures.html">
    Data Structures
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures_ii.html">
    Data Structures II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="week3_quiz.html">
+  <a class="reference internal" href="../wk03/week3_quiz.html">
    Week 3 quiz
   </a>
  </li>
@@ -380,9 +380,9 @@
   Week 12 - Review/File IO
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/wk12_worksheet1.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Week 12 Review Exercises
   </a>
  </li>
@@ -465,11 +465,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/wk03/data_structures_ii.ipynb"><button type="button"
+            href="../_sources/wk12/wk12_worksheet1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk03/data_structures_ii.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/wk12/wk12_worksheet1.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -494,14 +494,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk03/data_structures_ii.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk12/wk12_worksheet1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk03/data_structures_ii.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk12/wk12_worksheet1.ipynb&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -533,13 +533,8 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   Question 2
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-3">
-   Question 3
+  <a class="reference internal nav-link" href="#question-2-practice-with-indexing-code-tracing">
+   Question 2:  Practice with indexing / code tracing
   </a>
  </li>
 </ul>
@@ -553,106 +548,30 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data-structures-ii">
-<h1>Data Structures II<a class="headerlink" href="#data-structures-ii" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-12-review-exercises">
+<h1>Week 12 Review Exercises<a class="headerlink" href="#week-12-review-exercises" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="eosc-211">
 <h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
-<p><strong>Week 3 Day 2</strong></p>
+<p><strong>Week 11 Day 1</strong></p>
 <p><strong>Learning Objectives:</strong></p>
 <ol class="simple">
-<li><p>Get more experience with Numpy arrays</p></li>
-<li><p>Use built in functions to write efficient, <em>Pythonic</em> code</p></li>
+<li><p>Solve problems with python code</p></li>
+<li><p>Choose appropriate data structures to make your code neat and efficient</p></li>
 </ol>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="question-1">
 <h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
-<p><strong>A) Execute the following cells and describe IN WORDS what is happening in each cell</strong></p>
+<p><strong>A) You have a cash register with $20, $10, $5, $2, $1, $0.25, $0.10, $0.05 bills or coins. Write code to make change usin the largest denominations possible – so that, for example, if someone gives you a $10 bill for something costing $6.55 the program will calculate that you get back $3.45 in change consisting of a $2, and $1, a $0.25, and 2 $0.10</strong></p>
+<p><strong>The floor division <code class="docutils literal notranslate"><span class="pre">//</span></code> and modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> operators are of use.</strong></p>
+<p><strong>Store the denominations available in a dictionary <code class="docutils literal notranslate"><span class="pre">money={'twenties',</span> <span class="pre">'tens',</span> <span class="pre">'fives',</span> <span class="pre">'toonies'...}</span></code>. The rest of the program is up to you.  There are many correct ways to solve this problem</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">21</span><span class="p">)</span>
-<span class="n">lats</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">16</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_cost</span> <span class="o">=</span> <span class="mf">6.55</span>  <span class="c1"># dollars</span>
+<span class="n">cash_in</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># dollars</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">lats</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">lats</span><span class="p">[</span><span class="mi">4</span><span class="p">]])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">lats</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">lats</span><span class="p">[</span><span class="mi">0</span><span class="p">]])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L4</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="n">lats</span> <span class="o">&gt;</span> <span class="mi">13</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L5</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="n">lats</span> <span class="o">&gt;=</span> <span class="mi">13</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L6</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">L7</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">L7</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">L7</span> <span class="o">=</span> <span class="n">lats</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">lats</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="question-2">
-<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
-<p><strong>A) We can change the shape of our <code class="docutils literal notranslate"><span class="pre">lats</span></code> array with numpy’s built in funciton <code class="docutils literal notranslate"><span class="pre">reshape()</span></code>. What does the following code do?</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">newlats</span> <span class="o">=</span> <span class="n">lats</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>B) What are all the possible shapes we can reassign to <code class="docutils literal notranslate"><span class="pre">lats</span></code>? Why do some work and others not</strong></p>
-<p><strong>C) We can return <code class="docutils literal notranslate"><span class="pre">lats</span></code> to it’s original shape using <code class="docutils literal notranslate"><span class="pre">flatten()</span></code>, i.e.</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lats</span> <span class="o">=</span> <span class="n">newlats</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
-<span class="n">lats</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10, 11, 12, 13, 14, 15])
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>How else could you accomplish this? Write code in the following cell that outputs the same result starting with any of the <code class="docutils literal notranslate"><span class="pre">newlats</span></code> shapes we used above</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
@@ -660,35 +579,111 @@
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="question-3">
-<h2>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h2>
-<p><strong>Along with <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, python also defines the <em>floor division operator</em> <code class="docutils literal notranslate"><span class="pre">//</span></code> and the <em>modulo operator</em> <code class="docutils literal notranslate"><span class="pre">%</span></code>. Floor division (<code class="docutils literal notranslate"><span class="pre">//</span></code>) outputs the <em>quotient</em> of two integers, and modulo (<code class="docutils literal notranslate"><span class="pre">%</span></code>) outputs the remainder. Example code:</strong></p>
+<p><strong>B) Turn this into a function called <code class="docutils literal notranslate"><span class="pre">getchange</span></code> that will take as input <code class="docutils literal notranslate"><span class="pre">item_cost</span></code>, <code class="docutils literal notranslate"><span class="pre">cash_in</span></code> and return <code class="docutils literal notranslate"><span class="pre">change</span></code>. Also, make your funtion raise an error if the customer does not give enough money to cover the cost of the purchase</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">//</span> <span class="mi">2</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">%</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
+
+<span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">)</span>
+<span class="n">mychange</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_12881</span><span class="o">/</span><span class="mf">3754145967.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># testing my function</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">mychange</span>
+
+<span class="ne">NameError</span>: name &#39;getchange&#39; is not defined
 </pre></div>
 </div>
 </div>
 </div>
-<p><strong>Write a few lines of code that will create the array <code class="docutils literal notranslate"><span class="pre">B</span></code>, which contains only the even valued elements of an array <code class="docutils literal notranslate"><span class="pre">A</span></code>. You don’t know the size of <code class="docutils literal notranslate"><span class="pre">A</span></code> but you do know it contains only integers.</strong></p>
+<p><strong>C) Edit get change to also take as input a dictionary <code class="docutils literal notranslate"><span class="pre">available_change</span></code> that contains the number of each denomination available in the cash register.  Use this to check that there are enough of each denomination to cover the change.  If any denomination is short make up the change with the next available largest bill.</strong></p>
+<p>e.g. in the above example $3.45 is required in change, so ideally the $3 part of the change would comprise 1 toonie and 1 loonie.  If no toonies are available then the $3 would comprise 3 loonies, if only 2 loonies were available it would comprise 2 looonies and 4 quarters etc.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">whats_there</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;twenties&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;tens&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;fives&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+        <span class="s2">&quot;toonies&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;loonies&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;quarters&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;dimes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">&quot;nickels&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="p">}</span> 
+
+<span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">,</span> <span class="n">whats_there</span><span class="p">)</span>
+<span class="n">mychange</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_12881</span><span class="o">/</span><span class="mf">3249587444.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="p">}</span> 
+<span class="g g-Whitespace">     </span><span class="mi">14</span> 
+<span class="ne">---&gt; </span><span class="mi">15</span> <span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">,</span> <span class="n">whats_there</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">mychange</span>
+
+<span class="ne">NameError</span>: name &#39;getchange&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-2-practice-with-indexing-code-tracing">
+<h2>Question 2:  Practice with indexing / code tracing<a class="headerlink" href="#question-2-practice-with-indexing-code-tracing" title="Permalink to this headline">¶</a></h2>
+<p><strong>A) For  <code class="docutils literal notranslate"><span class="pre">x1=[1,</span> <span class="pre">7,</span> <span class="pre">-8,</span> <span class="pre">2,</span> <span class="pre">-3,</span> <span class="pre">-9]</span></code>, what is contained in <code class="docutils literal notranslate"><span class="pre">y2</span></code> in each case after the code runs?  Do these three snippets of code do the same thing?  Show your work.</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Code Version A</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x1</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">y2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code Version B</span>
+<span class="k">del</span> <span class="n">y2</span>           <span class="c1"># remove any previous version of y2 from memory</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x1</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">y2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code Version C</span>
+<span class="k">del</span> <span class="n">y2</span>           <span class="c1"># remove any previous version of y2 from memory</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x1</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">y2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>B) Write code that produces the same result as A, but use vectorization instead of loops.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
@@ -712,7 +707,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./wk03"
+            path: "./wk12"
         },
         predefinedOutput: true
     }
@@ -729,19 +724,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="data_structures.html" title="previous page">
+        <a class="left-prev" href="../wk11/lab_wk11/lab_wk11.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Data Structures</p>
+                <p class="prevnext-title">Lab Week 11</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="week3_quiz.html" title="next page">
+        <a class="right-next" href="../assignment1/assignment1.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Week 3 quiz</p>
+                <p class="prevnext-title">Assignment 1 – CO2/temperature</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
