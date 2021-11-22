@@ -67,6 +67,9 @@ parts:
     chapters:
       - file: wk11/pythia_pandas.md
       - file: wk11/lab_wk11/lab_wk11.md
+  - caption: Week 12 - Review/File IO
+    chapters:
+      - file: wk12/wk12_worksheet1.md
   - caption: Assignments
     chapters:
       - file: assignment1/assignment1.md
