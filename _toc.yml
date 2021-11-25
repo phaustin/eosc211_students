@@ -71,6 +71,7 @@ parts:
   - caption: Week 12 - Review/File IO
     chapters:
       - file: wk12/wk12_worksheet1.md
+      - file: wk12/file_io_practice.md
   - caption: Assignments
     chapters:
       - file: assignment1/assignment1.md
