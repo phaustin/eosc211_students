@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="File IO" href="file_io_practice.html" />
+    <link rel="next" title="File IO Solution" href="file_io_practice_soln.html" />
     <link rel="prev" title="Week 11 quiz solution: pandas" href="../wk11/wk11_quiz_sol.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -177,7 +177,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../wk04/making_plots.html">
-   Making Plots Worksheet
+   Making Plots
   </a>
  </li>
  <li class="toctree-l1">
@@ -289,6 +289,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_ii_soln.html">
+   Functions II – solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
    Week 08 Quiz: Functions basics -solution
   </a>
@@ -323,6 +328,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../wk09/quiz_wk9_soln.html">
    Quiz Week 9:  Debugging with Functions solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging_ii_soln.html">
+   Debugging II
   </a>
  </li>
  <li class="toctree-l1">
@@ -370,7 +380,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk11/lab_wk11/lab_wk11.html">
+  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
    Lab Week 11
   </a>
  </li>
@@ -392,8 +402,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="file_io_practice.html">
-   File IO
+  <a class="reference internal" href="file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wk12_quiz_soln.html">
+   Name / Student #:
   </a>
  </li>
 </ul>
@@ -504,14 +519,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk12/wk12_worksheet1.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk12/wk12_worksheet1.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk12/wk12_worksheet1.ipynb&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk12/wk12_worksheet1.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -576,7 +591,7 @@
 <p><strong>Store the denominations available in a dictionary <code class="docutils literal notranslate"><span class="pre">money={'twenties',</span> <span class="pre">'tens',</span> <span class="pre">'fives',</span> <span class="pre">'toonies'...}</span></code>. The rest of the program is up to you.  There are many correct ways to solve this problem</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_cost</span> <span class="o">=</span> <span class="mf">6.55</span>  <span class="c1"># dollars</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">item_cost</span> <span class="o">=</span> <span class="mf">6.55</span>  <span class="c1"># dollars</span>
 <span class="n">cash_in</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># dollars</span>
 </pre></div>
 </div>
@@ -584,7 +599,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
@@ -592,30 +607,17 @@
 <p><strong>B) Turn this into a function called <code class="docutils literal notranslate"><span class="pre">getchange</span></code> that will take as input <code class="docutils literal notranslate"><span class="pre">item_cost</span></code>, <code class="docutils literal notranslate"><span class="pre">cash_in</span></code> and return <code class="docutils literal notranslate"><span class="pre">change</span></code>. Also, make your funtion raise an error if the customer does not give enough money to cover the cost of the purchase</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
 
 <span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">)</span>
 <span class="n">mychange</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_12881</span><span class="o">/</span><span class="mf">3754145967.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># testing my function</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">mychange</span>
-
-<span class="ne">NameError</span>: name &#39;getchange&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -624,7 +626,7 @@
 <p>e.g. in the above example $3.45 is required in change, so ideally the $3 part of the change would comprise 1 toonie and 1 loonie.  If no toonies are available then the $3 would comprise 3 loonies, if only 2 loonies were available it would comprise 2 looonies and 4 quarters etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">whats_there</span> <span class="o">=</span> <span class="p">{</span>
@@ -640,19 +642,6 @@
 
 <span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">,</span> <span class="n">whats_there</span><span class="p">)</span>
 <span class="n">mychange</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_12881</span><span class="o">/</span><span class="mf">3249587444.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="p">}</span> 
-<span class="g g-Whitespace">     </span><span class="mi">14</span> 
-<span class="ne">---&gt; </span><span class="mi">15</span> <span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">,</span> <span class="n">whats_there</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">mychange</span>
-
-<span class="ne">NameError</span>: name &#39;getchange&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -696,7 +685,7 @@
 <p><strong>B) Write code that produces the same result as A, but use vectorization instead of loops.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
@@ -743,10 +732,10 @@
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="file_io_practice.html" title="next page">
+        <a class="right-next" href="file_io_practice_soln.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">File IO</p>
+                <p class="prevnext-title">File IO Solution</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>
