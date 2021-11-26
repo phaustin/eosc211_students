@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Change worksheet &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    <title>Change worksheet solution &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -390,7 +390,7 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Change worksheet
+   Change worksheet solution
   </a>
  </li>
  <li class="toctree-l1">
@@ -565,8 +565,8 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="change-worksheet">
-<h1>Change worksheet<a class="headerlink" href="#change-worksheet" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="change-worksheet-solution">
+<h1>Change worksheet solution<a class="headerlink" href="#change-worksheet-solution" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="eosc-211">
 <h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
 <p><strong>Week 11 Day 1</strong></p>
@@ -583,7 +583,7 @@
 <p><strong>Store the denominations available in a dictionary <code class="docutils literal notranslate"><span class="pre">money={'twenties',</span> <span class="pre">'tens',</span> <span class="pre">'fives',</span> <span class="pre">'toonies'...}</span></code>. The rest of the program is up to you.  There are many correct ways to solve this problem</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">item_cost</span> <span class="o">=</span> <span class="mf">6.55</span>  <span class="c1"># dollars</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">item_cost</span> <span class="o">=</span> <span class="mf">6.55</span>  <span class="c1"># dollars</span>
 <span class="n">cash_in</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># dollars</span>
 </pre></div>
 </div>
@@ -591,14 +591,14 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Andrew&#39;s soln</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Andrew&#39;s soln</span>
 <span class="c1"># Catherine added small change to ensure output values are integer numbers.</span>
 
 <span class="c1"># create a dictionary of bill names and values to loop over</span>
@@ -623,18 +623,23 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;twenties&#39;: 0, &#39;tens&#39;: 0, &#39;fives&#39;: 0, &#39;toonies&#39;: 1, &#39;loonies&#39;: 1, &#39;quarters&#39;: 1, &#39;dimes&#39;: 2, &#39;nickels&#39;: 0}
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>B) Turn this into a function called <code class="docutils literal notranslate"><span class="pre">getchange</span></code> that will take as input <code class="docutils literal notranslate"><span class="pre">item_cost</span></code>, <code class="docutils literal notranslate"><span class="pre">cash_in</span></code> and return <code class="docutils literal notranslate"><span class="pre">change</span></code>. Also, make your funtion raise an error if the customer does not give enough money to cover the cost of the purchase</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
 <span class="k">def</span> <span class="nf">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">):</span>
     
     <span class="sd">&quot;&quot;&quot;</span>
@@ -674,10 +679,15 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
 
 <span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">)</span>
 <span class="n">mychange</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;toonies&#39;: 1, &#39;loonies&#39;: 1, &#39;quarters&#39;: 1, &#39;dimes&#39;: 2}
 </pre></div>
 </div>
 </div>
@@ -686,7 +696,7 @@
 <p>e.g. in the above example \<span class="math notranslate nohighlight">\(3.45 is required in change, so ideally the \\\)</span>3 part of the change would comprise 1 toonie and 1 loonie.  If no toonies are available then the $3 would comprise 3 loonies, if only 2 loonies were available it would comprise 2 looonies and 4 quarters etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">,</span> <span class="n">available_change</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">,</span> <span class="n">available_change</span><span class="p">):</span>
     
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Computes denominations needed to provide change.</span>
@@ -735,7 +745,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">whats_there</span> <span class="o">=</span> <span class="p">{</span>
@@ -754,6 +764,26 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_28102</span><span class="o">/</span><span class="mf">3249587444.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="p">}</span> 
+<span class="g g-Whitespace">     </span><span class="mi">14</span> 
+<span class="ne">---&gt; </span><span class="mi">15</span> <span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">,</span> <span class="n">whats_there</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">mychange</span>
+
+<span class="nn">/tmp/ipykernel_28102/3641906502.py</span> in <span class="ni">getchange</span><span class="nt">(item_cost, cash_in, available_change)</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span> 
+<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="k">if</span> <span class="p">(</span><span class="n">change</span> <span class="o">&gt;</span> <span class="n">money</span><span class="p">[</span><span class="s2">&quot;nickels&quot;</span><span class="p">]):</span>
+<span class="ne">---&gt; </span><span class="mi">41</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;not enough change in register to cover item&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> 
+<span class="g g-Whitespace">     </span><span class="mi">43</span>     <span class="k">return</span> <span class="n">denom</span>
+
+<span class="ne">ValueError</span>: not enough change in register to cover item
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="question-2-practice-with-indexing-code-tracing">
@@ -761,7 +791,7 @@
 <p><strong>A) For  <code class="docutils literal notranslate"><span class="pre">x1=[1,</span> <span class="pre">7,</span> <span class="pre">-8,</span> <span class="pre">2,</span> <span class="pre">-3,</span> <span class="pre">-9]</span></code>, what is contained in <code class="docutils literal notranslate"><span class="pre">y2</span></code> in each case after the code runs?  Do these three snippets of code do the same thing?  Show your work.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Code Version A</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Code Version A</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="p">[]</span>
@@ -772,10 +802,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-8, -3, -9]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code Version B</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code Version B</span>
 <span class="k">del</span> <span class="n">y2</span>           <span class="c1"># remove any previous version of y2 from memory</span>
 <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
@@ -788,10 +823,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0 -8 -3 -9  0  0]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code Version C</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code Version C</span>
 <span class="k">del</span> <span class="n">y2</span>           <span class="c1"># remove any previous version of y2 from memory</span>
 <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
@@ -802,20 +842,30 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 0  0 -8  0 -3 -9]
+</pre></div>
+</div>
+</div>
 </div>
 <p><strong>B) Write code that produces the same result as A, but use vectorization instead of loops.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
 <span class="n">y2</span> <span class="o">=</span> <span class="n">x1</span><span class="p">[</span><span class="n">x1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-8 -3 -9]
 </pre></div>
 </div>
 </div>

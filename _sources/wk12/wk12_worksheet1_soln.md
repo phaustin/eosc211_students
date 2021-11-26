@@ -14,7 +14,7 @@ kernelspec:
 orig_nbformat: 4
 ---
 
-# Change worksheet
+# Change worksheet solution
 
 ## EOSC 211
 
