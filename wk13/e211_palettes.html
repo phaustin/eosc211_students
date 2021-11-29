@@ -1,0 +1,917 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plotting color images with matplotlib &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Next steps" href="next_steps.html" />
+    <link rel="prev" title="File IO Solution" href="../wk12/file_io_practice_soln.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../announcements.html">
+   Course Home/Announcements
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 1 - Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/syllabus.html">
+   Course Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/covid_statements.html">
+   Covid Safety in the Classroom
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule_F2021.html">
+   Course Schedule - Fall Semester 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/worksheet_steps_in_problem_solving.html">
+   Steps In Problem Solving
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 2 - Data Types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/data_types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/some_review_plus_built_in_functions_arrays_preview.html">
+   Some Review Plus Built-In Functions, Arrays Preview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week2_lab/lab_wk2.html">
+   Answers: Lab Week 2 - Jupyterhub Tutorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/week2_quiz.html">
+   Week 2 quiz
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 3 - Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures_ii.html">
+   Data Structures II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/week3_quiz.html">
+   Week 3 quiz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week3_lab/lab_wk3_soln.html">
+   Answers: Lab Week 3
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 4 - Scientific Figures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk04/making_plots.html">
+   Making Plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week4_lab/lab_wk4.html">
+   Answers: Lab Week 4
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 5 - Computer Logic
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/logic.html">
+   Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/complicated_logic.html">
+   More Complicated Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/wk05_indexing.html">
+   Indexing worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/wk05_indexing_soln.html">
+   Week 5 indexing solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/week5_quiz_sol.html">
+   Week 5 quiz solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week5_lab/lab_wk5.html">
+   Answers: Lab Week 5
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_soln.html">
+   Loops – Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_ii.html">
+   Loops II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_ii_soln.html">
+   Loops II solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/week6_quiz_sol.html">
+   Week 6 quiz solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week6_lab/lab_wk6.html">
+   Lab Week 6 Solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 7 - Midterm
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/midterm_review_sol.html">
+   Midterm Review solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/week7_quiz_sol.html">
+   Week 7 quiz solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 8 - Functions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_soln.html">
+   Functions – solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_ii_soln.html">
+   Functions II – solutions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
+   Week 08 Quiz: Functions basics -solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week8_lab/lab_wk8.html">
+   Lab Week 8 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../midterm/midterm_2021_key.html">
+   e211 2021t1 midterm solutions
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 9 - Functions/debugging
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging.html">
+   More Functions &amp; Debugging Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging_soln.html">
+   solution: More Functions &amp; Debugging Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/quiz_wk9_soln.html">
+   Quiz Week 9:  Debugging with Functions solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging_ii_soln.html">
+   Debugging II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week9_lab/lab_wk9.html">
+   Lab Week 9 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/lab_wk9/lab_wk9.html">
+   Lab Week 9
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 10 - Interpolation/scipy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/wk10_interpolation_demo.html">
+   Week 10:  Interpolation - some examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/dictionaries_and_f_strings.html">
+   Dictionaries, F String Literals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/quiz_wk10_soln.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 11 - Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/pythia_pandas.html">
+   Introduction to Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
+   Week 11 quiz solution: pandas
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 12 - Review/File IO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/wk12_worksheet1_soln.html">
+   Change worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
+   Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wk13_worksheet1.html">
+   Review Exercises EOSC 211
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignment1/assignment1.html">
+   Assignment 1 – CO2/temperature
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignment02/ast2.html">
+   Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="next_steps.html">
+   Next steps
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Reference material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference_notes/thursday_oct7.html">
+   Notes for Thursday Oct. 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/lab_wk11/pandas-cheatsheet.html">
+   Pandas Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html">
+   Pythia Pandas Lesson
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/wk13/e211_palettes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/wk13/e211_palettes.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk13/e211_palettes.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk13/e211_palettes.ipynb&branch=e211_live_main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-objectives">
+   learning objectives
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#read-in-some-satellite-data">
+   read in some satellite data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#histogram-to-see-the-data-range">
+   Histogram to see the data range
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#producing-pseudocolor-images">
+   Producing pseudocolor images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#normalizing-a-colormap">
+   Normalizing a colormap
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-using-pcolormesh">
+   Plotting using pcolormesh
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-a-colorbar">
+   Adding a colorbar
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#specifying-over-under-bad-values">
+   Specifying over/under/bad values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-turn">
+   Your turn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#make-the-colorbar-range-20-20-k">
+   Make the colorbar range -20 -&gt; 20 K
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="plotting-color-images-with-matplotlib">
+<h1>Plotting color images with matplotlib<a class="headerlink" href="#plotting-color-images-with-matplotlib" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="learning-objectives">
+<h2>learning objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>introduce color plotting with colomaps and pcolormesh</p></li>
+<li><p>provide a set of links for future reference about using color to interpret/present image data</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="read-in-some-satellite-data">
+<h2>read in some satellite data<a class="headerlink" href="#read-in-some-satellite-data" title="Permalink to this headline">¶</a></h2>
+<p>Get a compressed npz archive that holds two <a class="reference external" href="https://modis.gsfc.nasa.gov/about/specifications.php">modis</a> brightness temperature maps (Kelvins) for Channel 31 and 32.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_dict</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;./sat_temps.npz&#39;</span><span class="p">)</span>
+<span class="nb">list</span><span class="p">(</span><span class="n">temp_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;chan31&#39;, &#39;chan32&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="histogram-to-see-the-data-range">
+<h2>Histogram to see the data range<a class="headerlink" href="#histogram-to-see-the-data-range" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">temp_dict</span><span class="p">[</span><span class="s1">&#39;chan31&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">flat</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e211_palettes_5_0.png" src="../_images/e211_palettes_5_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="producing-pseudocolor-images">
+<h2>Producing pseudocolor images<a class="headerlink" href="#producing-pseudocolor-images" title="Permalink to this headline">¶</a></h2>
+<p>For reference: some background about colormaps (aka palettes) and human color vision</p>
+<ul class="simple">
+<li><p>matplotlib</p>
+<ul>
+<li><p>we’ll use <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.pcolormesh.html">pcolormesh</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/introductory/images.html">matplotlib image tutorial</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html">matplotlib colormaps</a></p></li>
+<li><p><a class="reference external" href="https://www.computerhope.com/issues/ch001557.htm">32 bit true color vs. 8 bit colormaps</a></p></li>
+</ul>
+</li>
+<li><p>physiology and psychology of color vision in humans</p>
+<ul>
+<li><p><a class="reference external" href="https://www.healthline.com/health/tetrachromacy">rods, cones and rgb</a></p></li>
+<li><p><a class="reference external" href="https://www.colourblindawareness.org/colour-blindness/">colorblindness</a></p></li>
+<li><p><a class="reference external" href="https://blog.xkcd.com/2010/05/03/color-survey-results/">xkcd color survey</a></p></li>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/generated/seaborn.xkcd_palette.html">xkcd colors from matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/RGB_color_model">wikipedia article on RGB colors</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/The_dress">the dress</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="normalizing-a-colormap">
+<h2>Normalizing a colormap<a class="headerlink" href="#normalizing-a-colormap" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>We can set the datarange that we want to map onto the colors in a particular colormap, using the
+<a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Normalize.html">Normalize object</a></p></li>
+<li><p>We can set colors for out-of-range and missing data using the <code class="docutils literal notranslate"><span class="pre">set_over</span></code>, <code class="docutils literal notranslate"><span class="pre">set_under</span></code> and <code class="docutils literal notranslate"><span class="pre">set_bad</span></code>
+methods of the <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Colormap.html">colormap object</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">copy</span>
+<span class="n">pal</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;autumn&quot;</span><span class="p">))</span>
+<span class="n">pal</span><span class="o">.</span><span class="n">set_bad</span><span class="p">(</span><span class="s2">&quot;0.75&quot;</span><span class="p">)</span>  <span class="c1"># 75% grey for out-of-map cells</span>
+<span class="n">pal</span><span class="o">.</span><span class="n">set_over</span><span class="p">(</span><span class="s2">&quot;w&quot;</span><span class="p">)</span>  <span class="c1"># color cells &gt; vmax white</span>
+<span class="n">pal</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="s2">&quot;k&quot;</span><span class="p">)</span>  <span class="c1"># color cells &lt; vmin black</span>
+<span class="n">vmin</span> <span class="o">=</span> <span class="mf">200.</span>
+<span class="n">vmax</span> <span class="o">=</span> <span class="mf">400.</span>
+<span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">Normalize</span>
+
+<span class="n">the_norm</span> <span class="o">=</span> <span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-using-pcolormesh">
+<h2>Plotting using pcolormesh<a class="headerlink" href="#plotting-using-pcolormesh" title="Permalink to this headline">¶</a></h2>
+<p>Here’s the chan31 temperatures plotted with pcolormesh with the above normalization and the autumn palette.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.pcolormesh.html?highlight=pcolormesh#matplotlib.axes.Axes.pcolormesh">pcolormesh reference</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">col</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">temp_dict</span><span class="p">[</span><span class="s1">&#39;chan31&#39;</span><span class="p">],</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">pal</span><span class="p">,</span> <span class="n">norm</span> <span class="o">=</span> <span class="n">the_norm</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">col</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;matplotlib.collections.QuadMesh&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/e211_palettes_10_1.png" src="../_images/e211_palettes_10_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="adding-a-colorbar">
+<h2>Adding a colorbar<a class="headerlink" href="#adding-a-colorbar" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Now add a standard colobar to the figure.  The colorbar size can be reduced with the <code class="docutils literal notranslate"><span class="pre">shrink</span></code> keyword and
+the space between the colorbar and the image can be adjusted with the <code class="docutils literal notranslate"><span class="pre">pad</span></code> keyword.  We can also label the
+colorbar and adjust its alignment using <code class="docutils literal notranslate"><span class="pre">verticalalignment</span></code> and <code class="docutils literal notranslate"><span class="pre">rotation</span></code></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.colorbar.html">colorbar reference</a></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colorbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.95</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;channel31 brightness temperature (K)&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span><span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e211_palettes_12_0.png" src="../_images/e211_palettes_12_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="specifying-over-under-bad-values">
+<h2>Specifying over/under/bad values<a class="headerlink" href="#specifying-over-under-bad-values" title="Permalink to this headline">¶</a></h2>
+<p>Make a new image with temperatures below 250 set to missing, and all colors mapped to 310 K - 330 K</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">chan31</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">temp_dict</span><span class="p">[</span><span class="s1">&#39;chan31&#39;</span><span class="p">])</span>
+<span class="n">chan31</span><span class="p">[</span><span class="n">chan31</span> <span class="o">&lt;</span> <span class="mi">250</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">vmin</span> <span class="o">=</span> <span class="mf">310.</span>
+<span class="n">vmax</span> <span class="o">=</span> <span class="mf">330.</span>
+<span class="n">the_norm</span> <span class="o">=</span> <span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">col</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">chan31</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">pal</span><span class="p">,</span> <span class="n">norm</span> <span class="o">=</span> <span class="n">the_norm</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;channel31 brightness temperature (K)&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span><span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e211_palettes_14_0.png" src="../_images/e211_palettes_14_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="your-turn">
+<h2>Your turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h2>
+<p>Make a new image of (channel31 - mean(chan31)) and plot that using a <a class="reference external" href="https://matplotlib.org/stable/tutorials/colors/colormaps.html#diverging">diverging colormap</a> like <code class="docutils literal notranslate"><span class="pre">coolwarm</span></code>.  Don’t worry
+about normalization for this first pass.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># phil&#39;s answer</span>
+<span class="n">chan31</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">temp_dict</span><span class="p">[</span><span class="s1">&#39;chan31&#39;</span><span class="p">])</span>
+<span class="n">diff_31</span> <span class="o">=</span> <span class="n">chan31</span> <span class="o">-</span> <span class="n">chan31</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">pal</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">get_cmap</span><span class="p">(</span><span class="s2">&quot;coolwarm&quot;</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">col</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">diff_31</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">pal</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;channel31 brightness anomaly (K)&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span><span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e211_palettes_16_0.png" src="../_images/e211_palettes_16_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="make-the-colorbar-range-20-20-k">
+<h2>Make the colorbar range -20 -&gt; 20 K<a class="headerlink" href="#make-the-colorbar-range-20-20-k" title="Permalink to this headline">¶</a></h2>
+<p>We want the blue-red boundary to designate switch from negative to positive</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># now normalize</span>
+<span class="n">vmin</span> <span class="o">=</span> <span class="o">-</span><span class="mf">20.</span>
+<span class="n">vmax</span> <span class="o">=</span>  <span class="mf">20.</span>
+<span class="n">the_norm</span> <span class="o">=</span> <span class="n">Normalize</span><span class="p">(</span><span class="n">vmin</span><span class="o">=</span><span class="n">vmin</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="n">vmax</span><span class="p">,</span> <span class="n">clip</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">pal</span><span class="o">.</span><span class="n">set_bad</span><span class="p">(</span><span class="s2">&quot;0.75&quot;</span><span class="p">)</span>  <span class="c1"># 75% grey for out-of-map cells</span>
+<span class="n">pal</span><span class="o">.</span><span class="n">set_over</span><span class="p">(</span><span class="s2">&quot;crimson&quot;</span><span class="p">)</span>  <span class="c1"># color cells &gt; vmax white</span>
+<span class="n">pal</span><span class="o">.</span><span class="n">set_under</span><span class="p">(</span><span class="s2">&quot;cyan&quot;</span><span class="p">)</span>  <span class="c1"># color cells &lt; vmin black</span>
+<span class="n">col</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">diff_31</span><span class="p">,</span> <span class="n">cmap</span> <span class="o">=</span> <span class="n">pal</span><span class="p">,</span> <span class="n">norm</span> <span class="o">=</span> <span class="n">the_norm</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="o">=</span><span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mf">0.02</span><span class="p">,</span><span class="n">extend</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">)</span>
+<span class="n">colorbar</span><span class="o">.</span><span class="n">set_label</span><span class="p">(</span><span class="s1">&#39;channel31 brightness anomaly (K)&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=-</span><span class="mi">90</span><span class="p">,</span><span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/e211_palettes_18_0.png" src="../_images/e211_palettes_18_0.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./wk13"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../wk12/file_io_practice_soln.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">File IO Solution</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="next_steps.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Next steps</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

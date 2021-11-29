@@ -380,11 +380,6 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
-   Lab Week 11 - solution
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
    Week 11 quiz solution: pandas
   </a>
@@ -402,13 +397,20 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
-   File IO Solution
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
    Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
   </a>
  </li>
 </ul>
@@ -426,6 +428,28 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/e211_palettes.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/next_steps.html">
+   Next steps
   </a>
  </li>
 </ul>
@@ -599,7 +623,7 @@
 <p><strong>We have two input arrays, <code class="docutils literal notranslate"><span class="pre">x</span></code> which is distance and <code class="docutils literal notranslate"><span class="pre">tpro</span></code> which is elevation in kilometers (say, along a survey line). Both have shape (100,). Use a <em>loop</em> and an <em>if statement</em> to write out a new variable <code class="docutils literal notranslate"><span class="pre">tlow</span></code> that contains only the values in <code class="docutils literal notranslate"><span class="pre">tpro</span></code> when the elevation is less than -1.8km.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1"># km along the survey line</span>
 <span class="n">tpro</span> <span class="o">=</span> <span class="o">-</span><span class="mf">1.5</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># pretend topo</span>
@@ -611,7 +635,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="n">tlow</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([])</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">tpro</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
@@ -621,10 +645,31 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1.5        -1.81292939 -1.01186996 -1.94849139 -1.28854053 -1.38135848
+ -1.89652514 -1.00011274 -1.8832354  -1.40208879 -1.26949364 -1.95747182
+ -1.01690852 -1.79608944 -1.52122962 -1.17079506 -1.99228822 -1.06129795
+ -1.69203118 -1.63915784 -1.09090029 -1.99898567 -1.13074554 -1.57700432
+ -1.74913752 -1.03437285 -1.97718161 -1.22128454 -1.45757905 -1.84488674
+ -1.0044415  -1.92812148 -1.32774345 -1.34057683 -1.92093642 -1.0028159
+ -1.85460753 -1.44404146 -1.23268067 -1.97294268 -1.0295889  -1.76083879
+ -1.56353576 -1.1400535  -1.99793499 -1.08323125 -1.65217124 -1.67940097
+ -1.06798607 -1.99448581 -1.16067897 -1.53481183 -1.785019   -1.02059478
+ -1.96279215 -1.25750832 -1.41546401 -1.87435706 -1.00058659 -1.90466433
+ -1.36818853 -1.3009448  -1.94231227 -1.00910433 -1.82342253 -1.48639766
+ -1.19779539 -1.98500309 -1.04566148 -1.7237072  -1.60538374 -1.11190757
+ -1.99999108 -1.10816994 -1.61121396 -1.71835042 -1.04818715 -1.98642015
+ -1.19305929 -1.49236831 -1.81884517 -1.01027378 -1.94506543 -1.29548075
+ -1.37395857 -1.90112784 -1.00033302 -1.87828908 -1.40958413 -1.26274818
+ -1.96049853 -1.01893268 -1.78990528 -1.52885195 -1.16508934 -1.99356607
+ -1.06501037 -1.68496242 -1.64647178 -1.08656023]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution   </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution   </span>
 <span class="c1"># same as Andrew&#39;s but i used &quot;t&quot; not &quot;i&quot; to remind myself i am looping over the values in tpro not their indices</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -640,6 +685,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[-1.81292939 -1.94849139 -1.89652514 -1.8832354  -1.95747182 -1.99228822
+ -1.99898567 -1.97718161 -1.84488674 -1.92812148 -1.92093642 -1.85460753
+ -1.97294268 -1.99793499 -1.99448581 -1.96279215 -1.87435706 -1.90466433
+ -1.94231227 -1.82342253 -1.98500309 -1.99999108 -1.98642015 -1.81884517
+ -1.94506543 -1.90112784 -1.87828908 -1.96049853 -1.99356607]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="question-2">
@@ -648,14 +702,14 @@
 <p><strong>Finally, call your function with tpro as the input data and a cutoff of -1.8 km</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s soln</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s soln</span>
 <span class="k">def</span> <span class="nf">select_elev</span><span class="p">(</span><span class="n">in_data</span><span class="p">,</span> <span class="n">cutoff</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    selects elements of a 1D np array in_data which are below the value cutoff.</span>
@@ -671,6 +725,16 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-1.81292939, -1.94849139, -1.89652514, -1.8832354 , -1.95747182,
+       -1.99228822, -1.99898567, -1.97718161, -1.84488674, -1.92812148,
+       -1.92093642, -1.85460753, -1.97294268, -1.99793499, -1.99448581,
+       -1.96279215, -1.87435706, -1.90466433, -1.94231227, -1.82342253,
+       -1.98500309, -1.99999108, -1.98642015, -1.81884517, -1.94506543,
+       -1.90112784, -1.87828908, -1.96049853, -1.99356607])
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="question-3">
@@ -678,14 +742,14 @@
 <p><strong>Modify your function to return a <em>tuple</em> containing the elevations below <code class="docutils literal notranslate"><span class="pre">cutoff</span></code>, and the <em>indexes</em> of where those elements are found; ie <code class="docutils literal notranslate"><span class="pre">(tlow,</span> <span class="pre">tlow_ind)</span></code>.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln; catherine&#39;s basically the same</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln; catherine&#39;s basically the same</span>
 <span class="k">def</span> <span class="nf">select_elev2</span><span class="p">(</span><span class="n">in_data</span><span class="p">,</span> <span class="n">cutoff</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    selects elements of a 1D np array in_data which are below the value cutoff.</span>
@@ -704,6 +768,24 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([-1.81292939, -1.94849139, -1.89652514, -1.8832354 , -1.95747182,
+        -1.79608944, -1.52122962, -1.99228822, -1.69203118, -1.63915784,
+        -1.99898567, -1.57700432, -1.74913752, -1.97718161, -1.84488674,
+        -1.92812148, -1.92093642, -1.85460753, -1.97294268, -1.76083879,
+        -1.56353576, -1.99793499, -1.65217124, -1.67940097, -1.99448581,
+        -1.53481183, -1.785019  , -1.96279215, -1.87435706, -1.90466433,
+        -1.94231227, -1.82342253, -1.98500309, -1.7237072 , -1.60538374,
+        -1.99999108, -1.61121396, -1.71835042, -1.98642015, -1.81884517,
+        -1.94506543, -1.90112784, -1.87828908, -1.96049853, -1.78990528,
+        -1.52885195, -1.99356607, -1.68496242, -1.64647178]),
+ array([ 1.,  3.,  6.,  8., 11., 13., 14., 16., 18., 19., 21., 23., 24.,
+        26., 29., 31., 34., 36., 39., 41., 42., 44., 46., 47., 49., 51.,
+        52., 54., 57., 59., 62., 64., 67., 69., 70., 72., 74., 75., 77.,
+        80., 82., 85., 87., 90., 92., 93., 95., 97., 98.]))
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="question-4">
@@ -711,14 +793,14 @@
 <p><strong>Finally, I need not have used a loop and an “if” statement in the function.  How would I rewrite the body of the function in Exercise 2 to use logical indexing?  Note that the function call and function definition line don’t need to be changed.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="k">def</span> <span class="nf">select_elev3</span><span class="p">(</span><span class="n">in_data</span><span class="p">,</span> <span class="n">cutoff</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    selects elements of a 1D np array in_data which are below the value cutoff.</span>
@@ -727,6 +809,16 @@
     <span class="k">return</span> <span class="n">in_data</span><span class="p">[</span><span class="n">in_data</span> <span class="o">&lt;</span> <span class="n">cutoff</span><span class="p">]</span>
     
 <span class="n">select_elev3</span><span class="p">(</span><span class="n">tpro</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.8</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([-1.81292939, -1.94849139, -1.89652514, -1.8832354 , -1.95747182,
+       -1.99228822, -1.99898567, -1.97718161, -1.84488674, -1.92812148,
+       -1.92093642, -1.85460753, -1.97294268, -1.99793499, -1.99448581,
+       -1.96279215, -1.87435706, -1.90466433, -1.94231227, -1.82342253,
+       -1.98500309, -1.99999108, -1.98642015, -1.81884517, -1.94506543,
+       -1.90112784, -1.87828908, -1.96049853, -1.99356607])
 </pre></div>
 </div>
 </div>
