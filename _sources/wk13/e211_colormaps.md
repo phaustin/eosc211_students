@@ -17,7 +17,7 @@ kernelspec:
 # Plotting color images with matplotlib
 
 
-## learning objectives
+## Learning objectives
 
   * introduce color plotting with colomaps and pcolormesh
   * provide a set of links for future reference about using color to interpret/present image data
@@ -27,16 +27,20 @@ kernelspec:
 
 import matplotlib.pyplot as plt
 import numpy as np
+from pathlib import Path
 ```
 
 ## read in some satellite data
 
-Get a compressed npz archive that holds two [modis](https://modis.gsfc.nasa.gov/about/specifications.php) brightness temperature maps (Kelvins) for Channel 31 and 32.
+Get a compressed npz archive that holds two [modis](https://modis.gsfc.nasa.gov/about/specifications.php) brightness temperature maps (Kelvins) for Channel 31 and 32.  You can download this file
+from [this link](https://github.com/phaustin/eosc211_students/blob/e211_live_main/wk13/sat_temps.npz)
 
 ```{code-cell} ipython3
 :trusted: true
 
-temp_dict = np.load('./sat_temps.npz')
+# put sat_temps.npz in the same folder as this notebook
+sat_file = list(Path().glob('*sat_temps.npz'))[0]
+temp_dict = np.load(sat_file)
 list(temp_dict.keys())
 ```
 
