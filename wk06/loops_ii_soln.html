@@ -394,13 +394,20 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
-   File IO Solution
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
    Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
   </a>
  </li>
 </ul>
@@ -418,6 +425,28 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/next_steps.html">
+   Next steps
   </a>
  </li>
 </ul>
@@ -597,7 +626,7 @@
 <p><strong>Display the numbers of the series 2 4 6 8 10 12 …100 to the screen one by one.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="c1"># your code here</span>
 </pre></div>
 </div>
@@ -614,7 +643,7 @@
 <p>You are given the matrix <span class="math notranslate nohighlight">\(A\)</span> which is size 10x20. The following code loops through each element <span class="math notranslate nohighlight">\(A_{ij}\)</span> and calculates <span class="math notranslate nohighlight">\(i \cdot j \cdot A_{ij}\)</span>. Modify this code to store successive calculations in successive elements of a new variable <code class="docutils literal notranslate"><span class="pre">B</span></code> which will have shape 1x200.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># modify this code</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># modify this code</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span><span class="mi">20</span><span class="p">])</span>
 
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
@@ -626,7 +655,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="n">B</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
 <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># create an index variable to loop over the elements of B</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
@@ -637,10 +666,29 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.
+   0.   0.   0.   0.   0.   0.   0.   1.   2.   3.   4.   5.   6.   7.
+   8.   9.  10.  11.  12.  13.  14.  15.  16.  17.  18.  19.   0.   2.
+   4.   6.   8.  10.  12.  14.  16.  18.  20.  22.  24.  26.  28.  30.
+  32.  34.  36.  38.   0.   3.   6.   9.  12.  15.  18.  21.  24.  27.
+  30.  33.  36.  39.  42.  45.  48.  51.  54.  57.   0.   4.   8.  12.
+  16.  20.  24.  28.  32.  36.  40.  44.  48.  52.  56.  60.  64.  68.
+  72.  76.   0.   5.  10.  15.  20.  25.  30.  35.  40.  45.  50.  55.
+  60.  65.  70.  75.  80.  85.  90.  95.   0.   6.  12.  18.  24.  30.
+  36.  42.  48.  54.  60.  66.  72.  78.  84.  90.  96. 102. 108. 114.
+   0.   7.  14.  21.  28.  35.  42.  49.  56.  63.  70.  77.  84.  91.
+  98. 105. 112. 119. 126. 133.   0.   8.  16.  24.  32.  40.  48.  56.
+  64.  72.  80.  88.  96. 104. 112. 120. 128. 136. 144. 152.   0.   9.
+  18.  27.  36.  45.  54.  63.  72.  81.  90.  99. 108. 117. 126. 135.
+ 144. 153. 162. 171.]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">nrows</span> <span class="o">=</span> <span class="mi">10</span>     <span class="c1"># extra code lines here to define dimensions: avoids potential typos later and makes syntax clear</span>
@@ -656,6 +704,25 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.   0.
+   0.   0.   0.   0.   0.   0.   0.   1.   2.   3.   4.   5.   6.   7.
+   8.   9.  10.  11.  12.  13.  14.  15.  16.  17.  18.  19.   0.   2.
+   4.   6.   8.  10.  12.  14.  16.  18.  20.  22.  24.  26.  28.  30.
+  32.  34.  36.  38.   0.   3.   6.   9.  12.  15.  18.  21.  24.  27.
+  30.  33.  36.  39.  42.  45.  48.  51.  54.  57.   0.   4.   8.  12.
+  16.  20.  24.  28.  32.  36.  40.  44.  48.  52.  56.  60.  64.  68.
+  72.  76.   0.   5.  10.  15.  20.  25.  30.  35.  40.  45.  50.  55.
+  60.  65.  70.  75.  80.  85.  90.  95.   0.   6.  12.  18.  24.  30.
+  36.  42.  48.  54.  60.  66.  72.  78.  84.  90.  96. 102. 108. 114.
+   0.   7.  14.  21.  28.  35.  42.  49.  56.  63.  70.  77.  84.  91.
+  98. 105. 112. 119. 126. 133.   0.   8.  16.  24.  32.  40.  48.  56.
+  64.  72.  80.  88.  96. 104. 112. 120. 128. 136. 144. 152.   0.   9.
+  18.  27.  36.  45.  54.  63.  72.  81.  90.  99. 108. 117. 126. 135.
+ 144. 153. 162. 171.]
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="question-3">
@@ -665,7 +732,7 @@
 <p><strong>b.	3 times the value of the corresponding element in <code class="docutils literal notranslate"><span class="pre">x</span></code> if the latter is odd</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s solution</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
@@ -677,15 +744,20 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[  3  24 159  68 183  32  51  76  40]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># catherine&#39;s solution</span>
 <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">53</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">61</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>     <span class="c1"># see comment at end in print statement</span>
 
 <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="o">%</span><span class="k">2</span> == 0:
         <span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">y</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">x</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> 
@@ -702,6 +774,19 @@
 <span class="s2">   &quot;&quot;&quot;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   y contains [  3.  24. 159.  68. 183.  32.  51.  76.  40.]
+   
+   Note that here y has type float and in previous 
+   solution using np.empty_like had type int (same as x)
+   We saw this also in a question on the previous worksheet
+   Depending on your problem you may or may not want to preserve type
+   e.g. think about what happens if I wanted half the value of 
+   the element of x when the latter is odd
+   
 </pre></div>
 </div>
 </div>
@@ -742,7 +827,7 @@
 To exit and raise an error, include <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">Exception('Error</span> <span class="pre">message</span> <span class="pre">here')</span></code>, or  <code class="docutils literal notranslate"><span class="pre">raise</span> <span class="pre">TypeError('Error</span> <span class="pre">message</span> <span class="pre">here')</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>

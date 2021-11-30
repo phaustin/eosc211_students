@@ -1,0 +1,778 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Next steps &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Notes for Thursday Oct. 7" href="../reference_notes/thursday_oct7.html" />
+    <link rel="prev" title="Plotting color images with matplotlib" href="e211_colormaps.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../announcements.html">
+   Course Home/Announcements
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 1 - Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/syllabus.html">
+   Course Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/covid_statements.html">
+   Covid Safety in the Classroom
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/schedule_F2021.html">
+   Course Schedule - Fall Semester 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../syllabus/worksheet_steps_in_problem_solving.html">
+   Steps In Problem Solving
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 2 - Data Types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/data_types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/some_review_plus_built_in_functions_arrays_preview.html">
+   Some Review Plus Built-In Functions, Arrays Preview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week2_lab/lab_wk2.html">
+   Answers: Lab Week 2 - Jupyterhub Tutorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk02/week2_quiz.html">
+   Week 2 quiz
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 3 - Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/data_structures_ii.html">
+   Data Structures II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk03/week3_quiz.html">
+   Week 3 quiz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week3_lab/lab_wk3_soln.html">
+   Answers: Lab Week 3
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 4 - Scientific Figures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk04/making_plots.html">
+   Making Plots Worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week4_lab/lab_wk4.html">
+   Answers: Lab Week 4
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 5 - Computer Logic
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/logic.html">
+   Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/complicated_logic.html">
+   More Complicated Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/wk05_indexing.html">
+   Indexing worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/wk05_indexing_soln.html">
+   Week 5 indexing solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk05/week5_quiz_sol.html">
+   Week 5 quiz solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week5_lab/lab_wk5.html">
+   Answers: Lab Week 5
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_soln.html">
+   Loops – Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_ii.html">
+   Loops II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/loops_ii_soln.html">
+   Loops II solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk06/week6_quiz_sol.html">
+   Week 6 quiz solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week6_lab/lab_wk6.html">
+   Lab Week 6 Solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 7 - Midterm
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/midterm_review_sol.html">
+   Midterm Review solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk07/week7_quiz_sol.html">
+   Week 7 quiz solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 8 - Functions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/functions_soln.html">
+   Functions – solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
+   Week 08 Quiz: Functions basics -solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week8_lab/lab_wk8.html">
+   Lab Week 8 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../midterm/midterm_2021_key.html">
+   e211 2021t1 midterm solutions
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 9 - Functions/debugging
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging.html">
+   More Functions &amp; Debugging Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/debugging_soln.html">
+   solution: More Functions &amp; Debugging Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/quiz_wk9_soln.html">
+   Quiz Week 9:  Debugging with Functions solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week9_lab/lab_wk9.html">
+   Lab Week 9 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk09/lab_wk9/lab_wk9.html">
+   Lab Week 9
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 10 - Interpolation/scipy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/wk10_interpolation_demo.html">
+   Week 10:  Interpolation - some examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/dictionaries_and_f_strings.html">
+   Dictionaries, F String Literals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk10/quiz_wk10_soln.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 11 - Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/pythia_pandas.html">
+   Introduction to Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
+   Lab Week 11 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
+   Week 11 quiz solution: pandas
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 12 - Review/File IO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/wk12_worksheet1_soln.html">
+   Change worksheet solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
+   Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wk13_worksheet1.html">
+   Review Exercises EOSC 211
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignment1/assignment1.html">
+   Assignment 1 – CO2/temperature
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignment02/ast2.html">
+   Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Next steps
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Reference material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference_notes/thursday_oct7.html">
+   Notes for Thursday Oct. 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11/lab_wk11/pandas-cheatsheet.html">
+   Pandas Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html">
+   Pythia Pandas Lesson
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/wk13/next_steps.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/wk13/next_steps.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk13/next_steps.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk13/next_steps.ipynb&branch=e211_live_main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-to-from-here">
+   Where to From Here?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-continuing-education">
+   Python continuing education
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-at-ubc">
+   Python at UBC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#developing-your-own-coding-workflow">
+   Developing Your Own Coding Workflow
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vscode-and-other-ide-s">
+     VScode and Other IDE’s
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-github">
+     Git/Github
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-programming-languages">
+     Other Programming Languages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#useful-python-packages-for-geosciences">
+   Useful Python Packages for Geosciences
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="next-steps">
+<h1>Next steps<a class="headerlink" href="#next-steps" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="where-to-from-here">
+<h2>Where to From Here?<a class="headerlink" href="#where-to-from-here" title="Permalink to this headline">¶</a></h2>
+<p>We have reached the end of E211! We sincerely hope that you enjoyed the course, and gained some valuable skills to help you throughout the rest of your career at UBC and in the Earth Sciences.</p>
+<p>Below are a series of links and suggestions to help you continue building your coding skills beyond what we were able to cover in a single semester.</p>
+</div>
+<div class="section" id="python-continuing-education">
+<h2>Python continuing education<a class="headerlink" href="#python-continuing-education" title="Permalink to this headline">¶</a></h2>
+<p>How do you move from the course exercises we’ve been through to real-world programming in python?  The
+main thing is to continue to write code, and read code others have written.   Some useful links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://projectpythia.org/index.html#start-learning">Project Pythia</a>  – this website is hosted by the
+<a class="reference external" href="https://ncar.ucar.edu/">NCAR</a> to get scientists started in python programming for earth sciences applications</p></li>
+<li><p><a class="reference external" href="https://geo-python-site.readthedocs.io/en/latest/">University of Helsinki Geopython course</a> – well organized
+with an emphasis on GIS remote sensing.</p></li>
+<li><p><a class="reference external" href="https://www.earthdatascience.org/">University of Colorado Earth Lab</a> – lot’s of remote sensing/GIS tutorials in python and R</p></li>
+</ul>
+</div>
+<div class="section" id="python-at-ubc">
+<h2>Python at UBC<a class="headerlink" href="#python-at-ubc" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&amp;tname=subj-course&amp;dept=ATSC&amp;course=409">ATSC 409</a> – Numerical methods</p></li>
+<li><p><a class="reference external" href="https://courses.students.ubc.ca/cs/courseschedule?pname=subjarea&amp;tname=subj-course&amp;dept=ATSC&amp;course=301">ATSC 301: Remote Sensing</a> – offered January 2023.  Python based GIS/satellite remote sensing</p></li>
+<li><p>Courses in the <a class="reference external" href="https://datascience.ubc.ca/minor">UBC Data Science minor</a></p></li>
+</ul>
+</div>
+<div class="section" id="developing-your-own-coding-workflow">
+<h2>Developing Your Own Coding Workflow<a class="headerlink" href="#developing-your-own-coding-workflow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vscode-and-other-ide-s">
+<h3>VScode and Other IDE’s<a class="headerlink" href="#vscode-and-other-ide-s" title="Permalink to this headline">¶</a></h3>
+<p>In this course we relied exclusively on Jupyter notebooks and related infrastructure, chosen for simplicity, ease of use, and popularity in the research community. If you want a more fully-featured, customizable <em>integrated development environment</em> (IDE), you might consider using VScode or Spyder. With more complex IDE’s you can add extentions like <a class="reference external" href="https://visualstudiomagazine.com/articles/2019/04/24/vs-code-python-update.aspx">variable explorers</a>, <a class="reference external" href="https://code.visualstudio.com/docs/python/debugging">debugging tools</a>, <a class="reference external" href="https://code.visualstudio.com/docs/editor/github">version-control</a>, <a class="reference external" href="https://dev.to/adamlombard/how-to-use-the-black-python-code-formatter-in-vscode-3lo0">automatic code formatters</a> and more. You can also configure VScode to look and feel <a class="reference external" href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">very much like a jupyter notebook</a>. How you develop and manage your coding workflow is largely a matter of personal taste; You can write code with anything from a simple text editor to a super tricked-out IDE that took you years to configure.</p>
+</div>
+<div class="section" id="git-github">
+<h3>Git/Github<a class="headerlink" href="#git-github" title="Permalink to this headline">¶</a></h3>
+<p>For those interested in pursuing scientific programming as a career, we highly recommend incorporating Git into your programming flow. Git is a <em>version control system</em>, designed to allow you to backup many versions of your code as you develop more complex projects, as well as efficiently collaborate with teammates without making a mess (this is how 2 professors and 3 TA’s manage all the material for a programming course). Profficiently using Git is a super useful skill sought after by employers – if you are interested in learning more, send <span class="xref myst">Andrew</span> an email, as he will be creating a series of tutorials on <em>git for earth science students and researchers</em> in the spring ‘22 semester.</p>
+<blockquote>
+<div><p><a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">git</a> - Version control software that lives in your computer and keeps track of changes to your code</p>
+</div></blockquote>
+<blockquote>
+<div><p><a class="reference external" href="https://github.com/">github</a> - An online platform designed for collaboratively developing <em>open source</em> code</p>
+</div></blockquote>
+</div>
+<div class="section" id="other-programming-languages">
+<h3>Other Programming Languages<a class="headerlink" href="#other-programming-languages" title="Permalink to this headline">¶</a></h3>
+<p>Python is one of many high-level programming languages commmonly used today (currently the <em>most</em> commonly used). Either by choice or necessity, you may find yourself in the future needing to expand your horizons and work in another language. Learning a second programming language is much easier than the first, as they all tend to have much in common. Every language defines a number of data types, logical flow control statements, loops, etc.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://julialang.org/">Julia</a> – a high peformance scripting language that’s fast enough to use for <a class="reference external" href="https://clima.github.io/ClimateMachine.jl/latest/">Earth System Modelling</a></p></li>
+<li><p><a class="reference external" href="https://education.rstudio.com/">R</a> – the native language of most statisticians.  Used at UBC for DSCI 100 and all other stats courses.</p></li>
+<li><p><a class="reference external" href="https://numba.pydata.org/numba-doc/latest/user/5minguide.html">Numba</a> – probably the easiest way to make python code go faster.</p></li>
+<li><p><a class="reference external" href="https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html">Cython</a>. Cython is a bridge to C and C++ in python.</p></li>
+<li><p><a class="reference external" href="https://fortran-lang.org/">Fortran</a>  – Created in 1957, this is the one of the first programming languages, and still the dominant language for climate modeling work on supercomputers.</p></li>
+<li><p><a class="reference external" href="https://www.rust-lang.org/learn/get-started">Rust</a> – A new language which can be used to accelerate python code via the <a class="reference external" href="https://pyo3.rs/v0.15.1/">PyO3</a> module</p></li>
+<li><p><a class="reference external" href="https://www.mathworks.com/">Matlab</a> - Commonly used for engineering applications, syntactically very similar to Python. Free License through UBC</p>
+<ul>
+<li><p><a class="reference external" href="https://it.ubc.ca/services/desktop-print-services/software-licensing/matlab">Get a UBC license for MATLAB</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="useful-python-packages-for-geosciences">
+<h2>Useful Python Packages for Geosciences<a class="headerlink" href="#useful-python-packages-for-geosciences" title="Permalink to this headline">¶</a></h2>
+<p>More stuff we wish we had time to cover in EOSC 211:</p>
+<p><a class="reference external" href="https://www.freecodecamp.org/news/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c">Maintaining a Conda Environment</a> - This is an important skill in Python programming. It is good practice to create separate coding environments for each project, and keep your environments as simple as possible (but not any simpler). Well-maintained environments lead to fewer bugs. Here is a <a class="reference external" href="https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf">conda cheat sheet</a></p>
+<p><a class="reference external" href="https://scipy.org/">Scipy</a> - Hardcore math stuff. Analytical equation solvers, linear algebra, statistics</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install scipy
+</pre></div>
+</div>
+<p><a class="reference external" href="https://scikit-learn.org/stable/index.html">Scikit-Learn</a> - Neural networks and machine learning models for novice programmers</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install scikit-learn
+</pre></div>
+</div>
+<p><a class="reference external" href="http://xarray.pydata.org/en/stable/">Xarray</a> - like Pandas, but for dense numpy arrays extended to 3D and beyond. Great for handling things like NetCDF data and displaying  Meteorological and Oceanographic vector fields.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge xarray dask netCDF4 bottleneck
+</pre></div>
+</div>
+<p><a class="reference external" href="https://geopandas.org/en/stable/">Geopandas</a> - Like Pandas, but with expanded functionality to work with geographical information systems (GIS) data: KML, KMZ, shp, etc files can all be processed with Python. (I much prefer this approach over a graphical program like Qgis)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install -c conda-forge geopandas
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./wk13"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="e211_colormaps.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Plotting color images with matplotlib</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../reference_notes/thursday_oct7.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Notes for Thursday Oct. 7</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By UBC<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

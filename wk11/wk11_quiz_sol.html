@@ -392,13 +392,20 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
-   File IO Solution
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
    Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
   </a>
  </li>
 </ul>
@@ -416,6 +423,28 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/next_steps.html">
+   Next steps
   </a>
  </li>
 </ul>
@@ -557,14 +586,14 @@
 <h1>Week 11 quiz solution: pandas<a class="headerlink" href="#week-11-quiz-solution-pandas" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;enso_data.csv&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filepath</span> <span class="o">=</span> <span class="s2">&quot;enso_data.csv&quot;</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -572,7 +601,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df_enso</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="n">df_enso</span> <span class="o">=</span> <span class="n">df_enso</span><span class="p">[[</span><span class="s1">&#39;Nino12&#39;</span><span class="p">,</span><span class="s1">&#39;Nino3&#39;</span><span class="p">,</span><span class="s1">&#39;Nino4&#39;</span><span class="p">]]</span>
 </pre></div>
@@ -583,36 +612,123 @@
 <h2>Given the following DataFrame:<a class="headerlink" href="#given-the-following-dataframe" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Nino12</th>
+      <th>Nino3</th>
+      <th>Nino4</th>
+    </tr>
+    <tr>
+      <th>datetime</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2020-12-01</th>
+      <td>22.16</td>
+      <td>24.38</td>
+      <td>27.65</td>
+    </tr>
+    <tr>
+      <th>2021-01-01</th>
+      <td>23.89</td>
+      <td>25.06</td>
+      <td>27.10</td>
+    </tr>
+    <tr>
+      <th>2021-02-01</th>
+      <td>25.55</td>
+      <td>25.80</td>
+      <td>27.20</td>
+    </tr>
+    <tr>
+      <th>2021-03-01</th>
+      <td>26.48</td>
+      <td>26.80</td>
+      <td>27.79</td>
+    </tr>
+    <tr>
+      <th>2021-04-01</th>
+      <td>24.89</td>
+      <td>26.96</td>
+      <td>28.47</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Write down the numerical values that would be printed for each of the following statements:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2021-02-01&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2021-02-01&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Nino12    25.55
+Nino3     25.80
+Nino4     27.20
+Name: 2021-02-01 00:00:00, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span><span class="p">[</span><span class="s1">&#39;Nino3&#39;</span><span class="p">][</span><span class="s1">&#39;2021-03-01&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span><span class="p">[</span><span class="s1">&#39;Nino3&#39;</span><span class="p">][</span><span class="s1">&#39;2021-03-01&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>26.8
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span><span class="o">.</span><span class="n">columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Nino12&#39;, &#39;Nino3&#39;, &#39;Nino4&#39;], dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_enso</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28.47
 </pre></div>
 </div>
 </div>

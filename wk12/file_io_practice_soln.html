@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Week 12 Quiz: solution" href="wk12_quiz_soln.html" />
-    <link rel="prev" title="Change worksheet solution" href="wk12_worksheet1_soln.html" />
+    <link rel="next" title="Plotting color images with matplotlib" href="../wk13/e211_colormaps.html" />
+    <link rel="prev" title="Assignment 2 - Flybys" href="../assignment02/ast2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -385,20 +385,27 @@
   Week 12 - Review/File IO
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="wk12_worksheet1_soln.html">
    Change worksheet solution
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   File IO Solution
-  </a>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="wk12_quiz_soln.html">
    Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
   </a>
  </li>
 </ul>
@@ -416,6 +423,28 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/next_steps.html">
+   Next steps
   </a>
  </li>
 </ul>
@@ -640,7 +669,7 @@ end of the worksheet.</p>
 <p>Here’s basic  write of a numpy array to a text file using the folders we created in the week 11 lab.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">myhome</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
 
@@ -680,7 +709,7 @@ file written in json.  We’ll try a 3-d array this time.  We need to first turn
 a list, then dump the list to the file using <a class="reference external" href="https://docs.python.org/3/library/json.html">json.dump</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="c1">#</span>
 <span class="c1"># make a 3-d array</span>
 <span class="c1">#</span>
@@ -702,10 +731,28 @@ numpy <code class="docutils literal notranslate"><span class="pre">tolist</span>
 correctly <code class="docutils literal notranslate"><span class="pre">round-trips</span></code> the list back to a numpy array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_in</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_in</span><span class="p">:</span>
     <span class="n">new_vec</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_in</span><span class="p">)</span>
 <span class="n">new_vec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">new_vec</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">new_vec</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">,:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[[ 0  1]
+  [ 4  5]]
+
+ [[20 21]
+  [24 25]]
+
+ [[40 41]
+  [44 45]]
+
+ [[60 61]
+  [64 65]]
+
+ [[80 81]
+  [84 85]]]
 </pre></div>
 </div>
 </div>
@@ -718,7 +765,7 @@ physical units, uncertainty estimates, etc.  You can do this with json using a d
 your list along with other strings, lists and dictionaries if needed:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">my_data</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_data</span> <span class="o">=</span> <span class="p">{}</span>
 <span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;units&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;deg C&#39;</span>
 <span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;plot_title&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;incubator temperature&quot;</span>
 <span class="n">my_data</span><span class="p">[</span><span class="s1">&#39;valid range&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
@@ -731,7 +778,7 @@ your list along with other strings, lists and dictionaries if needed:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">meta_file</span> <span class="o">=</span> <span class="n">text_dir</span> <span class="o">/</span> <span class="s1">&#39;metadata.json&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">meta_file</span> <span class="o">=</span> <span class="n">text_dir</span> <span class="o">/</span> <span class="s1">&#39;metadata.json&#39;</span>
 <span class="c1">#</span>
 <span class="c1"># indent 4 spaces</span>
 <span class="c1">#</span>
@@ -746,9 +793,14 @@ levels more readable.  Since whitespace isn’t significant in json files, those
 when your read it back in:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">meta_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">meta_in</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">meta_file</span><span class="p">)</span> <span class="k">as</span> <span class="n">meta_in</span><span class="p">:</span>
     <span class="n">new_dict</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">meta_in</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">new_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dict_keys([&#39;units&#39;, &#39;plot_title&#39;, &#39;valid range&#39;, &#39;missing_values&#39;, &#39;comment&#39;, &#39;first_run&#39;])
 </pre></div>
 </div>
 </div>
@@ -779,7 +831,7 @@ cost of 19 bytes per date.  Feel free to use
 whichever format you think fits best with your application.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
 
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span> <span class="k">as</span> <span class="n">dt</span>
 <span class="n">the_dates</span> <span class="o">=</span> <span class="p">[</span><span class="n">dt</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="n">dt</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">dt</span><span class="p">(</span><span class="mi">2021</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">)]</span>
@@ -809,7 +861,7 @@ The datetime module provides the function <code class="docutils literal notransl
 to go from iso strings back to datetimes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># solution</span>
 <span class="kn">import</span> <span class="nn">datetime</span>
 <span class="k">def</span> <span class="nf">process_params</span><span class="p">(</span><span class="n">infile</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">infile</span><span class="p">)</span> <span class="k">as</span> <span class="n">file_in</span><span class="p">:</span>
@@ -823,6 +875,11 @@ to go from iso strings back to datetimes.</p>
  
 <span class="n">params</span> <span class="o">=</span> <span class="n">process_params</span><span class="p">(</span><span class="n">param_file</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;the_dates&#39;: [datetime.datetime(2021, 3, 1, 0, 0), datetime.datetime(2021, 4, 2, 0, 0), datetime.datetime(2021, 5, 4, 0, 0)], &#39;the_slice&#39;: slice(5, 20, None)}
 </pre></div>
 </div>
 </div>
@@ -875,19 +932,19 @@ and <a class="reference external" href="http://xarray.pydata.org/en/stable/gener
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="wk12_worksheet1_soln.html" title="previous page">
+        <a class="left-prev" href="../assignment02/ast2.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Change worksheet solution</p>
+                <p class="prevnext-title">Assignment 2 - Flybys</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="wk12_quiz_soln.html" title="next page">
+        <a class="right-next" href="../wk13/e211_colormaps.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Week 12 Quiz: solution</p>
+                <p class="prevnext-title">Plotting color images with matplotlib</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

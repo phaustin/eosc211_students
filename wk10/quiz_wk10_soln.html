@@ -392,13 +392,20 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
-   File IO Solution
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
    Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
   </a>
  </li>
 </ul>
@@ -416,6 +423,28 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/next_steps.html">
+   Next steps
   </a>
  </li>
 </ul>
@@ -568,7 +597,7 @@
 <p>What would get printed to the screen by the print command in the second cell after the function has been run? (include any numbers).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">get_commute_stats</span><span class="p">(</span><span class="o">*</span><span class="n">commute_modes</span><span class="p">,</span><span class="n">transport</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -594,7 +623,7 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># placeholder results (not the actual survey)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># placeholder results (not the actual survey)</span>
 <span class="n">commute2021</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;car&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
     <span class="s2">&quot;bus&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -605,6 +634,11 @@
 
 <span class="n">output</span><span class="o">=</span><span class="n">get_commute_stats</span><span class="p">(</span><span class="s2">&quot;bike&quot;</span><span class="p">,</span><span class="s2">&quot;car&quot;</span><span class="p">,</span><span class="s2">&quot;walk&quot;</span><span class="p">,</span> <span class="n">transport</span><span class="o">=</span><span class="n">commute2021</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;bike&#39;: [5, 3, 21], &#39;car&#39;: [7, 2, 30], &#39;walk&#39;: [5, 1, 40]}
 </pre></div>
 </div>
 </div>
