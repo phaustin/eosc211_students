@@ -69,7 +69,7 @@ Python is one of many high-level programming languages commmonly used today (cur
 
 * [Cython](https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html). Cython is a bridge to C and C++ in python.
 
-* [Fortran](https://fortran-lang.org/)  -- Created in 1957, this is the one of the first programming languages, and still the dominate language for climate modeling work on supercomputers.
+* [Fortran](https://fortran-lang.org/)  -- Created in 1957, this is the one of the first programming languages, and still the dominant language for climate modeling work on supercomputers.
 
 * [Rust](https://www.rust-lang.org/learn/get-started) -- A new language which can be used to accelerate python code via the [PyO3](https://pyo3.rs/v0.15.1/) module
 
