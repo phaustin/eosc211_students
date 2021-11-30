@@ -83,7 +83,7 @@ Python is one of many high-level programming languages commmonly used today (cur
 
 More stuff we wish we had time to cover in EOSC 211:
 
-[Maintaining a Conda Environment](link) - This is an important skill in Python programming. It is good practice to create separate coding environments for each project, and keep your environments as simple as possible (but not any simpler). Well-maintained environments lead to fewer bugs. 
+[Maintaining a Conda Environment](https://www.freecodecamp.org/news/why-you-need-python-environments-and-how-to-manage-them-with-conda-85f155f4353c) - This is an important skill in Python programming. It is good practice to create separate coding environments for each project, and keep your environments as simple as possible (but not any simpler). Well-maintained environments lead to fewer bugs. Here is a [conda cheat sheet](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 
 [Scipy](https://scipy.org/) - Hardcore math stuff. Analytical equation solvers, linear algebra, statistics
 
