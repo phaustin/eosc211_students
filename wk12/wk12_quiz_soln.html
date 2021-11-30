@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Review Exercises EOSC 211" href="../wk13/wk13_worksheet1.html" />
-    <link rel="prev" title="Change worksheet solution" href="wk12_worksheet1_soln.html" />
+    <link rel="next" title="Assignment 1 – CO2/temperature" href="../assignment1/assignment1.html" />
+    <link rel="prev" title="File IO Solution" href="file_io_practice_soln.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -370,6 +370,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
+   Lab Week 11 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
    Week 11 quiz solution: pandas
   </a>
@@ -386,21 +391,14 @@
    Change worksheet solution
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Week 12 Quiz: solution
-  </a>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Week 13 - Review
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
-   Review Exercises EOSC 211
   </a>
  </li>
 </ul>
@@ -418,28 +416,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
-  </a>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Extra topics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="file_io_practice_soln.html">
-   File IO Solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/e211_colormaps.html">
-   Plotting color images with matplotlib
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/next_steps.html">
-   Next steps
   </a>
  </li>
 </ul>
@@ -654,7 +630,7 @@
 <h2>Import the packages we need<a class="headerlink" href="#import-the-packages-we-need" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 </div>
@@ -664,7 +640,7 @@
 <h2>Use the variables defined in the following cell to answer all the questions below<a class="headerlink" href="#use-the-variables-defined-in-the-following-cell-to-answer-all-the-questions-below" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
 <span class="n">ult_ans</span> <span class="o">=</span> <span class="mi">42</span>
 <span class="n">row1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
 
@@ -693,13 +669,7 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">A</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A=array([[ 1.        ,  2.        ,  3.        ],
-       [-9.42477796,  0.        ,  1.57079633]])
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">A</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -715,12 +685,7 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;numpy.float64&#39;&gt;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -735,12 +700,7 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">A</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -755,12 +715,7 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 3)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">B</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -775,12 +730,7 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">B</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;numpy.ndarray&#39;&gt;  float64
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="nb">type</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="si">}</span><span class="s2">  </span><span class="si">{</span><span class="n">B</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -795,12 +745,7 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">B</span><span class="o">.</span><span class="n">T</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>B.T[:,-1]=array([ 1.,  1., 42.])
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">B</span><span class="o">.</span><span class="n">T</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -819,13 +764,8 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tcut</span><span class="o">=</span><span class="mi">23</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Tcut</span><span class="o">=</span><span class="mi">23</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Rainfall on days &gt; </span><span class="si">{</span><span class="n">Tcut</span><span class="si">}</span><span class="s2"> C was </span><span class="si">{</span><span class="n">rain</span><span class="p">[</span><span class="n">temp</span><span class="o">&gt;</span><span class="n">Tcut</span><span class="p">]</span><span class="si">}</span><span class="s2"> mm&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Rainfall on days &gt; 23 C was [0 2 1 2] mm
 </pre></div>
 </div>
 </div>
@@ -847,17 +787,12 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Q8:  Answer</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Q8:  Answer</span>
 <span class="n">t1</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;phil&quot;</span><span class="p">,</span><span class="mi">22175</span><span class="p">)</span>
 <span class="n">t2</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;catherine&quot;</span><span class="p">,</span><span class="mi">73480</span><span class="p">)</span>
 <span class="n">t3</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;no-one&quot;</span><span class="p">,</span><span class="mi">71111</span><span class="p">)</span>
 <span class="n">telnos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">,</span><span class="n">t3</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">telnos</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;phil&#39;: 22175, &#39;catherine&#39;: 73480, &#39;no-one&#39;: 71111}
 </pre></div>
 </div>
 </div>
@@ -876,7 +811,7 @@
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">telnos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">,</span><span class="n">t3</span><span class="p">])</span>   <span class="c1"># just in case run this cell out of order reset telnos to original</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">telnos</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">,</span><span class="n">t3</span><span class="p">])</span>   <span class="c1"># just in case run this cell out of order reset telnos to original</span>
 <span class="n">telnos</span><span class="p">[</span><span class="s2">&quot;phil&quot;</span><span class="p">]</span><span class="o">=</span><span class="n">telnos</span><span class="p">[</span><span class="s2">&quot;catherine&quot;</span><span class="p">]</span>  
 <span class="n">telnos</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;catherine&quot;</span><span class="p">)</span>   <span class="c1"># use pop</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">telnos</span><span class="p">)</span>
@@ -901,24 +836,12 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;phil&#39;: 73480, &#39;no-one&#39;: 71111}
-{&#39;phil&#39;: 73480, &#39;no-one&#39;: 71111}
-missing key: telnos={&#39;phil&#39;: None, &#39;catherine&#39;: 73480, &#39;no-one&#39;: 71111}
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">telnos</span><span class="o">=</span><span class="nb">dict</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">,</span><span class="n">t3</span><span class="p">])</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">telnos</span><span class="o">=</span><span class="nb">dict</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span><span class="n">t2</span><span class="p">,</span><span class="n">t3</span><span class="p">])</span>
 <span class="k">del</span> <span class="n">telnos</span><span class="p">[</span><span class="s1">&#39;catherine&#39;</span><span class="p">]</span>
 <span class="n">telnos</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;phil&#39;: 22175, &#39;no-one&#39;: 71111}
 </pre></div>
 </div>
 </div>
@@ -960,19 +883,19 @@ missing key: telnos={&#39;phil&#39;: None, &#39;catherine&#39;: 73480, &#39;no-o
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="wk12_worksheet1_soln.html" title="previous page">
+        <a class="left-prev" href="file_io_practice_soln.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Change worksheet solution</p>
+                <p class="prevnext-title">File IO Solution</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="../wk13/wk13_worksheet1.html" title="next page">
+        <a class="right-next" href="../assignment1/assignment1.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Review Exercises EOSC 211</p>
+                <p class="prevnext-title">Assignment 1 – CO2/temperature</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

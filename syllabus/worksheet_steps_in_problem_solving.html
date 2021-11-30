@@ -370,6 +370,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
+   Lab Week 11 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
    Week 11 quiz solution: pandas
   </a>
@@ -387,20 +392,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
-   Week 12 Quiz: solution
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
   </a>
  </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Week 13 - Review
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
-   Review Exercises EOSC 211
+  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
+   Week 12 Quiz: solution
   </a>
  </li>
 </ul>
@@ -418,28 +416,6 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
-  </a>
- </li>
-</ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Extra topics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
-   File IO Solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/e211_colormaps.html">
-   Plotting color images with matplotlib
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/next_steps.html">
-   Next steps
   </a>
  </li>
 </ul>
@@ -616,385 +592,11 @@
 <p><strong>We want to find the largest earthquake in the Pacific Northwest region in the past year.  The data sheet gives all earthquakes in this area that have a magnitude of at least 4.0.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
 <span class="n">e211</span><span class="o">.</span><span class="n">show_earthquake_data</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>#EventID</th>
-      <th>Time</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Depth/km</th>
-      <th>MagType</th>
-      <th>Magnitude</th>
-      <th>EventLocationName</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2.020082e+07</td>
-      <td>2020-08-19T11:40:59</td>
-      <td>50.6077</td>
-      <td>-129.4759</td>
-      <td>10.00</td>
-      <td>ML</td>
-      <td>4.0</td>
-      <td>Preliminary; 140 KM W OF PORT HARDY, BC/Prelim...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2.020082e+07</td>
-      <td>2020-08-19T11:40:55</td>
-      <td>50.4094</td>
-      <td>-130.2877</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.3</td>
-      <td>200 km W of Port Hardy, BC/200 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.020072e+07</td>
-      <td>2020-07-22T11:33:21</td>
-      <td>48.8371</td>
-      <td>-129.3728</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>5.2</td>
-      <td>221 km SW of Port Alice, BC/221 km SO de Port ...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2.020052e+07</td>
-      <td>2020-05-23T02:14:52</td>
-      <td>50.3600</td>
-      <td>-129.2800</td>
-      <td>8.00</td>
-      <td>M</td>
-      <td>4.9</td>
-      <td>Preliminary; 129 km W   of Port Alice, BC/Prel...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2.020052e+07</td>
-      <td>2020-05-23T02:14:48</td>
-      <td>50.1783</td>
-      <td>-129.8157</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>5.1</td>
-      <td>169 km W of Port Alice, BC/169 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2.020051e+07</td>
-      <td>2020-05-10T04:45:59</td>
-      <td>49.3278</td>
-      <td>-127.8000</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.8</td>
-      <td>120 km S of Port Alice, BC/120 km S de Port Al...</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2.020033e+07</td>
-      <td>2020-03-29T19:32:02</td>
-      <td>50.4999</td>
-      <td>-130.2003</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.3</td>
-      <td>192 km W of Port Hardy, BC/192 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2.020033e+07</td>
-      <td>2020-03-29T18:28:54</td>
-      <td>50.4114</td>
-      <td>-130.2842</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>200 km W of Port Hardy, BC/200 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2.020031e+07</td>
-      <td>2020-03-05T23:22:28</td>
-      <td>50.9881</td>
-      <td>-130.2942</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>198 km W of Port Hardy, BC/198 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2.020030e+07</td>
-      <td>2020-03-02T13:43:21</td>
-      <td>50.4455</td>
-      <td>-130.2483</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.4</td>
-      <td>196 km W of Port Hardy, BC/196 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2.020012e+07</td>
-      <td>2020-01-24T21:35:30</td>
-      <td>48.5739</td>
-      <td>-125.1857</td>
-      <td>38.48</td>
-      <td>Mw</td>
-      <td>4.5</td>
-      <td>29 km S of Bamfield, BC/29 km S de Bamfield, BC</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2.020011e+07</td>
-      <td>2020-01-08T20:20:38</td>
-      <td>50.6677</td>
-      <td>-130.4762</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.6</td>
-      <td>209 km W of Port Hardy, BC/209 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2.020011e+07</td>
-      <td>2020-01-06T12:21:43</td>
-      <td>47.7203</td>
-      <td>-129.3662</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.1</td>
-      <td>300 km SW of Tofino, BC/300 km SO de Tofino, BC</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2.020011e+07</td>
-      <td>2020-01-06T12:12:05</td>
-      <td>47.6905</td>
-      <td>-129.0957</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>285 km SW of Tofino, BC/285 km SO de Tofino, BC</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2.019123e+07</td>
-      <td>2019-12-29T08:32:29</td>
-      <td>50.7334</td>
-      <td>-130.4852</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.1</td>
-      <td>210 km W of Port Hardy, BC/210 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2.019123e+07</td>
-      <td>2019-12-25T20:38:50</td>
-      <td>50.7207</td>
-      <td>-130.5307</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.8</td>
-      <td>213 km W of Port Hardy, BC/213 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2.019123e+07</td>
-      <td>2019-12-25T07:31:07</td>
-      <td>50.2863</td>
-      <td>-130.2239</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>197 km W of Port Alice, BC/197 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2.019123e+07</td>
-      <td>2019-12-25T03:35:59</td>
-      <td>50.4851</td>
-      <td>-130.0955</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>6.2</td>
-      <td>185 km W of Port Hardy, BC/185 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T23:38:25</td>
-      <td>50.3906</td>
-      <td>-130.2040</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.9</td>
-      <td>194 km W of Port Hardy, BC/194 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T23:14:41</td>
-      <td>50.2895</td>
-      <td>-129.7727</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>165 km W of Port Alice, BC/165 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T22:50:13</td>
-      <td>50.4613</td>
-      <td>-129.5008</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.1</td>
-      <td>144 km W of Port Hardy, BC/144 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T22:20:02</td>
-      <td>50.3363</td>
-      <td>-130.0474</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.4</td>
-      <td>184 km W of Port Alice, BC/184 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T21:05:26</td>
-      <td>50.2388</td>
-      <td>-129.8421</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.9</td>
-      <td>171 km W of Port Alice, BC/171 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T20:56:21</td>
-      <td>50.2903</td>
-      <td>-130.0174</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>6.1</td>
-      <td>182 km W of Port Alice, BC/182 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T20:03:20</td>
-      <td>50.5622</td>
-      <td>-129.9012</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.2</td>
-      <td>170 km W of Port Hardy, BC/170 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T20:00:25</td>
-      <td>50.6015</td>
-      <td>-130.0958</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.7</td>
-      <td>183 km W of Port Hardy, BC/183 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T19:57:39</td>
-      <td>50.5347</td>
-      <td>-130.3156</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.9</td>
-      <td>200 km W of Port Hardy, BC/200 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T19:49:41</td>
-      <td>50.4871</td>
-      <td>-130.0940</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>6.0</td>
-      <td>185 km W of Port Hardy, BC/185 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T19:26:45</td>
-      <td>50.3751</td>
-      <td>-130.0185</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>182 km W of Port Alice, BC/182 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T19:13:24</td>
-      <td>50.4146</td>
-      <td>-130.0350</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>5.6</td>
-      <td>182 km W of Port Hardy, BC/182 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T16:44:10</td>
-      <td>50.3299</td>
-      <td>-130.0984</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>5.1</td>
-      <td>188 km W of Port Alice, BC/188 km O de Port Al...</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
 </div>
 <p>source: <a class="reference external" href="http://www.earthquakescanada.nrcan.gc.ca/">http://www.earthquakescanada.nrcan.gc.ca/</a></p>
 <p><strong>A) We want to design an <em>algorithm</em> to find the largest earthquake. Describe in words the <em>input</em> and <em>output</em> of your algorithm</strong></p>
@@ -1008,7 +610,7 @@
 <p><strong>The following is a <em>Python</em> code snippet:</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mag1</span> <span class="o">=</span> <span class="mf">4.9</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mag1</span> <span class="o">=</span> <span class="mf">4.9</span>
 <span class="n">mag2</span> <span class="o">=</span> <span class="mf">5.3</span>
 <span class="k">if</span> <span class="n">mag1</span> <span class="o">&gt;</span> <span class="n">mag2</span><span class="p">:</span>
     <span class="n">max_mag</span> <span class="o">=</span> <span class="n">mag1</span>
