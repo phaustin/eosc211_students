@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week 12 Review Exercises &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    <title>Week 13 Quiz 2 Solution: Review with numpy arrays, basic logical indexing &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="File IO Solution" href="file_io_practice_soln.html" />
-    <link rel="prev" title="Week 11 quiz solution: pandas" href="../wk11/wk11_quiz_sol.html" />
+    <link rel="next" title="Assignment 1 – CO2/temperature" href="../assignment1/assignment1.html" />
+    <link rel="prev" title="Week 13 Quiz 1 Solution: Review with basic functions, loops, code tracing" href="wk13_quiz_soln.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -381,7 +381,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
-   Lab Week 11
+   Lab Week 11 - solution
   </a>
  </li>
  <li class="toctree-l1">
@@ -395,20 +395,37 @@
   Week 12 - Review/File IO
  </span>
 </p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/wk12_worksheet1_soln.html">
+   Change worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
+   Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="wk13_worksheet1_soln.html">
+   Worksheet Solution: Review Exercises EOSC 211
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="wk13_quiz_soln.html">
+   Week 13 Quiz 1 Solution:  Review with basic functions, loops, code tracing
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Week 12 Review Exercises
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="file_io_practice_soln.html">
-   File IO Solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wk12_quiz_soln.html">
-   Name / Student #:
+   Week 13 Quiz 2 Solution:  Review with numpy arrays, basic logical indexing
   </a>
  </li>
 </ul>
@@ -426,6 +443,28 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="next_steps.html">
+   Next steps
   </a>
  </li>
 </ul>
@@ -490,11 +529,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/wk12/wk12_worksheet1.ipynb"><button type="button"
+            href="../_sources/wk13/wk13_quiz2_soln.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk12/wk12_worksheet1.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/wk13/wk13_quiz2_soln.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -519,14 +558,14 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk12/wk12_worksheet1.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk13/wk13_quiz2_soln.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk12/wk12_worksheet1.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk13/wk13_quiz2_soln.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -548,18 +587,63 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#eosc-211">
-   EOSC 211
+  <a class="reference internal nav-link" href="#name-student">
+   Name / Student #:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-1">
-   Question 1
+  <a class="reference internal nav-link" href="#group">
+   Group:
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2-practice-with-indexing-code-tracing">
-   Question 2:  Practice with indexing / code tracing
+  <a class="reference internal nav-link" href="#import-the-packages-we-need">
+   Import the packages we need
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-the-variables-defined-in-the-following-cell-to-answer-all-the-questions-below-show-all-your-work">
+   Use the variables defined in the following cell to answer all the questions below.  Show ALL your work.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#for-questions-1-7-what-is-printed">
+   For questions 1- 7 what is printed?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1-2-pts">
+   Question 1 (2 pts):
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2-2-pts">
+   Question 2 (2 pts):
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3-4-pts">
+   Question 3 (4 pts):
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4-1-pt">
+   Question 4 (1 pt):
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5-2-pts">
+   Question 5 (2 pts):
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-6-3-pts">
+   Question 6 (3 pts):
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-7-3-pts">
+   Question 7 (3 pts):
   </a>
  </li>
 </ul>
@@ -573,119 +657,220 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="week-12-review-exercises">
-<h1>Week 12 Review Exercises<a class="headerlink" href="#week-12-review-exercises" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="eosc-211">
-<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
-<p><strong>Week 11 Day 1</strong></p>
-<p><strong>Learning Objectives:</strong></p>
-<ol class="simple">
-<li><p>Solve problems with python code</p></li>
-<li><p>Choose appropriate data structures to make your code neat and efficient</p></li>
-</ol>
+  <div class="tex2jax_ignore mathjax_ignore section" id="week-13-quiz-2-solution-review-with-numpy-arrays-basic-logical-indexing">
+<h1>Week 13 Quiz 2 Solution:  Review with numpy arrays, basic logical indexing<a class="headerlink" href="#week-13-quiz-2-solution-review-with-numpy-arrays-basic-logical-indexing" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="name-student">
+<h2>Name / Student #:<a class="headerlink" href="#name-student" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="question-1">
-<h2>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h2>
-<p><strong>A) You have a cash register with $20, $10, $5, $2, $1, $0.25, $0.10, $0.05 bills or coins. Write code to make change usin the largest denominations possible – so that, for example, if someone gives you a $10 bill for something costing $6.55 the program will calculate that you get back $3.45 in change consisting of a $2, and $1, a $0.25, and 2 $0.10</strong></p>
-<p><strong>The floor division <code class="docutils literal notranslate"><span class="pre">//</span></code> and modulo <code class="docutils literal notranslate"><span class="pre">%</span></code> operators are of use.</strong></p>
-<p><strong>Store the denominations available in a dictionary <code class="docutils literal notranslate"><span class="pre">money={'twenties',</span> <span class="pre">'tens',</span> <span class="pre">'fives',</span> <span class="pre">'toonies'...}</span></code>. The rest of the program is up to you.  There are many correct ways to solve this problem</strong></p>
+<div class="section" id="group">
+<h2>Group:<a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="import-the-packages-we-need">
+<h2>Import the packages we need<a class="headerlink" href="#import-the-packages-we-need" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">item_cost</span> <span class="o">=</span> <span class="mf">6.55</span>  <span class="c1"># dollars</span>
-<span class="n">cash_in</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># dollars</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="use-the-variables-defined-in-the-following-cell-to-answer-all-the-questions-below-show-all-your-work">
+<h2>Use the variables defined in the following cell to answer all the questions below.  Show ALL your work.<a class="headerlink" href="#use-the-variables-defined-in-the-following-cell-to-answer-all-the-questions-below-show-all-your-work" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>B) Turn this into a function called <code class="docutils literal notranslate"><span class="pre">getchange</span></code> that will take as input <code class="docutils literal notranslate"><span class="pre">item_cost</span></code>, <code class="docutils literal notranslate"><span class="pre">cash_in</span></code> and return <code class="docutils literal notranslate"><span class="pre">change</span></code>. Also, make your funtion raise an error if the customer does not give enough money to cover the cost of the purchase</strong></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n1</span><span class="o">=</span><span class="mi">4</span>
+<span class="n">n2</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">pp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+<span class="n">c1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">mynum</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span>
 
-<span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">)</span>
-<span class="n">mychange</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>C) Edit get change to also take as input a dictionary <code class="docutils literal notranslate"><span class="pre">available_change</span></code> that contains the number of each denomination available in the cash register.  Use this to check that there are enough of each denomination to cover the change.  If any denomination is short make up the change with the next available largest bill.</strong></p>
-<p>e.g. in the above example $3.45 is required in change, so ideally the $3 part of the change would comprise 1 toonie and 1 loonie.  If no toonies are available then the $3 would comprise 3 loonies, if only 2 loonies were available it would comprise 2 looonies and 4 quarters etc.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># testing my function</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="c1"># define X and A</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">([</span><span class="n">n2</span><span class="p">,</span><span class="n">n1</span><span class="p">])</span>
+<span class="n">X</span><span class="p">[:,</span><span class="n">n1</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">=</span><span class="n">mynum</span>
+<span class="n">A</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span>
 
-<span class="n">whats_there</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;twenties&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s2">&quot;tens&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s2">&quot;fives&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s2">&quot;toonies&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;loonies&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;quarters&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;dimes&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="s2">&quot;nickels&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="p">}</span> 
+<span class="c1"># define Y and Z</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones_like</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">Y</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+=</span> <span class="n">mynum</span>
+<span class="n">Y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="n">c1</span>
+<span class="n">Y</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,:]</span> <span class="o">*=</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span>
 
-<span class="n">mychange</span> <span class="o">=</span> <span class="n">getchange</span><span class="p">(</span><span class="n">item_cost</span><span class="p">,</span> <span class="n">cash_in</span><span class="p">,</span> <span class="n">whats_there</span><span class="p">)</span>
-<span class="n">mychange</span>
+<span class="n">Z</span> <span class="o">=</span> <span class="n">Y</span><span class="o">==</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span>
+
+<span class="c1"># define c1vec and hit</span>
+<span class="n">c1vec</span><span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">c1</span><span class="p">)</span>
+<span class="n">hit</span> <span class="o">=</span> <span class="p">(</span><span class="n">c1vec</span> <span class="o">%</span> <span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-<div class="section" id="question-2-practice-with-indexing-code-tracing">
-<h2>Question 2:  Practice with indexing / code tracing<a class="headerlink" href="#question-2-practice-with-indexing-code-tracing" title="Permalink to this headline">¶</a></h2>
-<p><strong>A) For  <code class="docutils literal notranslate"><span class="pre">x1=[1,</span> <span class="pre">7,</span> <span class="pre">-8,</span> <span class="pre">2,</span> <span class="pre">-3,</span> <span class="pre">-9]</span></code>, what is contained in <code class="docutils literal notranslate"><span class="pre">y2</span></code> in each case after the code runs?  Do these three snippets of code do the same thing?  Show your work.</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Code Version A</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x1</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">y2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
-</pre></div>
+<div class="section" id="for-questions-1-7-what-is-printed">
+<h2>For questions 1- 7 what is printed?<a class="headerlink" href="#for-questions-1-7-what-is-printed" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code Version B</span>
-<span class="k">del</span> <span class="n">y2</span>           <span class="c1"># remove any previous version of y2 from memory</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
-<span class="n">k</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x1</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">k</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="n">y2</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Code Version C</span>
-<span class="k">del</span> <span class="n">y2</span>           <span class="c1"># remove any previous version of y2 from memory</span>
-<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span><span class="p">])</span>
-<span class="n">y2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x1</span><span class="p">)):</span>
-    <span class="k">if</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">y2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">x1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y2</span><span class="p">)</span>
-</pre></div>
-</div>
-<p><strong>B) Write code that produces the same result as A, but use vectorization instead of loops.</strong></p>
-<div class="cell docutils container">
+<div class="section" id="question-1-2-pts">
+<h2>Question 1 (2 pts):<a class="headerlink" href="#question-1-2-pts" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">print(X,</span> <span class="pre">X.shape)</span></code></p>
+<br />
+<br />
+<br />
+<br />
+<br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">X</span> <span class="si">= }</span><span class="s2">, </span><span class="se">\n</span><span class="si">{</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>    <span class="c1">#the \n just makes a new line for prettier formatting</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>X = array([[ 0.,  0.,  0., -2.],
+       [ 0.,  0.,  0., -2.]]), 
+X.shape=(2, 4)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-2-2-pts">
+<h2>Question 2 (2 pts):<a class="headerlink" href="#question-2-2-pts" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">print(np.shape(c1),</span> <span class="pre">type(c1))</span></code></p>
+<br />
+<br />
+<br />
+<br /><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">c1</span><span class="p">),</span> <span class="nb">type</span><span class="p">(</span><span class="n">c1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4,) &lt;class &#39;list&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-3-4-pts">
+<h2>Question 3 (4 pts):<a class="headerlink" href="#question-3-4-pts" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">print(Y,</span> <span class="pre">Y.shape)</span></code></p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Y</span> <span class="si">= }</span><span class="s2">, </span><span class="se">\n</span><span class="si">{</span><span class="n">Y</span><span class="o">.</span><span class="n">shape</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Y = array([[ 4.        ,  1.        ],
+       [ 3.        ,  1.        ],
+       [ 2.        ,  1.        ],
+       [ 3.14159265, -3.14159265]]), 
+Y.shape=(4, 2)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-4-1-pt">
+<h2>Question 4 (1 pt):<a class="headerlink" href="#question-4-1-pt" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">print(f&quot;{Z=}&quot;)</span></code></p>
+<br />
+<br />
+<br />
+<br />
+<br /><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Z</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Z=array([[False, False],
+       [False, False],
+       [False, False],
+       [ True, False]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-5-2-pts">
+<h2>Question 5 (2 pts):<a class="headerlink" href="#question-5-2-pts" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">print(f&quot;{A[Z]=},{len(A[Z])=}&quot;)</span></code></p>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">A</span><span class="p">[</span><span class="n">Z</span><span class="p">]</span><span class="si">=}</span><span class="s2">,</span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">[</span><span class="n">Z</span><span class="p">])</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A[Z]=array([-2.]),len(A[Z])=1
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-6-3-pts">
+<h2>Question 6 (3 pts):<a class="headerlink" href="#question-6-3-pts" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">print(c1vec[hit],'pha')</span></code></p>
+<br />
+<br />
+<br />
+<br />
+<br /><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">c1vec</span><span class="p">[</span><span class="n">hit</span><span class="p">],</span><span class="s1">&#39;pha&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4 2] pha
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="question-7-3-pts">
+<h2>Question 7 (3 pts):<a class="headerlink" href="#question-7-3-pts" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span><span class="n">Y</span><span class="p">[</span><span class="n">jj</span><span class="p">,:],</span><span class="n">Z</span><span class="p">[:,</span><span class="n">jj</span><span class="p">])</span>
+</pre></div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br /><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Solution</span>
+<span class="k">for</span> <span class="n">jj</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span><span class="n">Y</span><span class="p">[</span><span class="n">jj</span><span class="p">,:],</span><span class="n">Z</span><span class="p">[:,</span><span class="n">jj</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 [4. 1.] [False False False  True]
+1 [3. 1.] [False False False False]
 </pre></div>
 </div>
 </div>
@@ -706,7 +891,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./wk12"
+            path: "./wk13"
         },
         predefinedOutput: true
     }
@@ -723,19 +908,19 @@
 <div class='prev-next-bottom'>
     
     <div id="prev">
-        <a class="left-prev" href="../wk11/wk11_quiz_sol.html" title="previous page">
+        <a class="left-prev" href="wk13_quiz_soln.html" title="previous page">
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Week 11 quiz solution: pandas</p>
+                <p class="prevnext-title">Week 13 Quiz 1 Solution:  Review with basic functions, loops, code tracing</p>
             </div>
         </a>
     </div>
      <div id="next">
-        <a class="right-next" href="file_io_practice_soln.html" title="next page">
+        <a class="right-next" href="../assignment1/assignment1.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">File IO Solution</p>
+                <p class="prevnext-title">Assignment 1 – CO2/temperature</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

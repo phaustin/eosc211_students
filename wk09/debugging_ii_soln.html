@@ -404,13 +404,30 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
-   File IO Solution
+  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
+   Week 12 Quiz: solution
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/wk13_worksheet1_soln.html">
+   Worksheet Solution: Review Exercises EOSC 211
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
-   Week 12 Quiz: solution
+  <a class="reference internal" href="../wk13/wk13_quiz_soln.html">
+   Week 13 Quiz 1 Solution:  Review with basic functions, loops, code tracing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/wk13_quiz2_soln.html">
+   Week 13 Quiz 2 Solution:  Review with numpy arrays, basic logical indexing
   </a>
  </li>
 </ul>
@@ -428,6 +445,28 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignment02/ast2.html">
    Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
+   File IO Solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk13/next_steps.html">
+   Next steps
   </a>
  </li>
 </ul>
@@ -591,7 +630,7 @@
 <p><strong>Here is some code we have started to write to calculate runs in this way. However, there are 5 small bugs in this code - find and fix them.</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="c1"># debug this code</span>
 
 <span class="k">def</span> <span class="nf">runlength</span><span class="p">(</span><span class="n">spd</span><span class="p">,</span> <span class="n">minspd</span><span class="p">,</span> <span class="n">maxspd</span><span class="p">):</span>
@@ -623,10 +662,18 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_11889/3383483938.py&quot;</span><span class="gt">, line </span><span class="mi">19</span>
+<span class="nn">    for i</span> in <span class="ni">range</span><span class="nt">(N)</span>
+                     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># andrew&#39;s soln</span>
 <span class="k">def</span> <span class="nf">runlength</span><span class="p">(</span><span class="n">spd</span><span class="p">,</span> <span class="n">minspd</span><span class="p">,</span> <span class="n">maxspd</span><span class="p">):</span>
@@ -666,10 +713,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 3., 0., 2., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.])
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="c1"># Catherine&#39;s soln</span>
 <span class="k">def</span> <span class="nf">runlength</span><span class="p">(</span><span class="n">spd</span><span class="p">,</span> <span class="n">minspd</span><span class="p">,</span> <span class="n">maxspd</span><span class="p">):</span>
@@ -711,6 +763,11 @@
 <span class="c1"># CJ: I made a couple of edits things c.f. above and also turned into a dictionary. </span>
 <span class="c1"># The dictionary is not &quot;ordered&quot; ie # runs by increasing runlength but this doesn&#39;t matter</span>
 <span class="c1"># (obvious b/c I added an extra 5 for this test at end of speed array)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: 2, &#39;3&#39;: 2, &#39;2&#39;: 1}
 </pre></div>
 </div>
 </div>
