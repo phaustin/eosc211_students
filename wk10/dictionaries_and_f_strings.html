@@ -370,6 +370,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
+   Lab Week 11 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
    Week 11 quiz solution: pandas
   </a>
@@ -608,7 +613,7 @@
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># placeholder results (not the actual survey)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># placeholder results (not the actual survey)</span>
 <span class="n">transport</span> <span class="o">=</span> <span class="p">{</span>
     <span class="s2">&quot;car&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">14</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">],</span>
     <span class="s2">&quot;bus&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">34</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -627,14 +632,14 @@
 <p><strong>A) The median commuting time for people who drive</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="n">drivemed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">transport</span><span class="p">[</span><span class="s2">&quot;car&quot;</span><span class="p">])</span>
@@ -642,31 +647,21 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The median commute time for people who drive is 4.0 minutes
-</pre></div>
-</div>
-</div>
 </div>
 <p><strong>B) The number of people who ride bikes to UBC</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
 <span class="n">cyclists</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">transport</span><span class="p">[</span><span class="s2">&quot;bike&quot;</span><span class="p">])</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">cyclists</span><span class="si">}</span><span class="s2"> cyclists in EOSC211 this semester.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 5 cyclists in EOSC211 this semester.
 </pre></div>
 </div>
 </div>

@@ -372,6 +372,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../week11_lab/lab_wk11.html">
+   Lab Week 11 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../wk11/wk11_quiz_sol.html">
    Week 11 quiz solution: pandas
   </a>
@@ -671,7 +676,7 @@
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 </pre></div>
@@ -716,7 +721,7 @@
 <p>There are many Python libraries for dealing with dates and times, with the default being the built-in <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module that comes with every Python installation. For this course, we’ll focus on using the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module. Let’s start by importing the necessary <code class="docutils literal notranslate"><span class="pre">datetime</span></code> modules:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">timedelta</span>
 </pre></div>
 </div>
@@ -725,7 +730,7 @@
 <p><code class="docutils literal notranslate"><span class="pre">datetime</span></code> defines it’s own object types: <code class="docutils literal notranslate"><span class="pre">datetime.date</span></code>, <code class="docutils literal notranslate"><span class="pre">datetime.time</span></code>, or <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code>. Some sample conversions to <code class="docutils literal notranslate"><span class="pre">datetime.datetime</span></code> are provided below. If you get stuck later in the lab, the docs for the datetime library can be found <a class="reference external" href="https://docs.python.org/3/library/datetime.html">here</a>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ISO format</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># ISO format</span>
 <span class="n">my_date1</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="s1">&#39;2021-10-22T22:03:00&#39;</span><span class="p">)</span> 
 
 
@@ -759,15 +764,6 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>From ISO: 	2021-10-22 22:03:00
-From POSIX: 	2021-10-22 22:03:00
-From ordinal: 	2021-10-22 00:00:00
-From MAP: 	2021-10-22 22:03:00
-From string: 	2021-10-22 22:03:00
-</pre></div>
-</div>
-</div>
 </div>
 <div class="section" id="your-task">
 <h3>Your Task<a class="headerlink" href="#your-task" title="Permalink to this headline">¶</a></h3>
@@ -775,7 +771,7 @@ From string: 	2021-10-22 22:03:00
 <p>You will need to look at provided times and decide in which format they are saved. The time format you identify will  inform which <code class="docutils literal notranslate"><span class="pre">datetime</span></code> function you need to use for conversion. The code cell above contains examples of different <code class="docutils literal notranslate"><span class="pre">datetime</span></code> conversion functions to choose from.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
 
 <span class="c1"># Here are 4 different ways to do this task</span>
 
@@ -832,36 +828,6 @@ From string: 	2021-10-22 22:03:00
 
 
 <span class="c1">### END SOLUTION</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Times: [1.02151829e+09 1.02151829e+09 1.02151829e+09 ... 1.02152478e+09
- 1.02152478e+09 1.02152478e+09]
-Andrew: From aircraft file: 	[datetime.datetime(2002, 5, 15, 20, 4, 49, 440005)
- datetime.datetime(2002, 5, 15, 20, 4, 50, 439999)
- datetime.datetime(2002, 5, 15, 20, 4, 51, 440004) ...
- datetime.datetime(2002, 5, 15, 21, 53, 0, 430003)
- datetime.datetime(2002, 5, 15, 21, 53, 1, 429998)
- datetime.datetime(2002, 5, 15, 21, 53, 2, 430002)]
-Catherine: From aircraft file: 	[datetime.datetime(2002, 5, 15, 20, 4, 49, 440005)
- datetime.datetime(2002, 5, 15, 20, 4, 50, 439999)
- datetime.datetime(2002, 5, 15, 20, 4, 51, 440004) ...
- datetime.datetime(2002, 5, 15, 21, 53, 0, 430003)
- datetime.datetime(2002, 5, 15, 21, 53, 1, 429998)
- datetime.datetime(2002, 5, 15, 21, 53, 2, 430002)]
-Francis: From aircraft file: 	[datetime.datetime(2002, 5, 15, 20, 4, 49, 440005)
- datetime.datetime(2002, 5, 15, 20, 4, 50, 439999)
- datetime.datetime(2002, 5, 15, 20, 4, 51, 440004) ...
- datetime.datetime(2002, 5, 15, 21, 53, 0, 430003)
- datetime.datetime(2002, 5, 15, 21, 53, 1, 429998)
- datetime.datetime(2002, 5, 15, 21, 53, 2, 430002)]
-Version 4: From aircraft file: 	[datetime.datetime(2002, 5, 15, 20, 4, 49, 440005)
- datetime.datetime(2002, 5, 15, 20, 4, 50, 439999)
- datetime.datetime(2002, 5, 15, 20, 4, 51, 440004) ...
- datetime.datetime(2002, 5, 15, 21, 53, 0, 430003)
- datetime.datetime(2002, 5, 15, 21, 53, 1, 429998)
- datetime.datetime(2002, 5, 15, 21, 53, 2, 430002)]
 </pre></div>
 </div>
 </div>
@@ -928,7 +894,7 @@ W = \frac{L-1}{2}\tag{4}
 </div></blockquote>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
 <span class="c1"># Catherine&#39;s solution</span>
 
 <span class="n">ndat</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vel</span><span class="p">)</span>
@@ -958,16 +924,6 @@ W = \frac{L-1}{2}\tag{4}
 <span class="c1">### END SOLUTION</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>N = 6464, L = 5, W = 2
-special end case at point i = 0
-special end case at point i = 1
-special end case at point i = 6462
-special end case at point i = 6463
-</pre></div>
-</div>
-<img alt="../../_images/lab_wk6_11_1.png" src="../../_images/lab_wk6_11_1.png" />
 </div>
 </div>
 </div>
@@ -1018,7 +974,7 @@ special end case at point i = 6463
 <p><strong>3:</strong> Your code should follow our standard <em>input/import, process, display</em> structure, and include lots of commenting to show what is happening where.</p>
 </div><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">### BEGIN SOLUTION</span>
 <span class="c1"># andrew&#39;s soln</span>
 
 <span class="n">winlen</span> <span class="o">=</span> <span class="mi">7</span>  <span class="c1"># L from equation 3</span>
@@ -1073,9 +1029,6 @@ special end case at point i = 6463
 <span class="c1">### END SOLUTION</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../_images/lab_wk6_13_0.png" src="../../_images/lab_wk6_13_0.png" />
 </div>
 </div>
 </div>

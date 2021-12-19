@@ -372,6 +372,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../week11_lab/lab_wk11.html">
+   Lab Week 11 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../../wk11/wk11_quiz_sol.html">
    Week 11 quiz solution: pandas
   </a>
@@ -703,7 +708,7 @@
 <p>The easiest way to remember the heirarchy is <em>functions=paragraphs, modules=chapters, packages=books</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="c1">#import this # what happens if you un-comment this line?</span>
 </pre></div>
@@ -743,7 +748,7 @@ In this example, we’re using slice objects discussed in the <a class="referenc
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">average_region</span><span class="p">(</span><span class="n">the_map</span><span class="p">,</span> <span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">lon_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">average_region</span><span class="p">(</span><span class="n">the_map</span><span class="p">,</span> <span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">lon_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="si">{</span><span class="n">lat_slice</span><span class="o">.</span><span class="n">start</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">lat_slice</span><span class="o">.</span><span class="n">stop</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">lat_slice</span><span class="o">.</span><span class="n">step</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lon_slice</span><span class="o">.</span><span class="n">start</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">lon_slice</span><span class="o">.</span><span class="n">stop</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">lon_slice</span><span class="o">.</span><span class="n">step</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">mean_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nanmean</span><span class="p">(</span><span class="n">the_map</span><span class="p">[</span><span class="n">lat_slice</span><span class="p">,</span><span class="n">lon_slice</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
@@ -752,17 +757,6 @@ In this example, we’re using slice objects discussed in the <a class="referenc
 <span class="n">avg_map</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">([</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">average_region</span><span class="p">(</span><span class="n">avg_map</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">average_region</span><span class="p">(</span><span class="n">avg_map</span><span class="p">,</span><span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>    
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lat_slice.start=0, lat_slice.stop=-1, lat_slice.step=None
-lon_slice.start=0, lon_slice.stop=-1, lon_slice.step=None
-average_region(avg_map)=39.0
-
-lat_slice.start=3, lat_slice.stop=7, lat_slice.step=None
-lon_slice.start=0, lon_slice.stop=-1, lon_slice.step=None
-average_region(avg_map,lat_slice=slice(3,7))=49.0
 </pre></div>
 </div>
 </div>
@@ -776,21 +770,10 @@ of parameters. An example:</p>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pacific_nw_region</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">lon_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pacific_nw_region</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span><span class="n">lon_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
 <span class="n">prairie_region</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">7</span><span class="p">),</span><span class="n">lon_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">average_region</span><span class="p">(</span><span class="n">avg_map</span><span class="p">,</span><span class="o">**</span><span class="n">pacific_nw_region</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">average_region</span><span class="p">(</span><span class="n">avg_map</span><span class="p">,</span><span class="o">**</span><span class="n">prairie_region</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lat_slice.start=2, lat_slice.stop=5, lat_slice.step=None
-lon_slice.start=3, lon_slice.stop=6, lon_slice.step=None
-average_region(avg_map,**pacific_nw_region)=34.0
-
-lat_slice.start=3, lat_slice.stop=7, lat_slice.step=None
-lon_slice.start=8, lon_slice.stop=9, lon_slice.step=None
-average_region(avg_map,**prairie_region)=53.0
 </pre></div>
 </div>
 </div>
@@ -798,15 +781,10 @@ average_region(avg_map,**prairie_region)=53.0
 <p>The keyword expansion operator <code class="docutils literal notranslate"><span class="pre">**</span></code> is called “double splat” and can also be used in a function definition to represent an unknown/arbitrary number of optional arguments.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_args</span><span class="p">(</span><span class="o">**</span><span class="n">my_args</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_args</span><span class="p">(</span><span class="o">**</span><span class="n">my_args</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">my_args</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="n">print_args</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>my_args={&#39;a&#39;: 5, &#39;b&#39;: 7, &#39;c&#39;: 10}
 </pre></div>
 </div>
 </div>
@@ -820,7 +798,7 @@ function in an outer function.</p>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">average_missing</span><span class="p">(</span><span class="n">the_map</span><span class="p">,</span> <span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">lon_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">missing_val</span><span class="o">=-</span><span class="mf">999.</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">average_missing</span><span class="p">(</span><span class="n">the_map</span><span class="p">,</span> <span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">lon_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">missing_val</span><span class="o">=-</span><span class="mf">999.</span><span class="p">):</span>
     <span class="n">hit</span> <span class="o">=</span> <span class="p">(</span><span class="n">the_map</span> <span class="o">==</span> <span class="n">missing_val</span><span class="p">)</span>
     <span class="n">new_map</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">the_map</span><span class="p">,</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">)</span>  <span class="c1">#make a copy so no side effects</span>
     <span class="n">new_map</span><span class="p">[</span><span class="n">hit</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span>
@@ -828,13 +806,6 @@ function in an outer function.</p>
     <span class="k">return</span> <span class="n">out</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">average_missing</span><span class="p">(</span><span class="n">avg_map</span><span class="p">,</span><span class="o">**</span><span class="n">pacific_nw_region</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lat_slice.start=2, lat_slice.stop=5, lat_slice.step=None
-lon_slice.start=3, lon_slice.stop=6, lon_slice.step=None
-average_missing(avg_map,**pacific_nw_region)=34.0
 </pre></div>
 </div>
 </div>
@@ -847,19 +818,12 @@ default arguments defined.  You can do this using <a class="reference external" 
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
 <span class="n">my_average_missing</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="n">average_missing</span><span class="p">,</span><span class="n">missing_val</span><span class="o">=-</span><span class="mi">222</span><span class="p">)</span>
 
 <span class="n">new_map</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">avg_map</span><span class="p">)</span>
 <span class="n">new_map</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span><span class="o">=-</span><span class="mi">222</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">my_average_missing</span><span class="p">(</span><span class="n">new_map</span><span class="p">,</span><span class="o">**</span><span class="n">pacific_nw_region</span><span class="p">)</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lat_slice.start=2, lat_slice.stop=5, lat_slice.step=None
-lon_slice.start=3, lon_slice.stop=6, lon_slice.step=None
-my_average_missing(new_map,**pacific_nw_region)=35.375
 </pre></div>
 </div>
 </div>
@@ -872,7 +836,7 @@ also use a list expansion (<code class="docutils literal notranslate"><span clas
 Here’s an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_vars</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_vars</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="o">**</span><span class="n">kw</span><span class="p">):</span>
     <span class="n">out</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">       </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span><span class="si">=}</span><span class="s2">, </span><span class="si">{</span><span class="n">args</span><span class="si">=}</span><span class="s2"></span>
 <span class="s2">       </span><span class="si">{</span><span class="n">kw</span><span class="si">=}</span><span class="s2"></span>
@@ -885,21 +849,6 @@ Here’s an example:</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       len(args)=3, args=(1, 2, 3)
-       kw={&#39;a&#39;: 5, &#39;b&#39;: 6}
-    
-
-       len(args)=0, args=()
-       kw={&#39;height&#39;: 5}
-    
-
-       len(args)=3, args=(1, 2, 3)
-       kw={}
-    
-</pre></div>
-</div>
-</div>
 </div>
 </div>
 </div>
@@ -908,7 +857,7 @@ Here’s an example:</p>
 <p>Once our code has been packaged in succinct functions with no side effects, we can export it as a module and call our functions from other scripts. In the lab folder, you will find a file called <code class="docutils literal notranslate"><span class="pre">example_funcs.py</span></code>. We want to run these functions from the current notebook. To do this, use the familiar syntax to import functions from a module:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">example_funcs</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">example_funcs</span>
 <span class="c1"># or from example_funcs import earth</span>
 <span class="c1"># or import example_funcs as ef</span>
 </pre></div>
@@ -918,12 +867,7 @@ Here’s an example:</p>
 <p>and run the function with:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">example_funcs</span><span class="o">.</span><span class="n">earth</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Harmless&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">example_funcs</span><span class="o">.</span><span class="n">earth</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -974,7 +918,7 @@ less than 5 required input args (or use keyword expansion), no <em>side effects<
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># select_region function solution</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># select_region function solution</span>
 <span class="c1"># Define your select_region function in this cell using the signature in the cell above</span>
 <span class="c1"># </span>
 
@@ -1011,7 +955,7 @@ less than 5 required input args (or use keyword expansion), no <em>side effects<
 <p>Note that in Part 3  you will use the more sophisticated dictionary approach for the input arguments for <code class="docutils literal notranslate"><span class="pre">select_region</span></code>, but the example below should make it obvious what is needed later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#</span>
 <span class="c1"># select region test -- this should run successfully</span>
 <span class="c1">#</span>
 
@@ -1026,19 +970,6 @@ less than 5 required input args (or use keyword expansion), no <em>side effects<
 <span class="n">lon1</span><span class="p">,</span><span class="n">lat1</span><span class="p">,</span><span class="n">u1</span><span class="p">,</span><span class="n">v1</span><span class="o">=</span><span class="n">select_region</span><span class="p">(</span><span class="n">test_lons</span><span class="p">,</span> <span class="n">test_lats</span><span class="p">,</span> <span class="n">test_u</span><span class="p">,</span> <span class="n">test_v</span><span class="p">,</span>
                  <span class="n">lon_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">),</span><span class="n">lat_slice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lon1</span><span class="si">=}</span><span class="se">\n</span><span class="si">{</span><span class="n">lat1</span><span class="si">=}</span><span class="se">\n</span><span class="si">{</span><span class="n">u1</span><span class="si">=}</span><span class="se">\n</span><span class="si">{</span><span class="n">v1</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>np.shape(test_lons)=(36,),np.shape(test_lats)=(19,)
-lon1=array([60, 70, 80])
-lat1=array([ 0, 10, 20])
-u1=array([[0.        , 0.        , 0.        ],
-       [0.17101007, 0.11697778, 0.05939117],
-       [0.3213938 , 0.21984631, 0.1116189 ]])
-v1=array([[0.5       , 0.34202014, 0.17364818],
-       [0.5       , 0.34202014, 0.17364818],
-       [0.5       , 0.34202014, 0.17364818]])
 </pre></div>
 </div>
 </div>
@@ -1273,7 +1204,7 @@ of <code class="docutils literal notranslate"><span class="pre">select_region</s
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># HAND IN</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># HAND IN</span>
 
 <span class="c1"># In this cell a main function that calls your functions and plots</span>
 <span class="c1"># a map of the surface currents.  </span>
@@ -1339,7 +1270,7 @@ of <code class="docutils literal notranslate"><span class="pre">select_region</s
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># hidden calls to main() here</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># hidden calls to main() here</span>
 
 <span class="c1">### BEGIN HIDDEN TESTS</span>
 <span class="n">main</span><span class="p">(</span><span class="o">-</span><span class="mi">75</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">90</span><span class="p">)</span>
@@ -1347,16 +1278,6 @@ of <code class="docutils literal notranslate"><span class="pre">select_region</s
 <span class="c1">### END HIDDEN TESTS</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100,) (179,) (179, 100) (179, 100)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(359,) (179,) (179, 359) (179, 359)
-</pre></div>
-</div>
-<img alt="../../_images/lab_wk9_34_2.png" src="../../_images/lab_wk9_34_2.png" />
-<img alt="../../_images/lab_wk9_34_3.png" src="../../_images/lab_wk9_34_3.png" />
 </div>
 </div>
 </div>

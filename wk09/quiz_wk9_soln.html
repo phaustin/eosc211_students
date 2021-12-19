@@ -370,6 +370,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
+   Lab Week 11 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
    Week 11 quiz solution: pandas
   </a>
@@ -619,7 +624,7 @@
 <p>Identify and fix the up to 9 bugs (depends how you count them) in the following code.  You can assume the function declaration line has no bugs</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">lat_lonbounds_to_indices</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span><span class="n">lats</span><span class="p">,</span><span class="n">wlon</span><span class="p">,</span><span class="n">elon</span><span class="p">,</span><span class="n">slat</span><span class="p">,</span><span class="n">nlat</span><span class="p">):</span>
 
@@ -651,28 +656,14 @@
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_12949/3948385497.py&quot;</span><span class="gt">, line </span><span class="mi">27</span>
-    <span class="n">i2</span><span class="p">,</span><span class="n">i1</span><span class="p">,</span><span class="n">i3</span><span class="p">,</span><span class="n">i4</span> <span class="o">=</span> <span class="k">def</span> <span class="nf">lat_lonbounds_to_indices</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span><span class="n">lats</span><span class="p">,</span><span class="n">lon1</span><span class="p">,</span><span class="n">lat1</span><span class="p">,</span><span class="n">lon2</span><span class="p">,</span><span class="n">lat2</span><span class="p">)</span>
-                  <span class="o">^</span>
-<span class="ne">SyntaxError</span>: invalid syntax
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># example with np.argwhere</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># example with np.argwhere</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span> <span class="p">])</span>
 <span class="n">ix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">ix</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0],
-       [2]])
 </pre></div>
 </div>
 </div>
@@ -695,7 +686,7 @@
 <h3>Q1:<a class="headerlink" href="#q1" title="Permalink to this headline">¶</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="k">def</span> <span class="nf">lat_lonbounds_to_indices</span><span class="p">(</span><span class="n">lons</span><span class="p">,</span><span class="n">lats</span><span class="p">,</span><span class="n">wlon</span><span class="p">,</span><span class="n">elon</span><span class="p">,</span><span class="n">slat</span><span class="p">,</span><span class="n">nlat</span><span class="p">):</span>
 
@@ -727,14 +718,6 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">i1</span><span class="p">,</span><span class="n">i2</span><span class="p">,</span><span class="n">i3</span><span class="p">,</span><span class="n">i4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span><span class="n">lat</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">sub_lons</span><span class="p">,</span><span class="n">sub_lats</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9 10 9 12
-[  0  30  60  90 120 150 180 210 240 270 300 330] [-90 -80 -70 -60 -50 -40 -30 -20 -10   0  10  20  30  40  50  60  70  80
-  90]
-[270 300] [ 0 10 20 30]
 </pre></div>
 </div>
 </div>

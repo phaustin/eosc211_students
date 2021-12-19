@@ -370,6 +370,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
+   Lab Week 11 - solution
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
    Week 11 quiz solution: pandas
   </a>
@@ -636,7 +641,7 @@
 <h2>Import the packages we need<a class="headerlink" href="#import-the-packages-we-need" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 </div>
@@ -646,7 +651,7 @@
 <h2>The following function is called by questions 1-3.<a class="headerlink" href="#the-following-function-is-called-by-questions-1-3" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myfun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">myfun</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot; function doc string which i deliberately have not written&quot;&quot;&quot;</span>
     
     <span class="n">nfac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
@@ -668,17 +673,9 @@ print(f&quot;{y1=}&quot;)&#39;
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catherine&#39;s solution</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catherine&#39;s solution</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">myfun</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y1</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 4
-3 12
-2 24
-y1=24
 </pre></div>
 </div>
 </div>
@@ -693,14 +690,9 @@ print(f&quot;{y2=}&quot;)&#39;
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catherine&#39;s solution</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catherine&#39;s solution</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">myfun</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y1</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>y1=1
 </pre></div>
 </div>
 </div>
@@ -715,28 +707,9 @@ print(f&quot;{y3=}&quot;)&#39;
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catherine&#39;s solution</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catherine&#39;s solution</span>
 <span class="n">y1</span> <span class="o">=</span> <span class="n">myfun</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y1</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2089418</span><span class="o">/</span><span class="mf">3328868308.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Catherine&#39;s solution</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">myfun</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">y1</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="nn">/tmp/ipykernel_2089418/485320639.py</span> in <span class="ni">myfun</span><span class="nt">(n)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">nfac</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span>         <span class="n">nfac</span> <span class="o">=</span> <span class="n">nfac</span><span class="o">*</span><span class="n">i</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span>         <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">nfac</span><span class="p">)</span>
-
-<span class="ne">TypeError</span>: &#39;float&#39; object cannot be interpreted as an integer
 </pre></div>
 </div>
 </div>
@@ -771,7 +744,7 @@ print(f&quot;{y3=}&quot;)&#39;
 <br />
 <br /><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catherine solution - added print statement within if statement in loop to make clear what is going on</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Catherine solution - added print statement within if statement in loop to make clear what is going on</span>
 
 <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">])</span>
 
@@ -784,20 +757,6 @@ print(f&quot;{y3=}&quot;)&#39;
         <span class="n">nels</span> <span class="o">=</span> <span class="n">i</span>
         
 <span class="nb">print</span> <span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">mysum</span><span class="si">=}</span><span class="s2">,</span><span class="si">{</span><span class="n">nels</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1
-1 1
-2 -1
-3 6
-4 14
-5 15
-8 12
-9 17
-10 14
-mysum=14,nels=10
 </pre></div>
 </div>
 </div>
