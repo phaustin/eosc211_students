@@ -74,7 +74,9 @@ parts:
       - file: wk12/wk12_quiz_soln.md
   - caption: Week 13 - Review
     chapters:
-      - file: wk13/wk13_worksheet1.md
+      - file: wk13/wk13_worksheet1_soln.md
+      - file: wk13/wk13_quiz_soln.md
+      - file: wk13/wk13_quiz2_soln.md
   - caption: Assignments
     chapters:
       - file: assignment1/assignment1.md
@@ -90,25 +92,3 @@ parts:
       - file: wk11/lab_wk11/pandas-cheatsheet.md
       - url: https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html
         title: Pythia Pandas Lesson
-  #     - file: assignment01/ast1.md
-  # - caption: Week 8 - Functions
-  #   chapters:
-  #     - file: wk08/functions.md
-  #     - file: wk08/functions_ii.md
-  #     - file: wk08/lab_wk8/lab_wk8.md
-  # - caption: Week 9 - Debugging 
-  #   chapters:
-  #     - file: wk09/debugging.md
-  #     - file: wk09/debugging_2.md
-  #     - file: wk09/lab_wk9/lab_wk9.md
-  # - caption: Week 10 - Developing Workflows
-  #   chapters:
-  #     - file: wk10/dictionaries_and_f_strings.md
-  # - caption: Week 11 - Vectorization and Speed
-  #   chapters:
-  #     - file: wk11/loops_and_vectorization.ipynb
-  #     - file: wk11/lab_wk11/lab_wk11.md
-  # - caption: Week 12
-  #   chapters:
-  #     - file: wk12/file_io_practice.md
-  #     - file: wk12/exercises.md
