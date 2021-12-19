@@ -52,8 +52,14 @@ Aside: There is a good plain English article __[here](https://learnpython.com/bl
 The easiest way to remember the heirarchy is *functions=paragraphs, modules=chapters, packages=books*.
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.447779Z'
+  iopub.status.busy: '2021-12-19T16:52:34.447463Z'
+  iopub.status.idle: '2021-12-19T16:52:34.882094Z'
+  shell.execute_reply: '2021-12-19T16:52:34.882308Z'
+trusted: true
+---
 import numpy as np
 from matplotlib import pyplot as plt
 #import this # what happens if you un-comment this line?
@@ -91,8 +97,14 @@ Python has a few features that help in writing functions that are concise and ea
    In this example, we're using slice objects discussed in the [Oct. 7 notes](https://phaustin.github.io/eosc211_students/reference_notes/thursday_oct7.html):
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.885906Z'
+  iopub.status.busy: '2021-12-19T16:52:34.885586Z'
+  iopub.status.idle: '2021-12-19T16:52:34.887238Z'
+  shell.execute_reply: '2021-12-19T16:52:34.887439Z'
+trusted: true
+---
 def average_region(the_map, lat_slice=slice(0,-1), lon_slice=slice(0,-1)):
     print(f"\n{lat_slice.start=}, {lat_slice.stop=}, {lat_slice.step=}")
     print(f"{lon_slice.start=}, {lon_slice.stop=}, {lon_slice.step=}")
@@ -111,8 +123,14 @@ print(f"{average_region(avg_map,lat_slice=slice(3,7))=}")
    of parameters. An example:
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.889697Z'
+  iopub.status.busy: '2021-12-19T16:52:34.889404Z'
+  iopub.status.idle: '2021-12-19T16:52:34.891124Z'
+  shell.execute_reply: '2021-12-19T16:52:34.891322Z'
+trusted: true
+---
 pacific_nw_region = dict(lat_slice=slice(2,5),lon_slice=slice(3,6))
 prairie_region = dict(lat_slice=slice(3,7),lon_slice=slice(8,9))
 print(f"{average_region(avg_map,**pacific_nw_region)=}")
@@ -122,8 +140,14 @@ print(f"{average_region(avg_map,**prairie_region)=}")
 The keyword expansion operator `**` is called "double splat" and can also be used in a function definition to represent an unknown/arbitrary number of optional arguments.
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.893185Z'
+  iopub.status.busy: '2021-12-19T16:52:34.892390Z'
+  iopub.status.idle: '2021-12-19T16:52:34.894496Z'
+  shell.execute_reply: '2021-12-19T16:52:34.894730Z'
+trusted: true
+---
 def print_args(**my_args):
     print(f"{my_args=}")
 
@@ -137,8 +161,14 @@ print_args(a=5, b=7, c=10)
    function in an outer function.
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.897204Z'
+  iopub.status.busy: '2021-12-19T16:52:34.896914Z'
+  iopub.status.idle: '2021-12-19T16:52:34.898750Z'
+  shell.execute_reply: '2021-12-19T16:52:34.898530Z'
+trusted: true
+---
 def average_missing(the_map, lat_slice=slice(0,-1), lon_slice=slice(0,-1), missing_val=-999.):
     hit = (the_map == missing_val)
     new_map = np.array(the_map,dtype=np.float64)  #make a copy so no side effects
@@ -155,8 +185,14 @@ print(f"{average_missing(avg_map,**pacific_nw_region)=}")
    default arguments defined.  You can do this using [partial functions](https://www.udacity.com/blog/2020/12/how-to-create-partial-functions-in-python.html).  Here's an example where you know you are always going to use -222 for missing data.
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.901098Z'
+  iopub.status.busy: '2021-12-19T16:52:34.900840Z'
+  iopub.status.idle: '2021-12-19T16:52:34.902207Z'
+  shell.execute_reply: '2021-12-19T16:52:34.902407Z'
+trusted: true
+---
 from functools import partial
 my_average_missing=partial(average_missing,missing_val=-222)
 
@@ -172,8 +208,14 @@ also use a list expansion (`*args`) to expand a required list of arguments in a 
 Here's an example:
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.904789Z'
+  iopub.status.busy: '2021-12-19T16:52:34.904515Z'
+  iopub.status.idle: '2021-12-19T16:52:34.905996Z'
+  shell.execute_reply: '2021-12-19T16:52:34.906197Z'
+trusted: true
+---
 def print_vars(*args,**kw):
     out=f"""
        {len(args)=}, {args=}
@@ -193,8 +235,14 @@ print_vars(1,2,3)
 Once our code has been packaged in succinct functions with no side effects, we can export it as a module and call our functions from other scripts. In the lab folder, you will find a file called `example_funcs.py`. We want to run these functions from the current notebook. To do this, use the familiar syntax to import functions from a module:
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.907719Z'
+  iopub.status.busy: '2021-12-19T16:52:34.907289Z'
+  iopub.status.idle: '2021-12-19T16:52:34.909013Z'
+  shell.execute_reply: '2021-12-19T16:52:34.909214Z'
+trusted: true
+---
 import example_funcs
 # or from example_funcs import earth
 # or import example_funcs as ef
@@ -203,8 +251,14 @@ import example_funcs
 and run the function with:
 
 ```{code-cell} ipython3
-:trusted: true
-
+---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.912068Z'
+  iopub.status.busy: '2021-12-19T16:52:34.910309Z'
+  iopub.status.idle: '2021-12-19T16:52:34.913387Z'
+  shell.execute_reply: '2021-12-19T16:52:34.913588Z'
+trusted: true
+---
 example_funcs.earth()
 ```
 
@@ -267,6 +321,11 @@ return lons, lats, u_vel,v_vel
 
 ```{code-cell} ipython3
 ---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.916160Z'
+  iopub.status.busy: '2021-12-19T16:52:34.915900Z'
+  iopub.status.idle: '2021-12-19T16:52:34.917282Z'
+  shell.execute_reply: '2021-12-19T16:52:34.917016Z'
 nbgrader:
   grade: false
   grade_id: cell-a36b8ab2c097201f
@@ -313,6 +372,11 @@ Note that in Part 3  you will use the more sophisticated dictionary approach for
 
 ```{code-cell} ipython3
 ---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.920132Z'
+  iopub.status.busy: '2021-12-19T16:52:34.919870Z'
+  iopub.status.idle: '2021-12-19T16:52:34.922113Z'
+  shell.execute_reply: '2021-12-19T16:52:34.921902Z'
 nbgrader:
   grade: true
   grade_id: cell-3b0067bf4d226e9b
@@ -578,6 +642,11 @@ def select_region():
 
 ```{code-cell} ipython3
 ---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.926114Z'
+  iopub.status.busy: '2021-12-19T16:52:34.923295Z'
+  iopub.status.idle: '2021-12-19T16:52:34.927534Z'
+  shell.execute_reply: '2021-12-19T16:52:34.927736Z'
 lines_to_next_cell: 2
 nbgrader:
   grade: true
@@ -653,6 +722,11 @@ def main(lon_min,lon_max,lat_min,lat_max):
 
 ```{code-cell} ipython3
 ---
+execution:
+  iopub.execute_input: '2021-12-19T16:52:34.929770Z'
+  iopub.status.busy: '2021-12-19T16:52:34.929508Z'
+  iopub.status.idle: '2021-12-19T16:52:40.295338Z'
+  shell.execute_reply: '2021-12-19T16:52:40.295114Z'
 nbgrader:
   grade: true
   grade_id: cell-a573337618332afa
