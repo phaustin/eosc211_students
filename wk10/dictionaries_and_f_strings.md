@@ -43,13 +43,6 @@ transport = {
 # your code here
 ```
 
-```{code-cell}
-# andrew's soln
-import numpy as np
-
-drivemed = np.median(transport["car"])
-print(f"The median commute time for people who drive is {drivemed} minutes")
-```
 
 **B) The number of people who ride bikes to UBC**
 
@@ -57,13 +50,4 @@ print(f"The median commute time for people who drive is {drivemed} minutes")
 # your code here
 ```
 
-```{code-cell}
-# andrew's soln
-cyclists = len(transport["bike"])
 
-print(f"There are {cyclists} cyclists in EOSC211 this semester.")
-```
-
-## Question 2
-
-!!!! no direct translation from matlab. formatted print statements are way less complicated in python.

@@ -83,6 +83,6 @@ parts:
   - caption: Reference material 
     chapters:
       - file: reference_notes/thursday_oct7.md
-      - file: wk11/lab_wk11/pandas-cheatsheet.md
+      - file: wk11/week11_lab/pandas-cheatsheet.md
       - url: https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html
         title: Pythia Pandas Lesson
