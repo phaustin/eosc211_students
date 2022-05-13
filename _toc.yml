@@ -11,79 +11,73 @@ parts:
     chapters:
       - file: wk02/data_types.md
       - file: wk02/some_review_plus_built_in_functions_arrays_preview.md
-      - file: lab_keys/week2_lab/lab_wk2.ipynb
+      - file: wk02/week2_lab/lab_wk2.ipynb
       - file: wk02/week2_quiz.md
   - caption: Week 3 - Data Structures
     chapters:
       - file: wk03/data_structures.md
       - file: wk03/data_structures_ii.md
       - file: wk03/week3_quiz.md
-      - file: lab_keys/week3_lab/lab_wk3_soln.ipynb
+      - file: wk03/week3_lab/lab_wk3.ipynb
   - caption: Week 4 - Scientific Figures
     chapters:
       - file: wk04/making_plots.md
-      - file: lab_keys/week4_lab/lab_wk4.md
+      - file: wk04/week4_lab/lab_wk4.md
   - caption: Week 5 - Computer Logic
     chapters:
       - file: wk05/logic.md
       - file: wk05/complicated_logic.md
       - file: wk05/wk05_indexing.md
-      - file: wk05/wk05_indexing_soln.md
-      - file: wk05/week5_quiz_sol.md
-      - file: lab_keys/week5_lab/lab_wk5.md
+      - file: wk05/week5_quiz.md
+      - file: wk05/week5_lab/lab_wk5.md
   - caption: Week 6 - Loops
     chapters:
       - file: wk06/loops.md
-      - file: wk06/loops_soln.md
       - file: wk06/loops_ii.md
-      - file: wk06/loops_ii_soln.md
-      - file: wk06/week6_quiz_sol.md
-      - file: lab_keys/week6_lab/lab_wk6.md
+      - file: wk06/week6_quiz.md
+      - file: wk06/week6_lab/lab_wk6.md
   - caption: Week 7 - Midterm
     chapters:
-      - file: wk07/midterm_review_sol.md
-      - file: wk07/week7_quiz_sol.md
+      - file: wk07/midterm_review.md
+      - file: wk07/week7_quiz.md
   - caption: Week 8 - Functions
     chapters:
-      - file: wk08/functions_soln.md
-      - file: wk08/functions_ii_soln.md
-      - file: wk08/quiz_wk08_soln.md
-      - file: lab_keys/week8_lab/lab_wk8.md
-      - file: midterm/midterm_2021_key.md
+      - file: wk08/functions.md
+      - file: wk08/functions_ii.md
+      - file: wk08/quiz_wk08.md
+      - file: wk08/week8_lab/lab_wk8.md
   - caption: Week 9 - Functions/debugging
     chapters:
       - file: wk09/debugging.md
-      - file: wk09/debugging_soln.md
-      - file: wk09/quiz_wk9_soln.md
-      - file: wk09/debugging_ii_soln.md
-      - file: lab_keys/week9_lab/lab_wk9.md
-      - file: wk09/lab_wk9/lab_wk9.md
+      - file: wk09/quiz_wk9.md
+      - file: wk09/debugging_ii.md
+      - file: wk09/week9_lab/lab_wk9.md
   - caption: Week 10 - Interpolation/scipy
     chapters:
       - file: wk10/wk10_interpolation_demo.md
       - file: wk10/dictionaries_and_f_strings.md
-      - file: wk10/quiz_wk10_soln.md
+      - file: wk10/quiz_wk10.md
   - caption: Week 11 - Pandas
     chapters:
       - file: wk11/pythia_pandas.md
-      - file: lab_keys/week11_lab/lab_wk11.md
-      - file: wk11/wk11_quiz_sol.md
+      - file: wk11/week11_lab/lab_wk11.md
+      - file: wk11/wk11_quiz.md
   - caption: Week 12 - Review/File IO
     chapters:
-      - file: wk12/wk12_worksheet1_soln.md
-      - file: wk12/wk12_quiz_soln.md
+      - file: wk12/wk12_worksheet1.md
+      - file: wk12/wk12_quiz.md
   - caption: Week 13 - Review
     chapters:
-      - file: wk13/wk13_worksheet1_soln.md
-      - file: wk13/wk13_quiz_soln.md
-      - file: wk13/wk13_quiz2_soln.md
+      - file: wk13/wk13_worksheet1.md
+      - file: wk13/wk13_quiz.md
+      - file: wk13/wk13_quiz2.md
   - caption: Assignments
     chapters:
       - file: assignment1/assignment1.md
       - file: assignment02/ast2.md
   - caption: Extra topics
     chapters:
-      - file: wk12/file_io_practice_soln.md
+      - file: wk12/file_io_practice.md
       - file: wk13/e211_colormaps.md
       - file: wk13/next_steps.md
   - caption: Reference material 
