@@ -12,7 +12,7 @@ kernelspec:
 orig_nbformat: 4
 ---
 
-# Week 11 quiz solution: pandas
+# Week 11 quiz
 
 ```{code-cell} ipython3
 import pandas as pd
