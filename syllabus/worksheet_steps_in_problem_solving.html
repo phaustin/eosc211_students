@@ -37,17 +37,19 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -135,8 +137,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week2_lab/lab_wk2.html">
-   Answers: Lab Week 2 - Jupyterhub Tutorial
+  <a class="reference internal" href="../wk02/week2_lab/lab_wk2.html">
+   Lab Week 2 - Jupyterhub Tutorial
   </a>
  </li>
  <li class="toctree-l1">
@@ -167,8 +169,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week3_lab/lab_wk3_soln.html">
-   Answers: Lab Week 3
+  <a class="reference internal" href="../wk03/week3_lab/lab_wk3.html">
+   Lab Week 3
   </a>
  </li>
 </ul>
@@ -184,8 +186,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week4_lab/lab_wk4.html">
-   Answers: Lab Week 4
+  <a class="reference internal" href="../wk04/week4_lab/lab_wk4.html">
+   Lab Week 4
   </a>
  </li>
 </ul>
@@ -211,18 +213,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk05/wk05_indexing_soln.html">
-   Week 5 indexing solution
+  <a class="reference internal" href="../wk05/week5_quiz.html">
+   Week 5 quiz
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk05/week5_quiz_sol.html">
-   Week 5 quiz solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week5_lab/lab_wk5.html">
-   Answers: Lab Week 5
+  <a class="reference internal" href="../wk05/week5_lab/lab_wk5.html">
+   Lab Week 5
   </a>
  </li>
 </ul>
@@ -238,28 +235,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/loops_soln.html">
-   Loops – Solution
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk06/loops_ii.html">
    Loops II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/loops_ii_soln.html">
-   Loops II solution
+  <a class="reference internal" href="../wk06/week6_quiz.html">
+   Q1)  What does the following cell print?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/week6_quiz_sol.html">
-   Week 6 quiz solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week6_lab/lab_wk6.html">
-   Lab Week 6 Solution
+  <a class="reference internal" href="../wk06/week6_lab/lab_wk6.html">
+   Lab Week 6
   </a>
  </li>
 </ul>
@@ -270,13 +257,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk07/midterm_review_sol.html">
-   Midterm Review solution
+  <a class="reference internal" href="../wk07/midterm_review.html">
+   Midterm Review
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk07/week7_quiz_sol.html">
-   Week 7 quiz solution
+  <a class="reference internal" href="../wk07/week7_quiz.html">
+   Week 7 quiz
   </a>
  </li>
 </ul>
@@ -287,23 +274,23 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/functions_soln.html">
-   Functions – solution
+  <a class="reference internal" href="../wk08/functions.html">
+   Functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
-   Week 08 Quiz: Functions basics -solution
+  <a class="reference internal" href="../wk08/functions_ii.html">
+   Functions II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week8_lab/lab_wk8.html">
-   Lab Week 8 - solution
+  <a class="reference internal" href="../wk08/quiz_wk08.html">
+   Week 08 Quiz: Functions basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../midterm/midterm_2021_key.html">
-   e211 2021t1 midterm solutions
+  <a class="reference internal" href="../wk08/week8_lab/lab_wk8.html">
+   Lab Week 8
   </a>
  </li>
 </ul>
@@ -319,22 +306,17 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/debugging_soln.html">
-   solution: More Functions &amp; Debugging Practice
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/quiz_wk9_soln.html">
+  <a class="reference internal" href="../wk09/quiz_wk9.html">
    Quiz Week 9:  Debugging with Functions solution
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week9_lab/lab_wk9.html">
-   Lab Week 9 - solution
+  <a class="reference internal" href="../wk09/debugging_ii.html">
+   Debugging II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/lab_wk9/lab_wk9.html">
+  <a class="reference internal" href="../wk09/week9_lab/lab_wk9.html">
    Lab Week 9
   </a>
  </li>
@@ -356,7 +338,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk10/quiz_wk10_soln.html">
+  <a class="reference internal" href="../wk10/quiz_wk10.html">
    Week 10 Quiz Solution:  Practice with Dictionaries and Functions
   </a>
  </li>
@@ -373,13 +355,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
-   Lab Week 11 - solution
+  <a class="reference internal" href="../wk11/week11_lab/lab_wk11.html">
+   Lab Week 11
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
-   Week 11 quiz solution: pandas
+  <a class="reference internal" href="../wk11/wk11_quiz.html">
+   Week 11 quiz
   </a>
  </li>
 </ul>
@@ -390,13 +372,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/wk12_worksheet1_soln.html">
-   Change worksheet solution
+  <a class="reference internal" href="../wk12/wk12_worksheet1.html">
+   Week 12 Review Exercises
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
-   Week 12 Quiz: solution
+  <a class="reference internal" href="../wk12/wk12_quiz.html">
+   Name / Student #:
   </a>
  </li>
 </ul>
@@ -407,18 +389,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/wk13_worksheet1_soln.html">
-   Worksheet Solution: Review Exercises EOSC 211
+  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/wk13_quiz_soln.html">
+  <a class="reference internal" href="../wk13/wk13_quiz.html">
    Week 13 Quiz 1 Solution:  Review with basic functions, loops, code tracing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/wk13_quiz2_soln.html">
-   Week 13 Quiz 2 Solution:  Review with numpy arrays, basic logical indexing
+  <a class="reference internal" href="../wk13/wk13_quiz2.html">
+   Week 13 Quiz 2:  Review with numpy arrays, basic logical indexing
   </a>
  </li>
 </ul>
@@ -446,8 +428,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
-   File IO Solution
+  <a class="reference internal" href="../wk12/file_io_practice.html">
+   File IO
   </a>
  </li>
  <li class="toctree-l1">
@@ -473,7 +455,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk11/lab_wk11/pandas-cheatsheet.html">
+  <a class="reference internal" href="../wk11/week11_lab/pandas-cheatsheet.html">
    Pandas Cheatsheet
   </a>
  </li>
@@ -531,7 +513,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -558,7 +540,7 @@
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/syllabus/worksheet_steps_in_problem_solving.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://jupyter.eoastest.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/syllabus/worksheet_steps_in_problem_solving.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -572,7 +554,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -609,7 +591,47 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Steps In Problem Solving</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eosc-211">
+   EOSC 211
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-1">
+     Question 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-2">
+     Question 2
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#question-3">
+     Question 3
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="steps-in-problem-solving">
@@ -640,379 +662,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">e211</span><span class="o">.</span><span class="n">show_earthquake_data</span><span class="p">()</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>#EventID</th>
-      <th>Time</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th>Depth/km</th>
-      <th>MagType</th>
-      <th>Magnitude</th>
-      <th>EventLocationName</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>2.020082e+07</td>
-      <td>2020-08-19T11:40:59</td>
-      <td>50.6077</td>
-      <td>-129.4759</td>
-      <td>10.00</td>
-      <td>ML</td>
-      <td>4.0</td>
-      <td>Preliminary; 140 KM W OF PORT HARDY, BC/Prelim...</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2.020082e+07</td>
-      <td>2020-08-19T11:40:55</td>
-      <td>50.4094</td>
-      <td>-130.2877</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.3</td>
-      <td>200 km W of Port Hardy, BC/200 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.020072e+07</td>
-      <td>2020-07-22T11:33:21</td>
-      <td>48.8371</td>
-      <td>-129.3728</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>5.2</td>
-      <td>221 km SW of Port Alice, BC/221 km SO de Port ...</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>2.020052e+07</td>
-      <td>2020-05-23T02:14:52</td>
-      <td>50.3600</td>
-      <td>-129.2800</td>
-      <td>8.00</td>
-      <td>M</td>
-      <td>4.9</td>
-      <td>Preliminary; 129 km W   of Port Alice, BC/Prel...</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2.020052e+07</td>
-      <td>2020-05-23T02:14:48</td>
-      <td>50.1783</td>
-      <td>-129.8157</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>5.1</td>
-      <td>169 km W of Port Alice, BC/169 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>2.020051e+07</td>
-      <td>2020-05-10T04:45:59</td>
-      <td>49.3278</td>
-      <td>-127.8000</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.8</td>
-      <td>120 km S of Port Alice, BC/120 km S de Port Al...</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>2.020033e+07</td>
-      <td>2020-03-29T19:32:02</td>
-      <td>50.4999</td>
-      <td>-130.2003</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.3</td>
-      <td>192 km W of Port Hardy, BC/192 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>2.020033e+07</td>
-      <td>2020-03-29T18:28:54</td>
-      <td>50.4114</td>
-      <td>-130.2842</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>200 km W of Port Hardy, BC/200 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>2.020031e+07</td>
-      <td>2020-03-05T23:22:28</td>
-      <td>50.9881</td>
-      <td>-130.2942</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>198 km W of Port Hardy, BC/198 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>2.020030e+07</td>
-      <td>2020-03-02T13:43:21</td>
-      <td>50.4455</td>
-      <td>-130.2483</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.4</td>
-      <td>196 km W of Port Hardy, BC/196 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2.020012e+07</td>
-      <td>2020-01-24T21:35:30</td>
-      <td>48.5739</td>
-      <td>-125.1857</td>
-      <td>38.48</td>
-      <td>Mw</td>
-      <td>4.5</td>
-      <td>29 km S of Bamfield, BC/29 km S de Bamfield, BC</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2.020011e+07</td>
-      <td>2020-01-08T20:20:38</td>
-      <td>50.6677</td>
-      <td>-130.4762</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.6</td>
-      <td>209 km W of Port Hardy, BC/209 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>2.020011e+07</td>
-      <td>2020-01-06T12:21:43</td>
-      <td>47.7203</td>
-      <td>-129.3662</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.1</td>
-      <td>300 km SW of Tofino, BC/300 km SO de Tofino, BC</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>2.020011e+07</td>
-      <td>2020-01-06T12:12:05</td>
-      <td>47.6905</td>
-      <td>-129.0957</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>285 km SW of Tofino, BC/285 km SO de Tofino, BC</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>2.019123e+07</td>
-      <td>2019-12-29T08:32:29</td>
-      <td>50.7334</td>
-      <td>-130.4852</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.1</td>
-      <td>210 km W of Port Hardy, BC/210 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>2.019123e+07</td>
-      <td>2019-12-25T20:38:50</td>
-      <td>50.7207</td>
-      <td>-130.5307</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.8</td>
-      <td>213 km W of Port Hardy, BC/213 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>2.019123e+07</td>
-      <td>2019-12-25T07:31:07</td>
-      <td>50.2863</td>
-      <td>-130.2239</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>197 km W of Port Alice, BC/197 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>2.019123e+07</td>
-      <td>2019-12-25T03:35:59</td>
-      <td>50.4851</td>
-      <td>-130.0955</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>6.2</td>
-      <td>185 km W of Port Hardy, BC/185 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T23:38:25</td>
-      <td>50.3906</td>
-      <td>-130.2040</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.9</td>
-      <td>194 km W of Port Hardy, BC/194 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T23:14:41</td>
-      <td>50.2895</td>
-      <td>-129.7727</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>165 km W of Port Alice, BC/165 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T22:50:13</td>
-      <td>50.4613</td>
-      <td>-129.5008</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.1</td>
-      <td>144 km W of Port Hardy, BC/144 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T22:20:02</td>
-      <td>50.3363</td>
-      <td>-130.0474</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.4</td>
-      <td>184 km W of Port Alice, BC/184 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T21:05:26</td>
-      <td>50.2388</td>
-      <td>-129.8421</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.9</td>
-      <td>171 km W of Port Alice, BC/171 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T20:56:21</td>
-      <td>50.2903</td>
-      <td>-130.0174</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>6.1</td>
-      <td>182 km W of Port Alice, BC/182 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T20:03:20</td>
-      <td>50.5622</td>
-      <td>-129.9012</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.2</td>
-      <td>170 km W of Port Hardy, BC/170 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T20:00:25</td>
-      <td>50.6015</td>
-      <td>-130.0958</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.7</td>
-      <td>183 km W of Port Hardy, BC/183 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T19:57:39</td>
-      <td>50.5347</td>
-      <td>-130.3156</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.9</td>
-      <td>200 km W of Port Hardy, BC/200 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T19:49:41</td>
-      <td>50.4871</td>
-      <td>-130.0940</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>6.0</td>
-      <td>185 km W of Port Hardy, BC/185 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T19:26:45</td>
-      <td>50.3751</td>
-      <td>-130.0185</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>4.0</td>
-      <td>182 km W of Port Alice, BC/182 km O de Port Al...</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T19:13:24</td>
-      <td>50.4146</td>
-      <td>-130.0350</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>5.6</td>
-      <td>182 km W of Port Hardy, BC/182 km O de Port Ha...</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>2.019122e+07</td>
-      <td>2019-12-23T16:44:10</td>
-      <td>50.3299</td>
-      <td>-130.0984</td>
-      <td>10.00</td>
-      <td>Mw</td>
-      <td>5.1</td>
-      <td>188 km W of Port Alice, BC/188 km O de Port Al...</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;e211_lib&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <p>source: <a class="reference external" href="http://www.earthquakescanada.nrcan.gc.ca/">http://www.earthquakescanada.nrcan.gc.ca/</a></p>
 <p><strong>A) We want to design an <em>algorithm</em> to find the largest earthquake. Describe in words the <em>input</em> and <em>output</em> of your algorithm</strong></p>
@@ -1067,8 +726,8 @@
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
     <a class='left-prev' id="prev-link" href="schedule_F2021.html" title="previous page">
         <i class="fas fa-angle-left"></i>
@@ -1085,19 +744,17 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By UBC<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By UBC<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

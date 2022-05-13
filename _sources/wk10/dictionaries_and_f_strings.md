@@ -5,7 +5,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.10.3
+    jupytext_version: 1.13.8
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -21,7 +21,7 @@ kernelspec:
 **Learning Objectives:**  
 1. ?
 
-```{code-cell} ipython3
+```{code-cell}
 # placeholder results (not the actual survey)
 transport = {
     "car": [14, 2, 3, 4, 2, 15, 30],
@@ -39,11 +39,11 @@ transport = {
 
 **A) The median commuting time for people who drive**
 
-```{code-cell} ipython3
+```{code-cell}
 # your code here
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 # andrew's soln
 import numpy as np
 
@@ -53,11 +53,11 @@ print(f"The median commute time for people who drive is {drivemed} minutes")
 
 **B) The number of people who ride bikes to UBC**
 
-```{code-cell} ipython3
+```{code-cell}
 # your code here
 ```
 
-```{code-cell} ipython3
+```{code-cell}
 # andrew's soln
 cyclists = len(transport["bike"])
 

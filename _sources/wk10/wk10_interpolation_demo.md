@@ -6,7 +6,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.13.8
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -21,9 +21,7 @@ Note: There is also a numpy function that does just linear interpolation: See ht
 
 ## Import Packages
 
-```{code-cell} ipython3
-:trusted: true
-
+```{code-cell}
 ## import the packages I'll need
 import numpy as np
 from scipy import interpolate 
@@ -33,10 +31,7 @@ import time
 
 ### Example #1 from the web page reading
 
-```{code-cell} ipython3
-:lines_to_next_cell: 2
-:trusted: true
-
+```{code-cell}
 # make synthetic data - a nice smooth function
 x = np.linspace(0, 4, 12)
 y = np.cos(x**2/3+4)
@@ -45,10 +40,7 @@ y = np.cos(x**2/3+4)
 plt.plot(x, y, 'o');
 ```
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```{code-cell}
 # mess around a bit with basic 1D interpolation methods
 f1 = interpolate.interp1d(x, y, kind = 'nearest')  # nearest neighbor
 
@@ -64,9 +56,6 @@ plt.figure(figsize=(12,6))
 plt.plot(x, y, 'o', xnew, f1(xnew), 'x-', xnew, f2(xnew), '--', xnew, f3(xnew),'-.')
 plt.legend(['data', 'nearest', 'linear', 'cubic'], loc = 'best');
 ```
-
-
-+++ {"lines_to_next_cell": 0}
 
 ### More detail with Splines - only use these more complex approaches once you have gained some experience / understanding of interpolation
 
@@ -85,12 +74,7 @@ This fits a spline y = spl(x) of degree k to the provided x, y data. Parameters:
 
     ext − Controls the extrapolation mode (ext = 0 or ‘extrapolate’, returns the extrapolated value)
 
-
-
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```{code-cell}
 # make a function and add some gaussian random noise, mean 0, variance 1
 
 x = np.linspace(-3, 3, 50)
@@ -115,10 +99,7 @@ plt.title('Different Smoothing Factors (SF)');
 
 ## Example #2: Demos with interp1d - nearest neighbor, linear, cubic
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```{code-cell}
 # set up my demo function
 
 # make a nice smooth function
@@ -152,10 +133,7 @@ plt.plot(x, y, 'k--', lw=3)
 plt.plot(xsamp, ysamp, 'o', ms = 15, label='raw data');
 ```
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```{code-cell}
 # plot original data and my interpolation estimates
 plt.figure(figsize=(12,6))
 plt.plot(x, y, 'k--', lw=1)
@@ -164,10 +142,7 @@ plt.plot(xnew, f1(xnew), 'x-', lw=1)
 plt.legend(['original','data', 'nearest'], loc = 'best');
 ```
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```{code-cell}
 # plot original data and my interpolation estimates
 plt.figure(figsize=(12,6))
 plt.plot(x, y, 'k--', lw=1)
@@ -177,10 +152,7 @@ plt.plot(xnew, f2(xnew), 'x--')
 plt.legend(['original','data', 'nearest', 'linear'], loc = 'best');
 ```
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```{code-cell}
 plt.figure(figsize=(12,6))
 plt.plot(x, y, 'k-', lw=1)
 plt.plot(xsamp, ysamp, 'o', ms = 15, label='raw data')
@@ -191,12 +163,9 @@ plt.plot(xnew, f3(xnew),'x-.')
 plt.legend(['original','data', 'nearest', 'linear', 'cubic'], loc = 'best');
 ```
 
-## What can go wrong?  Example #3 - overshoot 
+## What can go wrong?  Example #3 - overshoot
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```{code-cell}
 x = np.arange(-2,2.1,0.2)
 y = np.zeros_like(x)
 y[x<0] = -1
@@ -216,12 +185,9 @@ plt.plot(xnew, f3(xnew),'-.')
 plt.legend(['original','data','linear', 'cubic'], loc = 'best');
 ```
 
-## What can go wrong? Example #4 - extrapolation issues 
+## What can go wrong? Example #4 - extrapolation issues
 
-```{code-cell} ipython3
-:lines_to_next_cell: 0
-:trusted: true
-
+```{code-cell}
 x = np.arange(-2,2.1,0.5)
 y = np.zeros_like(x)
 y[x<0] = -1

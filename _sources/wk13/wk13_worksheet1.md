@@ -7,7 +7,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.13.8
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -18,9 +18,7 @@ kernelspec:
 
 ## Week 13,  Worksheet 1
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 # import the packages we might need
 import numpy as np
 from matplotlib import pyplot as plt
@@ -35,9 +33,7 @@ How would you improve the code in the last problem on the quiz to make it work p
 #### From quiz:  
 I want to add together the numbers in an array 'x' until my sum exceeds the number in the variable target, then **stop** and return the sum and the number of elements that were summed.  You can assume that there are enough elements in x that I don't get to the end of the array before reaching the target.  I write the following code which has a semantics error not a syntax error (i.e. it runs but doesn't do what it was intended to do).  What is output to the screen? (Show your work).
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 x = np.array([1, 0, -2, 7, 8, 1, 10, 21, -3, 5, -3])
 
 target = 21
@@ -55,9 +51,7 @@ for i in range(0, len(x)):
 print (f"{mysum=},{nels=}")
 ```
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 # your code here
 ```
 
@@ -65,18 +59,14 @@ print (f"{mysum=},{nels=}")
 #### A)
 Write a function `transp` that will take as input a 2-D array A, and return the array B where `B[i,j] = A[j,i]`. Do not use a built-in python function.
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 # your code here
 ```
 
 #### B)
 Add a check to the function code that will exit the function with an error message if A is not a 2-D array.
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 # your code here
 ```
 
@@ -87,9 +77,7 @@ The function $e^x$ can be calculated from the following formula:  $e^x = \Sigma_
 
 2.  Complete the python code below to do this.  Also print the number of terms used to compute y.
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 x = 2
 target_err = 0.1
 
@@ -108,9 +96,7 @@ term = x**i/math.factorial(i)
 ### Question 4:  code tracing, logical indexing,  for loops
 What is in `y` after exectuing this code?
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 x=np.empty(8)
 x[0]=1
 x[1]=1
@@ -120,9 +106,7 @@ for k in range(2,len(x)):
 y = x[np.logical_and(x>3,x%2==1)]
 ```
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 # your answer here
 ```
 
@@ -135,16 +119,12 @@ three numbers is greater than or equal to 9, and `reject_list` if all three numb
 than 9.  Bonus: How many samples do you think will be in each list?  Increase the sample size to 1000; 10,000;
 100,000 -- do the lengths match your guess?
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 from numpy.random import random_sample
 my_sample = random_sample([3])*10
 ```
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 # your code here
 ```
 
@@ -160,9 +140,7 @@ The following resources are useful if you are confused about wrapping / unwrappi
 
 3. https://treyhunner.com/2018/03/tuple-unpacking-improves-python-code-readability/
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 # your code here
 ```
 
@@ -292,9 +270,7 @@ k) `f`
 #### A) Bugs ...
 What happens when you run the following code?
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 A=np.array([1, 5, 3, 0, 1])
 B=np.array([0, 5, 6, 0, 1])
 C=A/B + 4
@@ -302,9 +278,7 @@ C=A/B + 4
 
 #### B More bugs ...
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 A=[1, 5, 3, 0, 1]
 B=[0, 5, 6, 0, 1]
 C=B/A + 4
@@ -313,9 +287,7 @@ C=B/A + 4
 #### C) Precedence
 What does `x` contain after running the following code? show your work.
 
-```{code-cell}
-:trusted: true
-
+```{code-cell} ipython3
 a = 3.0;
 x = [2**a+a*2+1, a**(np.sum(np.append(np.arange(2,-1,-1),-4)))]
 ```

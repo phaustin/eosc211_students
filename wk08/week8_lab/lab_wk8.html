@@ -1,0 +1,1042 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Week 8 &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="More Functions &amp; Debugging Practice" href="../../wk09/debugging.html" />
+    <link rel="prev" title="Week 08 Quiz: Functions basics" href="../quiz_wk08.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../announcements.html">
+   Course Home/Announcements
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 1 - Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/syllabus.html">
+   Course Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/covid_statements.html">
+   Covid Safety in the Classroom
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/schedule_F2021.html">
+   Course Schedule - Fall Semester 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/worksheet_steps_in_problem_solving.html">
+   Steps In Problem Solving
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 2 - Data Types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/data_types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/some_review_plus_built_in_functions_arrays_preview.html">
+   Some Review Plus Built-In Functions, Arrays Preview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/week2_lab/lab_wk2.html">
+   Lab Week 2 - Jupyterhub Tutorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/week2_quiz.html">
+   Week 2 quiz
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 3 - Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/data_structures_ii.html">
+   Data Structures II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/week3_quiz.html">
+   Week 3 quiz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/week3_lab/lab_wk3.html">
+   Lab Week 3
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 4 - Scientific Figures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk04/making_plots.html">
+   Making Plots Worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk04/week4_lab/lab_wk4.html">
+   Lab Week 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 5 - Computer Logic
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/logic.html">
+   Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/complicated_logic.html">
+   More Complicated Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/wk05_indexing.html">
+   Indexing worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/week5_quiz.html">
+   Week 5 quiz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/week5_lab/lab_wk5.html">
+   Lab Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/loops_ii.html">
+   Loops II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/week6_quiz.html">
+   Q1)  What does the following cell print?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/week6_lab/lab_wk6.html">
+   Lab Week 6
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 7 - Midterm
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk07/midterm_review.html">
+   Midterm Review
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk07/week7_quiz.html">
+   Week 7 quiz
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 8 - Functions
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../functions_ii.html">
+   Functions II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../quiz_wk08.html">
+   Week 08 Quiz: Functions basics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab Week 8
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 9 - Functions/debugging
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging.html">
+   More Functions &amp; Debugging Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/quiz_wk9.html">
+   Quiz Week 9:  Debugging with Functions solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging_ii.html">
+   Debugging II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/week9_lab/lab_wk9.html">
+   Lab Week 9
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 10 - Interpolation/scipy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/wk10_interpolation_demo.html">
+   Week 10:  Interpolation - some examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/dictionaries_and_f_strings.html">
+   Dictionaries, F String Literals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/quiz_wk10.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 11 - Pandas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk11/pythia_pandas.html">
+   Introduction to Pandas
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk11/week11_lab/lab_wk11.html">
+   Lab Week 11
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk11/wk11_quiz.html">
+   Week 11 quiz
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 12 - Review/File IO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/wk12_worksheet1.html">
+   Week 12 Review Exercises
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/wk12_quiz.html">
+   Name / Student #:
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/wk13_quiz.html">
+   Week 13 Quiz 1 Solution:  Review with basic functions, loops, code tracing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/wk13_quiz2.html">
+   Week 13 Quiz 2:  Review with numpy arrays, basic logical indexing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../assignment1/assignment1.html">
+   Assignment 1 – CO2/temperature
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../assignment02/ast2.html">
+   Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/file_io_practice.html">
+   File IO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/next_steps.html">
+   Next steps
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference_notes/thursday_oct7.html">
+   Notes for Thursday Oct. 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk11/week11_lab/pandas-cheatsheet.html">
+   Pandas Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html">
+   Pythia Pandas Lesson
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/wk08/week8_lab/lab_wk8.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/wk08/week8_lab/lab_wk8.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk08/week8_lab/lab_wk8.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://jupyter.eoastest.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk08/week8_lab/lab_wk8.ipynb&branch=e211_live_main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#as-always-first-import-the-packages-you-ll-need">
+   As always, first import the packages you’ll need
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#now-get-some-data-sets">
+   Now get some data sets.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-your-first-function">
+   Setting up your first function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-your-function">
+   Testing your function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-mean-and-running-median-functions">
+   Running mean and running median functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-input-parameter-check">
+   Adding input parameter check
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-turn-in">
+   What to turn in
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-quick-sanity-check">
+   A quick sanity check
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lab Week 8</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#as-always-first-import-the-packages-you-ll-need">
+   As always, first import the packages you’ll need
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#now-get-some-data-sets">
+   Now get some data sets.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-up-your-first-function">
+   Setting up your first function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-your-function">
+   Testing your function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-mean-and-running-median-functions">
+   Running mean and running median functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#adding-input-parameter-check">
+   Adding input parameter check
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-turn-in">
+   What to turn in
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-quick-sanity-check">
+   A quick sanity check
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab-week-8">
+<h1>Lab Week 8<a class="headerlink" href="#lab-week-8" title="Permalink to this headline">¶</a></h1>
+<p><strong>Objectives:</strong> This week’s lab is about writing code that is reuseable, efficient and well-organized. How do we do this? Functions! The objective here is to take code from week 6 and re-package it in a better, more pythonic style. We will then test the code with a couple of datasets for the lab to make sure it can handle a range of input types and user-specified parameters, while still getting the right answer.</p>
+<p>As an example of how we can reuse code, you will use what you write for this lab as a core function for assignment 1.</p>
+<p>Datasets for this lab can be downloaded by clicking on the file names at:  <a class="reference external" href="https://github.com/phaustin/eosc211_students/tree/e211_live_main/wk08">https://github.com/phaustin/eosc211_students/tree/e211_live_main/wk08</a></p>
+<div class="section" id="as-always-first-import-the-packages-you-ll-need">
+<h2>As always, first import the packages you’ll need<a class="headerlink" href="#as-always-first-import-the-packages-you-ll-need" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;e211_lib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># your posix_to_datetime function will go here (see below for details)</span>
+
+<span class="c1">#</span>
+<span class="c1">#  Remember to comment out the NotImplementedError exception from all the cells you need</span>
+<span class="c1">#  to fill in.  Check to make sure your notebook runs cleanly before you upload to canvas</span>
+<span class="c1">#</span>
+
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [2],</span> in <span class="ni">&lt;cell line: 9&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># your posix_to_datetime function will go here (see below for details)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">#</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> 
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">9</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># IN THIS CELL DEFINE TWO FUNCTIONS WITH THE FOLLOWING NAMES AND SIGNATURES</span>
+
+<span class="c1"># check_inputs(winlen) return winlen</span>
+
+<span class="c1"># running_mean(data, winlen) return running mean</span>
+
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [3],</span> in <span class="ni">&lt;cell line: 8&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># IN THIS CELL DEFINE TWO FUNCTIONS WITH THE FOLLOWING NAMES AND SIGNATURES</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># check_inputs(winlen) return winlen</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> 
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># IN THIS CELL DEFINE YOUR RUNNING MEDIAN FUNCTION WITH THIS NAME AND SIGNATURE</span>
+<span class="c1">#</span>
+<span class="c1"># running_median(data, winlen=7)</span>
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [4],</span> in <span class="ni">&lt;cell line: 5&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># IN THIS CELL DEFINE YOUR RUNNING MEDIAN FUNCTION WITH THIS NAME AND SIGNATURE</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1">#</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># running_median(data, winlen=7)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="now-get-some-data-sets">
+<h2>Now get some data sets.<a class="headerlink" href="#now-get-some-data-sets" title="Permalink to this headline">¶</a></h2>
+<p>Remind yourself of np.load and what <code class="docutils literal notranslate"><span class="pre">.npz</span></code> files contain from the week 6 lab. Also review the week 6 lab to remind yourself about datetime objects are and how to import dates/times into a numpy array of datetime objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get the aircraft data again -- copy from week 6 solution</span>
+<span class="n">aircraft_gps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;aircraft_gps.npz&quot;</span><span class="p">)</span>
+<span class="n">vel</span> <span class="o">=</span> <span class="n">aircraft_gps</span><span class="p">[</span><span class="s2">&quot;vel&quot;</span><span class="p">]</span>
+<span class="n">time</span> <span class="o">=</span> <span class="n">aircraft_gps</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+
+<span class="c1"># very similar for a file with temperatures from Sand Heads, BC</span>
+<span class="n">sand_heads</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;sand_heads_temps.npz&quot;</span><span class="p">)</span>
+<span class="n">temp</span> <span class="o">=</span> <span class="n">sand_heads</span><span class="p">[</span><span class="s2">&quot;temp&quot;</span><span class="p">]</span>
+<span class="n">sand_time</span> <span class="o">=</span> <span class="n">sand_heads</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [5],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># get the aircraft data again -- copy from week 6 solution</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">aircraft_gps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;aircraft_gps.npz&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">vel</span> <span class="o">=</span> <span class="n">aircraft_gps</span><span class="p">[</span><span class="s2">&quot;vel&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">time</span> <span class="o">=</span> <span class="n">aircraft_gps</span><span class="p">[</span><span class="s2">&quot;time&quot;</span><span class="p">]</span>
+
+<span class="ne">NameError</span>: name &#39;np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="setting-up-your-first-function">
+<h2>Setting up your first function<a class="headerlink" href="#setting-up-your-first-function" title="Permalink to this headline">¶</a></h2>
+<p>First define a function called <code class="docutils literal notranslate"><span class="pre">posix_to_datetime</span></code> that takes as input an array of POSIX times and returns a variable <code class="docutils literal notranslate"><span class="pre">dt</span></code> that is a numpy array of datetime objects.  To help you get started the function declaration line and the return statement are provided.  Complete the rest of the fucntion code, making sure to include the docstring.  The structure of your function will look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">posix_to_datetime</span><span class="p">(</span><span class="n">time_array</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &lt;docstring&gt;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="o">&lt;</span><span class="n">function</span> <span class="n">body</span> <span class="n">code</span><span class="o">&gt;</span>
+    
+    <span class="k">return</span> <span class="n">dt</span>
+</pre></div>
+</div>
+<p>Remember that any functions in your code need to be defined <em>before</em> they are used.  So they go at the top of your file, after importing the packages.</p>
+</div>
+<div class="section" id="testing-your-function">
+<h2>Testing your function<a class="headerlink" href="#testing-your-function" title="Permalink to this headline">¶</a></h2>
+<p>You can save yourself a lot of time by testing pieces of your code as you go along.  Test your <code class="docutils literal notranslate"><span class="pre">posix_to_datetime</span></code> function by loading the data sets, calling it and making test plots of each of the two data sets.  e.g., my test plot was made after calling posix_to_datetime, assigning the output to a variable called <code class="docutils literal notranslate"><span class="pre">fly_time</span></code> and making a plot with these code lines.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># quick and dirty plot to check everything is working ok</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fly_time</span><span class="p">,</span> <span class="n">vel</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time [units]&#39;</span><span class="p">)</span>  <span class="c1"># reminding myself to always include units</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">70</span><span class="p">)</span>     <span class="c1"># rotate dates by 70 degrees so they don&#39;t overlap</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;vel [units]&#39;</span><span class="p">);</span>  <span class="c1">#add semicolon to suppress output</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-mean-and-running-median-functions">
+<h2>Running mean and running median functions<a class="headerlink" href="#running-mean-and-running-median-functions" title="Permalink to this headline">¶</a></h2>
+<p>Now take your running mean code from the week6 lab and turn it into a function called <code class="docutils literal notranslate"><span class="pre">running_mean</span></code>.  If your week6 lab code did not work, you can use the solution posted on the course web page under week 6. <code class="docutils literal notranslate"><span class="pre">running_mean</span></code> should take as INPUT arguments <code class="docutils literal notranslate"><span class="pre">data</span></code> (the numpy array of data on which the running mean is to be performed) and <code class="docutils literal notranslate"><span class="pre">winlen</span></code> (the number of points in the running mean window) <strong>in that order</strong>. It should return a variable <code class="docutils literal notranslate"><span class="pre">z</span></code> that contains the running mean values.</p>
+<p>Likewise take your running median code from the week6 lab and turn it into a function called <code class="docutils literal notranslate"><span class="pre">running_median</span></code> that takes as INPUT arguments <code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">winlen</span></code> (again, in that order) and returns a variable <code class="docutils literal notranslate"><span class="pre">zm</span></code> that contains the running median values.</p>
+<p>Again, test your functions by</p>
+<ol class="simple">
+<li><p>calling them</p></li>
+<li><p>plotting the raw data and the running mean/median to check it all looks reasonable</p></li>
+</ol>
+</div>
+<div class="section" id="adding-input-parameter-check">
+<h2>Adding input parameter check<a class="headerlink" href="#adding-input-parameter-check" title="Permalink to this headline">¶</a></h2>
+<p>Now write code that will check that the window length is an odd number, and if it is not add 1 to the length and print a message to the screen informing the user the value of the window length that was passed in, the fact that it was even and the value that it has been corrected to.  Put this code in a function called <code class="docutils literal notranslate"><span class="pre">check_inputs</span></code> that takes as input <code class="docutils literal notranslate"><span class="pre">winlen</span></code>.  It must also return <code class="docutils literal notranslate"><span class="pre">winlen</span></code> either unmodified if it is odd, or modified if it is even.</p>
+<p>Both the running mean and running median functions should call the <code class="docutils literal notranslate"><span class="pre">check_inputs</span></code> function.
+You can call functions from other functions, you just need to (a) keep track of which variables are passed where, and (b) scope (discussed in class).</p>
+<p>Make sure to rerun your code that calls the running mean and running median to check (a) you didn’t break anything, and (b) that <code class="docutils literal notranslate"><span class="pre">check_inputs</span></code> works.</p>
+</div>
+<div class="section" id="what-to-turn-in">
+<h2>What to turn in<a class="headerlink" href="#what-to-turn-in" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>define your posix_to_datetime in cell 2 (remove the exceptions in all fill-in cells)</p></li>
+<li><p>define your check_inputs and running_mean functions in cell 3</p></li>
+<li><p>define  your running_median function in cell 4</p></li>
+</ol>
+<p>Make sure your running_median function works when you test it by executing
+code roughly similar to the cell below
+for either the <code class="docutils literal notranslate"><span class="pre">aircraft</span></code> data set or the <code class="docutils literal notranslate"><span class="pre">temperature</span></code> dataset.  We will run
+code similar to this, with a variety of window sizes and data sets.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">tt</span><span class="p">):</span>
+    <span class="n">time</span><span class="o">=</span><span class="n">posix_to_datetime</span><span class="p">(</span><span class="n">tt</span><span class="p">)</span>
+    <span class="n">windows</span> <span class="o">=</span> <span class="n">choose</span> <span class="n">some</span> <span class="n">windows</span>
+    <span class="n">check</span> <span class="n">various</span> <span class="n">window</span> <span class="n">sizes</span><span class="p">:</span>
+        <span class="n">filtered_data</span> <span class="o">=</span> <span class="n">running_median</span> <span class="o">...</span>
+        <span class="c1">#</span>
+        <span class="c1"># overlay the filtered data on the raw data</span>
+        <span class="c1">#</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">data</span><span class="p">,</span><span class="n">time</span><span class="p">,</span><span class="n">filtered_data</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">70</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y values&#39;</span><span class="p">)</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+        
+<span class="n">main</span><span class="p">(</span><span class="n">vel</span><span class="p">,</span><span class="n">time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="a-quick-sanity-check">
+<h2>A quick sanity check<a class="headerlink" href="#a-quick-sanity-check" title="Permalink to this headline">¶</a></h2>
+<p>This code shows the raw data</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sands Heads data</span>
+<span class="n">temp_time</span> <span class="o">=</span> <span class="n">posix_to_datetime</span><span class="p">(</span><span class="n">sand_time</span><span class="p">)</span>
+
+<span class="c1"># quick and dirty plot to check everything is working ok</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temp_time</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;time [units]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">70</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;temperature [units]&#39;</span><span class="p">);</span>   <span class="c1"># I added semi-colon to suppress text output</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Sands Heads data</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">temp_time</span> <span class="o">=</span> <span class="n">posix_to_datetime</span><span class="p">(</span><span class="n">sand_time</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># quick and dirty plot to check everything is working ok</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">temp_time</span><span class="p">,</span> <span class="n">temp</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;posix_to_datetime&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>The cell below tests window length 32 for the velocity data and
+compares the result at index = 231 with the answer we got with our
+own running_median filter</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy.testing</span> <span class="k">as</span> <span class="nn">nt</span>
+<span class="n">window</span><span class="o">=</span><span class="mi">32</span>
+<span class="n">vel_median_filtered</span> <span class="o">=</span> <span class="n">running_median</span><span class="p">(</span><span class="n">vel</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
+<span class="n">testval</span> <span class="o">=</span> <span class="n">vel_median_filtered</span><span class="p">[</span><span class="mi">231</span><span class="p">]</span>
+<span class="n">nt</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">testval</span><span class="p">,</span><span class="mf">1.95</span><span class="p">,</span><span class="n">rtol</span><span class="o">=</span><span class="mf">1.e-2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [7],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy.testing</span> <span class="k">as</span> <span class="nn">nt</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">window</span><span class="o">=</span><span class="mi">32</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">vel_median_filtered</span> <span class="o">=</span> <span class="n">running_median</span><span class="p">(</span><span class="n">vel</span><span class="p">,</span> <span class="n">window</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">testval</span> <span class="o">=</span> <span class="n">vel_median_filtered</span><span class="p">[</span><span class="mi">231</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">nt</span><span class="o">.</span><span class="n">assert_allclose</span><span class="p">(</span><span class="n">testval</span><span class="p">,</span><span class="mf">1.95</span><span class="p">,</span><span class="n">rtol</span><span class="o">=</span><span class="mf">1.e-2</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;running_median&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You don&#39;t need to enter anything here  -- we have hidden the</span>
+<span class="c1"># code we will use to check your functions in this cell</span>
+<span class="c1"># Just comment out the exception so your notebook will run</span>
+
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [8],</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># You don&#39;t need to enter anything here  -- we have hidden the</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># code we will use to check your functions in this cell</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Just comment out the exception so your notebook will run</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./wk08/week8_lab"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../quiz_wk08.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Week 08 Quiz: Functions basics</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../wk09/debugging.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">More Functions &amp; Debugging Practice</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By UBC<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

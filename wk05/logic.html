@@ -37,22 +37,24 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="More Complicated Logic" href="complicated_logic.html" />
-    <link rel="prev" title="Answers: Lab Week 4" href="../lab_keys/week4_lab/lab_wk4.html" />
+    <link rel="prev" title="Lab Week 4" href="../wk04/week4_lab/lab_wk4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -135,8 +137,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week2_lab/lab_wk2.html">
-   Answers: Lab Week 2 - Jupyterhub Tutorial
+  <a class="reference internal" href="../wk02/week2_lab/lab_wk2.html">
+   Lab Week 2 - Jupyterhub Tutorial
   </a>
  </li>
  <li class="toctree-l1">
@@ -167,8 +169,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week3_lab/lab_wk3_soln.html">
-   Answers: Lab Week 3
+  <a class="reference internal" href="../wk03/week3_lab/lab_wk3.html">
+   Lab Week 3
   </a>
  </li>
 </ul>
@@ -184,8 +186,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week4_lab/lab_wk4.html">
-   Answers: Lab Week 4
+  <a class="reference internal" href="../wk04/week4_lab/lab_wk4.html">
+   Lab Week 4
   </a>
  </li>
 </ul>
@@ -211,18 +213,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="wk05_indexing_soln.html">
-   Week 5 indexing solution
+  <a class="reference internal" href="week5_quiz.html">
+   Week 5 quiz
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="week5_quiz_sol.html">
-   Week 5 quiz solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week5_lab/lab_wk5.html">
-   Answers: Lab Week 5
+  <a class="reference internal" href="week5_lab/lab_wk5.html">
+   Lab Week 5
   </a>
  </li>
 </ul>
@@ -238,28 +235,18 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/loops_soln.html">
-   Loops – Solution
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="../wk06/loops_ii.html">
    Loops II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/loops_ii_soln.html">
-   Loops II solution
+  <a class="reference internal" href="../wk06/week6_quiz.html">
+   Q1)  What does the following cell print?
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk06/week6_quiz_sol.html">
-   Week 6 quiz solution
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week6_lab/lab_wk6.html">
-   Lab Week 6 Solution
+  <a class="reference internal" href="../wk06/week6_lab/lab_wk6.html">
+   Lab Week 6
   </a>
  </li>
 </ul>
@@ -270,13 +257,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk07/midterm_review_sol.html">
-   Midterm Review solution
+  <a class="reference internal" href="../wk07/midterm_review.html">
+   Midterm Review
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk07/week7_quiz_sol.html">
-   Week 7 quiz solution
+  <a class="reference internal" href="../wk07/week7_quiz.html">
+   Week 7 quiz
   </a>
  </li>
 </ul>
@@ -287,23 +274,23 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/functions_soln.html">
-   Functions – solution
+  <a class="reference internal" href="../wk08/functions.html">
+   Functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk08/quiz_wk08_soln.html">
-   Week 08 Quiz: Functions basics -solution
+  <a class="reference internal" href="../wk08/functions_ii.html">
+   Functions II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week8_lab/lab_wk8.html">
-   Lab Week 8 - solution
+  <a class="reference internal" href="../wk08/quiz_wk08.html">
+   Week 08 Quiz: Functions basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../midterm/midterm_2021_key.html">
-   e211 2021t1 midterm solutions
+  <a class="reference internal" href="../wk08/week8_lab/lab_wk8.html">
+   Lab Week 8
   </a>
  </li>
 </ul>
@@ -319,22 +306,17 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/debugging_soln.html">
-   solution: More Functions &amp; Debugging Practice
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/quiz_wk9_soln.html">
+  <a class="reference internal" href="../wk09/quiz_wk9.html">
    Quiz Week 9:  Debugging with Functions solution
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week9_lab/lab_wk9.html">
-   Lab Week 9 - solution
+  <a class="reference internal" href="../wk09/debugging_ii.html">
+   Debugging II
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk09/lab_wk9/lab_wk9.html">
+  <a class="reference internal" href="../wk09/week9_lab/lab_wk9.html">
    Lab Week 9
   </a>
  </li>
@@ -356,7 +338,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk10/quiz_wk10_soln.html">
+  <a class="reference internal" href="../wk10/quiz_wk10.html">
    Week 10 Quiz Solution:  Practice with Dictionaries and Functions
   </a>
  </li>
@@ -373,13 +355,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../lab_keys/week11_lab/lab_wk11.html">
-   Lab Week 11 - solution
+  <a class="reference internal" href="../wk11/week11_lab/lab_wk11.html">
+   Lab Week 11
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk11/wk11_quiz_sol.html">
-   Week 11 quiz solution: pandas
+  <a class="reference internal" href="../wk11/wk11_quiz.html">
+   Week 11 quiz
   </a>
  </li>
 </ul>
@@ -390,13 +372,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/wk12_worksheet1_soln.html">
-   Change worksheet solution
+  <a class="reference internal" href="../wk12/wk12_worksheet1.html">
+   Week 12 Review Exercises
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/wk12_quiz_soln.html">
-   Week 12 Quiz: solution
+  <a class="reference internal" href="../wk12/wk12_quiz.html">
+   Name / Student #:
   </a>
  </li>
 </ul>
@@ -407,18 +389,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/wk13_worksheet1_soln.html">
-   Worksheet Solution: Review Exercises EOSC 211
+  <a class="reference internal" href="../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/wk13_quiz_soln.html">
+  <a class="reference internal" href="../wk13/wk13_quiz.html">
    Week 13 Quiz 1 Solution:  Review with basic functions, loops, code tracing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk13/wk13_quiz2_soln.html">
-   Week 13 Quiz 2 Solution:  Review with numpy arrays, basic logical indexing
+  <a class="reference internal" href="../wk13/wk13_quiz2.html">
+   Week 13 Quiz 2:  Review with numpy arrays, basic logical indexing
   </a>
  </li>
 </ul>
@@ -446,8 +428,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk12/file_io_practice_soln.html">
-   File IO Solution
+  <a class="reference internal" href="../wk12/file_io_practice.html">
+   File IO
   </a>
  </li>
  <li class="toctree-l1">
@@ -473,7 +455,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../wk11/lab_wk11/pandas-cheatsheet.html">
+  <a class="reference internal" href="../wk11/week11_lab/pandas-cheatsheet.html">
    Pandas Cheatsheet
   </a>
  </li>
@@ -531,7 +513,7 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
@@ -558,7 +540,7 @@
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://eosc211.jupyterhub.eoas.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk05/logic.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://jupyter.eoastest.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk05/logic.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -572,7 +554,7 @@
         </div>
 
         <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show">
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
@@ -622,7 +604,60 @@
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Logic</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eosc-211">
+   EOSC 211
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-1">
+   Question 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-2">
+   Question 2
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-3">
+   Question 3
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-4">
+   Question 4
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-5">
+   Question 5
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#question-6">
+   Question 6
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="logic">
@@ -758,14 +793,14 @@ Given two arbitrary values LON1 and LON2 in the range -360 to +360, write a sele
 
               </div>
               
-        
-            <!-- Previous / next buttons -->
+            
+                <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../lab_keys/week4_lab/lab_wk4.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../wk04/week4_lab/lab_wk4.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Answers: Lab Week 4</p>
+            <p class="prev-next-title">Lab Week 4</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="complicated_logic.html" title="next page">
@@ -776,19 +811,17 @@ Given two arbitrary values LON1 and LON2 in the range -360 to +360, write a sele
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-        
+            
         </div>
     </div>
     <footer class="footer">
-    <div class="container">
-      <p>
-        
-          By UBC<br/>
-        
-            &copy; Copyright 2021.<br/>
-      </p>
-    </div>
-  </footer>
+  <p>
+    
+      By UBC<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
 </main>
 
 

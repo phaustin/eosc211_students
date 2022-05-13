@@ -1,0 +1,1435 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab Week 11 &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Week 11 quiz" href="../wk11_quiz.html" />
+    <link rel="prev" title="Introduction to Pandas" href="../pythia_pandas.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../announcements.html">
+   Course Home/Announcements
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 1 - Introduction
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/syllabus.html">
+   Course Overview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/covid_statements.html">
+   Covid Safety in the Classroom
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/schedule_F2021.html">
+   Course Schedule - Fall Semester 2021
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../syllabus/worksheet_steps_in_problem_solving.html">
+   Steps In Problem Solving
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 2 - Data Types
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/data_types.html">
+   Data Types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/some_review_plus_built_in_functions_arrays_preview.html">
+   Some Review Plus Built-In Functions, Arrays Preview
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/week2_lab/lab_wk2.html">
+   Lab Week 2 - Jupyterhub Tutorial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk02/week2_quiz.html">
+   Week 2 quiz
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 3 - Data Structures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/data_structures.html">
+   Data Structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/data_structures_ii.html">
+   Data Structures II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/week3_quiz.html">
+   Week 3 quiz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk03/week3_lab/lab_wk3.html">
+   Lab Week 3
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 4 - Scientific Figures
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk04/making_plots.html">
+   Making Plots Worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk04/week4_lab/lab_wk4.html">
+   Lab Week 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 5 - Computer Logic
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/logic.html">
+   Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/complicated_logic.html">
+   More Complicated Logic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/wk05_indexing.html">
+   Indexing worksheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/week5_quiz.html">
+   Week 5 quiz
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk05/week5_lab/lab_wk5.html">
+   Lab Week 5
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 6 - Loops
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/loops_ii.html">
+   Loops II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/week6_quiz.html">
+   Q1)  What does the following cell print?
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk06/week6_lab/lab_wk6.html">
+   Lab Week 6
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 7 - Midterm
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk07/midterm_review.html">
+   Midterm Review
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk07/week7_quiz.html">
+   Week 7 quiz
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 8 - Functions
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/functions_ii.html">
+   Functions II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/quiz_wk08.html">
+   Week 08 Quiz: Functions basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk08/week8_lab/lab_wk8.html">
+   Lab Week 8
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 9 - Functions/debugging
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging.html">
+   More Functions &amp; Debugging Practice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/quiz_wk9.html">
+   Quiz Week 9:  Debugging with Functions solution
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/debugging_ii.html">
+   Debugging II
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk09/week9_lab/lab_wk9.html">
+   Lab Week 9
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 10 - Interpolation/scipy
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/wk10_interpolation_demo.html">
+   Week 10:  Interpolation - some examples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/dictionaries_and_f_strings.html">
+   Dictionaries, F String Literals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk10/quiz_wk10.html">
+   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 11 - Pandas
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../pythia_pandas.html">
+   Introduction to Pandas
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lab Week 11
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../wk11_quiz.html">
+   Week 11 quiz
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 12 - Review/File IO
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/wk12_worksheet1.html">
+   Week 12 Review Exercises
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/wk12_quiz.html">
+   Name / Student #:
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 13 - Review
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/wk13_worksheet1.html">
+   Review Exercises EOSC 211
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/wk13_quiz.html">
+   Week 13 Quiz 1 Solution:  Review with basic functions, loops, code tracing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/wk13_quiz2.html">
+   Week 13 Quiz 2:  Review with numpy arrays, basic logical indexing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Assignments
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../assignment1/assignment1.html">
+   Assignment 1 – CO2/temperature
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../assignment02/ast2.html">
+   Assignment 2 - Flybys
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Extra topics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk12/file_io_practice.html">
+   File IO
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/e211_colormaps.html">
+   Plotting color images with matplotlib
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../wk13/next_steps.html">
+   Next steps
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Reference material
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference_notes/thursday_oct7.html">
+   Notes for Thursday Oct. 7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas-cheatsheet.html">
+   Pandas Cheatsheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html">
+   Pythia Pandas Lesson
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/wk11/week11_lab/lab_wk11.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/wk11/week11_lab/lab_wk11.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk11/week11_lab/lab_wk11.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://jupyter.eoastest.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk11/week11_lab/lab_wk11.ipynb&branch=e211_live_main"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eosc-211">
+   EOSC 211
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learning-objectives">
+     Learning Objectives:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-folder-trees-and-pathlib">
+   Part 1: Folder Trees and Pathlib
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pathlib">
+     Using Pathlib
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-multiple-folders">
+     Creating Multiple Folders
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#searching-files-and-folders">
+     Searching Files and Folders
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-the-folder-tree">
+     Exploring the Folder Tree
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-data-analysis-with-pandas">
+   Part 2:  Data Analysis With Pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas-dataframes-vs-numpy-arrays">
+     Pandas dataframes vs. numpy arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-reading-beyond-this-lab">
+     Further Reading Beyond This Lab
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-a-csv-file-with-pandas">
+     Reading a CSV file with Pandas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-at-a-glance">
+     Data at a Glance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-the-groupby-function">
+     Using the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       groupby()
+      </span>
+     </code>
+     Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pandas-built-in-plotting">
+     Using Pandas Built-in Plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-your-function">
+     Use your function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-more-demonstration-can-we-see-global-warming-at-yvr">
+     One more demonstration: Can we see global warming at YVR?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-comments">
+     Final Comments
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Lab Week 11</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#eosc-211">
+   EOSC 211
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#learning-objectives">
+     Learning Objectives:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   Introduction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-1-folder-trees-and-pathlib">
+   Part 1: Folder Trees and Pathlib
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pathlib">
+     Using Pathlib
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creating-multiple-folders">
+     Creating Multiple Folders
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#searching-files-and-folders">
+     Searching Files and Folders
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exploring-the-folder-tree">
+     Exploring the Folder Tree
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#part-2-data-analysis-with-pandas">
+   Part 2:  Data Analysis With Pandas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pandas-dataframes-vs-numpy-arrays">
+     Pandas dataframes vs. numpy arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#further-reading-beyond-this-lab">
+     Further Reading Beyond This Lab
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reading-a-csv-file-with-pandas">
+     Reading a CSV file with Pandas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-at-a-glance">
+     Data at a Glance
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-the-groupby-function">
+     Using the
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       groupby()
+      </span>
+     </code>
+     Function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pandas-built-in-plotting">
+     Using Pandas Built-in Plotting
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-your-function">
+     Use your function
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-more-demonstration-can-we-see-global-warming-at-yvr">
+     One more demonstration: Can we see global warming at YVR?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-comments">
+     Final Comments
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="lab-week-11">
+<h1>Lab Week 11<a class="headerlink" href="#lab-week-11" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="eosc-211">
+<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
+<img alt="../../_images/example_plot.png" src="../../_images/example_plot.png" />
+<div class="section" id="learning-objectives">
+<h3>Learning Objectives:<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h3>
+<ol class="simple">
+<li><p>Use the python pathlib module to create a folder tree and organize your data</p></li>
+<li><p>Use a new package, pandas, for data analysis (you can think of pandas as spreadsheets on steroids)</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>  <span class="c1"># this one is new</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>  <span class="c1"># and this one</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="c1">#import scipy.stats as st</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span> <span class="c1"># this shows ALL of the columns of a dataFrame</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>For most people, doing math on a computer means using a spreadsheet:  <a class="reference external" href="https://askwonder.com/research/number-google-sheets-users-worldwide-eoskdoxav">between 0.75 - 2 billion people</a> use either Microsoft Excel
+or Google sheets to get work done every day.  In contrast to numpy arrays, a spreadsheet table can have
+many different data types across columns, and rows and columns can be referenced as named ranges,
+so that a spreadsheet formula might look like <code class="docutils literal notranslate"><span class="pre">=sum(receipts)</span></code>, where <code class="docutils literal notranslate"><span class="pre">receipts</span></code> is the label for
+table column <code class="docutils literal notranslate"><span class="pre">J</span></code>.  Spreadsheets also allow you to do simple database operations, like <a class="reference external" href="https://www.ablebits.com/office-addins-blog/2018/10/31/excel-merge-tables-matching-columns/">merging tables based on an index</a>.</p>
+<p>The python equivalent of a spreadsheet table is a <a class="reference external" href="https://realpython.com/pandas-dataframe/">pandas dataframe</a>, which is a 2-dimensional data type in which columns and rows can be accessed by either column/row numbers
+or index labels.</p>
+<p>Dataframes originated in the statistical languge <code class="docutils literal notranslate"><span class="pre">S</span></code> (the ancestor of <code class="docutils literal notranslate"><span class="pre">R</span></code>) and are central to both statistical
+computing and data analysis.  Pandas is a large library, and we’re going to just skim part of it here, but
+there are great references (including jupyter notebooks) in the reference list below.</p>
+</div>
+<div class="section" id="part-1-folder-trees-and-pathlib">
+<h2>Part 1: Folder Trees and Pathlib<a class="headerlink" href="#part-1-folder-trees-and-pathlib" title="Permalink to this headline">¶</a></h2>
+<p>Before we start working with dataframes, we need to get more organized about how to handle files and folders
+in python.  We’ve been putting data alongside notebooks in a single folder for each lab, but there is
+the obvious problem that the same dataset can be used for multiple projects, and having dozens of files
+in a folder makes it hard to organize your work.</p>
+<p>In this lab we need to construct the following folder tree:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span> <span class="n">myhome</span>
+    <span class="o">+</span> <span class="n">eosc211</span>
+        <span class="o">+</span> <span class="n">lab_wk11</span>
+            <span class="o">+</span> <span class="n">data</span>
+                <span class="o">+</span> <span class="n">raw</span>
+                <span class="o">+</span> <span class="n">processed</span>
+
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">myhome</span></code> is your “home folder” which we will define in below.  On my windows laptop
+<code class="docutils literal notranslate"><span class="pre">myhome</span></code> is <code class="docutils literal notranslate"><span class="pre">C:\Users\phil</span></code> and the full path to <code class="docutils literal notranslate"><span class="pre">processed</span></code> is <code class="docutils literal notranslate"><span class="pre">C:\Users\phil\eosc211\lab_wk11\data\processed</span></code>.  On our jupyterhub <code class="docutils literal notranslate"><span class="pre">myhome</span></code> is <code class="docutils literal notranslate"><span class="pre">/home/jovyan</span></code> and the pathname is <code class="docutils literal notranslate"><span class="pre">/home/jovyan/eosc211/lab_wk11/data/processed</span></code>.</p>
+<div class="section" id="using-pathlib">
+<h3>Using Pathlib<a class="headerlink" href="#using-pathlib" title="Permalink to this headline">¶</a></h3>
+<p>The python pathlib module provides a way to specify folder paths that is portable across macos, windows
+and linux. As a general principle, it is always good to write code that works across operating systems whenever possible. Here is how you locate your home folder with pathlib:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">myhome</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">home</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">myhome</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>myhome=PosixPath(&#39;/home/phil&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>and here is how you use the Path.mkdir method to
+make a nested <code class="docutils literal notranslate"><span class="pre">lab_wk11</span></code> folder (aka directory) below the home folder:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lab11</span> <span class="o">=</span> <span class="n">myhome</span> <span class="o">/</span> <span class="s1">&#39;eosc211/lab_wk11&#39;</span>  <span class="c1"># note the &quot;/&quot; symbol takes on a different meaning here than usual</span>
+<span class="n">lab11</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">lab11</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>lab11=PosixPath(&#39;/home/phil/eosc211/lab_wk11&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="creating-multiple-folders">
+<h3>Creating Multiple Folders<a class="headerlink" href="#creating-multiple-folders" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># create two new folders &quot;raw&quot; and &quot;processed&quot;, which are subfolders of &quot;data&quot;</span>
+<span class="n">new_dirs</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data/raw&#39;</span><span class="p">,</span><span class="s1">&#39;data/processed&#39;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">the_dir</span> <span class="ow">in</span> <span class="n">new_dirs</span><span class="p">:</span>
+    <span class="n">curr_dir</span> <span class="o">=</span> <span class="n">lab11</span> <span class="o">/</span> <span class="n">the_dir</span>
+    <span class="n">curr_dir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="searching-files-and-folders">
+<h3>Searching Files and Folders<a class="headerlink" href="#searching-files-and-folders" title="Permalink to this headline">¶</a></h3>
+<p>Once you have a folder tree you can search through it for files
+matching specific patterns.  This is called <code class="docutils literal notranslate"><span class="pre">globbing</span></code> and the pattern that matches
+any path or name is <code class="docutils literal notranslate"><span class="pre">*</span></code>, known as the <code class="docutils literal notranslate"><span class="pre">wildcard</span></code>.  In the cell below we use globbing to start in the
+<code class="docutils literal notranslate"><span class="pre">lab11</span></code> folder and recursively descend through all that folder’s children, listing them:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">all_dirs</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lab11</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;**/*&#39;</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">this_dir</span> <span class="ow">in</span> <span class="n">all_dirs</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;found </span><span class="si">{</span><span class="n">this_dir</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>found /home/phil/eosc211/lab_wk11/data
+found /home/phil/eosc211/lab_wk11/data/raw
+found /home/phil/eosc211/lab_wk11/data/processed
+found /home/phil/eosc211/lab_wk11/data/weather_YVR.csv
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="exploring-the-folder-tree">
+<h3>Exploring the Folder Tree<a class="headerlink" href="#exploring-the-folder-tree" title="Permalink to this headline">¶</a></h3>
+<p>To see how your folder tree looks from a terminal or explorer/finder, do the following:</p>
+<ol class="simple">
+<li><p>open a miniconda powershell window (on a windows laptop) or a bash terminal on jupyterhub or macos</p></li>
+<li><p>type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~</span></code>  (spanish tilde) to change to your home folder</p></li>
+<li><p>type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">eosc211</span></code> to change to the top folder in our tree.</p></li>
+<li><p>type <code class="docutils literal notranslate"><span class="pre">ls</span></code> to list the folders in the current directory</p></li>
+<li><p>type <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> to move up one folder, or <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">foldername</span></code> to move into a folder named foldername.</p></li>
+<li><p>If you want to add a folder, on the commandline do:
+<code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">foldername</span></code></p></li>
+</ol>
+<p>On your laptop, you can also start explorer (windows) or finder (macos) in a folder by typing:</p>
+<p><code class="docutils literal notranslate"><span class="pre">open</span> <span class="pre">.</span></code>  (for macos)</p>
+<p>or</p>
+<p><code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">.</span></code>  (for windows)</p>
+<p>Try adding a folder to your new eosc211 tree with explorer or finder – does it appear in
+the all_dirs list when you cell above?</p>
+</div>
+</div>
+<div class="section" id="part-2-data-analysis-with-pandas">
+<h2>Part 2:  Data Analysis With Pandas<a class="headerlink" href="#part-2-data-analysis-with-pandas" title="Permalink to this headline">¶</a></h2>
+<p><img alt="../../_images/panda.jpg" src="../../_images/panda.jpg" /> </img></p>
+<p>Check out <a class="reference external" href="http://www.kidssearch.com/PicturesOfPanda.html">the site I found this photo from</a> if you need to relax for a few minutes. Also, look at how the image is referenced (double click here to see raw markdown). Note the file path!</p>
+<p>Pandas is a python library purpose-built for types of data processing we often do in the earth sciences.
+The core object of the pandas library is the <em>dataFrame</em>, which we can think of like a hybridized version
+of a numpy array and a dictionary, laid out to resemble a standard data table.
+Dataframes store data in a 2-d grid,
+but instead of referencing by numerical index, we can give each row and column a sensible name.
+Much easier to keep track of, and provides a level of automatic documentation about the data values.
+Pandas is also a very good choice for parsing <code class="docutils literal notranslate"><span class="pre">.csv</span></code> or <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code> data,
+we can load spreadsheets and manipulate them with all of the pythonic tricks we have gathered over the term.</p>
+<p><strong>Summary</strong></p>
+<ul class="simple">
+<li><p>Pandas is a library for working with <strong>labelled</strong> tabular data (1-D and 2-D)</p>
+<ul>
+<li><p>Data formats include: comma separated values (CSV) and other text files, Excel spreadsheets, HDF5, <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/io.html">and others</a></p></li>
+</ul>
+</li>
+<li><p>With <code class="docutils literal notranslate"><span class="pre">pandas</span></code> you can do pretty much everything you would in a spreadsheet, plus a whole lot more!</p></li>
+</ul>
+<div class="section" id="pandas-dataframes-vs-numpy-arrays">
+<h3>Pandas dataframes vs. numpy arrays<a class="headerlink" href="#pandas-dataframes-vs-numpy-arrays" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Dataframes are <strong>column oriented</strong>, arrays are <strong>row oriented</strong></p></li>
+<li><p>Array items are all of the same dtype (i.e. numpy.float32), dataframe columns can
+have different types (e.g.strings vs. integers)</p></li>
+<li><p>Dataframe columns (referred to as a pandas.Series <a class="reference external" href="https://phaustin.github.io/eosc211_students/wk11/pythia_pandas.html#the-pandas-series">in the week 11 reading</a>)
+can be indexed by name (e.g. “Total area of basin”) or by integer index</p></li>
+<li><p>Dataframe rows can be indexed by number or by a special index (e.g. postal code)</p></li>
+<li><p>Dataframe objects have dozens of methods to summarize and manipulate the data they hold,
+making them similar in features to a lightweight relational database.</p></li>
+</ul>
+</div>
+<div class="section" id="further-reading-beyond-this-lab">
+<h3>Further Reading Beyond This Lab<a class="headerlink" href="#further-reading-beyond-this-lab" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> = <a class="reference external" href="https://pandas.pydata.org/">Python Data Analysis Library</a></p></li>
+<li><p><a class="reference external" href="https://swcarpentry.github.io/python-novice-gapminder/08-data-frames/index.html">software carpentry pandas lesson</a></p></li>
+<li><p>Best book: <a class="reference external" href="https://github.com/wesm/pydata-book">Python for data analysis</a> by Wes McKinney</p></li>
+<li><p>Jennifer Walker’s <a class="reference external" href="https://phaustin.github.io/eosc211_students/wk11/lab_wk11/pandas-cheatsheet.html">Pandas cheatsheet</a></p></li>
+</ul>
+</div>
+<div class="section" id="reading-a-csv-file-with-pandas">
+<h3>Reading a CSV file with Pandas<a class="headerlink" href="#reading-a-csv-file-with-pandas" title="Permalink to this headline">¶</a></h3>
+<p>You should see <code class="docutils literal notranslate"><span class="pre">weather_YVR.csv</span></code> on our canvas homepage, which is a list of 29,000 weather measurements taken
+at the Vancouver International Airport between 1938-2017/ Copy this file into <code class="docutils literal notranslate"><span class="pre">myhome/eosc211/lab_wk11/data</span></code>
+using <code class="docutils literal notranslate"><span class="pre">explorer/finder</span></code>, or if you’re on the hub, the <code class="docutils literal notranslate"><span class="pre">files</span></code> page as demonstrated in class.  If you’ve done this
+correctly then the following wildcard search should find it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">weather_file</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">lab11</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;**/w*csv&#39;</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">weather_file</span><span class="si">=}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>weather_file=PosixPath(&#39;/home/phil/eosc211/lab_wk11/data/weather_YVR.csv&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, import the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file as a pandas dataframe. Your dataframe should include columns <code class="docutils literal notranslate"><span class="pre">Date,</span> <span class="pre">Year,</span> <span class="pre">Month,</span> <span class="pre">Day,</span> <span class="pre">T_mean</span> <span class="pre">(C),</span> <span class="pre">T_high</span> <span class="pre">(C),</span> <span class="pre">T_low</span> <span class="pre">(C),</span> <span class="pre">Rain</span> <span class="pre">(mm),</span> <span class="pre">Snow</span> <span class="pre">(cm),</span> <span class="pre">Total</span> <span class="pre">Precip</span> <span class="pre">(mm)</span></code></p>
+<p>Name the dataframe <code class="docutils literal notranslate"><span class="pre">weather_YVR</span></code></p>
+<p><strong>Hint:</strong> This week’s reading has a helpful example of <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="c1"># show the first 6 lines of the dataframe</span>
+<span class="n">weather_YVR</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [7],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># show the first 6 lines of the dataframe</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">weather_YVR</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-at-a-glance">
+<h3>Data at a Glance<a class="headerlink" href="#data-at-a-glance" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">pandas</span></code> provides many ways to quickly and easily summarize your data. What do each of the following compute?</p>
+<p><code class="docutils literal notranslate"><span class="pre">weather_YVR.shape</span></code> (notice the difference from <code class="docutils literal notranslate"><span class="pre">np.shape(arr)</span></code>, like we use to get the shape of a numpy array)</p>
+<p><code class="docutils literal notranslate"><span class="pre">weather_YVR.columns</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">weather_YVR.mean()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">weather_YVR.describe()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># try each of the above here (dont need to hand in). </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="using-the-groupby-function">
+<h3>Using the <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> Function<a class="headerlink" href="#using-the-groupby-function" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have some ideas about the general characteristics of our data (is the dataset relatively <em>complete</em>? Do the values <em>make sense</em>?), it’s time to do some analysis. Say we would like to know about the cumulative precipitation in each month, averaged over a particular decade (1980-1990, for example). Use pandas built in groupby() function to split the raw data into a separate data frame for each decade (1930-2010).</p>
+<p><strong>Hint:</strong> There is no <code class="docutils literal notranslate"><span class="pre">&quot;decade&quot;</span></code> column in the dataframe, so how are you going to assign each year to its decade using python and then add that information to
+the dataframe for each measurement?</p>
+<p>First think about how you would extract the year of an observation form <code class="docutils literal notranslate"><span class="pre">weather_YVR</span></code>
+row and then how you would convert,
+say, all the years in the 1930s to be assigned to the 1930 decade.  Once you’ve
+figured this out, follow the example in the week11 reading (where they add a <code class="docutils literal notranslate"><span class="pre">month</span></code> column)
+to add a new column called <code class="docutils literal notranslate"><span class="pre">decade</span></code> to the dataframe, and then use groupby on that column to produce a
+groupby object containing a DataFrame for each of the 9 decades.  Finally, use
+the <code class="docutils literal notranslate"><span class="pre">dict(tuple(df_groups)))</span></code> trick to turn that groupby object into a dictionary.  Your dictionary keys
+should look like:  <code class="docutils literal notranslate"><span class="pre">dict_keys([1930,</span> <span class="pre">1940,</span> <span class="pre">1950,</span> <span class="pre">1960,</span> <span class="pre">1970,</span> <span class="pre">1980,</span> <span class="pre">1990,</span> <span class="pre">2000,</span> <span class="pre">2010])</span></code></p>
+<p>Call that dictionary <code class="docutils literal notranslate"><span class="pre">decades</span></code> – we’ll depend on that name in the cells below</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [9],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">decades</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [10],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">assert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">decades</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;decades&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># decades is a dictionary, what are the keys?</span>
+<span class="n">decades</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [11],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># decades is a dictionary, what are the keys?</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">decades</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
+
+<span class="ne">NameError</span>: name &#39;decades&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># okay, so the keys are integers representing each decade. What are the values of the &quot;decades&quot; dict?</span>
+<span class="n">decades</span><span class="p">[</span><span class="mi">1940</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [12],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># okay, so the keys are integers representing each decade. What are the values of the &quot;decades&quot; dict?</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">decades</span><span class="p">[</span><span class="mi">1940</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;decades&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="using-pandas-built-in-plotting">
+<h3>Using Pandas Built-in Plotting<a class="headerlink" href="#using-pandas-built-in-plotting" title="Permalink to this headline">¶</a></h3>
+<p>Let’s display our data with a bar chart, pandas style! This is all still the matplotlib that we know and love,
+but the functions are called via the pandas library, instead of doing it directly. Pandas has some built-in intuition about plot formatting, so oftentimes this takes care of things like axis labels without having to explicitly specify them.</p>
+<p>This cell creates a bar chart of average monthly rainfall for the years 1960-1969:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">the_ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">decades</span><span class="p">[</span><span class="mi">1960</span><span class="p">]</span>
+          <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)[</span><span class="s2">&quot;Rain (mm)&quot;</span><span class="p">]</span>
+          <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+          <span class="o">.</span><span class="n">plot</span>
+          <span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Rain (mm)&quot;</span><span class="p">,</span>
+               <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Average Monthly Rainfall in the 1960s&quot;</span><span class="p">));</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [13],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">the_ax</span> <span class="o">=</span> <span class="p">(</span><span class="n">decades</span><span class="p">[</span><span class="mi">1960</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>           <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)[</span><span class="s2">&quot;Rain (mm)&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>           <span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>           <span class="o">.</span><span class="n">plot</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>           <span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">ylabel</span><span class="o">=</span><span class="s2">&quot;Rain (mm)&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>                <span class="n">title</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Average Monthly Rainfall in the 1960s&quot;</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;decades&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>Using the code in the cell above, write a function called <code class="docutils literal notranslate"><span class="pre">plot_monthly_average()</span></code> which takes a pandas dataframe stored in the <code class="docutils literal notranslate"><span class="pre">decades</span></code> dictionary (remember the keys to the <code class="docutils literal notranslate"><span class="pre">decades</span></code> dictionary are just integers representing each decade, so e.g. <code class="docutils literal notranslate"><span class="pre">decade[1980]</span></code> is the dataframe for the 1980s) and some variable (e.g. <code class="docutils literal notranslate"><span class="pre">YVR_1960</span></code>, <code class="docutils literal notranslate"><span class="pre">Rain</span> <span class="pre">(mm)</span></code>), and creates a bar chart of that variable for each month, averaged over the whole decade. Include a docstring and some checks on the input arguments.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [14],</span> in <span class="ni">&lt;cell line: 2&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="use-your-function">
+<h3>Use your function<a class="headerlink" href="#use-your-function" title="Permalink to this headline">¶</a></h3>
+<p>In the cells below, call your function to create histogram plots of the following:</p>
+<p>A) Mean temperature, by month from 1980-1989</p>
+<p>B) Mean total precip, by month from 1960-1969</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># A)</span>
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [15],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># A)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># B)</span>
+<span class="c1"># YOUR CODE HERE</span>
+<span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NotImplementedError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">Input In [16],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># B)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># YOUR CODE HERE</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">()</span>
+
+<span class="ne">NotImplementedError</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="one-more-demonstration-can-we-see-global-warming-at-yvr">
+<h3>One more demonstration: Can we see global warming at YVR?<a class="headerlink" href="#one-more-demonstration-can-we-see-global-warming-at-yvr" title="Permalink to this headline">¶</a></h3>
+<p>You can do much more with this dataset.  As one more example, here is code to
+compare the decadal change in low temperature, high temperature, and rainfall
+at YVR</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compare_decs</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">decade_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1960</span><span class="p">,</span> <span class="mi">1980</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2010</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">the_decade</span><span class="p">,</span><span class="n">the_df</span> <span class="ow">in</span> <span class="n">decades</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">]</span><span class="o">=</span><span class="p">{}</span>
+    <span class="k">for</span> <span class="n">the_var</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;T_low (C)&#39;</span><span class="p">,</span><span class="s1">&#39;T_high (C)&#39;</span><span class="p">,</span> <span class="s1">&#39;Rain (mm)&#39;</span><span class="p">]:</span>
+        <span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">][</span><span class="n">the_var</span><span class="p">]</span> <span class="o">=</span> <span class="n">the_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)[</span><span class="n">the_var</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [17],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">compare_decs</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">decade_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1960</span><span class="p">,</span> <span class="mi">1980</span><span class="p">,</span> <span class="mi">2000</span><span class="p">,</span> <span class="mi">2010</span><span class="p">]</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">for</span> <span class="n">the_decade</span><span class="p">,</span><span class="n">the_df</span> <span class="ow">in</span> <span class="n">decades</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">]</span><span class="o">=</span><span class="p">{}</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="k">for</span> <span class="n">the_var</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;T_low (C)&#39;</span><span class="p">,</span><span class="s1">&#39;T_high (C)&#39;</span><span class="p">,</span> <span class="s1">&#39;Rain (mm)&#39;</span><span class="p">]:</span>
+
+<span class="ne">NameError</span>: name &#39;decades&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">the_var</span> <span class="o">=</span> <span class="s1">&#39;T_low (C)&#39;</span>
+<span class="k">for</span> <span class="n">the_decade</span> <span class="ow">in</span> <span class="n">decade_list</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">][</span><span class="n">the_var</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">the_decade</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;decadal monthly mean for </span><span class="si">{</span><span class="n">the_var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">Input In [18],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">the_var</span> <span class="o">=</span> <span class="s1">&#39;T_low (C)&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">the_decade</span> <span class="ow">in</span> <span class="n">decade_list</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">][</span><span class="n">the_var</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">the_decade</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;decadal monthly mean for </span><span class="si">{</span><span class="n">the_var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="ne">KeyError</span>: 1960
+</pre></div>
+</div>
+<img alt="../../_images/lab_wk11_35_1.png" src="../../_images/lab_wk11_35_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">the_var</span> <span class="o">=</span> <span class="s1">&#39;T_high (C)&#39;</span>
+<span class="k">for</span> <span class="n">the_decade</span> <span class="ow">in</span> <span class="n">decade_list</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">][</span><span class="n">the_var</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">the_decade</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;decadal monthly mean for </span><span class="si">{</span><span class="n">the_var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">Input In [19],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">the_var</span> <span class="o">=</span> <span class="s1">&#39;T_high (C)&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">the_decade</span> <span class="ow">in</span> <span class="n">decade_list</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">][</span><span class="n">the_var</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">the_decade</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;decadal monthly mean for </span><span class="si">{</span><span class="n">the_var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="ne">KeyError</span>: 1960
+</pre></div>
+</div>
+<img alt="../../_images/lab_wk11_36_1.png" src="../../_images/lab_wk11_36_1.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">the_var</span> <span class="o">=</span> <span class="s1">&#39;Rain (mm)&#39;</span>
+<span class="k">for</span> <span class="n">the_decade</span> <span class="ow">in</span> <span class="n">decade_list</span><span class="p">:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">][</span><span class="n">the_var</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">the_decade</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;decadal monthly mean for </span><span class="si">{</span><span class="n">the_var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">Input In [20],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">the_var</span> <span class="o">=</span> <span class="s1">&#39;Rain (mm)&#39;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">the_decade</span> <span class="ow">in</span> <span class="n">decade_list</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">4</span>     <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">compare_decs</span><span class="p">[</span><span class="n">the_decade</span><span class="p">][</span><span class="n">the_var</span><span class="p">],</span><span class="n">label</span><span class="o">=</span><span class="n">the_decade</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;decadal monthly mean for </span><span class="si">{</span><span class="n">the_var</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="ne">KeyError</span>: 1960
+</pre></div>
+</div>
+<img alt="../../_images/lab_wk11_37_1.png" src="../../_images/lab_wk11_37_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="final-comments">
+<h3>Final Comments<a class="headerlink" href="#final-comments" title="Permalink to this headline">¶</a></h3>
+<p>This lab is just the tip of the iceberg when it comes to using Pandas or other python libraries to do data analysis. We could have just as well completed all of this lab with our familiar numpy arrays and produced the same result – There are always multiple ways to solve the same problem with code, and choosing the best tool for the job is often far from obvious. Choose tools that work for you for the task at hand!</p>
+<p><strong>Optional Extras:</strong> There are other variations of the pandas library, two of which are particularly helpful for geosciences applications.</p>
+<blockquote>
+<div><ol class="simple">
+<li><p><a class="reference external" href="http://xarray.pydata.org/en/stable/index.html">Xarray</a>: <em>Like pandas but in generalized to 3D, 4D.. ND. These are really good for processing field data of the sort that you encounter in meteorology or oceanography, for example, the temperature field in a 3D slice of the atmosphere, salinity in the ocean, currents, etc. Save this link for later and do some exploring!</em></p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><ol class="simple">
+<li><p><a class="reference external" href="https://geopandas.org/en/stable/">Geopandas</a>: <em>A version of pandas with added functionality for parsing common GIS datatypes, like .KML, .shp, .shx, .dbf. You can do pretty much everything in python that you might try in a program like ArcGIS, with the added advantage of looping through big datasets, etc.</em></p></li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./wk11/week11_lab"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../pythia_pandas.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction to Pandas</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../wk11_quiz.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Week 11 quiz</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By UBC<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

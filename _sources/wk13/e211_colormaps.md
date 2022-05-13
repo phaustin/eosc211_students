@@ -7,7 +7,7 @@ jupytext:
     extension: .md
     format_name: myst
     format_version: 0.13
-    jupytext_version: 1.11.5
+    jupytext_version: 1.13.8
 kernelspec:
   display_name: Python 3 (ipykernel)
   language: python
@@ -23,8 +23,6 @@ kernelspec:
   * provide a set of links for future reference about using color to interpret/present image data
 
 ```{code-cell} ipython3
-:trusted: true
-
 import matplotlib.pyplot as plt
 import numpy as np
 from pathlib import Path
@@ -36,8 +34,6 @@ Get a compressed npz archive that holds two [modis](https://modis.gsfc.nasa.gov/
 from [this link](https://github.com/phaustin/eosc211_students/blob/e211_live_main/wk13/sat_temps.npz)
 
 ```{code-cell} ipython3
-:trusted: true
-
 # put sat_temps.npz in the same folder as this notebook
 sat_file = list(Path().glob('*sat_temps.npz'))[0]
 temp_dict = np.load(sat_file)
@@ -47,8 +43,6 @@ list(temp_dict.keys())
 ## Histogram to see the data range
 
 ```{code-cell} ipython3
-:trusted: true
-
 fig, ax = plt.subplots(1,1, figsize=(8,6))
 ax.hist(temp_dict['chan31'].flat);
 ```
@@ -92,8 +86,6 @@ For reference: some background about colormaps (aka palettes) and human color vi
   methods of the [colormap object](https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.Colormap.html)
 
 ```{code-cell} ipython3
-:trusted: true
-
 import copy
 pal = copy.copy(plt.get_cmap("autumn"))
 pal.set_bad("0.75")  # 75% grey for out-of-map cells
@@ -113,8 +105,6 @@ Here's the chan31 temperatures plotted with pcolormesh with the above normalizat
 * [pcolormesh reference](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.pcolormesh.html?highlight=pcolormesh#matplotlib.axes.Axes.pcolormesh)
 
 ```{code-cell} ipython3
-:trusted: true
-
 fig, ax = plt.subplots(1,1,figsize=(10,8))
 col = ax.pcolormesh(temp_dict['chan31'], cmap = pal, norm = the_norm)
 print(type(col))
@@ -130,8 +120,6 @@ print(type(col))
 * [colorbar reference](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.colorbar.html)
 
 ```{code-cell} ipython3
-:trusted: true
-
 colorbar=fig.colorbar(col, shrink=0.95, pad=0.05,extend='both')
 colorbar.set_label('channel31 brightness temperature (K)',rotation=-90,verticalalignment='bottom')
 display(fig)
@@ -142,8 +130,6 @@ display(fig)
 Make a new image with temperatures below 250 set to missing, and all colors mapped to 310 K - 330 K
 
 ```{code-cell} ipython3
-:trusted: true
-
 fig, ax = plt.subplots(1,1,figsize=(10,8))
 chan31 = np.array(temp_dict['chan31'])
 chan31[chan31 < 250] = np.nan
@@ -161,8 +147,6 @@ Make a new image of (channel31 - mean(chan31)) and plot that using a [diverging 
 about normalization for this first pass.
 
 ```{code-cell} ipython3
-:trusted: true
-
 # your code here
 ```
 
