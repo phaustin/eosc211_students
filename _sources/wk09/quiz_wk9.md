@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-# Quiz Week 9:  Debugging with Functions solution
+# Quiz Week 9:  Debugging with Functions
 
 *Name*
 *Student number*
@@ -58,20 +58,12 @@ i2,i1,i3,i4 = def lat_lonbounds_to_indices(lons,lats,lon1,lat1,lon2,lat2)
 sub_lons = lon[i1:i2+1]   
 sub_lats = lat[i3:i4+1]
 ```
-
-```{code-cell} ipython3
-:trusted: true
-
-# example with np.argwhere
-import numpy as np
-x = np.array([ 0, 5, -9 ])
-ix = np.argwhere(x<=0)
-ix
 ```
 
 ## Question 2
 
 In the following version of the code I am hoping to pass my lat, lon bounds as using keyword arguments specified by the dictionary, `lims_dict`.  How would I modify the input arguments to my function now to do this? 
+
 
 ```
 lon = np.arange(0,360,30)

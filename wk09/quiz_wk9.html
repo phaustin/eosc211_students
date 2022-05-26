@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz Week 9: Debugging with Functions solution &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
+    <title>Quiz Week 9: Debugging with Functions &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -307,7 +307,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Quiz Week 9:  Debugging with Functions solution
+   Quiz Week 9:  Debugging with Functions
   </a>
  </li>
  <li class="toctree-l1">
@@ -339,7 +339,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../wk10/quiz_wk10.html">
-   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+   Week 10 Quiz
   </a>
  </li>
 </ul>
@@ -540,7 +540,7 @@ const thebe_selector_output = ".output, .cell_output"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://jupyter.eoastest.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk09/quiz_wk9.md&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://open.jupyter.ubc.ca/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk09/quiz_wk9.md&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -566,11 +566,6 @@ const thebe_selector_output = ".output, .cell_output"
    Question 1
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   Question 2
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -581,7 +576,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Quiz Week 9:  Debugging with Functions solution</h1>
+                <h1>Quiz Week 9:  Debugging with Functions</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -596,11 +591,6 @@ const thebe_selector_output = ".output, .cell_output"
    Question 1
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   Question 2
-  </a>
- </li>
 </ul>
 
                         </nav>
@@ -610,8 +600,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="quiz-week-9-debugging-with-functions-solution">
-<h1>Quiz Week 9:  Debugging with Functions solution<a class="headerlink" href="#quiz-week-9-debugging-with-functions-solution" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="quiz-week-9-debugging-with-functions">
+<h1>Quiz Week 9:  Debugging with Functions<a class="headerlink" href="#quiz-week-9-debugging-with-functions" title="Permalink to this headline">¶</a></h1>
 <p><em>Name</em>
 <em>Student number</em>
 <em>Group:</em></p>
@@ -661,32 +651,19 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># example with np.argwhere</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">9</span> <span class="p">])</span>
-<span class="n">ix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">ix</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+## Question 2
+
+In the following version of the code I am hoping to pass my lat, lon bounds as using keyword arguments specified by the dictionary, `lims_dict`.  How would I modify the input arguments to my function now to do this? 
+
+
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0],
-       [2]])
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="question-2">
-<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
-<p>In the following version of the code I am hoping to pass my lat, lon bounds as using keyword arguments specified by the dictionary, <code class="docutils literal notranslate"><span class="pre">lims_dict</span></code>.  How would I modify the input arguments to my function now to do this?</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">360</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
-<span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">90</span><span class="p">,</span><span class="mi">91</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>   
-<span class="n">lims_dict</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;wlon&quot;</span><span class="p">:</span><span class="mi">250</span><span class="p">,</span><span class="s2">&quot;elon&quot;</span><span class="p">:</span><span class="mi">300</span><span class="p">,</span><span class="s2">&quot;slat&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;nlat&quot;</span><span class="p">:</span><span class="mi">31</span><span class="p">}</span>
-                   
-<span class="n">i1</span><span class="p">,</span><span class="n">i2</span><span class="p">,</span><span class="n">i3</span><span class="p">,</span><span class="n">i4</span> <span class="o">=</span> <span class="n">lat_lonbounds_to_indices</span><span class="p">(</span><span class="o">*</span><span class="n">enter</span> <span class="n">your</span> <span class="nb">input</span> <span class="n">arguments</span> <span class="n">here</span><span class="o">*</span><span class="p">)</span> 
+<p>lon = np.arange(0,360,30)
+lat = np.arange(-90,91,10)<br />
+lims_dict={“wlon”:250,”elon”:300,”slat”:0,”nlat”:31}</p>
+<p>i1,i2,i3,i4 = lat_lonbounds_to_indices(<em>enter your input arguments here</em>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>

@@ -13,7 +13,7 @@ kernelspec:
   name: python3
 ---
 
-## Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+## Week 10 Quiz
 
 +++ {"tags": []}
 
@@ -64,10 +64,3 @@ output=get_commute_stats("bike","car","walk", transport=commute2021)
 print(output)
 ```
 
-### Solution
-
-output: dictionary containing # of people and the min, max times for each commute mode.
-
-```python
-{'bike': [5, 3, 21], 'car': [7, 2, 30], 'walk': [5, 1, 40]}
-```

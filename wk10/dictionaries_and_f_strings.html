@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Week 10 Quiz Solution: Practice with Dictionaries and Functions" href="quiz_wk10.html" />
+    <link rel="next" title="Week 10 Quiz" href="quiz_wk10.html" />
     <link rel="prev" title="Week 10: Interpolation - some examples" href="wk10_interpolation_demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -307,7 +307,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../wk09/quiz_wk9.html">
-   Quiz Week 9:  Debugging with Functions solution
+   Quiz Week 9:  Debugging with Functions
   </a>
  </li>
  <li class="toctree-l1">
@@ -339,7 +339,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="quiz_wk10.html">
-   Week 10 Quiz Solution:  Practice with Dictionaries and Functions
+   Week 10 Quiz
   </a>
  </li>
 </ul>
@@ -540,7 +540,7 @@ const thebe_selector_output = ".output, .cell_output"
                     alt="Interact on binder">Binder</button></a>
         
         
-        <a class="jupyterhub-button" href="https://jupyter.eoastest.xyz/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk10/dictionaries_and_f_strings.ipynb&branch=e211_live_main"><button type="button"
+        <a class="jupyterhub-button" href="https://open.jupyter.ubc.ca/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk10/dictionaries_and_f_strings.ipynb&branch=e211_live_main"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
                 data-placement="left"><img class="jupyterhub-button-logo"
                     src="../_static/images/logo_jupyterhub.svg"
@@ -571,11 +571,6 @@ const thebe_selector_output = ".output, .cell_output"
    Question 1
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   Question 2
-  </a>
- </li>
 </ul>
 
             </nav>
@@ -604,11 +599,6 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#question-1">
    Question 1
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#question-2">
-   Question 2
   </a>
  </li>
 </ul>
@@ -655,22 +645,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="n">drivemed</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">transport</span><span class="p">[</span><span class="s2">&quot;car&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The median commute time for people who drive is </span><span class="si">{</span><span class="n">drivemed</span><span class="si">}</span><span class="s2"> minutes&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The median commute time for people who drive is 4.0 minutes
-</pre></div>
-</div>
-</div>
-</div>
 <p><strong>B) The number of people who ride bikes to UBC</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -679,25 +653,6 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># andrew&#39;s soln</span>
-<span class="n">cyclists</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">transport</span><span class="p">[</span><span class="s2">&quot;bike&quot;</span><span class="p">])</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are </span><span class="si">{</span><span class="n">cyclists</span><span class="si">}</span><span class="s2"> cyclists in EOSC211 this semester.&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>There are 5 cyclists in EOSC211 this semester.
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="question-2">
-<h2>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h2>
-<p>!!!! no direct translation from matlab. formatted print statements are way less complicated in python.</p>
 </div>
 </div>
 
@@ -736,7 +691,7 @@ const thebe_selector_output = ".output, .cell_output"
     <a class='right-next' id="next-link" href="quiz_wk10.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Week 10 Quiz Solution:  Practice with Dictionaries and Functions</p>
+        <p class="prev-next-title">Week 10 Quiz</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
