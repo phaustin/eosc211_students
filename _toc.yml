@@ -16,7 +16,7 @@ parts:
   - caption: Week 3 - Data Structures
     chapters:
       - file: wk03/data_structures.md
-      - file: wk03/data_structures_ii.md
+      - file: wk03/data_structures_ii.ipynb
       - file: wk03/week3_quiz.md
       - file: wk03/week3_lab/lab_wk3.ipynb
   - caption: Week 4 - Scientific Figures
