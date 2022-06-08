@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab Week 5 &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -39,12 +36,13 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -64,7 +62,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +85,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
       
@@ -88,14 +101,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../announcements.html">
-   Course Home/Announcements
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../announcements.html">
+                    Course Home/Announcements
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Week 1 - Introduction
  </span>
@@ -469,100 +483,199 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../../_sources/wk05/week5_lab/lab_wk5.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/wk05/week5_lab/lab_wk5.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk05/week5_lab/lab_wk5.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://open.jupyter.ubc.ca/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk05/week5_lab/lab_wk5.md&branch=e211_live_main"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=lab/tree/wk05/week5_lab/lab_wk5.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://open.jupyter.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=lab/tree/eosc211_students/wk05/week5_lab/lab_wk5.md&branch=e211_live_main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/wk05/week5_lab/lab_wk5.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../_sources/wk05/week5_lab/lab_wk5.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eosc-211">
    EOSC 211
@@ -637,12 +750,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Lab Week 5</h1>
@@ -733,15 +845,16 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab-week-5">
-<h1>Lab Week 5<a class="headerlink" href="#lab-week-5" title="Permalink to this headline">¶</a></h1>
+<h1>Lab Week 5<a class="headerlink" href="#lab-week-5" title="Permalink to this headline">#</a></h1>
 <div class="section" id="eosc-211">
-<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
+<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">#</a></h2>
 <div class="section" id="learning-objectives">
-<h3>Learning Objectives:<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h3>
+<h3>Learning Objectives:<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">#</a></h3>
 <ol class="simple">
 <li><p>Apply our skills with conditional statements <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">elif</span> <span class="pre">else</span></code> to an earth sciences problem</p></li>
 <li><p>Define variables using user input data</p></li>
@@ -751,7 +864,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <hr class="docutils" />
 <div class="section" id="part-1-the-plt-annotate-function-and-formatted-text-tutorial">
-<h2>Part 1: The <code class="docutils literal notranslate"><span class="pre">plt.annotate()</span></code> Function and Formatted Text (Tutorial)<a class="headerlink" href="#part-1-the-plt-annotate-function-and-formatted-text-tutorial" title="Permalink to this headline">¶</a></h2>
+<h2>Part 1: The <code class="docutils literal notranslate"><span class="pre">plt.annotate()</span></code> Function and Formatted Text (Tutorial)<a class="headerlink" href="#part-1-the-plt-annotate-function-and-formatted-text-tutorial" title="Permalink to this headline">#</a></h2>
 <p>This lab will focus on applying some of the new concepts we have learned to work with data very similar to what we have seen before. This week’s dataset is a <em>digital elevation model</em> (DEM) and your challenge is to write a program for the analysis of topographic slopes. Usually datasets are not provided with slopes, instead elevation data are stored in a Digital Elevation Model (DEM), which is basically a large array containing elevation above some datum (usually sea level) over a grid of points. You already saw a DEM in the lab for Week 3, though we didn’t call it by that name. The program you write let a “user” pick a point on a plot of the DEM, then calculate the slope at that point, and use formatted text to tell you whether that point is east-facing, west-facing, or relatively flat. Your code will have to take into account that the world is round if you select a point on the edge of the DEM. A useful way of writing this kind of program is to proceed in a few steps:</p>
 <ul class="simple">
 <li><p>Break up the problem into parts.   One technique useful for programs handling a lot of ‘special cases’ is to make it work for only one of the cases as a starting point.</p></li>
@@ -906,7 +1019,7 @@ to find the closest point on the map to the user specified lat/lon.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="part-2-calculate-the-topographic-slope">
-<h2>Part 2:  Calculate the topographic slope:<a class="headerlink" href="#part-2-calculate-the-topographic-slope" title="Permalink to this headline">¶</a></h2>
+<h2>Part 2:  Calculate the topographic slope:<a class="headerlink" href="#part-2-calculate-the-topographic-slope" title="Permalink to this headline">#</a></h2>
 <p>Your task is to solve the following problem: What is the east/west slope (in degrees) at the point you specify at the input? The east/west slope is a height difference between the point immediately to the RIGHT (or EAST) of the one you picked and the one immediately to the LEFT (or WEST) of it,  divided by the horizontal distance of these two points (think <span class="math notranslate nohighlight">\(slope = \frac{rise}{run}\)</span>). Then take the arc-tangent to get the result in degrees:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -914,7 +1027,7 @@ slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta lon \cdot 
 \]</div>
 <p>Make sure that you understand why the denominator in the equation above gives the horizontal distance of two points at the same latitude.  This is a key thing to know in earth / planetary science!  A picture might help – think back to arc lengths on a circle.</p>
 <div class="section" id="table-1">
-<h3>Table 1:<a class="headerlink" href="#table-1" title="Permalink to this headline">¶</a></h3>
+<h3>Table 1:<a class="headerlink" href="#table-1" title="Permalink to this headline">#</a></h3>
 <p><a name="table-1-constants"></a></p>
 <table class="colwidths-auto table">
 <thead>
@@ -953,7 +1066,7 @@ slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta lon \cdot 
 </div>
 <hr class="docutils" />
 <div class="section" id="a">
-<h3>2a<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h3>
+<h3>2a<a class="headerlink" href="#a" title="Permalink to this headline">#</a></h3>
 <p>In the cell below, write code to make this work for points well within the array (i.e. away from the edges of the map). Make sure the trigonometric functions you use are for degrees and not radians. You may find the functions <code class="docutils literal notranslate"><span class="pre">np.deg2rad()</span></code> and <code class="docutils literal notranslate"><span class="pre">np.rad2deg()</span></code> helpful.  Print the value of your slope as the last line of your cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -988,7 +1101,7 @@ slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta lon \cdot 
 </div>
 <hr class="docutils" />
 <div class="section" id="b">
-<h3>2b<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h3>
+<h3>2b<a class="headerlink" href="#b" title="Permalink to this headline">#</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">if</span></code> <code class="docutils literal notranslate"><span class="pre">elif</span></code> <code class="docutils literal notranslate"><span class="pre">else</span></code> blocks to print the following message to the screen:</p>
 <p>(i)  The latitude and longitude of the selected point (note - latitudes can be N or S, longitudes can always be E)</p>
 <p>(ii)  The elevation AND the slope at that point (in degrees)</p>
@@ -1044,27 +1157,27 @@ slope \approx tan^{-1}\left(\frac{topo(i, j+1) - topo(i, j-1)}{\Delta lon \cdot 
 </div>
 <hr class="docutils" />
 <div class="section" id="part-3-selections-check-arguments">
-<h2>Part 3: Selections - Check Arguments<a class="headerlink" href="#part-3-selections-check-arguments" title="Permalink to this headline">¶</a></h2>
+<h2>Part 3: Selections - Check Arguments<a class="headerlink" href="#part-3-selections-check-arguments" title="Permalink to this headline">#</a></h2>
 <p>Often with user input, your program has to first check their validity to make sure they don’t crash the program or get an unwanted (incorrect) result. We already implemented code to make sure to reference the <em>closest available point to the input</em>, rather than trusting that input will precisely match the values in the arrays <code class="docutils literal notranslate"><span class="pre">lats</span></code> and <code class="docutils literal notranslate"><span class="pre">lons</span></code>.</p>
 <p>In general, it is a good strategy to write code to handle the majority of possible cases, running it, then modifying  to account for “edge cases” as needed.</p>
 <p>What other “bad” inputs can we anticipate that would result in buggy output? What if the user enters a value at the edge of the map (ie <code class="docutils literal notranslate"><span class="pre">usrlon</span> <span class="pre">=</span> <span class="pre">355.5</span></code>), such that there is no <span class="math notranslate nohighlight">\(j+1\)</span> element of the array? What about <code class="docutils literal notranslate"><span class="pre">usrlon</span> <span class="pre">=</span> <span class="pre">0</span></code>? Modify your code from part <strong>2a</strong> as necessary to handle these possibilities. (<strong>hint:</strong> Do you encounter the same problem on both the left and right edges of the map? Why/why not?)</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="to-hand-in">
-<h2>To Hand In:<a class="headerlink" href="#to-hand-in" title="Permalink to this headline">¶</a></h2>
+<h2>To Hand In:<a class="headerlink" href="#to-hand-in" title="Permalink to this headline">#</a></h2>
 <p>In the cell(s) below, write a self contained program (you can recycle code from earlier parts of the lab) that runs through the whole process of <em>import/input, data scrubbing, presentation.</em></p>
 <div class="section" id="import-input">
-<h3>Import/Input<a class="headerlink" href="#import-input" title="Permalink to this headline">¶</a></h3>
+<h3>Import/Input<a class="headerlink" href="#import-input" title="Permalink to this headline">#</a></h3>
 <p>This part should be pretty trivial, just copy/paste the appropriate code from above.  Use the variables
 <code class="docutils literal notranslate"><span class="pre">usrlat</span></code> and <code class="docutils literal notranslate"><span class="pre">usrlon</span></code> to hold your lat/lon coordinates.</p>
 </div>
 <div class="section" id="data-scrubbing">
-<h3>Data Scrubbing<a class="headerlink" href="#data-scrubbing" title="Permalink to this headline">¶</a></h3>
+<h3>Data Scrubbing<a class="headerlink" href="#data-scrubbing" title="Permalink to this headline">#</a></h3>
 <p>Use <code class="docutils literal notranslate"><span class="pre">if</span></code> <code class="docutils literal notranslate"><span class="pre">elif</span></code> <code class="docutils literal notranslate"><span class="pre">else</span></code> statements to handle the possible special cases for user input.  Assume that we
 will run your code for arbitrary values of <code class="docutils literal notranslate"><span class="pre">usrlat</span></code> and <code class="docutils literal notranslate"><span class="pre">usrlon</span></code>.</p>
 </div>
 <div class="section" id="output">
-<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h3>
+<h3>Output<a class="headerlink" href="#output" title="Permalink to this headline">#</a></h3>
 <p>Generate a scientific figure with the following:</p>
 <ul class="simple">
 <li><p>An X marking the selected location</p></li>
@@ -1191,9 +1304,11 @@ will run your code for arbitrary values of <code class="docutils literal notrans
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../week5_quiz.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1209,24 +1324,28 @@ will run your code for arbitrary values of <code class="docutils literal notrans
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By UBC<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
     
-      By UBC<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

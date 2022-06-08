@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Review Exercises EOSC 211 &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,12 +36,13 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -64,7 +62,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +85,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
@@ -88,14 +101,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../announcements.html">
-   Course Home/Announcements
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../announcements.html">
+                    Course Home/Announcements
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Week 1 - Introduction
  </span>
@@ -469,100 +483,199 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/wk13/wk13_worksheet1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk13/wk13_worksheet1.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk13/wk13_worksheet1.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://open.jupyter.ubc.ca/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk13/wk13_worksheet1.ipynb&branch=e211_live_main"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=lab/tree/wk13/wk13_worksheet1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://open.jupyter.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=lab/tree/eosc211_students/wk13/wk13_worksheet1.ipynb&branch=e211_live_main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/wk13/wk13_worksheet1.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/wk13/wk13_worksheet1.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#week-13-worksheet-1">
    Week 13,  Worksheet 1
@@ -653,12 +766,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Review Exercises EOSC 211</h1>
@@ -765,13 +877,14 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="review-exercises-eosc-211">
-<h1>Review Exercises EOSC 211<a class="headerlink" href="#review-exercises-eosc-211" title="Permalink to this headline">¶</a></h1>
+<h1>Review Exercises EOSC 211<a class="headerlink" href="#review-exercises-eosc-211" title="Permalink to this headline">#</a></h1>
 <div class="section" id="week-13-worksheet-1">
-<h2>Week 13,  Worksheet 1<a class="headerlink" href="#week-13-worksheet-1" title="Permalink to this headline">¶</a></h2>
+<h2>Week 13,  Worksheet 1<a class="headerlink" href="#week-13-worksheet-1" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the packages we might need</span>
@@ -783,10 +896,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="question-1-practice-with-while-versus-for-loops">
-<h3>Question 1 -  Practice with while versus for loops<a class="headerlink" href="#question-1-practice-with-while-versus-for-loops" title="Permalink to this headline">¶</a></h3>
+<h3>Question 1 -  Practice with while versus for loops<a class="headerlink" href="#question-1-practice-with-while-versus-for-loops" title="Permalink to this headline">#</a></h3>
 <p>How would you improve the code in the last problem on the quiz to make it work properly using a while loop?  Here’s the code you were given and (in words), what it was supposed to do:</p>
 <div class="section" id="from-quiz">
-<h4>From quiz:<a class="headerlink" href="#from-quiz" title="Permalink to this headline">¶</a></h4>
+<h4>From quiz:<a class="headerlink" href="#from-quiz" title="Permalink to this headline">#</a></h4>
 <p>I want to add together the numbers in an array ‘x’ until my sum exceeds the number in the variable target, then <strong>stop</strong> and return the sum and the number of elements that were summed.  You can assume that there are enough elements in x that I don’t get to the end of the array before reaching the target.  I write the following code which has a semantics error not a syntax error (i.e. it runs but doesn’t do what it was intended to do).  What is output to the screen? (Show your work).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -824,9 +937,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="question-2-basic-function-practice">
-<h3>Question 2: Basic function Practice<a class="headerlink" href="#question-2-basic-function-practice" title="Permalink to this headline">¶</a></h3>
+<h3>Question 2: Basic function Practice<a class="headerlink" href="#question-2-basic-function-practice" title="Permalink to this headline">#</a></h3>
 <div class="section" id="a">
-<h4>A)<a class="headerlink" href="#a" title="Permalink to this headline">¶</a></h4>
+<h4>A)<a class="headerlink" href="#a" title="Permalink to this headline">#</a></h4>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">transp</span></code> that will take as input a 2-D array A, and return the array B where <code class="docutils literal notranslate"><span class="pre">B[i,j]</span> <span class="pre">=</span> <span class="pre">A[j,i]</span></code>. Do not use a built-in python function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -837,7 +950,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="b">
-<h4>B)<a class="headerlink" href="#b" title="Permalink to this headline">¶</a></h4>
+<h4>B)<a class="headerlink" href="#b" title="Permalink to this headline">#</a></h4>
 <p>Add a check to the function code that will exit the function with an error message if A is not a 2-D array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -849,7 +962,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="question-3">
-<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">¶</a></h3>
+<h3>Question 3<a class="headerlink" href="#question-3" title="Permalink to this headline">#</a></h3>
 <p>The function <span class="math notranslate nohighlight">\(e^x\)</span> can be calculated from the following formula:  <span class="math notranslate nohighlight">\(e^x = \Sigma_{k=0}^{\inf} \frac {x^k}{k!} = 1 + x + \frac {x^2} {2!} + \frac {x^3} {3!} + \cdots \)</span>.  You want to write a piece of code that will compute <code class="docutils literal notranslate"><span class="pre">y</span></code> = <span class="math notranslate nohighlight">\(e^x\)</span>, given a value for <code class="docutils literal notranslate"><span class="pre">x</span></code> using this series expansion, keeping all the terms until the difference between successive terms is less than some specified amount, contained in the variable <code class="docutils literal notranslate"><span class="pre">target_err</span></code>.</p>
 <ol class="simple">
 <li><p>Would you use a while loop or a for loop?  Give a reason for your answer.</p></li>
@@ -876,7 +989,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="question-4-code-tracing-logical-indexing-for-loops">
-<h3>Question 4:  code tracing, logical indexing,  for loops<a class="headerlink" href="#question-4-code-tracing-logical-indexing-for-loops" title="Permalink to this headline">¶</a></h3>
+<h3>Question 4:  code tracing, logical indexing,  for loops<a class="headerlink" href="#question-4-code-tracing-logical-indexing-for-loops" title="Permalink to this headline">#</a></h3>
 <p>What is in <code class="docutils literal notranslate"><span class="pre">y</span></code> after exectuing this code?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -900,7 +1013,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="question-5-more-practice-with-for-loops-if-elif">
-<h3>Question 5:  more practice with for loops / if, elif<a class="headerlink" href="#question-5-more-practice-with-for-loops-if-elif" title="Permalink to this headline">¶</a></h3>
+<h3>Question 5:  more practice with for loops / if, elif<a class="headerlink" href="#question-5-more-practice-with-for-loops-if-elif" title="Permalink to this headline">#</a></h3>
 <p>The following code produces a uniform random sample of 3 numbers that lie between
 0 and 10 (excluding 10 exactly).  Use this code to produce<br />
 100  samples each of 3 numbers, and put the samples into one of two lists:  <code class="docutils literal notranslate"><span class="pre">accept_list</span></code> if one of the
@@ -924,7 +1037,7 @@ than 9.  Bonus: How many samples do you think will be in each list?  Increase th
 </div>
 </div>
 <div class="section" id="question-6-harder-practice-with-args">
-<h3>Question 6 (harder):  Practice with *args<a class="headerlink" href="#question-6-harder-practice-with-args" title="Permalink to this headline">¶</a></h3>
+<h3>Question 6 (harder):  Practice with *args<a class="headerlink" href="#question-6-harder-practice-with-args" title="Permalink to this headline">#</a></h3>
 <p>Turn the code in Question 2 into a function that will take as input an arbitrary number of 2-D arrays and return the transpose of each.</p>
 <p>The following resources are useful if you are confused about wrapping / unwrapping of arguments and keyword arguments:</p>
 <ol class="simple">
@@ -941,7 +1054,7 @@ than 9.  Bonus: How many samples do you think will be in each list?  Increase th
 </div>
 </div>
 <div class="section" id="a-few-faq-comments-about-args">
-<h3>A few FAQ / comments about *args<a class="headerlink" href="#a-few-faq-comments-about-args" title="Permalink to this headline">¶</a></h3>
+<h3>A few FAQ / comments about *args<a class="headerlink" href="#a-few-faq-comments-about-args" title="Permalink to this headline">#</a></h3>
 <p>1.  What is the <code class="docutils literal notranslate"><span class="pre">*</span></code> doing in <code class="docutils literal notranslate"><span class="pre">def</span> <span class="pre">trans2(*args1):</span></code>?  The <code class="docutils literal notranslate"><span class="pre">*</span></code> or <code class="docutils literal notranslate"><span class="pre">splat</span></code> can be thought of as an operator.  It is operating on the function arguments and returning a tuple called <code class="docutils literal notranslate"><span class="pre">args1</span></code>:  see the output of  <code class="docutils literal notranslate"><span class="pre">print(f&quot;{type(args1)=}&quot;)</span></code>
 </br></p>
 <p>2.  We made <code class="docutils literal notranslate"><span class="pre">args2</span></code> a list of 2D arrays.  The function returns this which is then “unpacked” into the individual variables <code class="docutils literal notranslate"><span class="pre">B1</span></code>, <code class="docutils literal notranslate"><span class="pre">B2</span></code>, <code class="docutils literal notranslate"><span class="pre">B3</span></code> and <code class="docutils literal notranslate"><span class="pre">B4</span></code>.  This communicates to someone reading the code that you expect
@@ -978,7 +1091,7 @@ short term human memory.   If you need more than that, then use a dictionary tha
 contain the required arguments and require that instead.</p>
 </div>
 <div class="section" id="question-7-type-dimensions-quickies">
-<h3>Question 7:  Type / Dimensions Quickies<a class="headerlink" href="#question-7-type-dimensions-quickies" title="Permalink to this headline">¶</a></h3>
+<h3>Question 7:  Type / Dimensions Quickies<a class="headerlink" href="#question-7-type-dimensions-quickies" title="Permalink to this headline">#</a></h3>
 <p>Use the following variable definitions to answer the questions below</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
 <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
@@ -1029,9 +1142,9 @@ contain the required arguments and require that instead.</p>
 </br></p>
 </div>
 <div class="section" id="question-8-more-quickies">
-<h3>Question 8:  More quickies<a class="headerlink" href="#question-8-more-quickies" title="Permalink to this headline">¶</a></h3>
+<h3>Question 8:  More quickies<a class="headerlink" href="#question-8-more-quickies" title="Permalink to this headline">#</a></h3>
 <div class="section" id="a-bugs">
-<h4>A) Bugs …<a class="headerlink" href="#a-bugs" title="Permalink to this headline">¶</a></h4>
+<h4>A) Bugs …<a class="headerlink" href="#a-bugs" title="Permalink to this headline">#</a></h4>
 <p>What happens when you run the following code?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1052,7 +1165,7 @@ contain the required arguments and require that instead.</p>
 </div>
 </div>
 <div class="section" id="b-more-bugs">
-<h4>B More bugs …<a class="headerlink" href="#b-more-bugs" title="Permalink to this headline">¶</a></h4>
+<h4>B More bugs …<a class="headerlink" href="#b-more-bugs" title="Permalink to this headline">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
@@ -1076,7 +1189,7 @@ contain the required arguments and require that instead.</p>
 </div>
 </div>
 <div class="section" id="c-precedence">
-<h4>C) Precedence<a class="headerlink" href="#c-precedence" title="Permalink to this headline">¶</a></h4>
+<h4>C) Precedence<a class="headerlink" href="#c-precedence" title="Permalink to this headline">#</a></h4>
 <p>What does <code class="docutils literal notranslate"><span class="pre">x</span></code> contain after running the following code? show your work.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1113,9 +1226,11 @@ contain the required arguments and require that instead.</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../wk12/wk12_quiz.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1131,24 +1246,28 @@ contain the required arguments and require that instead.</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By UBC<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
     
-      By UBC<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab Week 2 - Jupyterhub Tutorial &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -39,12 +36,13 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -64,7 +62,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -73,9 +85,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
       
@@ -88,14 +101,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../announcements.html">
-   Course Home/Announcements
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../announcements.html">
+                    Course Home/Announcements
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Week 1 - Introduction
  </span>
@@ -469,100 +483,199 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../../_sources/wk02/week2_lab/lab_wk2.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/wk02/week2_lab/lab_wk2.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk02/week2_lab/lab_wk2.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://open.jupyter.ubc.ca/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk02/week2_lab/lab_wk2.ipynb&branch=e211_live_main"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=lab/tree/wk02/week2_lab/lab_wk2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://open.jupyter.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=lab/tree/eosc211_students/wk02/week2_lab/lab_wk2.ipynb&branch=e211_live_main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/wk02/week2_lab/lab_wk2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../_sources/wk02/week2_lab/lab_wk2.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#eosc-211">
    EOSC 211
@@ -653,12 +766,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Lab Week 2 - Jupyterhub Tutorial</h1>
@@ -765,15 +877,16 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab-week-2-jupyterhub-tutorial">
-<h1>Lab Week 2 - Jupyterhub Tutorial<a class="headerlink" href="#lab-week-2-jupyterhub-tutorial" title="Permalink to this headline">¶</a></h1>
+<h1>Lab Week 2 - Jupyterhub Tutorial<a class="headerlink" href="#lab-week-2-jupyterhub-tutorial" title="Permalink to this headline">#</a></h1>
 <div class="section" id="eosc-211">
-<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">¶</a></h2>
+<h2>EOSC 211<a class="headerlink" href="#eosc-211" title="Permalink to this headline">#</a></h2>
 <div class="section" id="learning-objectives">
-<h3>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">¶</a></h3>
+<h3>Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Connect to Jupyterhub via the course website</p></li>
 <li><p>Create, edit, and delete <em>code cells</em> and <em>markdown cells</em> in a Jupyter notebook</p></li>
@@ -784,12 +897,12 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="intro">
-<h3>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">¶</a></h3>
+<h3>Intro<a class="headerlink" href="#intro" title="Permalink to this headline">#</a></h3>
 <p>Welcome to your first lab in <strong>EOSC 211</strong>! Here we will write our first bits of <em>Python</em> code, explore some of the features of <em>Jupyter Notebooks</em>, and learn how to save and submit your work for grading.</p>
 <p>The URL for this course is -url-. Here you can view all of the notes, worksheets, labs, and assignments for each week of the course. If you are on the website and would like to open an assignment to work on your own copy of it, click the rocketship icon in the top right hand corner of the screen to launch <em><strong>JuptyerHub</strong></em>. After you sign in, Jupyterhub will open an interactive copy of the notebook which you can edit, download, and submit for grading.</p>
 <a class="reference internal image-reference" href="../../_images/open_jhub.png"><img alt="../../_images/open_jhub.png" src="../../_images/open_jhub.png" style="width: 150px;" /></a>
 <div class="section" id="why-python-jupyterhub">
-<h4>Why Python/Jupyterhub?<a class="headerlink" href="#why-python-jupyterhub" title="Permalink to this headline">¶</a></h4>
+<h4>Why Python/Jupyterhub?<a class="headerlink" href="#why-python-jupyterhub" title="Permalink to this headline">#</a></h4>
 <img src=xkcd_python.png>
 <figcaption>Credit: Randal Munroe, xkcd.com</figcaption>
 <p><strong>Python</strong> is a <em>high level programming language,</em> meaning it is comparatively easy for humans to read. Python programs are executed by a <em>python interpreter,</em> which takes python code, reads it into a processor (the CPU on your computer, or in our case, a Jupyterhub server) and returns a result. This process is repeated over and over for each line of code, often taking the result of one line and feeding it into the next.</p>
@@ -799,12 +912,12 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="code-cells-and-markdown-cells">
-<h3>Code Cells and Markdown Cells<a class="headerlink" href="#code-cells-and-markdown-cells" title="Permalink to this headline">¶</a></h3>
+<h3>Code Cells and Markdown Cells<a class="headerlink" href="#code-cells-and-markdown-cells" title="Permalink to this headline">#</a></h3>
 <p>Jupyter notebooks are divided into <em>cells,</em> which can be individually edited and run. To create a new cell, click <code class="docutils literal notranslate"><span class="pre">Insert</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Insert</span> <span class="pre">Cell</span> <span class="pre">Below</span></code>, or press <code class="docutils literal notranslate"><span class="pre">[Alt]</span></code> + <code class="docutils literal notranslate"><span class="pre">[Enter]</span></code> to run the current cell and create a new one below. After you create a cell, you can choose either <em>Code</em> (keyboard shortcut <code class="docutils literal notranslate"><span class="pre">[Esc]</span></code> + <code class="docutils literal notranslate"><span class="pre">[y]</span></code>) or <em>Markdown</em> (<code class="docutils literal notranslate"><span class="pre">[Esc]</span></code> + <code class="docutils literal notranslate"><span class="pre">[m]</span></code>) as the cell type. You can delete cells with <code class="docutils literal notranslate"><span class="pre">Edit</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Cells</span></code></p>
 <p><a class="reference internal" href="../../_images/insert_new_cell.png"><img alt="../../_images/insert_new_cell.png" src="../../_images/insert_new_cell.png" style="width: 180px;" /></a><a class="reference internal" href="../../_images/cell_type.png"><img alt="../../_images/cell_type.png" src="../../_images/cell_type.png" style="width: 150px;" /></a><a class="reference internal" href="../../_images/delete_cells.png"><img alt="../../_images/delete_cells.png" src="../../_images/delete_cells.png" style="width: 180px;" /></a></p>
 </div>
 <div class="section" id="code-cells">
-<h3>Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h3>
+<h3>Code Cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">#</a></h3>
 <p>Code cells are where you can write, edit, and run <em>Python Code.</em> Text entered into code cells will be shown with <em>syntax highlighting,</em> with python <em>reserved words</em> shown in green, <em>strings</em> shown in red, and <em>comments</em> in blue. You can execute code cells by pressing [<span class="math notranslate nohighlight">\(\blacktriangleright\)</span> Run], or <code class="docutils literal notranslate"><span class="pre">[Ctrl]</span></code> + <code class="docutils literal notranslate"><span class="pre">[Enter]</span></code> (execute current cell), <code class="docutils literal notranslate"><span class="pre">[Shift]</span></code> + <code class="docutils literal notranslate"><span class="pre">[Enter]</span></code> (run current cell and select the next one), or <code class="docutils literal notranslate"><span class="pre">[Alt]</span></code> + <code class="docutils literal notranslate"><span class="pre">[Enter]</span></code> (execute current cell and create a new one below).</p>
 <p>Try it yourself! Edit the cell below, replacing the comment (lines of code beginning with “#” are ignored by the python interpreter and not executed) with:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World&quot;</span><span class="p">)</span>
@@ -856,7 +969,7 @@ Hello Atmosphere
 </div>
 <p>If there is something wrong with a code cell, the python interpreter stops execution and produces a <em>traceback message.</em> Traceback messages appear below a code cell and usually give you a helpful hint as to what is wrong and how to fix it. Some messages can be a bit cryptic; if this is the case, try searching <a class="reference external" href="https://stackoverflow.com/">stack overflow</a> or another helpful coding site (many exist). After searching 3 different sites without success, ask the nearest classmate, professor, or TA for help.</p>
 <div class="section" id="variables">
-<h4>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h4>
+<h4>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">#</a></h4>
 <p>Instead of just outputting things to the screen, we can also save data as a <em>variable</em>, and reference it throughout your code, like so:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -884,7 +997,7 @@ Earth  will shortly be destroyed to make space for the new interstellar Vogon hi
 </div>
 </div>
 <div class="section" id="cell-execution-order-and-restarting-the-kernel">
-<h4>Cell Execution Order and Restarting the Kernel<a class="headerlink" href="#cell-execution-order-and-restarting-the-kernel" title="Permalink to this headline">¶</a></h4>
+<h4>Cell Execution Order and Restarting the Kernel<a class="headerlink" href="#cell-execution-order-and-restarting-the-kernel" title="Permalink to this headline">#</a></h4>
 <p>Within a cell, lines of code are executed in the order they are written. Code cells will execute in any order you decide. The order in which cells are executed appears to the left e.g. <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[7]:</span></code> indicates that a particular cell is the seventh cell to be run in the notebook. Try executing the cells below in order:</p>
 <ul class="simple">
 <li><p>cell 1, cell 2, cell 3</p></li>
@@ -931,7 +1044,7 @@ Earth  will shortly be destroyed to make space for the new interstellar Vogon hi
 </div>
 </div>
 <div class="section" id="math-in-python">
-<h4>Math in Python<a class="headerlink" href="#math-in-python" title="Permalink to this headline">¶</a></h4>
+<h4>Math in Python<a class="headerlink" href="#math-in-python" title="Permalink to this headline">#</a></h4>
 <p>The Python core contains functionality for doing basic math. Later in the course, we will learn how to <em>import</em> further functionality for doing not-so-basic math. The syntax for math in Python is summarized below:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -988,7 +1101,7 @@ Earth  will shortly be destroyed to make space for the new interstellar Vogon hi
 </div>
 </div>
 <div class="section" id="math-with-variables">
-<h4>Math With Variables<a class="headerlink" href="#math-with-variables" title="Permalink to this headline">¶</a></h4>
+<h4>Math With Variables<a class="headerlink" href="#math-with-variables" title="Permalink to this headline">#</a></h4>
 <p>Just like we could print <em>variables</em> to the screen, we can assign and reference variables within calculations. For example, the circumference <span class="math notranslate nohighlight">\(C\)</span> of a circle is:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1013,7 +1126,7 @@ C = 2\pi r
 </div>
 </div>
 <div class="section" id="markdown-cells">
-<h3>Markdown Cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline">¶</a></h3>
+<h3>Markdown Cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline">#</a></h3>
 <p>One of the big learning goals in this course is writing code that is <em>well documented</em>. It should be easy for another programmer (or your future self) to look at your code and understand what is happening in each code cell and why. A major reason we have elected to teach this course with Jupyter Notebooks is their ability to show nicely formatted commentary between snippets of executable computer code.</p>
 <p>Unlike code cells, <em>markdown cells</em> don’t execute or produce outputs, they simply <em>render</em> plain text into nicely formatted paragraphs. The cell you are reading right now is written in markdown; double click on it to see the plain text before rendering. Press <code class="docutils literal notranslate"><span class="pre">[Shift]</span></code> + <code class="docutils literal notranslate"><span class="pre">[Enter]</span></code> to re-render the cell.</p>
 <p>The main focus of this course is writing <em>Python</em> code, so you won’t be expected to learn every part of the markdown syntax  (but feel free to make your notebooks/labs as fancy as you like, we encourage it!). You will need to be able to edit markdown cells in order to complete long answer questions, like so:</p>
@@ -1021,23 +1134,23 @@ C = 2\pi r
 <p>your answer here</p>
 </div>
 <div class="section" id="saving-and-submitting-assignments">
-<h3>Saving and Submitting Assignments<a class="headerlink" href="#saving-and-submitting-assignments" title="Permalink to this headline">¶</a></h3>
+<h3>Saving and Submitting Assignments<a class="headerlink" href="#saving-and-submitting-assignments" title="Permalink to this headline">#</a></h3>
 <p>As you create or edit a Jupyter Notebook, you can save your work by clicking <code class="docutils literal notranslate"><span class="pre">File</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">and</span> <span class="pre">Checkpoint</span></code> (or <code class="docutils literal notranslate"><span class="pre">[Ctrl]</span></code> + <code class="docutils literal notranslate"><span class="pre">[s]</span></code>). This will save your notebook on the Jupyterhub server in the cloud. To download a notebook to your own computer, select <code class="docutils literal notranslate"><span class="pre">File</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">as</span></code> <span class="math notranslate nohighlight">\(\rightarrow\)</span> <code class="docutils literal notranslate"><span class="pre">Notebook</span> <span class="pre">(.ipynb)</span></code>.</p>
 <p>It is <em><strong>very good programming practice</strong></em> to keep at least 2 copies of each notebook in at least 2 locations (e.g. on the jupyterhub server and on your laptop) and we highly recommend doing this to prevent losing work.</p>
 <p>To hand in an assignment, download your final copy as a .ipynb and upload it via the link to that assignment on canvas</p>
 </div>
 </div>
 <div class="section" id="to-hand-in-by-the-end-of-this-lab">
-<h2>To hand in by the end of this lab<a class="headerlink" href="#to-hand-in-by-the-end-of-this-lab" title="Permalink to this headline">¶</a></h2>
+<h2>To hand in by the end of this lab<a class="headerlink" href="#to-hand-in-by-the-end-of-this-lab" title="Permalink to this headline">#</a></h2>
 <p>Write your answers in the cells below and submit your lab via Canvas</p>
 <div class="section" id="question-1">
-<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">#</a></h3>
 <p><strong>What motivated you to sign up for this course?  Are you most interested in Earth, Ocean, or Atmospheric Science? (or something else?)</strong></p>
 <p><strong>(Double click to edit the markdown cell below, <code class="docutils literal notranslate"><span class="pre">[Ctrl]</span></code> + <code class="docutils literal notranslate"><span class="pre">[Enter]</span></code> to render)</strong></p>
 <p>your answer here</p>
 </div>
 <div class="section" id="question-2">
-<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">#</a></h3>
 <p><strong>We can calculate travel time <span class="math notranslate nohighlight">\(t\)</span> given distance <span class="math notranslate nohighlight">\(d\)</span> and speed <span class="math notranslate nohighlight">\(v\)</span> with</strong></p>
 <div class="math notranslate nohighlight">
 \[
@@ -1076,7 +1189,7 @@ t = \frac{d}{v}
 </div>
 </div>
 <div class="section" id="helpful-terminology">
-<h2>Helpful Terminology<a class="headerlink" href="#helpful-terminology" title="Permalink to this headline">¶</a></h2>
+<h2>Helpful Terminology<a class="headerlink" href="#helpful-terminology" title="Permalink to this headline">#</a></h2>
 <p><strong>Python:</strong> a high level programming language popular among scientists. Python code is saved with the extension <code class="docutils literal notranslate"><span class="pre">.py</span></code> and can be run on any computer with a python interpreter installed on it. We are using version the <em>miniconda distribution, version 3.7</em> for this course.</p>
 <p><strong>Jupyter Notebooks:</strong> an <em>Integrated Development Environment</em> for writing python code that runs in a web browser (i.e. Chrome, Firefox). Notebooks are comprised of cells, which are either executable python code or rendered markdown text. Notebooks contain and execute python code, but are saved with the extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code></p>
 <p><strong>Jupyterhub:</strong> a <em>computational environment</em> for running jupyter notebooks in the cloud, designed specifically for applications like teaching or collaborative research. The EOSC211 course hub is available online and requires no installation on your own machine. Later in the course, we will talk about installing python yourself and developing your own individual workflow.</p>
@@ -1105,9 +1218,11 @@ t = \frac{d}{v}
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../some_review_plus_built_in_functions_arrays_preview.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1123,24 +1238,28 @@ t = \frac{d}{v}
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By UBC<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
     
-      By UBC<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

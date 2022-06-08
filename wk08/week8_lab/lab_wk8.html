@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lab Week 8 &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -39,12 +36,13 @@
     <script src="../../_static/doctools.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -62,7 +60,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +83,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
       
       
@@ -86,14 +99,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../announcements.html">
-   Course Home/Announcements
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../announcements.html">
+                    Course Home/Announcements
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Week 1 - Introduction
  </span>
@@ -467,100 +481,199 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../../_sources/wk08/week8_lab/lab_wk8.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/wk08/week8_lab/lab_wk8.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk08/week8_lab/lab_wk8.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://open.jupyter.ubc.ca/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk08/week8_lab/lab_wk8.ipynb&branch=e211_live_main"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=lab/tree/wk08/week8_lab/lab_wk8.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://open.jupyter.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=lab/tree/eosc211_students/wk08/week8_lab/lab_wk8.ipynb&branch=e211_live_main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../../_sources/wk08/week8_lab/lab_wk8.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../../_sources/wk08/week8_lab/lab_wk8.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#as-always-first-import-the-packages-you-ll-need">
    As always, first import the packages you’ll need
@@ -603,12 +716,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Lab Week 8</h1>
@@ -667,16 +779,17 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lab-week-8">
-<h1>Lab Week 8<a class="headerlink" href="#lab-week-8" title="Permalink to this headline">¶</a></h1>
+<h1>Lab Week 8<a class="headerlink" href="#lab-week-8" title="Permalink to this headline">#</a></h1>
 <p><strong>Objectives:</strong> This week’s lab is about writing code that is reuseable, efficient and well-organized. How do we do this? Functions! The objective here is to take code from week 6 and re-package it in a better, more pythonic style. We will then test the code with a couple of datasets for the lab to make sure it can handle a range of input types and user-specified parameters, while still getting the right answer.</p>
 <p>As an example of how we can reuse code, you will use what you write for this lab as a core function for assignment 1.</p>
 <p>Datasets for this lab can be downloaded by clicking on the file names at:  <a class="reference external" href="https://github.com/phaustin/eosc211_students/tree/e211_live_main/wk08">https://github.com/phaustin/eosc211_students/tree/e211_live_main/wk08</a></p>
 <div class="section" id="as-always-first-import-the-packages-you-ll-need">
-<h2>As always, first import the packages you’ll need<a class="headerlink" href="#as-always-first-import-the-packages-you-ll-need" title="Permalink to this headline">¶</a></h2>
+<h2>As always, first import the packages you’ll need<a class="headerlink" href="#as-always-first-import-the-packages-you-ll-need" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">e211_lib</span> <span class="kn">import</span> <span class="n">e211</span>
@@ -787,7 +900,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="now-get-some-data-sets">
-<h2>Now get some data sets.<a class="headerlink" href="#now-get-some-data-sets" title="Permalink to this headline">¶</a></h2>
+<h2>Now get some data sets.<a class="headerlink" href="#now-get-some-data-sets" title="Permalink to this headline">#</a></h2>
 <p>Remind yourself of np.load and what <code class="docutils literal notranslate"><span class="pre">.npz</span></code> files contain from the week 6 lab. Also review the week 6 lab to remind yourself about datetime objects are and how to import dates/times into a numpy array of datetime objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -819,7 +932,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="setting-up-your-first-function">
-<h2>Setting up your first function<a class="headerlink" href="#setting-up-your-first-function" title="Permalink to this headline">¶</a></h2>
+<h2>Setting up your first function<a class="headerlink" href="#setting-up-your-first-function" title="Permalink to this headline">#</a></h2>
 <p>First define a function called <code class="docutils literal notranslate"><span class="pre">posix_to_datetime</span></code> that takes as input an array of POSIX times and returns a variable <code class="docutils literal notranslate"><span class="pre">dt</span></code> that is a numpy array of datetime objects.  To help you get started the function declaration line and the return statement are provided.  Complete the rest of the fucntion code, making sure to include the docstring.  The structure of your function will look something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">posix_to_datetime</span><span class="p">(</span><span class="n">time_array</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -834,7 +947,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Remember that any functions in your code need to be defined <em>before</em> they are used.  So they go at the top of your file, after importing the packages.</p>
 </div>
 <div class="section" id="testing-your-function">
-<h2>Testing your function<a class="headerlink" href="#testing-your-function" title="Permalink to this headline">¶</a></h2>
+<h2>Testing your function<a class="headerlink" href="#testing-your-function" title="Permalink to this headline">#</a></h2>
 <p>You can save yourself a lot of time by testing pieces of your code as you go along.  Test your <code class="docutils literal notranslate"><span class="pre">posix_to_datetime</span></code> function by loading the data sets, calling it and making test plots of each of the two data sets.  e.g., my test plot was made after calling posix_to_datetime, assigning the output to a variable called <code class="docutils literal notranslate"><span class="pre">fly_time</span></code> and making a plot with these code lines.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># quick and dirty plot to check everything is working ok</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">fly_time</span><span class="p">,</span> <span class="n">vel</span><span class="p">)</span>
@@ -845,7 +958,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="running-mean-and-running-median-functions">
-<h2>Running mean and running median functions<a class="headerlink" href="#running-mean-and-running-median-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Running mean and running median functions<a class="headerlink" href="#running-mean-and-running-median-functions" title="Permalink to this headline">#</a></h2>
 <p>Now take your running mean code from the week6 lab and turn it into a function called <code class="docutils literal notranslate"><span class="pre">running_mean</span></code>.  If your week6 lab code did not work, you can use the solution posted on the course web page under week 6. <code class="docutils literal notranslate"><span class="pre">running_mean</span></code> should take as INPUT arguments <code class="docutils literal notranslate"><span class="pre">data</span></code> (the numpy array of data on which the running mean is to be performed) and <code class="docutils literal notranslate"><span class="pre">winlen</span></code> (the number of points in the running mean window) <strong>in that order</strong>. It should return a variable <code class="docutils literal notranslate"><span class="pre">z</span></code> that contains the running mean values.</p>
 <p>Likewise take your running median code from the week6 lab and turn it into a function called <code class="docutils literal notranslate"><span class="pre">running_median</span></code> that takes as INPUT arguments <code class="docutils literal notranslate"><span class="pre">data</span></code> and <code class="docutils literal notranslate"><span class="pre">winlen</span></code> (again, in that order) and returns a variable <code class="docutils literal notranslate"><span class="pre">zm</span></code> that contains the running median values.</p>
 <p>Again, test your functions by</p>
@@ -855,14 +968,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ol>
 </div>
 <div class="section" id="adding-input-parameter-check">
-<h2>Adding input parameter check<a class="headerlink" href="#adding-input-parameter-check" title="Permalink to this headline">¶</a></h2>
+<h2>Adding input parameter check<a class="headerlink" href="#adding-input-parameter-check" title="Permalink to this headline">#</a></h2>
 <p>Now write code that will check that the window length is an odd number, and if it is not add 1 to the length and print a message to the screen informing the user the value of the window length that was passed in, the fact that it was even and the value that it has been corrected to.  Put this code in a function called <code class="docutils literal notranslate"><span class="pre">check_inputs</span></code> that takes as input <code class="docutils literal notranslate"><span class="pre">winlen</span></code>.  It must also return <code class="docutils literal notranslate"><span class="pre">winlen</span></code> either unmodified if it is odd, or modified if it is even.</p>
 <p>Both the running mean and running median functions should call the <code class="docutils literal notranslate"><span class="pre">check_inputs</span></code> function.
 You can call functions from other functions, you just need to (a) keep track of which variables are passed where, and (b) scope (discussed in class).</p>
 <p>Make sure to rerun your code that calls the running mean and running median to check (a) you didn’t break anything, and (b) that <code class="docutils literal notranslate"><span class="pre">check_inputs</span></code> works.</p>
 </div>
 <div class="section" id="what-to-turn-in">
-<h2>What to turn in<a class="headerlink" href="#what-to-turn-in" title="Permalink to this headline">¶</a></h2>
+<h2>What to turn in<a class="headerlink" href="#what-to-turn-in" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>define your posix_to_datetime in cell 2 (remove the exceptions in all fill-in cells)</p></li>
 <li><p>define your check_inputs and running_mean functions in cell 3</p></li>
@@ -891,7 +1004,7 @@ code similar to this, with a variety of window sizes and data sets.</p>
 </div>
 </div>
 <div class="section" id="a-quick-sanity-check">
-<h2>A quick sanity check<a class="headerlink" href="#a-quick-sanity-check" title="Permalink to this headline">¶</a></h2>
+<h2>A quick sanity check<a class="headerlink" href="#a-quick-sanity-check" title="Permalink to this headline">#</a></h2>
 <p>This code shows the raw data</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1001,9 +1114,11 @@ own running_median filter</p>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../quiz_wk08.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1019,24 +1134,28 @@ own running_median filter</p>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By UBC<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
     
-      By UBC<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introduction to Pandas &#8212; EOSC211 - Computer Methods for Earth, Ocean, and Atmospheric Scientists</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,20 +19,16 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -39,12 +36,13 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -62,7 +60,21 @@ const thebe_selector_output = ".output, .cell_output"
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -71,9 +83,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
       
@@ -86,14 +99,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../announcements.html">
-   Course Home/Announcements
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../announcements.html">
+                    Course Home/Announcements
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Week 1 - Introduction
  </span>
@@ -467,100 +481,199 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        <a class="dropdown-buttons"
-            href="../_sources/wk11/pythia_pandas.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/wk11/pythia_pandas.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=tree/wk11/pythia_pandas.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        <a class="jupyterhub-button" href="https://open.jupyter.ubc.ca/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=tree/eosc211_students/wk11/pythia_pandas.ipynb&branch=e211_live_main"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
-                data-placement="left"><img class="jupyterhub-button-logo"
-                    src="../_static/images/logo_jupyterhub.svg"
-                    alt="Interact on JupyterHub">JupyterHub</button></a>
-        
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/phaustin/eosc211_students/e211_live_main?urlpath=lab/tree/wk11/pythia_pandas.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://open.jupyter.ubc.ca/jupyter/hub/user-redirect/git-pull?repo=https://github.com/phaustin/eosc211_students&urlpath=lab/tree/eosc211_students/wk11/pythia_pandas.ipynb&branch=e211_live_main"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/wk11/pythia_pandas.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download notebook file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="../_sources/wk11/pythia_pandas.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#overview">
    Overview
@@ -760,12 +873,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Introduction to Pandas</h1>
@@ -981,14 +1093,15 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <center><img src="https://github.com/pandas-dev/pandas/raw/master/web/pandas/static/img/pandas.svg" alt="pandas Logo" style="width: 800px;"/></center>
 <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-pandas">
-<h1>Introduction to Pandas<a class="headerlink" href="#introduction-to-pandas" title="Permalink to this headline">¶</a></h1>
+<h1>Introduction to Pandas<a class="headerlink" href="#introduction-to-pandas" title="Permalink to this headline">#</a></h1>
 <div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p>Introduction to pandas data structures</p></li>
 <li><p>How to slice and dice pandas dataframes and dataseries</p></li>
@@ -996,14 +1109,14 @@ const thebe_selector_output = ".output, .cell_output"
 </ol>
 </div>
 <div class="section" id="credits">
-<h2>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">¶</a></h2>
+<h2>Credits<a class="headerlink" href="#credits" title="Permalink to this headline">#</a></h2>
 <p>This notebook is part of the <a class="reference external" href="https://foundations.projectpythia.org/core/pandas/pandas.html">Project Pythia foundations series</a> (<a class="reference external" href="https://github.com/ProjectPythia/pythia-foundations">link to github repo</a>).  <a class="reference external" href="https://github.com/ProjectPythia/pythia-foundations/blob/main/LICENSE">LICENSE</a></p>
 <ul class="simple">
 <li><p><strong>Time to learn</strong>: 60 minutes</p></li>
 </ul>
 </div>
 <div class="section" id="imports">
-<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">#</a></h2>
 <p>You will often see the nickname <code class="docutils literal notranslate"><span class="pre">pd</span></code> used as an abbreviation for pandas in the import statement, just like <code class="docutils literal notranslate"><span class="pre">numpy</span></code> is often imported as <code class="docutils literal notranslate"><span class="pre">np</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1016,13 +1129,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="the-pandas-dataframe">
-<h2>The pandas <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/dsintro.html#dataframe"><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a>…<a class="headerlink" href="#the-pandas-dataframe" title="Permalink to this headline">¶</a></h2>
+<h2>The pandas <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/dsintro.html#dataframe"><code class="docutils literal notranslate"><span class="pre">DataFrame</span></code></a>…<a class="headerlink" href="#the-pandas-dataframe" title="Permalink to this headline">#</a></h2>
 <p>… is a <strong>labeled</strong>, two dimensional columnal structure similar to a table, spreadsheet, or the R <code class="docutils literal notranslate"><span class="pre">data.frame</span></code>.</p>
 <p><img alt="dataframe schematic" src="https://github.com/pandas-dev/pandas/raw/master/doc/source/_static/schemas/01_table_dataframe.svg" /></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">columns</span></code> that make up our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> can be lists, dictionaries, NumPy arrays, pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code>, or more. Within these <code class="docutils literal notranslate"><span class="pre">columns</span></code> our data can be any texts, numbers, dates and times, or many other data types you may have encountered in Python and NumPy. Shown here on the left in dark gray, our very first <code class="docutils literal notranslate"><span class="pre">column</span></code>  is uniquely referrred to as an <code class="docutils literal notranslate"><span class="pre">Index</span></code>, and this contains information characterizing each row of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Similar to any other <code class="docutils literal notranslate"><span class="pre">column</span></code>, the <code class="docutils literal notranslate"><span class="pre">index</span></code> can label our rows by text, numbers, <code class="docutils literal notranslate"><span class="pre">datetime</span></code>s (a popular one!), or more.</p>
 </div>
 <div class="section" id="sea-surface-temperature-measurements">
-<h2>Sea surface temperature measurements<a class="headerlink" href="#sea-surface-temperature-measurements" title="Permalink to this headline">¶</a></h2>
+<h2>Sea surface temperature measurements<a class="headerlink" href="#sea-surface-temperature-measurements" title="Permalink to this headline">#</a></h2>
 <p>For this notebook we will be looking at temperature timeseries used to monitor the  El Niño Southern Oscillation (ENSO). The data are provided by  the US National Climatic Data Center.  You can read about the regions
 corresponding to the various sea surface temperatures (Nino12, Nino3 and Nino4) <a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">at the NCDC website</a>.</p>
 <p><a class="reference external" href="https://drive.google.com/file/d/1Wf_FQglTU4fMZ5imAsHczAr0hcg4h1Ej/view?usp=sharing">Here is an animation showing</a> the Southern Oscilation</p>
@@ -1476,7 +1589,7 @@ fluctuation about the mean.</p>
 </div>
 </div>
 <div class="section" id="the-pandas-series">
-<h2>The pandas <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/dsintro.html#series"><code class="docutils literal notranslate"><span class="pre">Series</span></code></a>…<a class="headerlink" href="#the-pandas-series" title="Permalink to this headline">¶</a></h2>
+<h2>The pandas <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/dsintro.html#series"><code class="docutils literal notranslate"><span class="pre">Series</span></code></a>…<a class="headerlink" href="#the-pandas-series" title="Permalink to this headline">#</a></h2>
 <p>… is essentially any one of the columns of our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, with its accompanying <code class="docutils literal notranslate"><span class="pre">Index</span></code> to provide a label for each value in our column.</p>
 <p><img alt="pandas Series" src="https://github.com/pandas-dev/pandas/raw/master/doc/source/_static/schemas/01_table_series.svg" /></p>
 <p>The pandas <code class="docutils literal notranslate"><span class="pre">Series</span></code> is a fast and capable 1-dimensional array of nearly any data type we could want, and it can behave very similarly to a NumPy <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> or a Python <code class="docutils literal notranslate"><span class="pre">dict</span></code>. You can take a look at any of the <code class="docutils literal notranslate"><span class="pre">Series</span></code> that make up your <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with its label and the Python <code class="docutils literal notranslate"><span class="pre">dict</span></code> notation, or with dot-shorthand:</p>
@@ -1531,14 +1644,14 @@ Name: Nino34, Length: 472, dtype: float64
 </div>
 </div>
 <div class="section" id="slicing-and-dicing-the-dataframe-and-series">
-<h2>Slicing and Dicing the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#slicing-and-dicing-the-dataframe-and-series" title="Permalink to this headline">¶</a></h2>
+<h2>Slicing and Dicing the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> and <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#slicing-and-dicing-the-dataframe-and-series" title="Permalink to this headline">#</a></h2>
 <p>We will expand on what you just saw, soon! Importantly,</p>
 <blockquote>
 <div><p><strong>Everything in pandas can be accessed with its label</strong>,</p>
 </div></blockquote>
 <p>no matter how your data is organized.</p>
 <div class="section" id="indexing-a-series">
-<h3>Indexing a <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#indexing-a-series" title="Permalink to this headline">¶</a></h3>
+<h3>Indexing a <code class="docutils literal notranslate"><span class="pre">Series</span></code><a class="headerlink" href="#indexing-a-series" title="Permalink to this headline">#</a></h3>
 <p>Let’s back up a bit here. Once more, let’s pull out one <code class="docutils literal notranslate"><span class="pre">Series</span></code> from our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> using its column label, and we’ll start there.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1679,7 +1792,7 @@ Name: Nino34, dtype: float64
 </div>
 </div>
 <div class="section" id="using-iloc-and-loc-to-index">
-<h3>Using <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> and <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to index<a class="headerlink" href="#using-iloc-and-loc-to-index" title="Permalink to this headline">¶</a></h3>
+<h3>Using <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> and <code class="docutils literal notranslate"><span class="pre">.loc</span></code> to index<a class="headerlink" href="#using-iloc-and-loc-to-index" title="Permalink to this headline">#</a></h3>
 <p>Let’s introduce pandas-preferred ways to access your data by label, <code class="docutils literal notranslate"><span class="pre">.loc</span></code>, or by index, <code class="docutils literal notranslate"><span class="pre">.iloc</span></code>. They behave similarly to the notation introduced above, but provide more speed, security, and rigor in your value selection, as well as help you avoid <a class="reference external" href="https://pandas.pydata.org/docs/user_guide/indexing.html#returning-a-view-versus-a-copy">chained assignment warnings</a> within pandas.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1757,7 +1870,7 @@ Name: Nino34, dtype: float64
 </div>
 </div>
 <div class="section" id="extending-to-the-dataframe">
-<h3>Extending to the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#extending-to-the-dataframe" title="Permalink to this headline">¶</a></h3>
+<h3>Extending to the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#extending-to-the-dataframe" title="Permalink to this headline">#</a></h3>
 <p>These capabilities extend back to our original <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>, as well!</p>
 <div class="cell tag_raises-exception docutils container">
 <div class="cell_input docutils container">
@@ -2410,7 +2523,7 @@ Name: 1982-04-01 00:00:00, dtype: float64
 </div>
 </div>
 <div class="section" id="indexing-summary">
-<h3>Indexing summary<a class="headerlink" href="#indexing-summary" title="Permalink to this headline">¶</a></h3>
+<h3>Indexing summary<a class="headerlink" href="#indexing-summary" title="Permalink to this headline">#</a></h3>
 <p>Here are some rules of thumb for all of these different ways of indexing into a pandas
 dataframe:</p>
 <ol class="simple">
@@ -2574,9 +2687,9 @@ to be able to access the sorted rows by number:</p>
 </div></div>
 </div>
 <div class="section" id="exploratory-data-analysis">
-<h2>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">#</a></h2>
 <div class="section" id="get-a-quick-look-at-the-beginning-end-of-your-dataframe">
-<h3>Get a Quick Look at the Beginning/End of your <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code><a class="headerlink" href="#get-a-quick-look-at-the-beginning-end-of-your-dataframe" title="Permalink to this headline">¶</a></h3>
+<h3>Get a Quick Look at the Beginning/End of your <code class="docutils literal notranslate"><span class="pre">Dataframe</span></code><a class="headerlink" href="#get-a-quick-look-at-the-beginning-end-of-your-dataframe" title="Permalink to this headline">#</a></h3>
 <p>Pandas also gives you a few shortcuts to quickly investigate entire <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2792,7 +2905,7 @@ to be able to access the sorted rows by number:</p>
 </div>
 </div>
 <div class="section" id="quick-plots-of-your-data">
-<h3>Quick Plots of Your Data<a class="headerlink" href="#quick-plots-of-your-data" title="Permalink to this headline">¶</a></h3>
+<h3>Quick Plots of Your Data<a class="headerlink" href="#quick-plots-of-your-data" title="Permalink to this headline">#</a></h3>
 <p>A good way to explore your data is by making a simple plot. Pandas allows you to plot without even calling <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>! Here, we are interested in the <code class="docutils literal notranslate"><span class="pre">Nino34</span></code> series. Check this out…</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2845,7 +2958,7 @@ the figure:</p>
 </div>
 <p>Here, we again see a clear difference in the distributions. These are not the only plots you can use within pandas! For more examples of plotting choices, check out <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.plot.html">the pandas plot documentation</a></p>
 <div class="section" id="more-on-customizing-your-plot-use-an-existing-figure-with-plt-subplots">
-<h4>More on customizing your plot – use an existing figure with plt.subplots<a class="headerlink" href="#more-on-customizing-your-plot-use-an-existing-figure-with-plt-subplots" title="Permalink to this headline">¶</a></h4>
+<h4>More on customizing your plot – use an existing figure with plt.subplots<a class="headerlink" href="#more-on-customizing-your-plot-use-an-existing-figure-with-plt-subplots" title="Permalink to this headline">#</a></h4>
 <p>Pandas DataFrame <code class="docutils literal notranslate"><span class="pre">plot()</span></code> methods are just wrappers around matplotlib, so you always have the option to use matlplotlib directly
 instead of calling it through pandas.  Suppose you want the Nino34 graph to be one of four separate plots
 in a figure?  In that case, you can create a 2 x 2 set of axes with <code class="docutils literal notranslate"><span class="pre">plt.subplots</span></code>,
@@ -2903,7 +3016,7 @@ code more opaque.</p>
 </div>
 </div>
 <div class="section" id="basic-statistics">
-<h3>Basic Statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this headline">¶</a></h3>
+<h3>Basic Statistics<a class="headerlink" href="#basic-statistics" title="Permalink to this headline">#</a></h3>
 <p>By using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method, we see some general statistics! Notice how calling this on the dataframe returns a table with all the <code class="docutils literal notranslate"><span class="pre">Series</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3069,7 +3182,7 @@ dtype: float64
 </div>
 </div>
 <div class="section" id="subsetting-using-the-datetime-column">
-<h3>Subsetting Using the Datetime Column<a class="headerlink" href="#subsetting-using-the-datetime-column" title="Permalink to this headline">¶</a></h3>
+<h3>Subsetting Using the Datetime Column<a class="headerlink" href="#subsetting-using-the-datetime-column" title="Permalink to this headline">#</a></h3>
 <p>You can use techniques besides slicing to subset a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Here, we provide examples of using a couple other options.</p>
 <p>Say you only want the month of January - you can use <code class="docutils literal notranslate"><span class="pre">df.index.month</span></code> to query for which month you are interested in (in this case, 1 for the month of January)</p>
 <div class="cell docutils container">
@@ -3199,7 +3312,7 @@ dtype: float64
 </div>
 </div>
 <div class="section" id="pandas-style-hint-method-chaining">
-<h4>Pandas style hint:  method chaining<a class="headerlink" href="#pandas-style-hint-method-chaining" title="Permalink to this headline">¶</a></h4>
+<h4>Pandas style hint:  method chaining<a class="headerlink" href="#pandas-style-hint-method-chaining" title="Permalink to this headline">#</a></h4>
 <p>The cell above “chains” two methods (mean and plot) together, without creating an intermediate result.  It’s equivalent to:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3228,12 +3341,12 @@ dtype: float64
 </div>
 </div>
 <div class="section" id="your-turn">
-<h4>Your turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">¶</a></h4>
+<h4>Your turn<a class="headerlink" href="#your-turn" title="Permalink to this headline">#</a></h4>
 <p>Add a grid, title and a yaxis label to this plot using the <code class="docutils literal notranslate"><span class="pre">the_ax</span></code> axis.  See the <a class="reference external" href="https://matplotlib.org/stable/gallery/index.html">matplotlib gallery</a> for some examples.</p>
 </div>
 </div>
 <div class="section" id="turning-a-groupby-result-into-a-dictionary">
-<h3>Turning a groupby result into a dictionary<a class="headerlink" href="#turning-a-groupby-result-into-a-dictionary" title="Permalink to this headline">¶</a></h3>
+<h3>Turning a groupby result into a dictionary<a class="headerlink" href="#turning-a-groupby-result-into-a-dictionary" title="Permalink to this headline">#</a></h3>
 <p>Here is an incantation that turns a groupby object into a dictionary:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3250,13 +3363,13 @@ dtype: float64
 </div>
 </div>
 <div class="section" id="id1">
-<h4>Your turn<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<h4>Your turn<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h4>
 <p>What steps would you take to figure out why <code class="docutils literal notranslate"><span class="pre">dict(tuple(month_groups))</span></code> works the way it does?  Here’s a good
 <a class="reference external" href="https://realpython.com/iterate-through-dictionary-python/">overview of dicitionaries</a></p>
 </div>
 </div>
 <div class="section" id="investigating-extreme-values">
-<h3>Investigating Extreme Values<a class="headerlink" href="#investigating-extreme-values" title="Permalink to this headline">¶</a></h3>
+<h3>Investigating Extreme Values<a class="headerlink" href="#investigating-extreme-values" title="Permalink to this headline">#</a></h3>
 <p>You can also use <em><strong>conditional indexing</strong></em>, such that you can search where rows meet a certain criteria. In this case, we are interested in where the Nino34 anomaly is greater than 2</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3903,7 +4016,7 @@ dtype: float64
 </div>
 </div>
 <div class="section" id="resampling">
-<h3>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">¶</a></h3>
+<h3>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">#</a></h3>
 <p>Here, we are trying to resample the timeseries such that the signal does not appear as noisy. This can helpfule when working with timeseries data! In this case, we resample to a yearly average (<code class="docutils literal notranslate"><span class="pre">1Y</span></code>) instead of monthly values</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -3916,12 +4029,12 @@ dtype: float64
 </div>
 </div>
 <div class="section" id="id2">
-<h4>Your turn<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<h4>Your turn<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h4>
 <p>How would you plot the original timeseries on top of the one year resample?</p>
 </div>
 </div>
 <div class="section" id="applying-operations-to-a-dataframe">
-<h3>Applying operations to a dataframe<a class="headerlink" href="#applying-operations-to-a-dataframe" title="Permalink to this headline">¶</a></h3>
+<h3>Applying operations to a dataframe<a class="headerlink" href="#applying-operations-to-a-dataframe" title="Permalink to this headline">#</a></h3>
 <p>Often times, people are interested in applying calculations to data within pandas <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s. Here, we setup a function to convert from degrees Celsius to Kelvin</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -4341,7 +4454,7 @@ Name: Nino34_degK, Length: 472, dtype: float64
 </div>
 </div>
 <div class="section" id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>Pandas is a very powerful tool for working with tabular (i.e. spreadsheet-style) data</p></li>
 <li><p>There are multiple ways of subsetting your pandas dataframe or series</p></li>
@@ -4351,7 +4464,7 @@ Name: Nino34_degK, Length: 472, dtype: float64
 </ul>
 </div>
 <div class="section" id="resources-and-references">
-<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">¶</a></h2>
+<h2>Resources and References<a class="headerlink" href="#resources-and-references" title="Permalink to this headline">#</a></h2>
 <ol class="simple">
 <li><p><a class="reference external" href="https://www.ncdc.noaa.gov/teleconnections/enso/indicators/sst/">NOAA NCDC ENSO Dataset Used in this Example</a></p></li>
 <li><p><a class="reference external" href="https://swcarpentry.github.io/python-novice-gapminder/08-data-frames/index.html">Software carpentry pandas lesson</a></p></li>
@@ -4386,9 +4499,11 @@ Name: Nino34_degK, Length: 472, dtype: float64
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../wk10/quiz_wk10.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -4404,24 +4519,28 @@ Name: Nino34_degK, Length: 472, dtype: float64
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By UBC<br/>
+  
+      &copy; Copyright 2021.<br/>
+</p>
+        </footer>
+    </div>
     
-      By UBC<br/>
-    
-        &copy; Copyright 2021.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
